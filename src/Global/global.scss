@@ -1,8 +1,40 @@
-$bluebox-color: lightblue;
-$input-margin: 30px 0;
-$pfontfamily: Museo;
-
-.xcala-logo{
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap");
+$input-margin: 20px 0;
+$width-100: 100%;
+$pfontfamily: "Poppins", sans-serif;
+$themeColor: #1e22aa;
+p {
+    margin-top: 0px;
+}
+.MuiFormControl-root {
+    .MuiInputLabel-root.Mui-focused {
+        color: $themeColor;
+    }
+    .css-ghsjzk-MuiInputBase-root-MuiInput-root {
+        &:after {
+            border-bottom: 2px solid $themeColor;
+        }
+    }
+    .css-ghsjzk-MuiInputBase-root-MuiInput-root:hover:not(.Mui-disabled):before {
+        border-bottom: 1px solid $themeColor;
+    }
+}
+.register-input-text {
+    .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root,
+    .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked {
+        color: $themeColor;
+    }
+}
+body .button-primary {
+    background: $themeColor;
+    border-radius: 8px;
+    color: white;
+    padding: 17px 10px;
+}
+.button-primary.Mui-disabled {
+    background: #bfbfbf;
+}
+.xcala-logo {
     width: 100%;
     height: auto;
     display: flex;
@@ -10,21 +42,55 @@ $pfontfamily: Museo;
     padding: 25px 0;
 }
 
-p{
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 27px;
-    color:#182849;
-}
+.register-wrapper {
+    background: rgba(246, 246, 246, 1);
+    position: relative;
+    z-index: 1;
+    padding-bottom: 20px;
 
-.bluebox{
-    background-color: $bluebox-color;
-    border-radius:8px;
-    padding: 10px;
-}
+    &::after {
+        content: "";
+        background-image: url(../assets/layer-login.svg);
+        background-repeat: no-repeat;
+        padding-bottom: 30px;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
 
-.register-input-text {
-    margin: $input-margin;
+    .register-input-text {
+        margin: $input-margin;
+        width: $width-100;
+        max-width: 333px;
+    }
+    .form-register {
+        background: #ffffff;
+        mix-blend-mode: normal;
+        border-radius: 8px;
+        padding-bottom: 20px;
+        .form-inner {
+            max-width: 444px;
+            margin: 0 auto;
+            padding: 70px 0 0;
+            .bluebox {
+                background: rgba(150, 189, 228, 0.1);
+                border-radius: 8px;
+                padding: 16px;
+                p {
+                    color: rgba(24, 40, 73, 1);
+                    span {
+                        span {
+                            color: #49a197;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 .rectangle-heading {

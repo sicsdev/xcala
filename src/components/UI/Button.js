@@ -7,7 +7,9 @@ const Button = (props) => {
       className={props.className}
       onClick={props.onClick}
       disabled={props.disabled}
+      variant="contained"
     >
+      {props.label}
     </button>
   );
 };

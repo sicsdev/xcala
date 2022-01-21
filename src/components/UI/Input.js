@@ -1,5 +1,9 @@
 import React from 'react';
-
+const styles = theme => ({
+  multilineColor:{
+      color:'red'
+  }
+});
 function Input() {
   return (
     <div>
@@ -8,6 +12,7 @@ function Input() {
         value={props.value}
         id={props.id}
         className={props.className}
+
       />
     </div>
   );

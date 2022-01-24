@@ -3,8 +3,19 @@ $input-margin: 20px 0;
 $width-100: 100%;
 $pfontfamily: "Poppins", sans-serif;
 $themeColor: #1e22aa;
+
+// background-image
+
+
+.xcala-logo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+}
 p {
-    margin-top: 0px;
+    margin: 0px;
 }
 .MuiFormControl-root {
     .MuiInputLabel-root.Mui-focused {
@@ -34,80 +45,5 @@ body .button-primary {
 .button-primary.Mui-disabled {
     background: #bfbfbf;
 }
-.xcala-logo {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    padding: 25px 0;
-}
 
-.register-wrapper {
-    background: rgba(246, 246, 246, 1);
-    position: relative;
-    z-index: 1;
-    padding-bottom: 20px;
 
-    &::after {
-        content: "";
-        background-image: url(../assets/layer-login.svg);
-        background-repeat: no-repeat;
-        padding-bottom: 30px;
-        height: 100%;
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
-    }
-
-    .register-input-text {
-        margin: $input-margin;
-        width: $width-100;
-        max-width: 333px;
-    }
-    .form-register {
-        background: #ffffff;
-        mix-blend-mode: normal;
-        border-radius: 8px;
-        padding-bottom: 40px;
-        .form-inner {
-            max-width: 444px;
-            margin: 0 auto;
-            padding: 70px 0 0;
-            .bluebox {
-                background: rgba(150, 189, 228, 0.1);
-                border-radius: 8px;
-                padding: 16px;
-                p {
-                    color: rgba(24, 40, 73, 1);
-                    span {
-                        span {
-                            color: #49a197;
-                            font-weight: 500;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-.rectangle-heading {
-    font-family: $pfontfamily;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 38px;
-    letter-spacing: 0em;
-    text-align: center;
-    display: inline;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-
-.rectangle-p p {
-    text-align: center;
-}

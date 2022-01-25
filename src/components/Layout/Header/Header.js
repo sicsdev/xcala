@@ -13,8 +13,9 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Styles from '../Header/Header.module.scss'
+import ImagSrc from "../../../notification.svg"
 
-const pages = ['Inicio', 'Productos', 'Mis transacciones', 'Mis transacciones'];
+const pages = ['Inicio', 'Productos', 'Mis transacciones' ];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
@@ -82,6 +83,7 @@ const ResponsiveAppBar = () => {
                         >
                             {pages.map((page) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
+                                    
                                     <Typography textAlign="center">{page}</Typography>
                                 </MenuItem>
                             ))}
@@ -96,7 +98,12 @@ const ResponsiveAppBar = () => {
                         LOGO
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
-                        {pages.map((page) => (
+                        {pages.map((page) =>
+                        console.log("page", typeof page)
+
+                        (
+
+                            // {page == "Inicio" ? <h1></h1> :<h1></h1> }
                             <Button
                                 key={page}
                                 onClick={handleCloseNavMenu}

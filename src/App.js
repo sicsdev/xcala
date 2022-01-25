@@ -6,18 +6,17 @@ import "./Global/global.scss";
 import Usercontext from "./context/userContext";
 import Usercontextprovider from "./context/Usercontextprovider";
 
-
 function App() {
   return (
     <div>
-      <BrowserRouter>
-        <Routes>
-          {/* <Usercontextprovider value = {null}> */}
+      <Usercontextprovider value={null} name ="shshsu">
+        <BrowserRouter>
+          <Routes>
             <Route exact path="/Login" element={<Firstpage />} />
             <Route exact path="/" element={<Layout />} />
-          {/* </Usercontextprovider>   */}
-        </Routes>
-      </BrowserRouter>
+          </Routes>
+        </BrowserRouter>
+      </Usercontextprovider>
     </div>
   );
 }

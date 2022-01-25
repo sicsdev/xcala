@@ -6,7 +6,10 @@ $themeColor: #1e22aa;
 
 // background-image
 
-
+body{
+    margin: 0;
+    font-family: $pfontfamily;
+}
 .xcala-logo {
     width: 100%;
     height: auto;
@@ -16,6 +19,7 @@ $themeColor: #1e22aa;
 }
 p {
     margin: 0px;
+    font-family: $pfontfamily;
 }
 .MuiFormControl-root {
     .MuiInputLabel-root.Mui-focused {

@@ -4,19 +4,23 @@ $width-100: 100%;
 $pfontfamily: "Poppins", sans-serif;
 $themeColor: #1e22aa;
 
-// background-image
+p{
+    margin: 0px;
+}
 
+.MuiContainer-root.MuiContainer-maxWidthSm.css-cuefkz-MuiContainer-root {
+    width: 676px !important ;
+    max-width: 676px !important;
+}
 
 .xcala-logo {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
-    padding: 25px 0;
+    padding: 44px 0px 46px 0px;
 }
-p {
-    margin: 0px;
-}
+
 .MuiFormControl-root {
     .MuiInputLabel-root.Mui-focused {
         color: $themeColor;
@@ -40,10 +44,21 @@ body .button-primary {
     background: $themeColor;
     border-radius: 8px;
     color: white;
-    padding: 17px 10px;
+    padding: 14px 10px;
+    width: 200px;
+    text-transform: capitalize;
+    font-size: 18px;
 }
 .button-primary.Mui-disabled {
     background: #bfbfbf;
+    color: #ffffff !important;
 }
 
+.Register_rectangle_heading__g-SsI p {
+    margin: 0px;
+}
 
+// sandeepcss
+.formbutton{
+    text-align: center;
+}

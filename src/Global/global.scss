@@ -9,7 +9,7 @@ p{
 }
 
 .MuiContainer-root.MuiContainer-maxWidthSm.css-cuefkz-MuiContainer-root {
-    width: 676px !important ;
+    width: 676px !important;
     max-width: 676px !important;
 }
 
@@ -59,6 +59,21 @@ body .button-primary {
 }
 
 // sandeepcss
-.formbutton{
+.formbutton {
     text-align: center;
+}
+
+.backgroundscreen {
+    background: rgba(246, 246, 246, 1);
+    position: relative;
+    padding-bottom: 20px;
+    background-image: url(../../public/assets/images/layer-login.svg);
+    background-repeat: no-repeat;
+    padding-bottom: 30px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }

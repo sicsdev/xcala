@@ -1,0 +1,64 @@
+$pfontfamily: "Poppins", sans-serif;
+.rectangle_heading{
+    font-family: $pfontfamily;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: center;
+    display: inline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 12px;
+}
+
+.otpverification{
+    background: #ffffff;
+    mix-blend-mode: normal;
+    border-radius: 8px;
+    max-width: 100%;
+    padding: 55px 0 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 35px;
+    margin-bottom: 8rem;
+
+    .text{
+        width: 444px;
+        margin-bottom: 80px;
+        p{
+            color: #182849;
+            font-size: 18px;
+        }
+    }
+    input[type="password"] {
+        height: 69.81px !important;
+        border: 1px solid #1E22AA;
+        box-sizing: border-box;
+        transform: rotate( 90deg);
+        width: 101px !important;
+        border-radius: 32px;
+        margin-right: 0px !important;
+    }
+    .fadetext{
+        width: 444px;
+        margin-top: 80px;
+        margin-bottom: 55px;
+        color: #808080;
+        font-size: 14px;
+    }
+    .otpbutton{
+        padding: 9px 32px;
+        height: 60px;
+        background: #F4F4FB;
+        border-radius: 8px;
+        color: #1E22AA;
+        font-weight: 700;
+        text-transform: capitalize;
+        border: 1px solid transparent;
+    }
+}

@@ -4,23 +4,23 @@ $pfontfamily: "Poppins", sans-serif;
 $themeColor: #1e22aa;
 
 .register_wrapper {
-  background: rgba(246, 246, 246, 1);
-  position: relative;
-  z-index: 1;
-  padding-bottom: 20px;
+  // background: rgba(246, 246, 246, 1);
+  // position: relative;
+  // z-index: 1;
+  // padding-bottom: 20px;
 
-  &::after {
-    content: "";
-    background-image: url(../../../../public/assets/images/layer-login.svg);
-    background-repeat: no-repeat;
-    padding-bottom: 30px;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-  }
+  // &::after {
+  //   content: "";
+  //   background-image: url(../../../../public/assets/images/layer-login.svg);
+  //   background-repeat: no-repeat;
+  //   padding-bottom: 30px;
+  //   height: 100%;
+  //   position: fixed;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   z-index: -1;
+  // }
   .rectangle_heading {
     font-family: $pfontfamily;
     font-size: 32px;

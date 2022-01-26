@@ -13,12 +13,70 @@ p{
     max-width: 676px !important;
 }
 
+body {
+    margin: 0;
+    font-family: $pfontfamily;
+}
 .xcala-logo {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
     padding: 44px 0px 46px 0px;
+}
+p {
+    margin: 0px;
+    font-family: $pfontfamily;
+}
+.font-lg-18 {
+    font-size: 18px;
+}
+.accordion-main.Mui-expanded {
+    .MuiButtonBase-root {
+        border: 2px solid transparent;
+        position: relative;
+        background-clip: padding-box;
+        backdrop-filter: none;
+         &::after{
+             content: '';
+            background: linear-gradient(91.94deg, #1E22AA -51.99%, #E3E3E3 50.09%, #1E22AA 136.47%);
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            margin: -2px;
+            border-radius: inherit;
+         }       
+    }
+}
+.accordion-main {
+    background-color: transparent !important;
+    display: grid;
+    place-content: center;
+    text-align: initial;
+    margin: 20px 0px;
+    &::before {
+        display: none;
+    }
+    .MuiButtonBase-root {
+        background: linear-gradient(
+            268.78deg,
+            rgba(255, 255, 255, 0.8) 1.52%,
+            rgba(255, 255, 255, 0) 39.44%,
+            rgba(255, 255, 255, 0.8) 99.9%
+        );
+        mix-blend-mode: normal;
+        backdrop-filter: blur(48px);
+        border-radius: 8px;
+        border: 2px solid;
+        border-image-source: linear-gradient(92.05deg, #ffffff -0.62%, #e3e3e3 50.1%, #ffffff 93.02%);
+    }
+    .size-accordion {
+        padding: 16px 0;
+        margin-left: 14px;
+    }
 }
 
 .MuiFormControl-root {
@@ -42,21 +100,15 @@ p{
 }
 body .button-primary {
     background: $themeColor;
-    border-radius: 8px;
     color: white;
-    padding: 14px 10px;
-    width: 200px;
-    text-transform: capitalize;
-    font-size: 18px;
+    padding: 17px 47px;
+    border: none;
 }
 .button-primary.Mui-disabled {
     background: #bfbfbf;
     color: #ffffff !important;
 }
 
-.Register_rectangle_heading__g-SsI p {
-    margin: 0px;
-}
 
 // sandeepcss
 .formbutton {

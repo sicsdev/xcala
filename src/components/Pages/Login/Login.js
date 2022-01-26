@@ -1,67 +1,107 @@
-// import React from 'react';
-// import Container from "@mui/material/Container";
-// import { Grid, Button, FormControl  } from "@mui/material";
-// import "react-phone-number-input/style.css";
-// import Xcalalogo from "../Xcalalogo";
-// import Backgroundscreen from "../../Backgroundscreen";
-// import loginstyles from "./Login.module.scss"
-// import IconButton from '@mui/material/IconButton';
-// import Input from '@mui/material/Input';
-// import InputLabel from '@mui/material/InputLabel';
-// import InputAdornment from '@mui/material/InputAdornment';
-// import TextField from '@mui/material/TextField';
-// import Visibility from '@mui/icons-material/Visibility';
-// import VisibilityOff from '@mui/icons-material/VisibilityOff';
-// import Box from '@mui/material/Box'; 
+import React from 'react';
+import Container from "@mui/material/Container";
+import { Grid, Button, FormControl  } from "@mui/material";
+import "react-phone-number-input/style.css";
+import Xcalalogo from "../Xcalalogo";
+import Backgroundscreen from "../../Backgroundscreen";
+import loginstyles from "./Login.module.scss"
+import IconButton from '@mui/material/IconButton';
+import Input from '@mui/material/Input';
+import InputLabel from '@mui/material/InputLabel';
+import InputAdornment from '@mui/material/InputAdornment';
+import TextField from '@mui/material/TextField';
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import Box from '@mui/material/Box'; 
 
-// function Login() {
+function Login() {
 
-//   return (
-//   <>
-//     <Backgroundscreen/>
+    const [values, setValues] = React.useState({
+        password: '',
+        sergfgh:"",
+        showPassword: false,
+      });
+    
+      const handleChange = (prop) => (event) => {
+        setValues({ ...values, [prop]: event.target.value });
+      };
+    
+      const handleClickShowPassword = () => {
+        setValues({
+          ...values,
+          showPassword: !values.showPassword,
+        });
+      };
+    
+      const handleMouseDownPassword = (event) => {
+        event.preventDefault();
+      };
 
-//         <Container maxWidth="sm">
-//             <Xcalalogo/>
+  return (
+  <>
+    <Backgroundscreen/>
 
-//             <div className={loginstyles.form_login}>
-//             <div className={loginstyles.form_inner}>
-//             <Grid container maxWidth="sm">
-//                 <form>
-//                   <div className={loginstyles.register_input_text}>
-//                     <TextField
-//                     //   className={
-//                     //     helpermsg.namehelpermsgcolor
-//                     //       ? styles.textfieldcolorrrr
-//                     //       : ""
-//                     //   }
-//                       fullWidth
-//                     //   onChange={onnamechange}
-//                       id="standard-basic"
-//                       label="Nombre"
-//                       variant="standard"
-//                       type="text"
-//                       FormHelperTextProps={{
-//                     //     className: styles.helperTextcolor || "",
-//                     //   }}
-//                     //   helperText={helpermsg.namehelpermsg}
-//                     />
-//                   </div>
-//                   </form>
-//                   </Grid>
+        <Container maxWidth="sm">
+            <Xcalalogo/>
 
-//         {/* passwordfield */}
+            <div className={loginstyles.form_login}>
+            <div className={loginstyles.form_inner}>
+            <Grid container maxWidth="sm">
+                <form>
+                  <div className={loginstyles.register_input_text}>
+                  <TextField
+                      fullWidth
+                      id="standard-basic"
+                      label="Email o RUT"
+                      variant="standard"
+                      type="email"
+                    />
+                  </div>
 
-//           <Grid className="formbutton" item md={12}>
-//                     <Button className="button-primary">
-//                     Ingresar
-//                     </Button>
-//           </Grid>
-//           </div>
-//           </div>
-//         </Container>  
+        <div className={loginstyles.password_form}>
+        <FormControl sx={{ width: '100%' }} variant="outlined">
+        <InputLabel htmlFor="standard-adornment-password">Contraseña</InputLabel>
+          <Input
+            id="standard-adornment-password"
+            type={values.showPassword ? 'text' : 'password'}
+            value={values.password}
+            onChange={handleChange('password')}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                >
+                  {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            }
+          /></FormControl></div>
+
+        <div className={loginstyles.pass_text}>
+            <p>¿Olvidaste tu contraseña?</p>
+        </div>
+
+                </form>
+             </Grid>
+
+
+          <Grid className="formbutton" item md={12}>
+                    <Button className="button-primary">
+                    Ingresar
+                    </Button>
+
+                    <div className={loginstyles.btn_text}>
+                       <p>¿Aún no estás registrado?</p>
+                     </div>
+          </Grid>
+          </div>
+          </div>
+        </Container>  
            
-//   </>
-//   );
-// }
+  </>
+  );
+}
 
-// export default Login;
+export default Login;

@@ -9,7 +9,7 @@ const Button = (props) => {
       disabled={props.disabled}
       variant="contained"
     >
-      {props.label}
+      {props.children}
     </button>
   );
 };

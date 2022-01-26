@@ -18,13 +18,18 @@ function Password() {
     const [values, setValues] = React.useState({
         password: '',
         sergfgh:"",
-        showPassword: true,
+        showPassword: false,
       });
-    
+      const [confirmpassword, setConfirmpassword] = React.useState("");
+       
       const handleChange = (prop) => (event) => {
         setValues({ ...values, [prop]: event.target.value });
       };
-    
+         
+      const handleChange2 =(event) => {
+        setConfirmpassword(event.target.value)
+      };
+      
       const handleClickShowPassword = () => {
         setValues({
           ...values,
@@ -127,32 +132,37 @@ function Password() {
               </InputAdornment>
             }
           />
+          </FormControl>
 
-        {/* <InputLabel htmlFor="standard-adornment-password">Nueva contraseña</InputLabel>
+        <FormControl sx={{ m: 1, width: '70%' }} variant="outlined">
+
+        <InputLabel htmlFor="standard-adornment-password2">Contraseña</InputLabel>
           <Input
-            id="standard-adornment-password"
-            type={values.showPassword ? 'text' : 'password'}
-            value={values.password}
-            onChange={handleChange('password')}
+            id="standard-adornment-password2"
+            type=  'password'
+            value={confirmpassword}
+            onChange={handleChange2}
             endAdornment={
               <InputAdornment position="end">
                 <IconButton
-                  aria-label="toggle password visibility"
+                  aria-label="toggle password visibility2"
                   onClick={handleClickShowPassword}
                   onMouseDown={handleMouseDownPassword}
                 >
-                  {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                  {confirmpassword ? <VisibilityOff /> : <Visibility />}
                 </IconButton>
               </InputAdornment>
             }
-          />    */}
+          />   
  
           </FormControl>
+          <div className={password.btnn}>
           <Grid className="formbutton" item md={12}>
                     <Button className="button-primary" disabled>
                     Crear contraseña
                     </Button>
                   </Grid>
+                  </div>
               </div>
               </div>
               </div>

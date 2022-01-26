@@ -1,6 +1,7 @@
-import React from 'react';
-
+import {useContext} from "react"
+import Usercontext from "../../context/userContext";
 function Checkbox() {
+  const {value, name } = useContext(Usercontext)
   return (
     <div>
       <FormGroup>

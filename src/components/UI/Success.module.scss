@@ -1,0 +1,23 @@
+$successtext: center;
+$succesfont: 600;
+
+.verificationsuccesslogo {
+    text-align: $successtext;
+
+    img {
+        width: 250px;
+    }
+    .successtext{
+        text-align: $successtext;
+        margin-bottom: 4.5rem;
+        p{
+        color: #347856;
+        font-weight: $succesfont;
+        }
+    }
+    .completetext{
+        margin-top: 2rem;
+        font-weight: $succesfont;
+        color: #1E22AA;
+    }
+}

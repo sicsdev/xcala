@@ -1,27 +1,34 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import Container from "@mui/material/Container";
 import { Grid, TextField, Select, Checkbox, Button } from "@mui/material";
-// import Rectangle from "../Rectangle.png";
-// import xcalalogo from "../logo.svg";
-// import messagebox from "../regis-icon-2.svg";
-// import vector from "../regis-icon-1.svg";
 import styles from "./Register.module.scss";
 import { useState } from "react";
 import isEmail from "validator/lib/isEmail";
 import "react-phone-number-input/style.css";
+import PhoneInput from "react-phone-number-input";
+import DoneIcon from '@mui/icons-material/Done';
+import Xcalalogo from "../Xcalalogo";
+import Backgroundscreen from "../../Backgroundscreen";
 
 function Firstpage() {
   const [name, setName] = useState("");
   const [motherslastname, setMothername] = useState("");
   const [lastname, setLastname] = useState("");
   const [emailError, setEmailError] = useState(false);
+  const [emailSuccess, setEmailSuccess] = useState("");
   const [errormsg, setErrormsg] = useState("");
+  const [value, setValue] = useState("");
+
   const [activeinputcolor, setactiveinputcolor] = useState("");
   const [helpermsg, setHelpermsg] = useState({
     namehelpermsg: "",
+    namehelpermsgcolor: false,
     mothernamehelpermsg: "",
+    mothernamehelpermsgcolor: false,
     lastnamehelpermsg: "",
+    lastnamehelpermsgcolor: false,
+    emailhelpermsgcolor: false,
   });
 
   //this is for name textfiled (Nombre)
@@ -32,6 +39,7 @@ function Firstpage() {
         return {
           ...nametext,
           namehelpermsg: "Perfecto",
+          namehelpermsgcolor: true,
         };
       });
     }
@@ -40,6 +48,7 @@ function Firstpage() {
         return {
           ...nametext,
           namehelpermsg: "",
+          namehelpermsgcolor: false,
         };
       });
     }
@@ -53,6 +62,7 @@ function Firstpage() {
         return {
           ...mothernametext,
           mothernamehelpermsg: "Muy bien",
+          mothernamehelpermsgcolor: true,
         };
       });
     }
@@ -61,6 +71,7 @@ function Firstpage() {
         return {
           ...mothernametext,
           mothernamehelpermsg: "",
+          mothernamehelpermsgcolor: false,
         };
       });
     }
@@ -74,6 +85,7 @@ function Firstpage() {
         return {
           ...lastnametext,
           lastnamehelpermsg: "Muy bien",
+          lastnamehelpermsgcolor: true,
         };
       });
     }
@@ -82,6 +94,7 @@ function Firstpage() {
         return {
           ...lastnametext,
           lastnamehelpermsg: "",
+          lastnamehelpermsgcolor: false,
         };
       });
     }
@@ -93,25 +106,29 @@ function Firstpage() {
 
     if (isEmail(val)) {
       setEmailError(false);
+      setEmailSuccess("¡Queda poco!");
       setErrormsg("");
     } else {
       setEmailError(true);
       setErrormsg("Algo anda mal... Verifica tu email");
+      setEmailSuccess("");
       return;
     }
   };
 
-  return (
+  return (  <>
     <React.Fragment>
       <CssBaseline />
+      <Backgroundscreen/>
       <div className={styles.register_wrapper}>
         <Container maxWidth="sm">
           <Grid container maxWidth="sm" spacing={2}>
-            <Grid item md={12}>
+            {/* <Grid item md={12}>
               <div className="xcala-logo">
                 <img src="/assets/images/logo.svg" alt="logo"></img>
               </div>
-            </Grid>
+            </Grid> */}
+            <Xcalalogo/>
             <Grid item md={12} mb={3}>
               <div className={styles.rectangle_heading}>
                 <img src="/assets/images/Rectangle.png" alt=""></img>
@@ -140,7 +157,7 @@ function Firstpage() {
                       height={20}
                       style={{ paddingTop: "5px" }}
                     ></img>
-                    <div className="p1" style={{ paddingLeft: "10px" }}>
+                    <div className={styles.p1} style={{ paddingLeft: "10px" }}>
                       <p>
                         Recibirás en tu correo una clave temporal para ingresar
                         a tu cuenta de prueba.
@@ -157,7 +174,7 @@ function Firstpage() {
                       height={20}
                       style={{ paddingTop: "5px" }}
                     ></img>
-                    <div className="p1" style={{ paddingLeft: "10px" }}>
+                    <div className={styles.p1} style={{ paddingLeft: "10px" }}>
                       <p>
                         Define tu perfil de riesgo y revisa nuestras
                         recomendaciones personalizadas.
@@ -169,37 +186,60 @@ function Firstpage() {
               <Grid container maxWidth="sm">
                 <form>
                   <div className={styles.register_input_text}>
-                    {/* {helpermsg.namehelpermsg != undefined ? } */}
                     <TextField
+                      className={
+                        helpermsg.namehelpermsgcolor
+                          ? styles.textfieldcolorrrr
+                          : ""
+                      }
                       fullWidth
                       onChange={onnamechange}
                       id="standard-basic"
                       label="Nombre"
                       variant="standard"
                       type="text"
+                      FormHelperTextProps={{
+                        className: styles.helperTextcolor || "",
+                      }}
                       helperText={helpermsg.namehelpermsg}
-                      autoComplete=""
+                      // autoComplete=false
                     />
                   </div>
                   <div className={styles.register_input_text}>
                     <TextField
                       fullWidth
+                      className={
+                        helpermsg.mothernamehelpermsgcolor
+                          ? styles.textfieldcolorrrr
+                          : ""
+                      }
                       onChange={onmothernamechange}
                       id="standard-basic"
                       label="Apellido materno"
                       variant="standard"
                       type="text"
+                      FormHelperTextProps={{
+                        className: styles.helperTextcolor || "",
+                      }}
                       helperText={helpermsg.mothernamehelpermsg}
                     />
                   </div>
                   <div className={styles.register_input_text}>
                     <TextField
                       fullWidth
+                      className={
+                        helpermsg.lastnamehelpermsgcolor
+                          ? styles.textfieldcolorrrr
+                          : ""
+                      }
                       onChange={onlastnamechange}
                       id="standard-basic"
                       label="Apellido paterno"
                       variant="standard"
                       type="text"
+                      FormHelperTextProps={{
+                        className: styles.helperTextcolor || "",
+                      }}
                       helperText={helpermsg.lastnamehelpermsg}
                     />
                   </div>
@@ -212,32 +252,47 @@ function Firstpage() {
                   </div>
                   <div className={styles.register_input_text}>
                     <TextField
+                    className={
+                      emailSuccess
+                        ? styles.textfieldcolorrrr
+                        :  ""
+                    }
                       fullWidth
-                      error={emailError}
+                      error={emailError ? emailError : false}
                       onChange={error}
                       id="standard-basic"
                       label="Email"
                       variant="standard"
                       type="email"
-                      helperText={errormsg}
+                      FormHelperTextProps={{
+                        className: styles.helperTextcolor || "",
+                      }}
+                      helperText={errormsg ? errormsg : emailSuccess}
                     />
                   </div>
                   <div className={styles.register_input_text}>
                     <Grid container maxWidth="sm" spacing={2}>
-                      <Grid item md={3} style={{ paddingTop: "0" }}>
-                        <Select
+                      {/* <Grid item md={3} style={{ paddingTop: "0" }}>
+                        <TextField
                           fullWidth
                           id="standard-basic"
                           label="Email"
                           variant="standard"
                         />
-                      </Grid>
-                      <Grid item md={9} style={{ paddingTop: "0" }}>
-                        <TextField
+                      </Grid> */}
+                      <Grid item md={12} style={{ paddingTop: "40px" }}>
+                        {/* <TextField
                           fullWidth
                           id="standard-basic"
                           label=""
                           variant="standard"
+                        /> */}
+                        <PhoneInput
+                          international
+                          countrySelectProps={{ unicodeFlags: false }}
+                          defaultCountry="RU"
+                          value={value}
+                          onChange={setValue}
                         />
                       </Grid>
                     </Grid>
@@ -248,14 +303,16 @@ function Firstpage() {
                       <div className="p1" style={{ paddingLeft: "10px" }}>
                         <p>
                           Acepto los{" "}
-                          <span>términos y condiciones del servicio </span>de
-                          Xcala.
+                          <span className={styles.greentext}>
+                            términos y condiciones del servicio{" "}
+                          </span>
+                          de Xcala.
                         </p>
                       </div>
                     </div>
                   </div>
-                  <Grid item md={12}>
-                    <Button fullWidth className="button-primary" disabled>
+                  <Grid className="formbutton" item md={12}>
+                    <Button className="button-primary" disabled>
                       Continuar
                     </Button>
                   </Grid>
@@ -266,6 +323,7 @@ function Firstpage() {
         </Container>
       </div>
     </React.Fragment>
+    </>
   );
 }
 

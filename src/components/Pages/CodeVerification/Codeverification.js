@@ -6,6 +6,7 @@ import codeverificationstyle from "./Codeverification.module.scss";
 import Backgroundscreen from "../../Backgroundscreen";
 import OTPInput, { ResendOTP } from "otp-input-react";
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import { Typography } from "@mui/material";
 
 //custom otp button
 // const renderButton = (buttonProps) => {
@@ -23,17 +24,17 @@ function Codeverification() {
       <Container maxWidth="sm">
           <Xcalalogo />
           <Grid item md={12} mb={3}>
-            <div className={codeverificationstyle.rectangle_heading}>
+            <div className="h2">
               <img src="/assets/images/Rectangle.png" alt=""></img>
               <p>Valida tu cuenta</p>
             </div>
           </Grid>
         <div className={codeverificationstyle.otpverification}>
           <div className={codeverificationstyle.text}>
-            <p>
-              Ingresa el código de verificación que enviamos al correo
+            <Typography className="p-18" variant="" component="">
+            Ingresa el código de verificación que enviamos al correo
               mar...@gmail.com
-            </p>
+            </Typography>
           </div>
           <OTPInput
             value={OTP}
@@ -45,10 +46,10 @@ function Codeverification() {
             secure
           />
           <div className={codeverificationstyle.fadetext}>
-            <p>
-              ¿No has recibido nuestro correo? ¿Revisaste tu spam? Puede que
-              hayamos llegado allá...{" "}
-            </p>
+            <Typography className="" variant="" component="">
+            ¿No has recibido nuestro correo? ¿Revisaste tu spam? Puede que
+              hayamos llegado allá...
+            </Typography>
           </div>
           <div>
             {/* <ResendOTP className={codeverificationstyle.otpbutton} onResendClick={() => console.log("Resend clicked")} /> */}

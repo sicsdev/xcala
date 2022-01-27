@@ -12,7 +12,8 @@ import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import Box from '@mui/material/Box';    
+import { Typography } from '@mui/material';
+
 function Password() {
 
     const [values, setValues] = React.useState({
@@ -47,8 +48,10 @@ function Password() {
         <Container maxWidth="sm">
             <Xcalalogo/>
             <Grid item md={12} mb={3}>
-              <div className={password.rectangle_heading}>
-                <p>¡Bienvenida Marcela!</p>
+              <div style={{ paddingBottom: "30px" }}>
+                <Typography className="h2" variant="" component="">
+                ¡Bienvenida Marcela!
+                </Typography>
               </div>
             </Grid>
           <div className={password.form_register}>
@@ -64,10 +67,10 @@ function Password() {
                     <img
                       src="/assets/images/ipassword.png"
                      ></img>
-                    <div className={password.p1} style={{ paddingLeft: "12px" }}>
-                      <p>
+                    <div style={{ paddingLeft: "12px" }}>
+                      <Typography className="p-16" variant="" component="">
                       Asegúrate de que tu contraseña tenga:
-                      </p>
+                      </Typography>
                     </div>
                   </div>
                 </Grid>                  
@@ -76,10 +79,10 @@ function Password() {
                     <img
                       src="/assets/images/blankpassword.png"
                      ></img>
-                    <div className={password.p1} style={{ paddingLeft: "12px" }}>
-                      <p>
+                    <div style={{ paddingLeft: "12px" }}>
+                      <Typography className={password.p_14} variant="" component="">
                       Letras y números
-                      </p>
+                      </Typography>
                     </div>
                   </div>
                 </Grid>
@@ -90,9 +93,9 @@ function Password() {
                       alt=""
                     ></img>
                     <div style={{ paddingLeft: "12px" }}>
-                      <p>
+                        <Typography className={password.p_14} variant="" component="">
                       Al menos una letra mayúscula
-                      </p>
+                      </Typography>
                     </div>
                   </div>
                 </Grid>
@@ -103,9 +106,9 @@ function Password() {
                       alt=""
                     ></img>
                     <div style={{ paddingLeft: "12px" }}>
-                      <p>
+                      <Typography className={password.p_14} variant="" component="">
                       Mínimo 8 caracteres (Máx. 16)
-                      </p>
+                      </Typography>
                     </div>
                   </div>
                 </Grid>                

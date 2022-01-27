@@ -1,7 +1,7 @@
 import React from "react";
 import "react-phone-number-input/style.css";
 import ResponsiveAppBar from "../Header/Header"
-import Profile from "../../Pages/profile/Profile";
+import Profile from "../../../Pages/profile/Profile";
 import Styles from "../Layout/Layout.module.scss"
 function Layout() {
     return (

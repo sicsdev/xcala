@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from "@mui/material/Container";
-import Styles from "../Pages/lets-start/letStart.module.scss"
+import Styles from "../../Pages/lets-start/letStart.module.scss"
 import Typography from '@mui/material/Typography';
 import { Grid, Link } from "@mui/material";
 function LetStartThree(props) {

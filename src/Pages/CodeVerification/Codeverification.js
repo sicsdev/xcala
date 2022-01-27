@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Container from "@mui/material/Container";
 import { Grid, Button } from "@mui/material";
-import Xcalalogo from "../Xcalalogo";
+import Xcalalogo from "../../components/UI/Xcalalogo";
 import codeverificationstyle from "./Codeverification.module.scss";
-import Backgroundscreen from "../../Backgroundscreen";
+import Backgroundscreen from "../../components/UI/Backgroundscreen";
 import OTPInput, { ResendOTP } from "otp-input-react";
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import { Typography } from "@mui/material";

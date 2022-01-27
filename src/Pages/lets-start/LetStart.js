@@ -2,15 +2,16 @@ import React, { useState } from 'react';
 import Styles from "../lets-start/letStart.module.scss"
 import Container from "@mui/material/Container";
 import { Grid, Link } from "@mui/material";
-import LetStartOne from '../../LetStart/letstartOne';
-import LetStartTwo from '../../LetStart/letstartTwo';
-import LetStartThree from '../../LetStart/letstartThree';
-import LetStartFour from '../../LetStart/letstartFour';
-import LetStartFive from '../../LetStart/letstartFive';
-import LetStartSix from '../../LetStart/letstartSix';
-import LetStartSeven from '../../LetStart/letstartSeven';
-import LetStartEight from '../../LetStart/letstartEight';
-import LetStartNine from '../../LetStart/letstartNine';
+import LetStartOne from '../../components/LetStart/letstartOne';
+import LetStartTwo from '../../components/LetStart/letstartTwo';
+import LetStartThree from '../../components/LetStart/letstartThree';
+import LetStartFour from '../../components/LetStart/letstartFour';
+import LetStartFive from '../../components/LetStart/letstartFive';
+import LetStartSix from '../../components/LetStart/letstartSix';
+import LetStartSeven from '../../components/LetStart/letstartSeven';
+import LetStartEight from '../../components/LetStart/letstartEight';
+import LetStartNine from '../../components/LetStart/letstartNine';
+
 function LetStart() {
 
   const [stepper, setstepper] = useState(1);

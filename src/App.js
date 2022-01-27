@@ -1,20 +1,19 @@
 import "./App.scss";
 import React,{useContext} from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Firstpage from "./components/Pages/Register/Register";
+import Firstpage from "./Pages/Register/Register";
 import "./Global/global.scss";
-import Codeverification from "./components/Pages/CodeVerification/Codeverification";
+import Codeverification from "./Pages/CodeVerification/Codeverification";
 import Success from "./components/UI/Success";
-import Password from "./components/Pages/Password/Password";
-import Login from "./components/Pages/Login/Login";
+import Password from "./Pages/Password/Password";
+import Login from "./Pages/Login/Login";
 import Layout from "./components/Layout/Layout/Layout"
-import Forgetpassword from "./components/Pages/Password/Forgetpassword";
-import Resetpasswordemail from "./components/Pages/Password/Resetpasswordemail";
-import LetStart from "./components/Pages/lets-start/LetStart";
+import Forgetpassword from "./Pages/Password/Forgetpassword";
+import Resetpasswordemail from "./Pages/Password/Resetpasswordemail";
+import LetStart from "./Pages/lets-start/LetStart";
 
 function App() {
   // useContext(Usercontext)
-
   return (
     <div>
       <BrowserRouter>

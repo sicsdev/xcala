@@ -7,8 +7,8 @@ import { useState } from "react";
 import isEmail from "validator/lib/isEmail";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
-import Xcalalogo from "../Xcalalogo";
-import Backgroundscreen from "../../Backgroundscreen";
+import Xcalalogo from "../../components/UI/Xcalalogo";
+import Backgroundscreen from "../../components/UI/Backgroundscreen";
 import { Typography } from "@mui/material";
 
 function Firstpage() {

@@ -2,8 +2,8 @@ import React,{useContext} from 'react';
 import Container from "@mui/material/Container";
 import { Grid, Button, FormControl  } from "@mui/material";
 import "react-phone-number-input/style.css";
-import Xcalalogo from "../Xcalalogo";
-import Backgroundscreen from "../../Backgroundscreen";
+import Xcalalogo from "../../components/UI/Xcalalogo";
+import Backgroundscreen from "../../components/UI/Backgroundscreen";
 import loginstyles from "./Login.module.scss"
 import IconButton from '@mui/material/IconButton';
 import Input from '@mui/material/Input';

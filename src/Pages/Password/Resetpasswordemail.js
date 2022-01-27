@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from "@mui/material/Container";
-import Xcalalogo from '../Xcalalogo';
+import Xcalalogo from "../../components/UI/Xcalalogo";
 import reset from "./Resetpasswordemail.module.scss";
 import { Typography } from '@mui/material';
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import Backgroundscreen from '../Backgroundscreen';
+import Backgroundscreen from "../../components/UI/Backgroundscreen";
 import Container from "@mui/material/Container";
-import Xcalalogo from '../Pages/Xcalalogo';
+import Xcalalogo from "../../components/UI/Xcalalogo";
 import success from "./Success.module.scss";
 import { Grid, Button } from "@mui/material";
 

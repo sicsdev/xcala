@@ -8,7 +8,7 @@ import { fontWeight } from '@mui/system';
 const accordion_body_content = "Prefieres tener inversiones con un nivel de riesgo menor, es decir invertir el 100% de tu dinero en instrumentos más seguros aunque de menor rendimiento."
 function Profile() {
   return (
-    <div className={Styles.page_content}>
+    <div className="page_content">
       <Container sx={{
         maxWidth: "674px !important",
       }}>

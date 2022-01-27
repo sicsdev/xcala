@@ -1,4 +1,5 @@
 import "./App.scss";
+import React,{useContext} from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Firstpage from "./components/Pages/Register/Register";
 import "./Global/global.scss";
@@ -11,6 +12,8 @@ import Forgetpassword from "./components/Pages/Password/Forgetpassword";
 import Resetpasswordemail from "./components/Pages/Password/Resetpasswordemail";
 
 function App() {
+  // useContext(Usercontext)
+
   return (
     <div>
       <BrowserRouter>

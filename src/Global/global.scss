@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap");
-$input-margin: 20px 0;
-$width-100: 100%;
-$pfontfamily: "Poppins", sans-serif;
-$themeColor: #1e22aa;
+@import '/src/Global/sass/variables.scss';
 
 p{
     margin: 0px;
@@ -98,23 +95,7 @@ p {
         color: $themeColor;
     }
 }
-body .button-primary {
-    background: $themeColor;
-    color: white;
-    padding: 17px 47px;
-    border: none;
-}
-.button-primary.Mui-disabled {
-    background: #bfbfbf;
-    color: #ffffff !important;
-}
-
-
 // sandeepcss
-.formbutton {
-    text-align: center;
-}
-
 .backgroundscreen {
     background: rgba(246, 246, 246, 1);
     position: relative;
@@ -128,4 +109,54 @@ body .button-primary {
     right: 0;
     bottom: 0;
     z-index: -1;
+}
+// new
+.h2{
+    // font-family: 'Museo';
+    font-size: $h2;
+    color: $h2-color;
+    line-height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+    font-weight: $fweight;
+}
+.p-center{
+    text-align: $center;
+    margin-bottom: 0.8rem;
+}
+.p-18 {
+    font-family: $pfontfamily;
+    color: $p-color1;
+    font-size: $p-18-fontsize;
+    font-weight: $fweight;
+}
+.p-16{
+    font-family: $pfontfamily;
+    color: $p-color1;
+    font-weight: $fweight;
+    font-size: $p-16-fontsize;
+}
+// button
+.formbutton {
+    text-align: center;
+}
+body .button-primary {
+    background: $themeColor;
+    color: white;
+    width: 212px;
+    height: 60px;
+    border: none;
+    border-radius: 8px;
+    text-transform: capitalize;
+    font-family: $pfontfamily;
+    font-size: $p-18-fontsize;
+    font-weight: $fweight;
+    margin-top: 1.5rem;
+}
+.button-primary.Mui-disabled {
+    background: #bfbfbf;
+    color: #ffffff !important;
 }

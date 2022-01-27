@@ -12,7 +12,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import Box from '@mui/material/Box'; 
+import { Typography } from '@mui/material';
 
 function Login() {
 
@@ -40,10 +40,8 @@ function Login() {
   return (
   <>
     <Backgroundscreen/>
-
         <Container maxWidth="sm">
             <Xcalalogo/>
-
             <div className={loginstyles.form_login}>
             <div className={loginstyles.form_inner}>
             <Grid container maxWidth="sm">
@@ -57,7 +55,6 @@ function Login() {
                       type="email"
                     />
                   </div>
-
         <div className={loginstyles.password_form}>
         <FormControl sx={{ width: '100%' }} variant="outlined">
         <InputLabel htmlFor="standard-adornment-password">Contraseña</InputLabel>
@@ -78,23 +75,23 @@ function Login() {
               </InputAdornment>
             }
           /></FormControl></div>
-
         <div className={loginstyles.pass_text}>
-            <p>¿Olvidaste tu contraseña?</p>
+            <Typography className={loginstyles.p_14} variant="" component="">
+            ¿Olvidaste tu contraseña?
+             </Typography>
         </div>
-
                 </form>
              </Grid>
-
-
           <Grid className="formbutton" item md={12}>
                     <Button className="button-primary">
                     Ingresar
                     </Button>
 
                     <div className={loginstyles.btn_text}>
-                       <p>¿Aún no estás registrado?</p>
-                     </div>
+                     <Typography variant="" component="">
+                     ¿Aún no estás registrado?
+                      </Typography>  
+                      </div>
           </Grid>
           </div>
           </div>

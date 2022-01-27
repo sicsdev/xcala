@@ -30,13 +30,13 @@ function LetStartNine(props) {
       </Grid>
 
       <Grid className={Styles.lets_start_btn} item md={12}>
-        <Link component="button" onClick={Handlestep}>Disminuirá</Link>
+        <Link component="button">Disminuirá</Link>
       </Grid>
       <Grid className={Styles.lets_start_btn} item md={12}>
-        <Link component="button" onClick={Handlestep}>Se mantendrá</Link>
+        <Link component="button">Se mantendrá</Link>
       </Grid>
       <Grid className={Styles.lets_start_btn} item md={12}>
-        <Link component="button" onClick={Handlestep}>Aumentará</Link>
+        <Link component="button">Aumentará</Link>
       </Grid>
     </Grid>
   );

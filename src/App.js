@@ -10,6 +10,7 @@ import Login from "./components/Pages/Login/Login";
 import Layout from "./components/Layout/Layout/Layout"
 import Forgetpassword from "./components/Pages/Password/Forgetpassword";
 import Resetpasswordemail from "./components/Pages/Password/Resetpasswordemail";
+import LetStart from "./components/Pages/lets-start/LetStart";
 
 function App() {
   // useContext(Usercontext)
@@ -26,7 +27,7 @@ function App() {
           <Route exact path="/profile-investor" element={<Layout/>} />  
           <Route exact path="/forgetpassword" element={<Forgetpassword/>} />
           <Route exact path="/resetpassword" element={<Resetpasswordemail/>} />  
-        </Routes>
+          </Routes>
       </BrowserRouter>
     </div>
   );

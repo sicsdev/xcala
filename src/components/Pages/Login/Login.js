@@ -15,9 +15,8 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { Typography } from '@mui/material';
 
 function Login() {
- const value =  useContext(Usercontext);
  
- console.log("value=>", value)
+
     const [values, setValues] = React.useState({
         password: '',
         sergfgh:"",

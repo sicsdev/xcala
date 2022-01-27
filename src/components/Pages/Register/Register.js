@@ -7,9 +7,9 @@ import { useState } from "react";
 import isEmail from "validator/lib/isEmail";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
-import DoneIcon from '@mui/icons-material/Done';
 import Xcalalogo from "../Xcalalogo";
 import Backgroundscreen from "../../Backgroundscreen";
+import { Typography } from "@mui/material";
 
 function Firstpage() {
   const [name, setName] = useState("");
@@ -123,21 +123,19 @@ function Firstpage() {
       <div className={styles.register_wrapper}>
         <Container maxWidth="sm">
           <Grid container maxWidth="sm" spacing={2}>
-            {/* <Grid item md={12}>
-              <div className="xcala-logo">
-                <img src="/assets/images/logo.svg" alt="logo"></img>
-              </div>
-            </Grid> */}
-            <Xcalalogo/>
+             <Xcalalogo/>
             <Grid item md={12} mb={3}>
-              <div className={styles.rectangle_heading}>
+              <div className="h2">
                 <img src="/assets/images/Rectangle.png" alt=""></img>
-                <p>¡Únete a Xcala!</p>
+                <Typography className="h2" variant="" component="">
+                ¡Únete a Xcala!
+                </Typography>
               </div>
-
-              <div className={styles.rectangle_p}>
-                <p>Invierte seguro, invierte con propósito...</p>
-              </div>
+              <div className="p-center">
+              <Typography className="p-18" variant="" component="">
+              Invierte seguro, invierte con propósito...
+            </Typography>
+            </div>
             </Grid>
           </Grid>
           <div className={styles.form_register}>
@@ -158,10 +156,10 @@ function Firstpage() {
                       style={{ paddingTop: "5px" }}
                     ></img>
                     <div className={styles.p1} style={{ paddingLeft: "10px" }}>
-                      <p>
-                        Recibirás en tu correo una clave temporal para ingresar
+                      <Typography className="p-16" variant="" component="">
+                      Recibirás en tu correo una clave temporal para ingresar
                         a tu cuenta de prueba.
-                      </p>
+                      </Typography>
                     </div>
                   </div>
                 </Grid>
@@ -175,10 +173,10 @@ function Firstpage() {
                       style={{ paddingTop: "5px" }}
                     ></img>
                     <div className={styles.p1} style={{ paddingLeft: "10px" }}>
-                      <p>
-                        Define tu perfil de riesgo y revisa nuestras
+                      <Typography className="p-16" variant="" component="">
+                      Define tu perfil de riesgo y revisa nuestras
                         recomendaciones personalizadas.
-                      </p>
+                      </Typography>                      
                     </div>
                   </div>
                 </Grid>
@@ -298,10 +296,10 @@ function Firstpage() {
                     </Grid>
                   </div>
                   <div className={styles.register_input_text}>
-                    <div style={{ display: "flex", alignItems: "flex-start" }}>
+                    <div style={{ display: "flex", marginTop: "3.4rem", alignItems: "flex-start" }}>
                       <Checkbox />
                       <div className="p1" style={{ paddingLeft: "10px" }}>
-                        <p>
+                        <p className="p-16">
                           Acepto los{" "}
                           <span className={styles.greentext}>
                             términos y condiciones del servicio{" "}

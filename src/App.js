@@ -8,30 +8,27 @@ import Success from "./components/UI/Success";
 import Password from "./components/Pages/Password/Password";
 import Login from "./components/Pages/Login/Login";
 import Layout from "./components/Layout/Layout/Layout"
-import LetStart from "./components/Pages/lets-start/LetStart";
-import Usercontextprovider from "./context/Usercontextprovider";
-import Usercontext from './context/userContext';
-import ResponsiveAppBar from "./components/Layout/Header/Header";
+import Forgetpassword from "./components/Pages/Password/Forgetpassword";
+import Resetpasswordemail from "./components/Pages/Password/Resetpasswordemail";
+
 function App() {
   // useContext(Usercontext)
 
   return (
-    <>
-      <Usercontextprovider>
-        <ResponsiveAppBar />
-        <BrowserRouter>
-          <Routes>
-            <Route exact path="/" element={<Firstpage />} />
-            <Route exact path="/codeverification" element={<Codeverification />} />
-            <Route exact path="/success" element={<Success />} />
-            <Route exact path="/password" element={<Password />} />
-            <Route exact path="/login" element={<Login />} />
-            <Route exact path="/profile-investor" element={<Layout />} />
-            <Route exact path="/lets-start" element={<LetStart />} />
-          </Routes>
-        </BrowserRouter>
-      </Usercontextprovider>
-    </>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Firstpage/>} />
+          <Route exact path="/codeverification" element={<Codeverification/>} />
+          <Route exact path="/success" element={<Success/>} />
+          <Route exact path="/password" element={<Password/>} />    
+          <Route exact path="/login" element={<Login/>} />  
+          <Route exact path="/profile-investor" element={<Layout/>} />  
+          <Route exact path="/forgetpassword" element={<Forgetpassword/>} />
+          <Route exact path="/resetpassword" element={<Resetpasswordemail/>} />  
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

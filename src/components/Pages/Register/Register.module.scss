@@ -1,71 +1,29 @@
-$input-margin: 25px 0;
-$width-100: 100%;
-$pfontfamily: "Poppins", sans-serif;
-$themeColor: #1e22aa;
-
+@import '/src/Global/sass/variables.scss';
 .register_wrapper {
-  // background: rgba(246, 246, 246, 1);
-  // position: relative;
-  // z-index: 1;
-  // padding-bottom: 20px;
-
-  // &::after {
-  //   content: "";
-  //   background-image: url(../../../../public/assets/images/layer-login.svg);
-  //   background-repeat: no-repeat;
-  //   padding-bottom: 30px;
-  //   height: 100%;
-  //   position: fixed;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   z-index: -1;
-  // }
-  .rectangle_heading {
-    font-family: $pfontfamily;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 38px;
-    letter-spacing: 0em;
-    text-align: center;
-    display: inline;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    padding-bottom: 12px;
-  }
-  .rectangle_p {
-    text-align: center;
-  }
   .register_input_text {
-    margin: $input-margin;
-    width: $pfontfamily;
+    margin: 25px 0;
     max-width: 333px;
   }
   .register_input_text:nth-child(7) {
-    max-width: 100%;
+    max-width: $width-100;
   }
   .form_register {
     background: #ffffff;
     mix-blend-mode: normal;
     border-radius: 8px;
     padding-bottom: 40px;
+    margin-bottom: 3rem;
     .form_inner {
       max-width: 444px;
       margin: 0 auto;
       padding: 70px 0 0;
-
       .bluebox {
         background: rgba(150, 189, 228, 0.1);
         border-radius: 8px;
-        padding: 16px;
         p {
-          color: rgba(24, 40, 73, 1);
           span {
             span {
-              color: #49a197;
+              color: $green-color;
               font-weight: 500;
             }
           }
@@ -77,15 +35,15 @@ $themeColor: #1e22aa;
     margin-bottom: 12px;
   }
   .greentext {
-    color: #49a197;
+    color: $green-color;
   }
   .textfieldcolorrrr label {
-    color: #1e22aa;;
+    color: $themeColor;
     .MuiInput-root {
       border-bottom: 2px solid red;
     }
   }
   .helperTextcolor{
-      color: #49A197
+      color: $green-color
   }
 }

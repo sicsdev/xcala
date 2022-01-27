@@ -112,12 +112,19 @@ const ResponsiveAppBar = () => {
                 {page}
               </Button>
             ))}
+             <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "white", display: "block" }}
+                className="notification"
+              >
+              <img src={ImagSrc}  alt="icon"></img>
+              </Button>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Remy Sharp" src="/assets/images/Avatar.svg" />
               </IconButton>
             </Tooltip>
             <Menu

@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import Container from "@mui/material/Container";
 import { Grid, Button, FormControl  } from "@mui/material";
 import "react-phone-number-input/style.css";
@@ -13,9 +13,11 @@ import TextField from '@mui/material/TextField';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import Box from '@mui/material/Box'; 
-
+import Usercontext from '../../../context/userContext';
 function Login() {
-
+ const value =  useContext(Usercontext);
+ 
+ console.log("value=>", value)
     const [values, setValues] = React.useState({
         password: '',
         sergfgh:"",

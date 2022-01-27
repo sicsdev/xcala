@@ -15,6 +15,15 @@ button{
 body {
     margin: 0;
     font-family: $pfontfamily;
+    .PhoneInputInput {
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+        outline: white !important;
+      }
+      .PhoneInput:focus-visible {
+        outline: white !important;
+        border: none !important;
+    }
 }
 .xcala-logo {
     width: 100%;

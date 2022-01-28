@@ -3,10 +3,18 @@
   .register_input_text {
     margin: 25px 0;
     max-width: 333px;
+    p#standard-basic-helper-text {
+      display: flex;
+      gap: 6px;
+     svg{
+        width: 18px;
+     }
+    }
   }
   .register_input_text:nth-child(7) {
     max-width: $width-100;
-  }
+}
+
   .form_register {
     background: #ffffff;
     mix-blend-mode: normal;
@@ -47,4 +55,3 @@
       color: $green-color
   }
 }
-

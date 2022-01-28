@@ -1,0 +1,47 @@
+.account_card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    .user_row {
+        .user_grid {
+            display: flex;
+            padding: 20px;
+            .user_img {
+                img {
+                    width: 60px;
+                }
+            }
+            .user_content {
+                margin-left: 20px;
+            }
+        }
+    }
+    .account_heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h5 {
+            font-weight: 600;
+        }
+        a {
+            font-size: 14px;
+            text-decoration: none;
+            svg {
+                width: 15px;
+                position: relative;
+                top: 6px;
+                right: 3px;
+            }
+        }
+    }
+    .account_detail_main{
+        max-width: 291px;
+        .fields{
+            padding: 10px 0;
+            button{
+                width: 100%;
+            }
+        }
+
+    }
+}

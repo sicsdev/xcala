@@ -1,14 +1,17 @@
 import React from "react";
-import "react-phone-number-input/style.css";
+
 import ResponsiveAppBar from "../Header/Header"
 import Profile from "../../../Pages/profile/Profile";
-import Styles from "../Layout/Layout.module.scss"
+import MyAccount from "../../../Pages/my-account/MyAccount";
+import Footer from "../Footer/Footer";
 function Layout() {
     return (
-        <div className={Styles.layout_main}>
+        <>
             < ResponsiveAppBar />
             <Profile />
-        </div>
+            {/* <MyAccount /> */}
+            {/* <Footer /> */}
+        </>
     );
 }
 

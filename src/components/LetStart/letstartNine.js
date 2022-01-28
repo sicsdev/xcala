@@ -1,21 +1,20 @@
 import React from 'react';
-import Container from "@mui/material/Container";
 import Styles from "../../Pages/lets-start/letStart.module.scss"
 import Typography from '@mui/material/Typography';
 import { Grid, Link } from "@mui/material";
 function LetStartNine(props) {
   props.setSteppercomp("comp9")
 
-  const Handlestep = () => {
-    props.setstepper(1)
-    props.setSteppercomp("comp10")
-    props.setSteppercolor(first => {
-      return {
-        ...first,
-        comp1: true
-      }
-    })
-  }
+  // const Handlestep = () => {
+  //   props.setstepper(1)
+  //   props.setSteppercomp("comp10")
+  //   props.setSteppercolor(first => {
+  //     return {
+  //       ...first,
+  //       comp1: true
+  //     }
+  //   })
+  // }
   return (
 
     <Grid container maxWidth="sm" spacing={2}>

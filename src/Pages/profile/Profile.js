@@ -3,8 +3,7 @@ import Styles from "../profile/Profile.module.scss"
 import Container from "@mui/material/Container";
 import Typography from '@mui/material/Typography';
 import CustomizedAccordions from '../../components/UI/accordion';
-import { Grid, TextField, Select, Checkbox, Button } from "@mui/material";
-import { fontWeight } from '@mui/system';
+import { Grid } from "@mui/material";
 const accordion_body_content = "Prefieres tener inversiones con un nivel de riesgo menor, es decir invertir el 100% de tu dinero en instrumentos más seguros aunque de menor rendimiento."
 function Profile() {
   return (

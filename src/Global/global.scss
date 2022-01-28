@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap");
 @import "/src/Global/sass/variables.scss";
 
-p {
+
+
+p{
     margin: 0px;
 }
 button {
@@ -195,7 +197,6 @@ body .button-secondary-outline {
     color: #ffffff !important;
 }
 
-// sandeepcss
 .backgroundscreen {
     background: rgba(246, 246, 246, 1);
     position: relative;
@@ -210,9 +211,7 @@ body .button-secondary-outline {
     bottom: 0;
     z-index: -1;
 }
-// new
-.h2 {
-    // font-family: 'Museo';
+.h2{
     font-size: $h2;
     color: $h2-color;
     line-height: 38px;
@@ -238,6 +237,12 @@ body .button-secondary-outline {
     color: $p-color1;
     font-weight: $fweight;
     font-size: $p-16-fontsize;
+}
+.p-14{
+    font-family: $pfontfamily;
+    color: $p-color1;
+    font-weight: $fweight;
+    font-size: 14px;
 }
 // button
 .formbutton {
@@ -271,3 +276,18 @@ body .button-light {
     background: #bfbfbf;
     color: #ffffff !important;
 }
+.password-hint-wrapper {
+    display: flex;
+}   
+
+
+//helpertextof register
+p#standard-basic-helper-text {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+p#standard-basic-helper-text svg{
+      width: 18px;
+   }
+  

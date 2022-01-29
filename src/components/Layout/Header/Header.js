@@ -47,7 +47,10 @@ const ResponsiveAppBar = () => {
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
             <div className="xcala-logo-layout">
-              <img src="/assets/images/logo.svg" alt="logo"></img>
+            <Link to="/my-account">
+            <img src="/assets/images/logo.svg" alt="logo"></img>
+            </Link>
+             
             </div>
           </Typography>
 

@@ -10,7 +10,7 @@ function Private() {
     const router = useLocation()
     return (
         <>
-            {router.pathname == "/lets-start" || router.pathname == "/profile-investor" || router.pathname == "/my-account" && (
+            {(router.pathname === "/lets-start" || router.pathname === "/profile-investor" || router.pathname === "/my-account") && (
                 <ResponsiveAppBar />)}
             <Routes>
                 <Route exact path="/profile-investor" element={<Profile />} />

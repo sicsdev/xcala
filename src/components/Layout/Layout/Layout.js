@@ -7,10 +7,8 @@ import Footer from "../Footer/Footer";
 function Layout() {
     return (
         <>
-            < ResponsiveAppBar />
-            <Profile />
-            {/* <MyAccount /> */}
-            {/* <Footer /> */}
+            <MyAccount />
+            <Footer />
         </>
     );
 }

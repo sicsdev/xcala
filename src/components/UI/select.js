@@ -1,6 +1,6 @@
 import React from 'react';
 import InputLabel from '@mui/material/InputLabel';
-import {Select, TextField } from '@mui/material';
+import {Select } from '@mui/material';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 function Customselect(props) {
@@ -10,8 +10,9 @@ function Customselect(props) {
       <InputLabel id={props.Labelid}>{props.placholder}</InputLabel>
         <Select
           labelId={props.Selectid}
-          id="demo-controlled-open-select"
+          id={props.id}
           label={props.label}
+          onChange= {props.onChange}
         >
           <MenuItem value={10}>{props.menuItems}</MenuItem>
         </Select>

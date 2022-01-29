@@ -1,3 +1,4 @@
+$themeColor2: #49a197;
 .account_card {
     background: #ffffff;
     border-radius: 16px;
@@ -26,6 +27,7 @@
         a {
             font-size: 14px;
             text-decoration: none;
+            color: $themeColor2;
             svg {
                 width: 15px;
                 position: relative;
@@ -34,14 +36,27 @@
             }
         }
     }
-    .account_detail_main{
+    .account_detail_main {
         max-width: 291px;
-        .fields{
+        .fields {
             padding: 10px 0;
-            button{
+            button {
                 width: 100%;
             }
         }
-
+        .readable_field {
+            display: flex;
+            justify-content: space-between;
+            padding: 16px 0;
+            border-bottom: 1px solid #F2F2F2;
+            &:last-child{
+                border:none;
+            }
+            p{
+                &:last-child{
+                    text-align: right;
+                }
+            }
+        }
     }
 }

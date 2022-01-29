@@ -16,6 +16,12 @@ button {
 .light-grey {
     color: $light-grey;
 }
+.light-blue {
+    color: $p-color1;
+}
+.dark-green {
+    color: $themeColor2;
+}
 body {
     margin: 0;
     font-family: $pfontfamily;
@@ -191,6 +197,7 @@ body .button-secondary-outline {
     font-family: $pfontfamily;
     font-size: $p-18-fontsize;
     font-weight: $fweight;
+    cursor: pointer;
 }
 .button-primary.Mui-disabled {
     background: #bfbfbf;
@@ -258,6 +265,7 @@ body .button-primary {
     font-family: $pfontfamily;
     font-size: $p-18-fontsize;
     font-weight: $fweight;
+    cursor: pointer;
     margin-top: 1.5rem;
 }
 body .button-light {
@@ -269,7 +277,8 @@ body .button-light {
     text-transform: capitalize;
     font-family: $pfontfamily;
     font-size: $p-18-fontsize;
-    font-weight: $fweight;
+    font-weight: $fweight2;
+    cursor: pointer;
     margin-top: 1.5rem;
 }
 .button-primary.Mui-disabled {

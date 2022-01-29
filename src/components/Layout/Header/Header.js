@@ -9,7 +9,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import Styles from "../Header/Header.module.scss";
 import ImagSrc from "../../../notification.svg";
@@ -112,21 +111,22 @@ const ResponsiveAppBar = () => {
                 {page}
               </Button>
             ))}
-             <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-                className="notification"
-              >
-              <img src={ImagSrc}  alt="icon"></img>
-              </Button>
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: "white", display: "block" }}
+              className={Styles.notification}
+            >
+              <img src={ImagSrc} alt="icon"></img>
+            </Button>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/assets/images/Avatar.svg" />
-              </IconButton>
-            </Tooltip>
+            <div className={Styles.dropdown_profile} onClick={handleOpenUserMenu}>
+                <IconButton  sx={{ p: 0 }}>
+                  <Avatar alt="Remy Sharp" src="/assets/images/Avatar.svg" />
+                </IconButton>
+              Mi cuenta
+            </div>
             <Menu
               sx={{ mt: "45px" }}
               id="menu-appbar"

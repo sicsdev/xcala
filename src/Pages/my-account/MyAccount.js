@@ -9,14 +9,21 @@ import DataPersonal from '../../components/data-personal/Data-Personal';
 import ContactInfo from '../../components/contact-information/Contact-Information';
 import BankInfo from '../../components/bank-infomation/Bank-Information';
 function MyAccount() {
-  const [bankDetail, setBandetail] = useState(true)
-
-  const showBankDetail = () => {
-    setBandetail(false);
+  const [personalData, setpersonalData] = useState(true)
+  const [contactData, setContactData] = useState(true)
+  const [bankData, setBanData] = useState(true)
+  const showBankData = () => {
+    setBanData((prevState) => !prevState);
+  }
+  const editPersonalData = () => {
+    setpersonalData((prevState) => !prevState)
+  }
+  const openContact = () => {
+    setContactData((prevState) => !prevState)
   }
   return <div className="page_content">
     <Container maxWidth="lg">
-      <Grid container md={12} mb={5}>
+      <Grid container item md={12} mb={5}>
         <Grid item md={12}>
           <div className={Styles.rectangle_heading}>
             <Typography
@@ -29,7 +36,7 @@ function MyAccount() {
         </Grid>
       </Grid>
       <div className={Styles.account_card}>
-        <Grid container spacing={5} md={12} mb={3}>
+        <Grid container item spacing={5} md={12} mb={3}>
           <Grid item md={12} mt={3}>
             <div className={Styles.user_row}>
               <div className={Styles.user_grid}>
@@ -65,11 +72,12 @@ function MyAccount() {
                 <Link
                   className='light-grey'
                   style={{ fontSize: "18" }}
+                  onClick={editPersonalData}
                 >
                   <EditIcon />Editar
                 </Link>
               </div>
-              <DataPersonal />
+              <DataPersonal personalData={personalData} setpersonalData={setpersonalData} />
             </div>
           </Grid>
           <Grid item md={4} mt={3}>
@@ -84,11 +92,12 @@ function MyAccount() {
                 <Link
                   className='light-grey'
                   style={{ fontSize: "18" }}
+                  onClick={openContact}
                 >
                   <EditIcon />Editar
                 </Link>
               </div>
-              <ContactInfo />
+              <ContactInfo contactData={contactData} setContactData={setContactData} />
             </div>
           </Grid>
           <Grid item md={4} mt={3}>
@@ -107,7 +116,7 @@ function MyAccount() {
                   <EditIcon />Editar
                 </Link>
               </div>
-              {bankDetail ?
+              {bankData ?
                 <div className=''>
                   <div className={Styles.fields}>
                     <Typography
@@ -116,7 +125,7 @@ function MyAccount() {
                     </Typography>
                   </div>
                   <div className={Styles.fields} >
-                    <Button type="button" className="button-light " onClick={showBankDetail}>Descartar</Button>
+                    <Button type="button" className="button-light " onClick={showBankData}>Agregar mi banco</Button>
                   </div>
                 </div>
                 :

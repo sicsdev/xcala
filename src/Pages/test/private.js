@@ -2,7 +2,7 @@
 import React from 'react';
 import { Route, Routes, useLocation, useRoutes } from "react-router-dom";
 import Layout from "../../components/Layout/Layout/Layout"
-import LetStart from "../../Pages/lets-start/LetStart";
+import LetStart from "../lets-start/LetStart";
 import ResponsiveAppBar from "../../components/Layout/Header/Header";
 import MyAccount from "../my-account/MyAccount";
 import Profile from '../profile/Profile';

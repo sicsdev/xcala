@@ -1,10 +1,10 @@
 
 import React from 'react';
 import { Route, Routes } from "react-router-dom";
-import Codeverification from "../../Pages/CodeVerification/Codeverification";
+import Codeverification from "../CodeVerification/Codeverification";
 import Success from "../../components/UI/Success";
 import Password from "../Password/Password";
-import Login from "../../Pages/login/Login";
+import Login from "../Login/Login";
 import Forgetpassword from "../Password/Forgetpassword";
 import Resetpasswordemail from "../Password/Resetpasswordemail";
 import Firstpage from "../Register/Register";

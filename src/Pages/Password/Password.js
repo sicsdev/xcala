@@ -16,7 +16,7 @@ import DoneIcon from "@mui/icons-material/Done";
 import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "react-router-dom";
 
-function Password() {
+const Password = () => {
   // const [values, setValues] = React.useState({
   //     password: '',
   //     sergfgh:"",
@@ -50,8 +50,6 @@ function Password() {
       setError("Password do not match");
       setInterval(() => setError(""), 3000);
     }
-
-    
   };
 
   const handleChange2 = (event) => {
@@ -277,6 +275,6 @@ function Password() {
       </Container>
     </>
   );
-}
+};
 
 export default Password;

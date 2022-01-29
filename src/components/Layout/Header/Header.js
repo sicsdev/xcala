@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -108,7 +109,11 @@ const ResponsiveAppBar = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                {page}
+                {page === "Inicio" ? (
+                  <Link to="/lets-start">{page}</Link>
+                ) : (
+                  <Link to="/my-account">{page}</Link>
+                )}
               </Button>
             ))}
             <Button

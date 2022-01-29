@@ -1,17 +1,18 @@
 import React from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import Container from "@mui/material/Container";
-import { Grid, TextField, Checkbox, Button } from "@mui/material";
+import { Grid, TextField, Select, Checkbox, Button, InputLabel, Input, MenuItem, Typography, } from "@mui/material";
 import styles from "./Register.module.scss";
 import { useState } from "react";
 import isEmail from "validator/lib/isEmail";
 import "react-phone-number-input/style.css";
-import PhoneInput from "react-phone-number-input";
 import Xcalalogo from "../../components/UI/Xcalalogo";
 import Backgroundscreen from "../../components/UI/Backgroundscreen";
-import { Typography } from "@mui/material";
 import DoneIcon from "@mui/icons-material/Done";
-import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from "@mui/icons-material/Close";
+import { FormControl } from "@mui/material";
+import mobileCodes from "../../data/mobileCodes.json";
+import { Link } from "react-router-dom";
 
 function Firstpage() {
   const [name, setName] = useState("");
@@ -125,6 +126,13 @@ function Firstpage() {
       setEmailSuccess("");
       return;
     }
+  };
+
+  //Phone-number
+  const [country, setCountry] = React.useState("");
+
+  const phonehandleChange = (event) => {
+    setCountry(event.target.value);
   };
 
   return (
@@ -287,36 +295,45 @@ function Firstpage() {
                         FormHelperTextProps={{
                           className: styles.helperTextcolor || "",
                         }}
-                        helperText={errormsg ? [logo4, errormsg] :[logo4, emailSuccess]}
+                        helperText={
+                          errormsg ? [logo4, errormsg] : [logo4, emailSuccess]
+                        }
                       />
                     </div>
+                    {/* Phone_field */}
                     <div className={styles.register_input_text}>
-                      <Grid container maxWidth="sm" spacing={2}>
-                        {/* <Grid item md={3} style={{ paddingTop: "0" }}>
-                        <TextField
-                          fullWidth
-                          id="standard-basic"
-                          label="Email"
-                          variant="standard"
-                        />
-                      </Grid> */}
-                        <Grid item md={12} style={{ paddingTop: "40px" }}>
-                          {/* <TextField
-                          fullWidth
-                          id="standard-basic"
-                          label=""
-                          variant="standard"
-                        /> */}
-                          <PhoneInput
-                            international
-                            countrySelectProps={{ unicodeFlags: false }}
-                            defaultCountry="RU"
-                            value={value}
-                            onChange={setValue}
+                      <Grid container maxWidth="sm" spacing={5}>
+                        <Grid item md={3}>
+                          <FormControl variant="standard" sx={{ minWidth: 80 }}>
+                            <InputLabel className={styles.phonecolor} id="demo-simple-select-filled-label">
+                              Celular
+                            </InputLabel>
+                            <Select
+                              labelId="demo-simple-select-filled-label"
+                              id="demo-simple-select-filled"
+                              value={"+93"}
+                              onChange={phonehandleChange}
+                            >
+                              {mobileCodes.map((ele, key) => (
+                                <MenuItem key={key} value={ele.dial_code}>
+                                  {ele.dial_code}
+                                </MenuItem>
+                              ))}
+                            </Select>
+                          </FormControl>
+                        </Grid>
+                        <Grid item md={9} style={{ paddingTop: "56px" }}>
+                          <Input
+                            fullWidth
+                            id="standard-basic"
+                            label=""
+                            type="number"
+                            variant="standard"
                           />
                         </Grid>
                       </Grid>
                     </div>
+
                     <div className={styles.register_input_text}>
                       <div
                         style={{
@@ -338,11 +355,14 @@ function Firstpage() {
                       </div>
                     </div>
                     <Grid className="formbutton" item md={12}>
-                      <Button className="button-primary" disabled>
+                      {/* <Button className="button-primary" disabled>
                         Continuar
-                      </Button>
+                        </Button>  */}
+                        <Link to="/codeverification" className="button-primary">
+                        Continuar
+                        </Link>                    
                     </Grid>
-                  </form>
+                  </form> 
                 </Grid>
               </div>
             </div>

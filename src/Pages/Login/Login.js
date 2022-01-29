@@ -13,6 +13,7 @@ import TextField from '@mui/material/TextField';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 function Login() {
     const [values, setValues] = React.useState({
@@ -54,6 +55,7 @@ function Login() {
                       type="email"
                     />
                   </div>
+                  
         <div className={loginstyles.password_form}>
         <FormControl sx={{ width: '100%' }} variant="outlined">
         <InputLabel htmlFor="standard-adornment-password">Contraseña</InputLabel>
@@ -76,22 +78,29 @@ function Login() {
           /></FormControl></div>
         <div className={loginstyles.pass_text}>
             <Typography className={loginstyles.p_14} variant="" component="">
-            ¿Olvidaste tu contraseña?
+            <Link to="/forgetpassword">¿Olvidaste tu contraseña?</Link> 
              </Typography>
         </div>
-                </form>
-             </Grid>
-          <Grid className="formbutton" item md={12}>
-                    <Button className="button-primary">
+        <Grid className="formbutton" item md={12}>
+                    {/* <Button className="button-primary">
                     Ingresar
+                    </Button> */}
+                    <Button className="button-primary">
+                    <Link style={{color:"#ffffff"}} to="/profile-investor">
+                    Ingresar
+                    </Link>
                     </Button>
+                    
 
                     <div className={loginstyles.btn_text}>
                      <Typography variant="" component="">
-                     ¿Aún no estás registrado?
+                     <Link to="/">¿Aún no estás registrado?</Link> 
                       </Typography>  
                       </div>
           </Grid>
+                </form>
+             </Grid>
+
           </div>
           </div>
         </Container>  

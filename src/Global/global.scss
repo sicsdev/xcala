@@ -258,7 +258,7 @@ body .button-secondary-outline {
 body .button-primary {
     background: $themeColor;
     color: white;
-    padding: 17px 30px;
+    padding: 17px 40px;
     border: none;
     border-radius: 8px;
     text-transform: capitalize;
@@ -267,6 +267,7 @@ body .button-primary {
     font-weight: $fweight;
     cursor: pointer;
     margin-top: 1.5rem;
+    text-decoration: auto;  
 }
 body .button-light {
     background: $themeColor3;
@@ -299,4 +300,11 @@ p#standard-basic-helper-text {
 p#standard-basic-helper-text svg{
       width: 18px;
    }
-  
+   a {
+    text-decoration: auto;
+}
+
+// phoneno. scroller
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiMenu-paper.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
+    height: 223px;
+  } 

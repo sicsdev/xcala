@@ -7,6 +7,7 @@ import Backgroundscreen from "../../components/UI/Backgroundscreen";
 import OTPInput, { ResendOTP } from "otp-input-react";
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import { Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 //custom otp button
 // const renderButton = (buttonProps) => {
@@ -54,7 +55,10 @@ function Codeverification() {
           <div>
             {/* <ResendOTP className={codeverificationstyle.otpbutton} onResendClick={() => console.log("Resend clicked")} /> */}
             {/* <ResendOTP renderButton={renderButton} /> */}
-            <Button className={codeverificationstyle.otpbutton} variant="outlined" startIcon={<MailOutlineIcon />}>Reenviar código</Button>
+            {/* <Button className={codeverificationstyle.otpbutton} variant="outlined" startIcon={<MailOutlineIcon />}>Reenviar código</Button> */}
+           <Button className={codeverificationstyle.otpbutton} variant="outlined" startIcon={<MailOutlineIcon />}>
+          <Link to="/password">Reenviar código</Link>
+          </Button> 
           </div>
         </div>
       </Container>

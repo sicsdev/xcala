@@ -13,7 +13,8 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import { Typography } from "@mui/material";
 import DoneIcon from "@mui/icons-material/Done";
-import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from "@mui/icons-material/Close";
+import { Link } from "react-router-dom";
 
 function Password() {
   // const [values, setValues] = React.useState({
@@ -23,8 +24,12 @@ function Password() {
   //   });
   // / statevariable password validor
   const [showPassword, setShowPassword] = useState(false);
+  const [showconfirmPassword, setShowconfirmPassword] = useState(false);
+
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   // const [passwordHint, setPasswordHint] = useState(false);
   const [containsUL, setContainsUL] = useState(false); // uppercase letter
@@ -32,18 +37,33 @@ function Password() {
   const [containsN, setContainsN] = useState(false); // number
   const [contains8C, setContains8C] = useState(false); // min 8 characters
 
-  const [confirmpassword, setConfirmpassword] = React.useState("");
+  // const [confirmpassword, setConfirmpassword] = React.useState("");
 
   // const handleChange = (prop) => (event) => {
   //   setValues({ ...values, [prop]: event.target.value });
   // };
 
-  // const handleChange2 =(event) => {
-  //   setConfirmpassword(event.target.value)
-  // };
+  //login logic
+  const handleLogin = (e) => {
+    e.preventDefault();
+    if (password != confirmPassword) {
+      setError("Password do not match");
+      setInterval(() => setError(""), 3000);
+    }
+
+    
+  };
+
+  const handleChange2 = (event) => {
+    setConfirmPassword(event.target.value);
+  };
 
   const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
+  };
+
+  const handleClickShowconfirmPassword = (event) => {
+    setShowconfirmPassword(!showconfirmPassword);
   };
 
   // const handleMouseDownPassword = (event) => {
@@ -59,7 +79,6 @@ function Password() {
 
   const validatePassword = (event) => {
     let passwordOne = event.target.value;
-    console.log("rfsd>", passwordOne);
     setPassword(passwordOne);
 
     // setPasswordHint(true);
@@ -137,10 +156,15 @@ function Password() {
                       <Grid item md={12}>
                         <div key={key}>
                           <div className={passwordstyles.blueboxsection}>
-                            {password.length == 0 ? <img style={{ paddingRight: "9px" }}
-                              className={passwordstyles.i}
-                              src="/assets/images/blankpassword.png"
-                            ></img>  :(  <CloseIcon style={{ color: "#D12D35" }}/>) }
+                            {password.length == 0 ? (
+                              <img
+                                style={{ paddingRight: "9px" }}
+                                className={passwordstyles.i}
+                                src="/assets/images/blankpassword.png"
+                              ></img>
+                            ) : (
+                              <CloseIcon style={{ color: "#D12D35" }} />
+                            )}
 
                             <div style={{ paddingLeft: "11px" }}>
                               <Typography
@@ -155,8 +179,7 @@ function Password() {
                         </div>
                       </Grid>
                     );
-                  } 
-                  else {
+                  } else {
                     return (
                       <div key={key}>
                         <div className={passwordstyles.blueboxsection}>
@@ -179,6 +202,7 @@ function Password() {
             </Grid>
 
             {/* passwordfield */}
+            {error ? <span>{error}</span> : null}
             <div className={passwordstyles.password_form}>
               <FormControl sx={{ m: 1, width: "70%" }} variant="outlined">
                 <InputLabel htmlFor="standard-adornment-password">
@@ -204,34 +228,47 @@ function Password() {
                 />
               </FormControl>
 
-              <FormControl style={{marginTop:"2rem"}} sx={{ m: 1, width: '70%' }} variant="outlined">
-
-              <InputLabel htmlFor="standard-adornment-password2">Contraseña</InputLabel>
-          <Input
-            id="standard-adornment-password2"
-            type=  'password'
-            // value={confirmpassword}
-            // onChange={handleChange2}
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility2"
-                  // onClick={handleClickShowPassword}
-                  // onMouseDown={handleMouseDownPassword}
-                >
-                  {confirmpassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            }
-          />   
-
+              {/* confirmpassword */}
+              <FormControl
+                style={{ marginTop: "2rem" }}
+                sx={{ m: 1, width: "70%" }}
+                variant="outlined"
+              >
+                <InputLabel htmlFor="standard-adornment-password2">
+                  Contraseña
+                </InputLabel>
+                <Input
+                  id="standard-adornment-password2"
+                  type={showconfirmPassword ? "text" : "password"}
+                  value={confirmPassword}
+                  onChange={handleChange2}
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <IconButton
+                        aria-label="toggle password visibility2"
+                        // onMouseDown={handleMouseDownPassword}
+                        onClick={handleClickShowconfirmPassword}
+                      >
+                        {showconfirmPassword ? (
+                          <VisibilityOff />
+                        ) : (
+                          <Visibility />
+                        )}
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                />
               </FormControl>
               <div className={passwordstyles.btnn}>
                 <Grid className="formbutton" item md={12}>
-                  <Button className="button-primary" disabled>
+                  {/* <Button className="button-primary" onClick={handleLogin}>
                     Crear<span style={{ color: "transparent" }}>.</span>
                     contraseña
-                  </Button>
+                  </Button> */}
+                  <Link to="/success" className="button-primary">
+                    Crear<span style={{ color: "transparent" }}>.</span>
+                    contraseña
+                  </Link>
                 </Grid>
               </div>
             </div>

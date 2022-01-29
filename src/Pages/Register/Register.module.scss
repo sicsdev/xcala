@@ -13,6 +13,7 @@
   }
   .register_input_text:nth-child(7) {
     max-width: $width-100;
+    margin-bottom: 3.5rem;
 }
 
   .form_register {
@@ -54,4 +55,7 @@
   .helperTextcolor{
       color: $green-color
   }
+}
+.phonecolor {
+  color: #1E22AA !important;
 }

@@ -7,6 +7,7 @@ import Backgroundscreen from "../../components/UI/Backgroundscreen";
 import forgetpasswordstyles from "./Forgetpassword.module.scss"
 import TextField from '@mui/material/TextField';
 import { Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 function Forgetpassword() {
   return (
@@ -40,9 +41,12 @@ function Forgetpassword() {
                   </div>
                 </form>
           <Grid className="formbutton" item md={12}>
-                    <Button className="button-primary">
+                    {/* <Button className="button-primary">
                     Enviar correo
-                    </Button>
+                    </Button> */}
+                    <Link to="/resetpassword" className="button-primary">
+                    Enviar correo
+                    </Link>
           </Grid>
           </div>
           </div>

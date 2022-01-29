@@ -4,6 +4,7 @@ import Container from "@mui/material/Container";
 import Xcalalogo from "../../components/UI/Xcalalogo";
 import success from "./Success.module.scss";
 import { Grid, Button } from "@mui/material";
+import { Link } from 'react-router-dom';
 
 function Success() {
   return( 
@@ -18,12 +19,17 @@ function Success() {
               <p>¡Cuenta creada exitosamente!</p>
           </div>
           <Grid className="formbutton" item md={12}>
-                    <Button className="button-primary">
+                    {/* <Button className="button-primary">
                     Ingresar a Xcala
-                    </Button>
+                    </Button> */}
+                    <Link to="/login" className="button-primary">
+                     Ingresar a Xcala 
+                    </Link> 
           </Grid>
           <div className={success.completetext}>
-              <p>Completar tu registro</p>
+             <Link to="/">
+             <p>Completar tu registro</p>
+             </Link> 
           </div>
           </div>
                  </Container>

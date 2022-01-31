@@ -3,10 +3,10 @@ import React from 'react';
 import { Route, Routes } from "react-router-dom";
 import Codeverification from "../CodeVerification/Codeverification";
 import Success from "../../components/UI/Success";
-import Password from "../Password/Password";
-import Login from "../Login/Login";
-import Forgetpassword from "../Password/Forgetpassword";
-import Resetpasswordemail from "../Password/Resetpasswordemail";
+import Password from "../password/Password";
+import Login from "../login/Login";
+import Forgetpassword from "../password/Forgetpassword";
+import Resetpasswordemail from "../password/Resetpasswordemail";
 import Firstpage from "../Register/Register";
 function Public() {
   return (

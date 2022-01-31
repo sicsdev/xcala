@@ -1,12 +1,11 @@
-import {useContext} from "react"
-import Usercontext from "../../context/userContext";
-function Checkbox() {
-  const {value, name } = useContext(Usercontext)
+import * as React from 'react';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+function Checkbox(props) {
   return (
     <div>
       <FormGroup>
-        <FormControlLabel control={<Checkbox defaultChecked />} label="Label" />
-        <FormControlLabel disabled control={<Checkbox />} label="Disabled" />
+        <FormControlLabel control={<Checkbox/>} />
       </FormGroup>
 
     </div>

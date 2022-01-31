@@ -115,7 +115,7 @@ const ResponsiveAppBar = () => {
                 {page === "Inicio" ? (
                   <Link to="/lets-start">{page}</Link>
                 ) : (
-                  <Link to="/my-account">{page}</Link>
+                  <Link to="/products">{page}</Link>
                 )}
               </Button>
             ))}

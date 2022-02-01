@@ -38,6 +38,11 @@
       .bluebox {
         background: rgba(150, 189, 228, 0.1);
         border-radius: 8px;
+        @media (max-width: $mobile) {
+          width: 100%;
+          margin-left: 0;
+        }
+      
         p {
           span {
             span {

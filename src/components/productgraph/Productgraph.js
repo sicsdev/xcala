@@ -1,12 +1,12 @@
 import React from 'react';
-import { Grid } from '@mui/material';
+import { Grid ,Link} from '@mui/material';
 import { Typography } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import { Button } from '@mui/material';
 import productgraphstyles from './Productgraph.module.scss'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Charts from './Chart';
 import { display } from '@mui/system';
 
@@ -43,10 +43,10 @@ function productgraph() {
 
         <CardActions>
           <Grid className="formbutton" item md={12}>
-            <Button style={{ marginTop: "0px", width: "100%" }} className="button-primary">
+            <Link style={{display:'block', height:'auto', marginTop: "0px" }} className="button-primary">
               Invertir
-            </Button>
-            <Button style={{ width: "100%", background: "#F4F4FB", color: "#1E22AA", fontWeight: "600", marginTop: "0" }} className="button-primary">
+            </Link>
+            <Button style={{ width: "100%", background: "#F4F4FB", color: "#1E22AA", fontWeight: "600", marginTop: "10px" }} className="button-primary">
               Más información
             </Button>
           </Grid>

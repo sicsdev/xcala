@@ -1,5 +1,5 @@
 @import "/src/Global/sass/variables.scss";
-.login_logo{
+.login_logo {
     @media (max-width: $mobile) {
         padding-top: 50px;
     }
@@ -20,11 +20,15 @@
         max-width: 326px;
         form {
             width: 100% !important;
-            button {
-                @media (max-width: $mobile) {
-                    width: 100%;
+            .continue_btn {
+                a {
+                    @media (max-width: $mobile) {
+                        display: block;
+                        height: auto;
+                    }
                 }
             }
+
             .btn_text {
                 a {
                     @media (max-width: $mobile) {

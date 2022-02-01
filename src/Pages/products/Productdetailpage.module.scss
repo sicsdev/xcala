@@ -1,0 +1,84 @@
+@import "/src/Global/sass/variables.scss";
+
+.productdetail{
+    background: #F2F2F2;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+
+.wrapper{
+    background: #fff;
+    border-radius: 20px;
+    padding: 2.5rem;
+    .heading{
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        position: relative;
+
+        .h2{
+        font-family: $pfontfamily;
+        font-style: normal;
+        font-weight: $fweight2;
+        font-size: 24px;
+        line-height: 27px;
+        }
+    }
+
+    .link{
+        margin-top: 0.2rem;
+        margin-bottom: 1rem;
+        display: flex;
+        gap: 10px;
+        align-content: center;
+        text-align: center;
+        margin-left: 3.6rem;
+
+        .link1, .link2{
+            padding: 3px 16px;
+            border-radius: 39px;
+            line-height: 25px;
+            font-family: $pfontfamily;
+            margin-bottom: 0.8rem;
+        }
+        .link1{
+
+            background: #E7F3FF;
+            font-size: 14px;    
+            color:#587BC8;
+            ;
+        }
+        .link2{
+            font-size: 12px;
+            background: #EDFCF9;
+            color: #49A197;
+        }
+    }
+    .btn1{
+        position: absolute;
+        margin-top: 0px;
+        right: 145px;
+        top: 70px;
+    }
+
+    .p{
+        margin-top: 3.2rem;
+        margin-bottom: 3.2rem;
+        width: 880px;
+        .fadetext{
+            color: #808080;
+            font-size: $p-18-fontsize;
+            line-height: 30px;
+        }
+    }
+    .pdf_section{
+        margin-top: 4.5rem;
+        background: linear-gradient(359.32deg, #F1F4F9 -62.97%, rgba(241, 244, 249, 0) 189.05%);
+        border-radius: 8px;
+        padding: 30px 20px;
+        .doc_head{
+            margin-bottom: 1rem;
+        }
+
+    }
+}
+}

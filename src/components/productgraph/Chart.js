@@ -4,59 +4,54 @@ function Charts() {
   const [options, setOptions] = useState({
     chart: {
       id: "apexchart-example",
-      toolbar: {
+      foreColor: 'red',
+      toolbar: {  
         show: false,
       },
+    },  
+    stroke: { width: 1,},
+    colors: [ "#1E22AA"],
+    dataLabels: {
+      enabled: false,
+    },
+    labels: {
+      show: false,
+    },
+    yaxis: {
+      show: false,
+    },
+    xaxis: {
+      labels: {
+        show: false,
+      }, 
+      axisTicks: {
+        show: false,} , 
+        axisBorder: {
+          show: false,},
+          
+    },
+    grid : {
+      show: true,
+      borderColor: '#90A4AE',
+      strokeDashArray: 0,
+      position: 'back',
       xaxis: {
-        labels: {
-          show: false,
-        },
-        axisBorder: {
-          show: false,
-        },
-        axisTicks: {
-          show: false,
-        },
-        tooltip: {
-          enabled: false,
-        },
-        axisTicks: {
-          show: false,
-        },
-        axisBorder: {
-          show: false,
-        },
-        crosshairs: {
-          show: false,
-        },
-      },
-      yaxis: {
-        show: false,
-        showAlways: false,
-      },
-      tooltip: {
-        enabled: false,
-      },
-      x: {
-        show: false,
-      },
+        lines: {
+            show: false
+        }
+    },   
+    yaxis: {
+        lines: {
+            show: false
+        }
     },
-    theme: {
-      mode: "light",
-      palette: "palette1",
-      monochrome: {
-        enabled: true,
-        color: "#255aee",
-        shadeTo: "light",
-        shadeIntensity: 0.65,
-      },
-    },
+    }
   });
 
   const [series, setSeries] = useState([
     {
       name: "series-1",
-      data: [30, 40, 35, 50, 49, 60, 70, 91, 125],
+      data: [105,200,135,318,520,272, 628, 830, 470, 735, 510, 949, 1060, 1500, 1691, 2125],
     },
   ]);
   return (

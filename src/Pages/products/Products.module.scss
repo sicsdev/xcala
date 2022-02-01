@@ -1,27 +1,6 @@
 @import "/src/Global/sass/variables.scss";
-.wrapper{
-        .product_heading{
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            margin-top: 4rem;
-            .h2{
-                font-size: 28px;
-                color: $h2-color;
-                font-size: $fweight;
-                line-height: 34px;
-            }
-        }
-        .p{
-            margin-top: 15px;
-            margin-bottom: 3.2rem;
-            .fadetext{
-                color: #808080;
-                font-size: 20px;
-                line-height: 30px;
-            }
-        }
-}
+@import "/src/Global/sass/mixin.scss";
+@include pageHeading;
 .filter{
     display: flex;
     align-items: center;

@@ -23,17 +23,23 @@ function Codeverification() {
     <>
       <Backgroundscreen />
       <Container maxWidth="sm">
-          <Xcalalogo />
-          <Grid item md={12} mb={3}>
+        <Grid container maxWidth="sm" spacing={2}>
+          <Grid item xs={12} md={12} mb={3}>
+            <Xcalalogo />
+          </Grid>
+          <Grid item md={12} mb={4}>
             <div className="h2">
               <img src="/assets/images/Rectangle.png" alt=""></img>
-              <p>Valida tu cuenta</p>
+              <Typography className="h2 museo-regular" variant="" component="">
+                Valida tu cuenta
+              </Typography>
             </div>
           </Grid>
+        </Grid>
         <div className={codeverificationstyle.otpverification}>
           <div className={codeverificationstyle.text}>
-            <Typography className="p-18" variant="" component="">
-            Ingresa el código de verificación que enviamos al correo
+            <Typography className={codeverificationstyle.p_18} variant="" component="">
+              Ingresa el código de verificación que enviamos al correo
               mar...@gmail.com
             </Typography>
           </div>
@@ -47,18 +53,18 @@ function Codeverification() {
             secure
           />
           <div className={codeverificationstyle.fadetext}>
-            <Typography className="" variant="" component="">
-            ¿No has recibido nuestro correo? ¿Revisaste tu spam? Puede que
+            <Typography className={codeverificationstyle.bottom_text} variant="" component="">
+              ¿No has recibido nuestro correo? ¿Revisaste tu spam? Puede que
               hayamos llegado allá...
             </Typography>
           </div>
-          <div>
+          <div className={codeverificationstyle.otpbutton_main}>
             {/* <ResendOTP className={codeverificationstyle.otpbutton} onResendClick={() => console.log("Resend clicked")} /> */}
             {/* <ResendOTP renderButton={renderButton} /> */}
             {/* <Button className={codeverificationstyle.otpbutton} variant="outlined" startIcon={<MailOutlineIcon />}>Reenviar código</Button> */}
-           <Button className={codeverificationstyle.otpbutton} variant="outlined" startIcon={<MailOutlineIcon />}>
-          <Link to="/password">Reenviar código</Link>
-          </Button> 
+            <Button className={codeverificationstyle.otpbutton} variant="outlined" startIcon={<MailOutlineIcon />}>
+              <Link to="/password">Reenviar código</Link>
+            </Button>
           </div>
         </div>
       </Container>

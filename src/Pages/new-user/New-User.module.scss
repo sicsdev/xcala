@@ -1,0 +1,35 @@
+@import "/src/Global/sass/mixin.scss";
+@import "/src/Global/sass/Variables.scss";
+.top_banner {
+    background-image: url("../../../public/assets/images/background-two.png");
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0px 40px 0;
+    @include cardBordered;
+    .edit_icon {
+        a {
+            text-decoration: none;
+            svg {
+                font-size: 16px;
+            }
+        }
+    }
+}
+.new_card {
+    background: #eff6fc;
+    border-radius: 8px;
+    padding: 20px 40px 20px 40px;
+    margin: 20px 0 0;
+    .MuiGrid-root.MuiGrid-container {
+        align-items: center;
+    }
+}
+.see_more{
+    text-align: center;
+    margin: 30px 0 50px;
+    button{
+        font-weight: 600;
+
+    }
+}
+@include pageHeading;

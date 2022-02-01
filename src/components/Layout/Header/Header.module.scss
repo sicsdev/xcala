@@ -4,7 +4,9 @@ body {
         background-color: rgba(255, 255, 255, 0.7);
         box-shadow: none;
         padding: 14px 0;
-        
+        a{
+            color: $themeColor;
+        }
         button{
             color: $themeColor;
             padding: 0 30px;

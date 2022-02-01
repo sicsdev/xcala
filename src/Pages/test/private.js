@@ -6,7 +6,9 @@ import Footer from "../../components/Layout/Footer/Footer";
 import MyAccount from "../my-account/MyAccount";
 import Profile from "../profile/Profile";
 import Products from "../products/Products";
-import Productgraph from "../../components/productgraph/Productgraph";
+import Productdetailpage from "../products/Productdetailpage";
+
+
 function Private() {
   const router = useLocation();
   return (
@@ -20,7 +22,7 @@ function Private() {
         <Route exact path="/lets-start" element={<LetStart />} />
         <Route exact path="/my-account" element={<MyAccount />} />
         <Route exact path="/products" element={<Products />} />
-        <Route exact path="/productgraph" element={<Productgraph />} />
+        <Route exact path="/productdetail" element={<Productdetailpage />} />
 
       </Routes>
       {(router.pathname === "/my-account" || router.pathname === "/products") && <Footer />}

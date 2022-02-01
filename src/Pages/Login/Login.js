@@ -41,11 +41,15 @@ function Login() {
     <>
       <Backgroundscreen />
       <Container maxWidth="sm">
-        <Xcalalogo />
+        <Grid container maxWidth="sm" spacing={2} className={loginstyles.login_logo}>
+          <Grid item xs={12} md={12} mb={3}>
+            <Xcalalogo />
+          </Grid>
+        </Grid>
         <div className={loginstyles.form_login}>
           <div className={loginstyles.form_inner}>
             <Grid container maxWidth="sm">
-              <form>
+              <form className={loginstyles.login_form}>
                 <div className={loginstyles.register_input_text}>
                   <TextField
                     fullWidth
@@ -77,14 +81,11 @@ function Login() {
                       }
                     /></FormControl></div>
                 <div className={loginstyles.pass_text}>
-                  <Typography className={loginstyles.p_14} variant="" component="">
+                  <Typography className={loginstyles.p_14} >
                     <Link to="/forgetpassword">¿Olvidaste tu contraseña?</Link>
                   </Typography>
                 </div>
-                <Grid className="formbutton" item md={12}>
-                  {/* <Button className="button-primary">
-                    Ingresar
-                    </Button> */}
+                <Grid className="formbutton" item xs={12} md={12}>
                   <Button className="button-primary">
                     <Link style={{ color: "#ffffff" }} to="/profile-investor">
                       Ingresar

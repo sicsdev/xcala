@@ -23,8 +23,8 @@ function Products() {
     <div>
       <Container maxWidth="lg">
         <Grid item md={12} mb={3}>
-          <div className={productstyles.wrapper}>
-            <div className={productstyles.product_heading}>
+          <div className={productstyles.page_wrapper}>
+            <div className={productstyles.heading}>
               <img src="/assets/images/product_rect.png" alt=""></img>
               <Typography className={productstyles.h2} variant="" component="">
                 Nuestros fondos
@@ -62,8 +62,8 @@ function Products() {
               </div>
             </div>
 
-            <Grid style={{ marginBottom: "5rem" }} container spacing={2}>
-              <Grid item xs={4}>
+            <Grid container spacing={5}  style={{ marginBottom: "5rem" }}>
+              <Grid item xs={3}>
                 {/* Accordion-1 */}
                 <Accordion style={{ boxShadow: "none", marginTop: "1rem" }}>
                   <AccordionSummary
@@ -238,8 +238,8 @@ function Products() {
                   </AccordionDetails>
                 </Accordion>
               </Grid>
-              <Grid item xs={8}>
-                <Grid container spacing={3}>
+              <Grid item xs={9}>
+                <Grid container spacing={3}  >
                   <Grid item xs={6}>
                     <Productgraph />
                   </Grid>

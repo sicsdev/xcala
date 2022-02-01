@@ -1,8 +1,7 @@
 @import "/src/Global/sass/variables.scss";
 
 .center{
-    display: flex;
-    justify-content: center;
+    
     margin-top: 1.5rem;
     .cardstyle{
         justify-content: center;
@@ -12,6 +11,7 @@
         box-sizing: border-box;
         box-shadow: 8px 8px 20px rgba(61, 64, 75, 0.05);
         position: relative;
+        max-width: 100%;
             .star_tag {
                 position: absolute;
                 right: 25px;
@@ -31,6 +31,7 @@
         font-size: $p-18-fontsize;
         line-height: 27px;
         }
+       
     }
     .link{
         margin-top: 1rem;

@@ -138,16 +138,17 @@ function Firstpage() {
   return (
     <>
       <React.Fragment>
-        <CssBaseline />
         <Backgroundscreen />
         <div className={styles.register_wrapper}>
           <Container maxWidth="sm">
             <Grid container maxWidth="sm" spacing={2}>
-              <Xcalalogo />
-              <Grid item md={12} mb={3}>
+              <Grid item xs={12} md={12} mb={3}>
+                <Xcalalogo />
+              </Grid>
+              <Grid item xs={12} md={12} mb={4}>
                 <div className="h2">
                   <img src="/assets/images/Rectangle.png" alt=""></img>
-                  <Typography className="h2" variant="" component="">
+                  <Typography className="h2 museo-regular" variant="" component="">
                     ¡Únete a Xcala!
                   </Typography>
                 </div>
@@ -338,7 +339,7 @@ function Firstpage() {
                       <div
                         style={{
                           display: "flex",
-                          marginTop: "3.4rem",
+                          marginTop: "3rem",
                           alignItems: "flex-start",
                         }}
                       >
@@ -358,11 +359,11 @@ function Firstpage() {
                       {/* <Button className="button-primary" disabled>
                         Continuar
                         </Button>  */}
-                        <Link to="/codeverification" className="button-primary">
+                      <Link to="/codeverification" className="button-primary">
                         Continuar
-                        </Link>                    
+                      </Link>
                     </Grid>
-                  </form> 
+                  </form>
                 </Grid>
               </div>
             </div>

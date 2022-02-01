@@ -125,13 +125,17 @@ const Password = () => {
     <>
       <Backgroundscreen />
       <Container maxWidth="sm">
-        <Xcalalogo />
-        <Grid item md={12} mb={3}>
-          <div style={{ paddingBottom: "30px" }}>
-            <Typography className="h2" variant="" component="">
-              ¡Bienvenida Marcela!
-            </Typography>
-          </div>
+        <Grid container maxWidth="sm" spacing={2}>
+          <Grid item xs={12} md={12} mb={3}>
+            <Xcalalogo />
+          </Grid>
+          <Grid item xs={12} md={12} mb={4}>
+            <div className="h2">
+              <Typography className="h2 museo-regular" variant="" component="">
+                ¡Bienvenida Marcela!
+              </Typography>
+            </div>
+          </Grid>
         </Grid>
         <div className={passwordstyles.form_register}>
           <div className={passwordstyles.form_inner}>
@@ -202,7 +206,7 @@ const Password = () => {
             {/* passwordfield */}
             {error ? <span>{error}</span> : null}
             <div className={passwordstyles.password_form}>
-              <FormControl sx={{ m: 1, width: "70%" }} variant="outlined">
+              <FormControl sx={{ m: 1, width: "100%" }} variant="outlined">
                 <InputLabel htmlFor="standard-adornment-password">
                   Nueva contraseña
                 </InputLabel>
@@ -217,7 +221,7 @@ const Password = () => {
                       <IconButton
                         aria-label="toggle password visibility"
                         onClick={handleClickShowPassword}
-                        // onMouseDown={handleMouseDownPassword}
+                      // onMouseDown={handleMouseDownPassword}
                       >
                         {showPassword ? <VisibilityOff /> : <Visibility />}
                       </IconButton>
@@ -229,7 +233,7 @@ const Password = () => {
               {/* confirmpassword */}
               <FormControl
                 style={{ marginTop: "2rem" }}
-                sx={{ m: 1, width: "70%" }}
+                sx={{ m: 1, width: "100%" }}
                 variant="outlined"
               >
                 <InputLabel htmlFor="standard-adornment-password2">

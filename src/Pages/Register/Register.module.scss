@@ -1,31 +1,40 @@
-@import '/src/Global/sass/variables.scss';
+@import "/src/Global/sass/variables.scss";
 .register_wrapper {
   .register_input_text {
     margin: 25px 0;
     max-width: 333px;
+
     p#standard-basic-helper-text {
       display: flex;
       gap: 6px;
-     svg{
+      svg {
         width: 18px;
-     }
+      }
     }
   }
   .register_input_text:nth-child(7) {
     max-width: $width-100;
     margin-bottom: 3.5rem;
-}
+  }
 
   .form_register {
-    background: #ffffff;
+    background: $white;
     mix-blend-mode: normal;
     border-radius: 8px;
     padding-bottom: 40px;
     margin-bottom: 3rem;
+    @media (max-width: $mobile) {
+      padding: 0px 20px;
+    }
     .form_inner {
       max-width: 444px;
+      width: 100%;
       margin: 0 auto;
       padding: 70px 0 0;
+      @media (max-width: $mobile) {
+        padding: 50px 0px;
+        max-width: 400px;
+      }
       .bluebox {
         background: rgba(150, 189, 228, 0.1);
         border-radius: 8px;
@@ -36,6 +45,12 @@
               font-weight: 500;
             }
           }
+        }
+      }
+      a{
+        @media (max-width: $mobile) {
+          display: block;
+          height: auto;
         }
       }
     }
@@ -52,10 +67,10 @@
       border-bottom: 2px solid red;
     }
   }
-  .helperTextcolor{
-      color: $green-color
+  .helperTextcolor {
+    color: $green-color;
   }
 }
 .phonecolor {
-  color: #1E22AA !important;
+  color: #1e22aa !important;
 }

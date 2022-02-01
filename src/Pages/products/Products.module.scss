@@ -1,0 +1,53 @@
+@import "/src/Global/sass/variables.scss";
+.wrapper{
+        .product_heading{
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-top: 4rem;
+            .h2{
+                font-size: 28px;
+                color: $h2-color;
+                font-size: $fweight;
+                line-height: 34px;
+            }
+        }
+        .p{
+            margin-top: 15px;
+            margin-bottom: 3.2rem;
+            .fadetext{
+                color: #808080;
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+}
+.filter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+.filter_text{
+    font-size: 24px;
+    color: $themeColor;
+}
+}
+.showmorebtn{
+    text-align: center;
+    .btn{
+        margin-top: 3rem;   
+        font-weight: $fweight2;
+        font-size: $p-18-fontsize;
+        line-height: 27px;
+        color: $green-color;
+        text-align: center;
+        text-transform: capitalize;
+        border-color: $green-color;
+        padding: 12px 88px;
+        border-radius: 8px;
+        :hover{
+            border-color: $green-color !important;
+        }
+    }
+}
+
+

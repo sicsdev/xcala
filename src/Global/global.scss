@@ -253,7 +253,7 @@ body .button-secondary-outline {
 }
 // button
 .formbutton {
-    text-align: center;
+    text-align: $center;
 }
 body .button-primary {
     background: $themeColor;
@@ -268,6 +268,7 @@ body .button-primary {
     cursor: pointer;
     margin-top: 1.5rem;
     text-decoration: auto;  
+    height: 60px;
 }
 body .button-light {
     background: $themeColor3;
@@ -308,3 +309,17 @@ p#standard-basic-helper-text svg{
 .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiMenu-paper.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
     height: 223px;
   } 
+
+//product page filter (accordion) 
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiAccordion-root.MuiAccordion-rounded.MuiAccordion-gutters.css-1elwnq4-MuiPaper-root-MuiAccordion-root:before{
+    display: none;
+}
+.MuiAccordionSummary-expandIconWrapper svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+    color: $p-color1;
+}
+.MuiCheckbox-root svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+    color: $themeColor;
+}
+.MuiGrid-root.MuiGrid-item.MuiGrid-grid-md-12.css-1o0tpb7-MuiGrid-root {
+    margin: 0px;
+}

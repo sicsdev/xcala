@@ -6,6 +6,8 @@ import Footer from "../../components/Layout/Footer/Footer";
 import MyAccount from "../my-account/MyAccount";
 import Profile from "../profile/Profile";
 import Products from "../products/Products";
+
+import Productdetailpage from "../products/Productdetailpage";
 import Productgraph from "../../components/productgraph/Productgraph";
 import ObjectiveInterest from "../objectives-interests/Objectives-Interests"
 import NewUser from "../new-user/New-User";
@@ -23,6 +25,7 @@ function Private() {
         <Route exact path="/lets-start" element={<LetStart />} />
         <Route exact path="/my-account" element={<MyAccount />} />
         <Route exact path="/products" element={<Products />} />
+        <Route exact path="/productdetail" element={<Productdetailpage />} />
         <Route exact path="/productgraph" element={<Productgraph />} />
         <Route exact path="/objectives-interests" element={<ObjectiveInterest />} />
         <Route exact path="/new-user" element={<NewUser />} />

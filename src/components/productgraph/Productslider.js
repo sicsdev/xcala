@@ -8,7 +8,7 @@ function Productslider() {
 
   return (
   <div style={{marginBottom:"3rem"}}>
-              <Carousel>
+              <Carousel navButtonsAlwaysInvisible>
                  <div>
                  <Grid container spacing={3}>
                         <Grid item xs={4}>

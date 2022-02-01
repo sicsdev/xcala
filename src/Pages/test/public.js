@@ -8,6 +8,7 @@ import Login from "../Login/Login";
 import Forgetpassword from "../Password/Forgetpassword";
 import Resetpasswordemail from "../Password/Resetpasswordemail";
 import Firstpage from "../Register/Register";
+
 function Public() {
   return (
     <>
@@ -19,6 +20,7 @@ function Public() {
           <Route exact path="/login" element={<Login/>} />  
           <Route exact path="/forgetpassword" element={<Forgetpassword/>} />
           <Route exact path="/resetpassword" element={<Resetpasswordemail/>} />  
+    
         </Routes>
     </>
   );

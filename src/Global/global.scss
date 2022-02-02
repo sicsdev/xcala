@@ -345,9 +345,11 @@ body .button-primary {
     font-weight: $fweight;
     cursor: pointer;
     margin-top: 1.5rem;
-
     text-decoration: auto;
     height: 60px;
+    &:hover{
+        background: $themeColor;
+    }
 }
 body .button-light {
     background: $themeColor3;

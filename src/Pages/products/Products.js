@@ -65,12 +65,13 @@ function Products() {
             <Grid container spacing={5}  style={{ marginBottom: "5rem" }}>
               <Grid item xs={4}>
                 {/* Accordion-1 */}
-                <Accordion style={{ boxShadow: "none", marginTop: "1rem" }}>
+                <Accordion style={{ boxShadow: "none", marginTop: "1rem" }}  defaultExpanded={true}>
                   <AccordionSummary
                     style={{ padding: "0px" }}
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
+                   
                   >
                     <Typography
                       className="p-18"

@@ -19,19 +19,19 @@ function Private() {
       {(router.pathname === "/lets-start" ||
         router.pathname === "/profile-investor" ||
         router.pathname === "/my-account" ||
-        router.pathname === "/products" || router.pathname === "/objectives-interests"|| router.pathname === "/new-user"|| router.pathname === "/complete-registration" ) && <ResponsiveAppBar />}
+        router.pathname === "/products" || router.pathname === "/objectives-interests" || router.pathname === "/new-user" || router.pathname === "/complete-registration" || router.pathname === "/product-detail") && <ResponsiveAppBar />}
       <Routes>
         <Route exact path="/profile-investor" element={<Profile />} />
         <Route exact path="/lets-start" element={<LetStart />} />
         <Route exact path="/my-account" element={<MyAccount />} />
         <Route exact path="/products" element={<Products />} />
-        <Route exact path="/productdetail" element={<Productdetailpage />} />
+        <Route exact path="/product-detail" element={<Productdetailpage />} />
         <Route exact path="/productgraph" element={<Productgraph />} />
         <Route exact path="/objectives-interests" element={<ObjectiveInterest />} />
         <Route exact path="/new-user" element={<NewUser />} />
         <Route exact path="/complete-registration" element={<CompleteRegistration />} />
       </Routes>
-      {(router.pathname === "/my-account" || router.pathname === "/products" || router.pathname === "/objectives-interests"|| router.pathname === "/new-user"|| router.pathname === "/complete-registration" ) && <Footer />}
+      {(router.pathname === "/my-account" || router.pathname === "/products" || router.pathname === "/objectives-interests" || router.pathname === "/new-user" || router.pathname === "/complete-registration" || router.pathname === "/product-detail") && <Footer />}
     </>
   );
 }

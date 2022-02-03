@@ -21,9 +21,7 @@ function Private() {
         router.pathname === "/profile-investor" ||
         router.pathname === "/my-account" ||
 
-        router.pathname === "/products" || router.pathname === "/objectives-interests"|| router.pathname === "/new-user"|| router.pathname === "/complete-registration"|| router.pathname === "/simulator" ) && <ResponsiveAppBar />}
-
-        router.pathname === "/products" || router.pathname === "/objectives-interests" || router.pathname === "/new-user" || router.pathname === "/complete-registration" || router.pathname === "/product-detail") && <ResponsiveAppBar />}
+        router.pathname === "/products" || router.pathname === "/objectives-interests"|| router.pathname === "/new-user"|| router.pathname === "/complete-registration"|| router.pathname === "/simulator"|| router.pathname === "/product-detail") && <ResponsiveAppBar />}
 
       <Routes>
         <Route exact path="/profile-investor" element={<Profile />} />
@@ -38,9 +36,7 @@ function Private() {
         <Route exact path="/simulator" element={<Simulator />} />
       </Routes>
 
-      {(router.pathname === "/my-account" || router.pathname === "/products" || router.pathname === "/objectives-interests"|| router.pathname === "/new-user"|| router.pathname === "/complete-registration"|| router.pathname === "/simulator" ) && <Footer />}
-
-      {(router.pathname === "/my-account" || router.pathname === "/products" || router.pathname === "/objectives-interests" || router.pathname === "/new-user" || router.pathname === "/complete-registration" || router.pathname === "/product-detail") && <Footer />}
+      {(router.pathname === "/my-account" || router.pathname === "/products" || router.pathname === "/objectives-interests"|| router.pathname === "/new-user"|| router.pathname === "/complete-registration"|| router.pathname === "/simulator"|| router.pathname === "/product-detail") && <Footer />}
 
     </>
   );

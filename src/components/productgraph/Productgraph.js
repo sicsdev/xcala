@@ -35,7 +35,7 @@ function productgraph() {
                 <Typography className='font-lg-20 dark-grey' >(últimos 12 meses)  </Typography>
               </span>
               {/* chart */}
-              <Charts />
+              <Charts  productdetail = {"products"}/>
             </Grid>
           </Grid>
         </CardContent>

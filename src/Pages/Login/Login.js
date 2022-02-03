@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from "@mui/material/Container";
-import { Grid, Button, FormControl } from "@mui/material";
+import { Grid, FormControl } from "@mui/material";
 import "react-phone-number-input/style.css";
 import Xcalalogo from "../../components/UI/Xcalalogo";
 import Backgroundscreen from "../../components/UI/Backgroundscreen";
@@ -86,25 +86,30 @@ function Login() {
                   </Typography>
                 </div>
                 <Grid className="formbutton" item xs={12} md={12}>
-                  <Button className="button-primary">
-                    <Link style={{ color: "#ffffff" }} to="/profile-investor">
+                  <div className={loginstyles.continue_btn}>
+                  <Link to="/profile-investor" className="button-primary">
+                    Ingresar
+                  </Link>
+                </div>
+                {/* <Button className="button-primary">
+                    <Link to="/profile-investor">
                       Ingresar
                     </Link>
-                  </Button>
+                  </Button> */}
 
 
-                  <div className={loginstyles.btn_text}>
-                    <Typography variant="" component="">
-                      <Link to="/">¿Aún no estás registrado?</Link>
-                    </Typography>
-                  </div>
-                </Grid>
-              </form>
+                <div className={loginstyles.btn_text}>
+                  <Typography variant="" component="">
+                    <Link to="/">¿Aún no estás registrado?</Link>
+                  </Typography>
+                </div>
             </Grid>
+          </form>
+        </Grid>
 
-          </div>
-        </div>
-      </Container>
+      </div>
+    </div>
+      </Container >
 
     </>
   );

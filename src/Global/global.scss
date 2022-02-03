@@ -11,10 +11,9 @@
 
 p {
     margin: 0px;
-}
-button {
     font-family: $pfontfamily;
 }
+
 // .MuiContainer-root.MuiContainer-maxWidthSm.css-cuefkz-MuiContainer-root {
 //     width: 100% !important;
 //     max-width: 676px !important;
@@ -25,15 +24,14 @@ button {
 .dark-grey {
     color: $dark-grey;
 }
-
+.dark-warning{
+    color: $warning;
+}
 .grey-bg {
     background: #f2f2f2;
 }
 .light-skyblue-bg {
     background-color: $themeColor3;
-}
-.light-blue {
-    color: $p-color1;
 }
 
 .text-center {
@@ -43,6 +41,10 @@ button {
     text-align: right;
 }
 body {
+    font-family: $pfontfamily;
+    p {
+        color: $p-color1;
+    }
     .museo-regular {
         font-family: Museo-Regular;
     }
@@ -51,6 +53,9 @@ body {
     }
     .blue_text {
         color: $themeColorText;
+    }
+    .light-blue {
+        color: $p-color1;
     }
     .dark-green {
         color: $themeColor2;
@@ -67,6 +72,16 @@ body {
     .fw-600 {
         font-weight: $fweight2;
     }
+    .mt-3 {
+        margin-top: 20px;
+    }
+    button {
+        font-family: $pfontfamily;
+    }
+}
+.break_content {
+    display: block;
+    padding: 7px 0;
 }
 .section-padding {
     height: calc(100vh - 206px);
@@ -89,6 +104,13 @@ body {
     }
     .MuiContainer-maxWidthLg {
         max-width: 1372px;
+    }
+    .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+        padding: 20px 15px;
+        border-radius: 16px;
+    }
+    .css-u8u3sx-MuiTypography-root {
+        font-family: $pfontfamily;
     }
 }
 
@@ -345,9 +367,29 @@ body .button-primary {
     cursor: pointer;
     margin-top: 1.5rem;
     padding: 17px 40px;
-
     text-decoration: auto;
     height: 60px;
+    &:hover {
+        background: $themeColor;
+    }
+}
+body .light-button-primary {
+    background: $themeColor3;
+    color: $themeColorText;
+    padding: 17px 40px;
+    border: none;
+    border-radius: 8px;
+    text-transform: capitalize;
+    font-family: $pfontfamily;
+    font-size: $p-18-fontsize;
+    font-weight: $fweight2;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    text-decoration: auto;
+    height: 60px;
+    &:hover {
+        background: $themeColor3;
+    }
 }
 body .button-light {
     background: $themeColor3;
@@ -448,6 +490,21 @@ tr.MuiTableRow-root.css-34nofg-MuiTableRow-root:nth-child(8) .MuiTableCell-root 
         border-radius: 8px;
         padding: 20px 20px;
         margin: 70px 0 50px;
+    }
+}
+
+.complete_registration_navbar {
+    padding: 40px 0;
+    background: #ffffff;
+    border-radius: 20px;
+    .stpper-navbar {
+        .MuiGrid-item {
+            flex-basis: 22.3%;
+            max-width: 22.3%;
+        }
+        span {
+            margin: 0 auto;
+        }
     }
 }
 

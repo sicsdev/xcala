@@ -1,7 +1,6 @@
 import React from "react";
-import CssBaseline from "@mui/material/CssBaseline";
 import Container from "@mui/material/Container";
-import { Grid, TextField, Select, Checkbox, Button, InputLabel, Input, MenuItem, Typography, } from "@mui/material";
+import { Grid, TextField, Select, Checkbox, InputLabel, Input, MenuItem, Typography, } from "@mui/material";
 import styles from "./Register.module.scss";
 import { useState } from "react";
 import isEmail from "validator/lib/isEmail";
@@ -304,7 +303,7 @@ function Firstpage() {
                     {/* Phone_field */}
                     <div className={styles.register_input_text}>
                       <Grid container maxWidth="sm" spacing={5}>
-                        <Grid item md={3}>
+                        <Grid item xs={3} md={3}>
                           <FormControl variant="standard" sx={{ minWidth: 80 }}>
                             <InputLabel className={styles.phonecolor} id="demo-simple-select-filled-label">
                               Celular
@@ -323,7 +322,7 @@ function Firstpage() {
                             </Select>
                           </FormControl>
                         </Grid>
-                        <Grid item md={9} style={{ paddingTop: "56px" }}>
+                        <Grid item xs={9} md={9} style={{ paddingTop: "56px" }}>
                           <Input
                             fullWidth
                             id="standard-basic"

@@ -1,14 +1,13 @@
 import React from 'react';
-import { Grid } from '@mui/material';
+import { Grid ,Link} from '@mui/material';
 import { Typography } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import { Button } from '@mui/material';
 import productgraphstyles from './Productgraph.module.scss'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Charts from './Chart';
-import { display } from '@mui/system';
 
 function productgraph() {
   return (
@@ -18,13 +17,13 @@ function productgraph() {
           <Grid container maxWidth="sm" spacing={2}>
             <Grid item md={12} mb={3}>
               <div className={productgraphstyles.card_h1}>
-                <img src="/assets/images/polygon.png" alt=""></img>
+                <img src="/assets/images/polygon.png" alt="d"></img>
                 <Typography className={productgraphstyles.h1} variant="" component="">
                   Xcala Balanceado Global
                 </Typography>
               </div>
               <span className={productgraphstyles.star_tag}>
-                <img src="/assets/images/start_tag.svg"></img>
+                <img src="/assets/images/start_tag.svg" alt='d'></img>
               </span>
 
               <div className={productgraphstyles.link}>
@@ -43,10 +42,10 @@ function productgraph() {
 
         <CardActions>
           <Grid className="formbutton" item md={12}>
-            <Button style={{ marginTop: "0px", width: "100%" }} className="button-primary">
+            <Link style={{display:'block', height:'auto', marginTop: "0px" }} className="button-primary">
               Invertir
-            </Button>
-            <Button style={{ width: "100%", background: "#F4F4FB", color: "#1E22AA", fontWeight: "600", marginTop: "0" }} className="button-primary">
+            </Link>
+            <Button style={{ width: "100%", background: "#F4F4FB", color: "#1E22AA", fontWeight: "600", marginTop: "10px" }} className="button-primary">
               Más información
             </Button>
           </Grid>

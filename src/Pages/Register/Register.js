@@ -1,7 +1,6 @@
 import React from "react";
-import CssBaseline from "@mui/material/CssBaseline";
 import Container from "@mui/material/Container";
-import { Grid, TextField, Select, Checkbox, Button, InputLabel, Input, MenuItem, Typography, } from "@mui/material";
+import { Grid, TextField, Select, Checkbox, InputLabel, Input, MenuItem, Typography, } from "@mui/material";
 import styles from "./Register.module.scss";
 import { useState } from "react";
 import isEmail from "validator/lib/isEmail";

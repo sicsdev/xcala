@@ -8,7 +8,6 @@ import { Button } from '@mui/material';
 import productgraphstyles from './Productgraph.module.scss'
 // import { Link } from 'react-router-dom';
 import Charts from './Chart';
-import { display } from '@mui/system';
 
 function productgraph() {
   return (
@@ -18,13 +17,13 @@ function productgraph() {
           <Grid container maxWidth="sm" spacing={2}>
             <Grid item md={12} mb={3}>
               <div className={productgraphstyles.card_h1}>
-                <img src="/assets/images/polygon.png" alt=""></img>
+                <img src="/assets/images/polygon.png" alt="d"></img>
                 <Typography className={productgraphstyles.h1} variant="" component="">
                   Xcala Balanceado Global
                 </Typography>
               </div>
               <span className={productgraphstyles.star_tag}>
-                <img src="/assets/images/start_tag.svg"></img>
+                <img src="/assets/images/start_tag.svg" alt='d'></img>
               </span>
 
               <div className={productgraphstyles.link}>

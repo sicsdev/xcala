@@ -1,15 +1,17 @@
 @import "/src/Global/sass/variables.scss";
-
+.bgcolor{
+    background: #F2F2F2;
 .simulate{
     display: flex;
     justify-content: center;
-    background: #F2F2F2;
+
     padding: 5rem 0rem 5rem 0rem;
 
         .container{
         border-radius: 16px;
         width: 444px;
         padding: 2.2rem 3.6rem 2rem 3.6rem;
+        margin-top: 0px;
           
          .heading{
              display: flex;
@@ -48,5 +50,6 @@
             margin-top: 0rem;
         }
     }
+}
 }
 }

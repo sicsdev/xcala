@@ -6,13 +6,14 @@ import Footer from "../../components/Layout/Footer/Footer";
 import MyAccount from "../my-account/MyAccount";
 import Profile from "../profile/Profile";
 import Products from "../products/Products";
-
 import Productdetailpage from "../products/Productdetailpage";
 import Productgraph from "../../components/productgraph/Productgraph";
 import ObjectiveInterest from "../objectives-interests/Objectives-Interests"
 import NewUser from "../new-user/New-User";
 import CompleteRegistration from "../complete-registration/Complete-Registration";
 import Simulator from "../products/Simulator";
+import Recurringdash from "../RecurringDash/Recurringdash";
+
 function Private() {
   const router = useLocation();
   return (
@@ -21,7 +22,7 @@ function Private() {
         router.pathname === "/profile-investor" ||
         router.pathname === "/my-account" ||
 
-        router.pathname === "/products" || router.pathname === "/objectives-interests"|| router.pathname === "/new-user"|| router.pathname === "/complete-registration"|| router.pathname === "/simulator"|| router.pathname === "/product-detail") && <ResponsiveAppBar />}
+        router.pathname === "/products" || router.pathname === "/objectives-interests"|| router.pathname === "/new-user"|| router.pathname === "/complete-registration"|| router.pathname === "/simulator"|| router.pathname === "/product-detail" || router.pathname === "/recurring-dash") && <ResponsiveAppBar />}
 
       <Routes>
         <Route exact path="/profile-investor" element={<Profile />} />
@@ -34,9 +35,10 @@ function Private() {
         <Route exact path="/new-user" element={<NewUser />} />
         <Route exact path="/complete-registration" element={<CompleteRegistration />} />
         <Route exact path="/simulator" element={<Simulator />} />
+        <Route exact path="/recurring-dash" element={<Recurringdash />} />
       </Routes>
 
-      {(router.pathname === "/my-account" || router.pathname === "/products" || router.pathname === "/objectives-interests"|| router.pathname === "/new-user"|| router.pathname === "/complete-registration"|| router.pathname === "/simulator"|| router.pathname === "/product-detail") && <Footer />}
+      {(router.pathname === "/my-account" || router.pathname === "/products" || router.pathname === "/objectives-interests"|| router.pathname === "/new-user"|| router.pathname === "/complete-registration"|| router.pathname === "/simulator"|| router.pathname === "/product-detail" || router.pathname === "/recurring-dash") && <Footer />}
 
     </>
   );

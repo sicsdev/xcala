@@ -8,8 +8,8 @@ import { Button } from '@mui/material';
 function Simulatorresult() {
   return (
   <div>
-        <Grid className={simulatorresultstyle.simulate_resultbox} container bgcolor={"#fff"} spacing={2}>
-        <Grid spacing={2}>
+        <Grid className={simulatorresultstyle.simulate_resultbox} container bgcolor={"#fff"}>
+        <Grid>
             <Grid item xs={12}>
                 <div className={simulatorresultstyle.heading}>
                     <Typography style={{textTransform:"uppercase"}} className="p-14" variant="" component="">

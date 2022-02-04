@@ -1,0 +1,16 @@
+@import "/src/Global/sass/variables.scss";
+@import "/src/Global/sass/mixin.scss";
+
+.invest_list{
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+    width: 300px;
+    margin-top: 1.8rem;
+    gap: 55px;
+    align-items: baseline;
+    .list_item{
+        font-size: 18px;
+        color: #101820;
+    }
+}

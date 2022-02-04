@@ -2,8 +2,10 @@
 
         .simulate_resultbox{
         border-radius: 16px;
-        max-width: 792px;
+        max-width: 100%;
         padding: 2.2rem 3.6rem 2rem 3.6rem;
+        display: flex;
+        justify-content: center;
 
         .heading{
             display: flex;

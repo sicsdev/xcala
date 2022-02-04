@@ -123,8 +123,6 @@ function Simulator() {
                     <div class={simulatorstyle.form_inputs}>
                       <FormControl variant="standard">
                         <InputLabel htmlFor="standard-adornment-amount">
-
-                          Sandeep, [2/4/2022 12:59 AM]
                           Inversión Inicial
                         </InputLabel>
                         <Input

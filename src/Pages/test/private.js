@@ -6,17 +6,18 @@ import Footer from "../../components/Layout/Footer/Footer";
 import MyAccount from "../my-account/MyAccount";
 import Profile from "../profile/Profile";
 import Products from "../products/Products";
-
 import Productdetailpage from "../products/Productdetailpage";
 import ObjectiveInterest from "../objectives-interests/Objectives-Interests"
 import NewUser from "../new-user/New-User";
 import CompleteRegistration from "../complete-registration/Complete-Registration";
 import Simulator from "../products/Simulator";
+import Recurringdash from "../RecurringDash/Recurringdash";
 import ConfirmRequest from "../confirm-request/Confirm-Request";
 import RiskProfile from "../risk-profile/Risk-Profile";
 import GoalInterest from "../goal-interest/Goal-Interest";
 import ConfigureNotification from "../configure-notifcation/Configure-Notification";
 import MyNotification from "../my-notifcation/My-Notification";
+
 function Private() {
   const router = useLocation();
   return (
@@ -24,17 +25,8 @@ function Private() {
       {(router.pathname === "/lets-start" ||
         router.pathname === "/profile-investor" ||
         router.pathname === "/my-account" ||
-        router.pathname === "/products" ||
-        router.pathname === "/objectives-interests" ||
-        router.pathname === "/new-user" ||
-        router.pathname === "/complete-registration" ||
-        router.pathname === "/simulator" ||
-        router.pathname === "/product-detail" ||
-        router.pathname === "/confirm-request" ||
-        router.pathname === "/risk-profile" ||
-        router.pathname === "/my-goal-interest" ||
-        router.pathname === "/configure-notification" ||
-        router.pathname === "/my-notification") && <ResponsiveAppBar />}
+
+        router.pathname === "/products" || router.pathname === "/objectives-interests"|| router.pathname === "/new-user"|| router.pathname === "/complete-registration"|| router.pathname === "/simulator"|| router.pathname === "/product-detail" || router.pathname === "/recurring-dash" || router.pathname === "/confirm-request" || router.pathname === "/risk-profile" || router.pathname === "/my-goal-interest" || router.pathname === "/configure-notification" || router.pathname === "/my-notification") && <ResponsiveAppBar />}
 
       <Routes>
         <Route exact path="/profile-investor" element={<Profile />} />
@@ -46,26 +38,17 @@ function Private() {
         <Route exact path="/new-user" element={<NewUser />} />
         <Route exact path="/complete-registration" element={<CompleteRegistration />} />
         <Route exact path="/simulator" element={<Simulator />} />
+        <Route exact path="/recurring-dash" element={<Recurringdash />} />
+      </Routes>
+
+      {(router.pathname === "/my-account" || router.pathname === "/products" || router.pathname === "/objectives-interests"|| router.pathname === "/new-user"|| router.pathname === "/complete-registration"|| router.pathname === "/simulator"|| router.pathname === "/product-detail" || router.pathname === "/recurring-dash" || router.pathname === "/confirm-request" || router.pathname === "/risk-profile" || router.pathname === "/my-goal-interest" || router.pathname === "/configure-notification" || router.pathname === "/my-notification") && <Footer />}
+
         <Route exact path="/confirm-request" element={<ConfirmRequest />} />
         <Route exact path="/risk-profile" element={<RiskProfile />} />
         <Route exact path="/my-goal-interest" element={<GoalInterest />} />
         <Route exact path="/configure-notification" element={<ConfigureNotification />} />
         <Route exact path="/my-notification" element={<MyNotification />} />
       </Routes>
-
-      {(router.pathname === "/my-account" ||
-        router.pathname === "/products" ||
-        router.pathname === "/objectives-interests" ||
-        router.pathname === "/new-user" ||
-        router.pathname === "/complete-registration" ||
-        router.pathname === "/simulator" ||
-        router.pathname === "/product-detail" ||
-        router.pathname === "/confirm-request" ||
-        router.pathname === "/risk-profile" ||
-        router.pathname === "/my-goal-interest" ||
-        router.pathname === "/configure-notification" ||
-        router.pathname === "/my-notification") && <Footer />}
-
     </>
   );
 }

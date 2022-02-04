@@ -1,17 +1,28 @@
 @import "/src/Global/sass/variables.scss";
-.bgcolor {
-    background: #f2f2f2;
-    .simulate {
-        display: flex;
-        justify-content: center;
 
-        padding: 5rem 0rem 5rem 0rem;
+.bgcolor{
+    background: #F2F2F2;
+.simulate{
+    display: flex;
+    justify-content: center;
 
-        .container {
-            border-radius: 16px;
-            width: 444px;
-            padding: 2.2rem 3.6rem 2rem 3.6rem;
-            margin-top: 0px;
+    padding: 5rem 0rem 5rem 0rem;
+
+        .container{
+        border-radius: 16px;
+        width: 444px;
+        padding: 2.2rem 3.6rem 2rem 3.6rem;
+        margin-top: 0px;
+          
+         .heading{
+             display: flex;
+             align-items: center;
+             gap: 10px;
+             color: $p-color1;
+         }
+        form{
+            width: 100%;
+
 
             .heading {
                 display: flex;
@@ -53,3 +64,6 @@
         }
     }
 }
+}
+}
+

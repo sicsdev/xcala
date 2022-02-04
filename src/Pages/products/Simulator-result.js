@@ -21,6 +21,7 @@ function Simulatorresult() {
                                                 </div>
                                         </Grid>
 
+
                                         <Grid className={simulatorresultstyle.green_box} container spacing={2}>
                                                 <Grid style={{ paddingLeft: "0px" }} item xs={12}>
                                                         <Typography className={simulatorresultstyle.greendata_text}>

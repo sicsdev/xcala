@@ -42,25 +42,7 @@ function MyNotification() {
                 </Grid>
               </Grid>
             )}
-            {/* <Grid container spacing={2} className={Styled.my_notification_step}>
-              <Grid item md={10} mb={3}>
-                <div className={Styled.my_notification}>
-                  <Typography className={Styled.my_notification_date}>
-                    12/12/2021
-                  </Typography>
-                  <Typography className={Styled.my_notification_message}>
-                    Se ha realizado un depósito de dividendos por un monto de $100.000 del fondo Xcala Balanceado Global en su cuenta corriente Nº 11111111 del Banco de Chile.
-                  </Typography>
-                </div>
-              </Grid>
-              <Grid item md={2} mb={3}>
-                <div className={Styled.delete_icon}>
-                <DeleteOutlineIcon className={Styled.delete_icon} />
-                </div>
-              </Grid>
-            </Grid> */}
-
-
+           
             <Grid item md={12} mb={3}>
               <div className={Styled.delete_all}>
                 <Link className="dark-green">Eliminar todas</Link>

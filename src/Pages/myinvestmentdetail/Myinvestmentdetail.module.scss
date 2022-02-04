@@ -1,0 +1,114 @@
+@import "/src/Global/sass/variables.scss";
+
+.top_banner {
+    background-image: url("../../../public/assets/images/recurring.png");
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0px 40px 0;
+    margin-bottom: 0px;
+        .heading{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: $p-color1;
+            margin-top: 1.3rem;
+            margin-bottom: 3rem;
+        }
+
+            .cardstyle{
+                margin-top: 1.5rem;
+                justify-content: center;
+                align-items: center;
+                border: 2px solid #F2F2F2;
+                box-shadow: 8px 8px 20px rgba(61, 64, 75, 0.05);
+                border-radius: 8px;
+                padding: 40px;
+                background: linear-gradient(268.78deg, rgba(255, 255, 255, 0.8) 1.52%, rgba(255, 255, 255, 0) 39.44%, rgba(255, 255, 255, 0.8) 99.9%);
+                mix-blend-mode: normal;
+                backdrop-filter: blur(48px); 
+
+            .card_h1{
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                    .h1{
+                    font-size: 24px;
+                    color: $themeColor;
+                    font-weight: $fweight2;
+                    }
+            }
+            .link{
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                display: flex;
+                gap: 10px;
+                align-content: center;
+                text-align: center;
+        
+                .link1, .link2{
+                    padding: 8px 16px;
+                    border-radius: 39px;
+                    font-size: 12px;
+                    text-decoration: none;
+                }
+                .link1{
+                    background: #E7F3FF;  
+                    color:#587BC8;
+                    ;
+                }
+                .link2{
+                    background: #EDFCF9;
+                    color: #49A197;
+                }
+            }
+        }
+
+        .green_btn{
+            justify-content: center;
+            margin-right: 20px;
+
+                Button{
+                margin-top: 1.65rem;
+                padding: 17px 40px;
+                color: $green-color;
+                border-color: $green-color;
+                border-radius: 8px;
+                font-weight: $fweight2;
+                text-transform: none;
+                font-size: $p-18-fontsize;
+                line-height: normal;
+                }
+        }
+    }
+.grey_section{
+    background: #F2F2F2;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    .summary{
+        border-radius: 8px;
+        background: #fff;
+        padding: 40px;
+        justify-content: center;
+        margin: 0;
+        margin-bottom: 3rem;
+    }
+    .bluebox{
+        background: #ECF5FF;
+        mix-blend-mode: normal;
+        border-radius: 8px;
+        padding: 40px;
+        margin-top: 3rem;
+        .invest_list{
+            display: flex;
+            flex-direction: row !important;
+            margin-top: 2rem;
+            gap: 20px;
+            align-items: baseline;
+            .list_item{
+                font-size: 18px;
+                color: #49A197;
+                font-weight: $fweight2;
+            }
+        }
+    }
+}

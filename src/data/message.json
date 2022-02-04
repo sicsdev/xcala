@@ -1,0 +1,17 @@
+[
+    {
+        "id": "1",
+        "date": "12/12/2021",
+        "message": "Se ha realizado un depósito de dividendos por un monto de $100.000 del fondo Xcala Balanceado Global en su cuenta corriente Nº 11111111 del Banco de Chile."
+    },
+    {
+        "id": "2",
+        "date": "15/12/2021",
+        "message": "Se ha realizado un depósito de dividendos por un monto de $100.000 del fondo Xcala Balanceado Global en su cuenta corriente Nº 11111111 del Banco de Chile."
+    },
+    {
+        "id": "3",
+        "date": "22/12/2021",
+        "message": "Se ha realizado un depósito de dividendos por un monto de $100.000 del fondo Xcala Balanceado Global en su cuenta corriente Nº 11111111 del Banco de Chile."
+    }
+]

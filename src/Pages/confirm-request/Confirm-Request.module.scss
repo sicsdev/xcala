@@ -1,0 +1,61 @@
+@import "/src/Global/sass/variables.scss";
+.complete_registraion_main {
+    padding: 50px 30px;
+    .registration_wrapper {
+        background: $white;
+        border-radius: 20px;
+        margin-top: 30px;
+        .registration_first_step {
+            max-width: 591px;
+            padding: 0px 37px;
+            margin: 0 auto;
+            // p {
+            //     color: $p-color1;
+            // }
+            .identity {
+                display: flex;
+                padding: 30px 0;
+                svg {
+                    color: $themeColorText;
+                }
+            }
+            .identity_radio {
+                display: flex;
+                align-items: flex-start;
+                padding: 10px 0;
+                span{
+                    padding: 0;
+                }
+                svg {
+                    color: $themeColorText;
+                }
+            }
+           
+            .continue_btn {
+                text-align: $center;
+                button {
+                    width: 100%;
+                    max-width: 225px;
+                    margin: 0px auto 30px;
+                    font-size: 13px;
+                    padding: 0;
+                }
+            }
+            .line{
+                border-bottom: 1px dashed #BFBFBF;
+                width: 100%;
+                padding-top: 30px;
+            }
+            .fields{
+                max-width: 341px;
+                margin: 20px 0;
+            }
+        }
+    }
+
+    button {
+        width: 100%;
+        max-width: 341px;
+        margin: 30px auto 20px;
+    }
+}

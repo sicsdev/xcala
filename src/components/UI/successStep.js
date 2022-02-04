@@ -10,7 +10,7 @@ function SuccessStep(props) {
       <>
          <Grid container maxWidth="sm" spacing={2} style={{ textAlign: "center" }}>
             <Grid item md={12}>
-               <img src="/assets/images/sucess-tick.svg" alt="success" style={{ mixBlendMode: 'multiply', margin: "0 auto" }}></img>
+               <img src="/assets/images/sucess-gif.gif" alt="success" style={{ mixBlendMode: 'multiply', margin: "0 auto" ,width:"100%"}}></img>
             </Grid>
             <Grid item md={12} >
                <Typography

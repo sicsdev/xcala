@@ -18,13 +18,11 @@ p {
 //     width: 100% !important;
 //     max-width: 676px !important;
 // }
-.light-grey {
-    color: $light-grey;
-}
+
 .dark-grey {
     color: $dark-grey;
 }
-.dark-warning{
+.dark-warning {
     color: $warning;
 }
 .grey-bg {
@@ -44,6 +42,10 @@ body {
     font-family: $pfontfamily;
     p {
         color: $p-color1;
+        font-weight: 400;
+    }
+    .light-grey {
+        color: $light-grey !important;
     }
     .museo-regular {
         font-family: Museo-Regular;
@@ -58,13 +60,22 @@ body {
         color: $p-color1;
     }
     .dark-green {
-        color: $themeColor2;
+        color: $themeColor2 !important;
+    }
+    .font-lg-14 {
+        font-size: 14px;
     }
     .font-lg-18 {
         font-size: 18px;
     }
+    .font-lg-20 {
+        font-size: 20px;
+    }
     .font-lg-24 {
         font-size: 24px;
+    }
+    .font-lg-28 {
+        font-size: 28px;
     }
     .font-lg-32 {
         font-size: 32px;
@@ -77,6 +88,9 @@ body {
     }
     button {
         font-family: $pfontfamily;
+    }
+    .pt-lg-45 {
+        padding-top: 45px;
     }
 }
 .break_content {
@@ -112,6 +126,52 @@ body {
     .css-u8u3sx-MuiTypography-root {
         font-family: $pfontfamily;
     }
+    .css-mhc70k-MuiGrid-root {
+        width: 100%;
+        margin-left: 0;
+    }
+    .css-mhc70k-MuiGrid-root > .MuiGrid-item {
+        padding-left: 0;
+    }
+    .active_notification{
+        p{
+            color: $themeColor !important;
+        }
+        .date{
+            font-weight: 600;
+        }
+    }
+    // Switch
+    .css-1yjjitx-MuiSwitch-track {
+        background-color: $p-color1;
+        opacity: 1;
+    }
+    .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked+.MuiSwitch-track {
+        background-color:  $themeColor;
+        opacity: 1;
+    }
+    .css-jsexje-MuiSwitch-thumb {
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        position: relative;
+        top: 4.1px;
+    }
+    .css-1yjjitx-MuiSwitch-track{
+        border-radius: 15px;
+    }
+    .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase {
+        transform: translateX(5px);
+    }
+    .css-julti5-MuiSwitch-root {
+        width: 55px;
+        height: 40px;
+    }
+    .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked {
+        color:$white;
+        
+    }
+   
 }
 
 .xcala-logo {
@@ -281,9 +341,8 @@ body .button-secondary-outline {
     border: 1px solid $themeColor2;
     background-color: transparent;
     color: $themeColor2;
-    padding: 17px 30px;
+    padding: 12px 35px;
     border-radius: 10px;
-    border-radius: 8px;
     text-transform: capitalize;
     font-family: $pfontfamily;
     font-size: $p-18-fontsize;
@@ -444,8 +503,8 @@ a {
 .MuiGrid-root.MuiGrid-item.MuiGrid-grid-md-12.css-1o0tpb7-MuiGrid-root {
     margin: 0px;
 }
-.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiAccordion-root.MuiAccordion-rounded.MuiAccordion-gutters.css-1elwnq4-MuiPaper-root-MuiAccordion-root {
-    width: 383px;
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+    margin: 16px 0;
 }
 
 // productdetailpage table
@@ -521,8 +580,12 @@ tr.MuiTableRow-root.css-34nofg-MuiTableRow-root:nth-child(8) .MuiTableCell-root 
         align-items: center;
         button {
             max-width: 280px;
+            width: 100%;
         }
     }
+}
+.makeStyles-indicators-4 {
+    margin-top: 30px;
 }
 body {
     .css-11h4g4n-MuiGrid-root {

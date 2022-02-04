@@ -1,0 +1,28 @@
+@import "../../Global/sass/mixin.scss";
+@import "../../Global/sass/variables.scss";
+
+.top_banner {
+    background-image: url("../../../public/assets/images/background-two.png");
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0px 40px 0;
+    @include cardBordered;
+    .edit_icon {
+        a {
+            text-decoration: none;
+            svg {
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+.see_more{
+    text-align: center;
+    margin: 30px 0 50px;
+    button{
+        font-weight: 600;
+
+    }
+}
+@include pageHeading;

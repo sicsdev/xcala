@@ -1,0 +1,31 @@
+@import "/src/Global/sass/variables.scss";
+.Interest_main {
+    background-color: $white;
+    border-radius: 16px;
+    padding: 30px;
+    .Interest_main {
+        width: 100%;
+    }
+    .accordion_content {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding: 12px 16px 10px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        background: linear-gradient(92.05deg, #ffffff -0.62%, #e3e3e32b 50.1%, #ffffff 93.02%);
+        mix-blend-mode: normal;
+        border-radius: 8px;
+        border: 2px solid #00000003;
+        span {
+            padding-top: 0;
+        }
+        .accordion_content_text {
+            display: flex;
+
+            p {
+                padding-left: 10px;
+            }
+        }
+    }
+}

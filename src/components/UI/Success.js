@@ -17,7 +17,7 @@ function Success() {
                </Grid>
             </Grid>
             <div className={success.verificationsuccesslogo}>
-               <img src="/assets/images/sucess-tick.svg" alt="success" style={{ mixBlendMode: 'multiply', margin: "0 auto" }}></img>
+               <img src="/assets/images/sucess-gif.gif" alt="success" style={{ mixBlendMode: 'multiply', margin: "0 auto" }}></img>
                <div>
                   <div className={success.successtext}>
                      <p>¡Cuenta creada exitosamente!</p>

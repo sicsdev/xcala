@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid ,Link} from '@mui/material';
+import { Grid, Link } from '@mui/material';
 import { Typography } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -35,17 +35,17 @@ function productgraph() {
                 <Typography className='font-lg-20 dark-grey' >(últimos 12 meses)  </Typography>
               </span>
               {/* chart */}
-              <Charts  productdetail = {"products"}/>
+              <Charts productdetail={"products"} />
             </Grid>
           </Grid>
         </CardContent>
 
         <CardActions>
           <Grid className="formbutton" item md={12}>
-            <Link style={{display:'block', height:'auto', marginTop: "0px" }} className="button-primary">
+            <Button className="button-primary" style={{width:"100%"}}>
               Invertir
-            </Link>
-            <Button style={{ width: "100%", background: "#F4F4FB", color: "#1E22AA", fontWeight: "600", marginTop: "10px" }} className="button-primary">
+            </Button>
+            <Button className="light-button-primary" style={{width:"100%"}}>
               Más información
             </Button>
           </Grid>

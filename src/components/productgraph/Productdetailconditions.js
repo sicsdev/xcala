@@ -25,15 +25,14 @@ function Productdetailconditions() {
   return (
   <div>
     <TableContainer style={{background: "#F1F4F9", borderRadius: "8px"}}>
-      <Table sx={{ minWidth: 560 }} aria-label="simple table">
+      <Table aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>
-                <Typography style={{fontSize:"24px", fontWeight:"600"}} className="p-18" variant="" component="">
+            <TableCell colSpan={2}>
+                <Typography  className="p-18 font-lg-24 fw-600">
                 Condiciones generales
                 </Typography>
                 </TableCell>
-            <TableCell align="right"></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -43,13 +42,13 @@ function Productdetailconditions() {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-              <Typography className="p-16" variant="" component="">
+              <Typography className="p-16">
               {row.data}
               </Typography>
                 
               </TableCell>
               <TableCell align="right">
-              <Typography style={{fontWeight:"600"}} className="p-18" variant="" component="">
+              <Typography style={{fontWeight:"600"}} className="p-18">
               {row.value}
               </Typography>
               </TableCell>

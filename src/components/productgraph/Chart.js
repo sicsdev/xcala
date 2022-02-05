@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReactApexChart from "react-apexcharts";
+
 function Charts(props) {
   console.log("productdetail=>",props)
   let first
@@ -8,7 +9,8 @@ if(props.productdetail === "productdetail"){
     chart: {
       id: "apexchart-example",
       toolbar: {
-        show: false,
+        show: true,
+
       },
     },
     stroke: { width: 1 },
@@ -22,6 +24,7 @@ if(props.productdetail === "productdetail"){
     yaxis: {
       show: true,
     },
+ 
     xaxis: {
       labels: {
         show: true,
@@ -33,6 +36,7 @@ if(props.productdetail === "productdetail"){
         show: true,
       },
     },
+
     grid: {
       show: true,
       borderColor: "#90A4AE",

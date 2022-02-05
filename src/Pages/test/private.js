@@ -17,6 +17,7 @@ import RiskProfile from "../risk-profile/Risk-Profile";
 import GoalInterest from "../goal-interest/Goal-Interest";
 import ConfigureNotification from "../configure-notifcation/Configure-Notification";
 import MyNotification from "../my-notifcation/My-Notification";
+import Myinvestmentdetail from "../myinvestmentdetail/Myinvestmentdetail";
 
 function Private() {
   const router = useLocation();
@@ -26,7 +27,7 @@ function Private() {
         router.pathname === "/profile-investor" ||
         router.pathname === "/my-account" ||
 
-        router.pathname === "/products" || router.pathname === "/objectives-interests"|| router.pathname === "/new-user"|| router.pathname === "/complete-registration"|| router.pathname === "/simulator"|| router.pathname === "/product-detail" || router.pathname === "/recurring-dash" || router.pathname === "/confirm-request" || router.pathname === "/risk-profile" || router.pathname === "/my-goal-interest" || router.pathname === "/configure-notification" || router.pathname === "/my-notification") && <ResponsiveAppBar />}
+        router.pathname === "/products" || router.pathname === "/objectives-interests"|| router.pathname === "/new-user"|| router.pathname === "/complete-registration"|| router.pathname === "/simulator"|| router.pathname === "/product-detail" || router.pathname === "/recurring-dash" || router.pathname === "/confirm-request" || router.pathname === "/risk-profile" || router.pathname === "/my-goal-interest" || router.pathname === "/configure-notification" || router.pathname === "/my-notification" || router.pathname === "/my-investment") && <ResponsiveAppBar />}
 
       <Routes>
         <Route exact path="/profile-investor" element={<Profile />} />
@@ -44,9 +45,11 @@ function Private() {
         <Route exact path="/my-goal-interest" element={<GoalInterest />} />
         <Route exact path="/configure-notification" element={<ConfigureNotification />} />
         <Route exact path="/my-notification" element={<MyNotification />} />
+        <Route exact path="/my-investment" element={<Myinvestmentdetail />} />
+
       </Routes>
 
-      {(router.pathname === "/my-account" || router.pathname === "/products" || router.pathname === "/objectives-interests"|| router.pathname === "/new-user"|| router.pathname === "/complete-registration"|| router.pathname === "/simulator"|| router.pathname === "/product-detail" || router.pathname === "/recurring-dash" || router.pathname === "/confirm-request" || router.pathname === "/risk-profile" || router.pathname === "/my-goal-interest" || router.pathname === "/configure-notification" || router.pathname === "/my-notification") && <Footer />}
+      {(router.pathname === "/my-account" || router.pathname === "/products" || router.pathname === "/objectives-interests"|| router.pathname === "/new-user"|| router.pathname === "/complete-registration"|| router.pathname === "/simulator"|| router.pathname === "/product-detail" || router.pathname === "/recurring-dash" || router.pathname === "/confirm-request" || router.pathname === "/risk-profile" || router.pathname === "/my-goal-interest" || router.pathname === "/configure-notification" || router.pathname === "/my-notification" || router.pathname === "/my-investment") && <Footer />}
     </>
   );
 }

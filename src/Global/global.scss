@@ -644,3 +644,12 @@ p#standard-basic-helper-text svg {
 .makeStyles-indicators-4 {
     margin-top: 30px;
 }
+body {
+    .css-11h4g4n-MuiGrid-root {
+        @media (max-width: $mobile) {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}
+

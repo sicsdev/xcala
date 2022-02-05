@@ -2,15 +2,21 @@
 
 .tablebody{
     .tableheading{
-        font-family: Poppins;
-        font-weight: normal;
+        font-family: $pfontfamily;
+        font-weight: $fweight;
         font-size: 14px;
         line-height: 21px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
-        color: #182849;
+        color: $p-color1;
         background: rgba(150, 189, 228, 0.1);
         height: 33px;
         padding: 3px 16px !important;
+    }
+    .tabledata{
+        font-family: $pfontfamily;
+        // font-weight: 600;
+        font-size: $p-18-fontsize; 
+        padding: 25px;   
     }
 }

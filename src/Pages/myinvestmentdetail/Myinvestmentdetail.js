@@ -63,8 +63,8 @@ function Myinvestmentdetail() {
                                     </Button>
                                 </Link>    
                                 <Link to="">
-                                    <Button style={{textTransform:"none"}} className="button-primary">
-                                    <img style={{marginRight:"15px"}} src="/assets/images/trending_up.svg"></img> Invertir más
+                                    <Button style={{textTransform:"none", display:"inline"}} className="button-primary">
+                                    <img style={{marginRight:"15px", verticalAlign:"middle"}} src="/assets/images/trending_up.svg"></img> Invertir más
                                     </Button> 
                                 </Link>
                             </Grid>

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Button, Grid, Typography } from "@mui/material";
+import { Link } from 'react-router-dom';
+import { margin } from '@mui/system';
 
 function SuccessStep(props) {
    if (props.setBack != null) {
@@ -10,7 +12,7 @@ function SuccessStep(props) {
       <>
          <Grid container maxWidth="sm" spacing={2} style={{ textAlign: "center" }}>
             <Grid item md={12}>
-               <img src="/assets/images/sucess-gif.gif" alt="success" style={{ mixBlendMode: 'multiply', margin: "0 auto" ,width:"100%"}}></img>
+               <img src="/assets/images/sucess-gif.gif" alt="success" style={{ mixBlendMode: 'multiply', margin: "0 auto", width: "100%" }}></img>
             </Grid>
             <Grid item md={12} >
                <Typography
@@ -29,7 +31,9 @@ function SuccessStep(props) {
             </Grid>)}
          </Grid >
          <Grid container maxWidth="sm" spacing={2} mt={5}>
-            <Button className="button-primary ">  {props.Success_btn}</Button>
+            <div style={{margin:'0 auto'}}>
+               <Link to={props.href} className="button-primary">{props.Success_btn}</Link>
+            </div>
          </Grid>
       </>
    );

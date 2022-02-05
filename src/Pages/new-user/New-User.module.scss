@@ -6,6 +6,9 @@
     background-size: cover;
     background-position: center;
     padding: 40px 0px 40px 0;
+    @media (max-width: $mobile) {
+        padding: 20px 0px 20px 0px;
+    }
     @include cardBordered;
     .edit_icon {
         a {
@@ -16,21 +19,32 @@
         }
     }
 }
+.padding-btn {
+    padding-top: 20px;
+}
+.not_registration {
+    padding-bottom: 5rem;
+    @media (max-width: $mobile) {
+        padding-bottom: 2rem;
+    }
+}
 .new_card {
     background: #eff6fc;
     border-radius: 8px;
     padding: 20px 40px 20px 40px;
     margin: 20px 0 0;
+    @media (max-width: $mobile) {
+        padding: 20px 15px 20px 15px;
+    }
     .MuiGrid-root.MuiGrid-container {
         align-items: center;
     }
 }
-.see_more{
+.see_more {
     text-align: center;
     margin: 30px 0 50px;
-    button{
+    button {
         font-weight: 600;
-
     }
 }
 @include pageHeading;

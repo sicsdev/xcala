@@ -26,15 +26,14 @@ function Products() {
           <div className={productstyles.page_wrapper}>
             <div className={productstyles.heading}>
               <img src="/assets/images/product_rect.png" alt=""></img>
-              <Typography className={productstyles.h2} variant="" component="">
+              <Typography className={productstyles.h2} >
                 Nuestros fondos
               </Typography>
             </div>
             <div className={productstyles.p}>
               <Typography
                 className={productstyles.fadetext}
-                variant=""
-                component=""
+
               >
                 Invierte tranquila... Podrás invertir desde $10 mil y sacar tu
                 plata cuando la necesites.
@@ -62,16 +61,16 @@ function Products() {
               </div>
             </div>
 
-            <Grid container spacing={5}  style={{ marginBottom: "5rem" }}>
+            <Grid container spacing={5} style={{ marginBottom: "5rem" }}>
               <Grid item xs={4}>
                 {/* Accordion-1 */}
-                <Accordion style={{ boxShadow: "none", marginTop: "1rem" }}  defaultExpanded={true}>
+                <Accordion style={{ boxShadow: "none", marginTop: "1rem" }} defaultExpanded={true}>
                   <AccordionSummary
                     style={{ padding: "0px" }}
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
-                   
+
                   >
                     <Typography
                       className="p-18"

@@ -4,6 +4,7 @@ import Button from '../../components/UI/Button';
 import Styled from "../received-request/Received-Request.module.scss"
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import DownloadIcon from '@mui/icons-material/Download';
+import { Link } from 'react-router-dom';
 function ReceivedRequest() {
   return <>
     <div className={Styled.received_request}>
@@ -132,7 +133,7 @@ function ReceivedRequest() {
         <Grid container spacing={2}>
           <Grid item md={12} mt={3}>
             <div className={Styled.continue_btn}>
-              <Button className="button-primary" >Volver al Inicio</Button>
+              <Link to="/recurring-dash" className="button-primary" >Volver al Inicio</Link>
             </div>
           </Grid>
         </Grid>

@@ -13,11 +13,9 @@ p {
     margin: 0px;
     font-family: $pfontfamily;
 }
-
-// .MuiContainer-root.MuiContainer-maxWidthSm.css-cuefkz-MuiContainer-root {
-//     width: 100% !important;
-//     max-width: 676px !important;
-// }
+a {
+    text-decoration: auto;
+}
 
 .dark-grey {
     color: $dark-grey;
@@ -92,7 +90,160 @@ body {
     .pt-lg-45 {
         padding-top: 45px;
     }
+    .p-18 {
+        font-family: $pfontfamily;
+        color: $p-color1;
+        font-size: $p-18-fontsize;
+        font-weight: $fweight;
+    }
+    .p-16 {
+        font-family: $pfontfamily;
+        color: $p-color1;
+        font-weight: $fweight;
+        font-size: $p-16-fontsize;
+    }
+    .p-14 {
+        font-family: $pfontfamily;
+        color: $p-color1;
+        font-weight: $fweight;
+        font-size: 14px;
+    }
+    .desktop-none {
+        display: none;
+    }
+    // button
+    .formbutton {
+        text-align: $center;
+    }
+    .img-fluid {
+        width: 100%;
+    }
+
+    .button-primary {
+        background: $themeColor;
+        color: white;
+        border: none;
+        display: block;
+        border-radius: 8px;
+        text-transform: capitalize;
+        font-family: $pfontfamily;
+        font-size: $p-18-fontsize;
+        font-weight: $fweight;
+        cursor: pointer;
+        margin-top: 1.5rem;
+        padding: 17px 40px;
+        text-decoration: auto;
+        &:hover {
+            background: $themeColor;
+        }
+    }
+    .light-button-primary {
+        background: $themeColor3;
+        color: $themeColorText;
+        padding: 17px 40px;
+        border: none;
+        display: block;
+        border-radius: 8px;
+        text-transform: capitalize;
+        font-family: $pfontfamily;
+        font-size: $p-18-fontsize;
+        font-weight: $fweight2;
+        cursor: pointer;
+        margin-top: 1.5rem;
+        text-decoration: auto;
+        &:hover {
+            background: $themeColor3;
+        }
+    }
+    .button-light {
+        background: $themeColor3;
+        color: $themeColor;
+        padding: 17px 30px;
+        border: none;
+        border-radius: 8px;
+        text-transform: capitalize;
+        font-family: $pfontfamily;
+        font-size: $p-18-fontsize;
+        font-weight: $fweight2;
+        cursor: pointer;
+        margin-top: 1.5rem;
+    }
+    .button-secondary-outline {
+        border: 1px solid $themeColor2;
+        background-color: transparent;
+        color: $themeColor2;
+        padding: 12px 35px;
+        border-radius: 10px;
+        text-transform: capitalize;
+        font-family: $pfontfamily;
+        font-size: $p-18-fontsize;
+        font-weight: $fweight;
+        cursor: pointer;
+    }
+    .button-primary.Mui-disabled {
+        background: #bfbfbf;
+        color: #ffffff !important;
+    }
 }
+@media (max-width: $mobile) {
+    body {
+        .font-lg-20 {
+            font-size: 18px;
+        }
+        .font-lg-24 {
+            font-size: 20px;
+        }
+        .font-lg-28 {
+            font-size: 24px;
+        }
+        .font-lg-32 {
+            font-size: 28px;
+        }
+        .font-lg-18 {
+            font-size: 16px;
+        }
+        .desktop-none {
+            display: block;
+        }
+    }
+}
+.icon-img {
+    position: relative;
+    img {
+        position: absolute;
+        @media (max-width: $mobile) {
+            width: 40px;
+            position: relative;
+        }
+    }
+}
+.xcala-logo-layout {
+    img {
+        width: 125px;
+    }
+}
+.xcala-logo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 44px 0px 46px 0px;
+    @media (max-width: $mobile) {
+        padding: 20px 0px 0px 0px;
+    }
+    img {
+        @media (max-width: $mobile) {
+            max-width: 102px;
+        }
+    }
+}
+
+.mobile-none {
+    @media (max-width: $mobile) {
+        display: none;
+    }
+}
+
 .break_content {
     display: block;
     padding: 7px 0;
@@ -133,21 +284,24 @@ body {
     .css-mhc70k-MuiGrid-root > .MuiGrid-item {
         padding-left: 0;
     }
-    .active_notification{
-        p{
+    .active_notification {
+        p {
             color: $themeColor !important;
         }
-        .date{
+        .date {
             font-weight: 600;
         }
+    }
+    .MuiLink-root {
+        cursor: pointer;
     }
     // Switch
     .css-1yjjitx-MuiSwitch-track {
         background-color: $p-color1;
         opacity: 1;
     }
-    .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked+.MuiSwitch-track {
-        background-color:  $themeColor;
+    .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
+        background-color: $themeColor;
         opacity: 1;
     }
     .css-jsexje-MuiSwitch-thumb {
@@ -157,7 +311,7 @@ body {
         position: relative;
         top: 4.1px;
     }
-    .css-1yjjitx-MuiSwitch-track{
+    .css-1yjjitx-MuiSwitch-track {
         border-radius: 15px;
     }
     .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase {
@@ -168,41 +322,92 @@ body {
         height: 40px;
     }
     .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked {
-        color:$white;
-        
+        color: $white;
     }
-   
-}
-
-.xcala-logo {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    padding: 44px 0px 46px 0px;
-    @media (max-width: $mobile) {
-        padding: 20px 0px 0px 0px;
+    .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root,
+    .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked {
+        color: $themeColor;
     }
-    img {
+    .css-11h4g4n-MuiGrid-root {
         @media (max-width: $mobile) {
-            max-width: 102px;
+            width: 100%;
+            margin-left: 0;
         }
     }
-}
-p {
-    margin: 0px;
-    font-family: $pfontfamily;
-}
-.mobile-none {
-    @media (max-width: $mobile) {
+    .css-11h4g4n-MuiGrid-root > .MuiGrid-item {
+        @media (max-width: $mobile) {
+            padding-left: 0px;
+        }
+    }
+    .custom-select {
+        .MuiSelect-select.Mui-focused {
+            color: $themeColor;
+        }
+        .css-1480iag-MuiInputBase-root-MuiInput-root {
+            &:after {
+                border-bottom: 2px solid $themeColor;
+            }
+        }
+        .css-1480iag-MuiInputBase-root-MuiInput-root:hover:not(.Mui-disabled):before {
+            border-bottom: 1px solid $themeColor;
+        }
+        .MuiSelect-select {
+            &::before {
+                content: "";
+                background-image: url(../../public/assets/images/down-arrow.svg);
+                position: absolute;
+                right: 10px;
+                bottom: 0;
+                top: 12px;
+                background-size: cover;
+                height: 10px;
+                width: 15px;
+            }
+        }
+        svg {
+            display: none;
+        }
+    }
+    // phoneno. scroller
+    .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiMenu-paper.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
+        // height: 223px;
+        height: auto;
+    }
+
+    //product page filter (accordion)
+    .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiAccordion-root.MuiAccordion-rounded.MuiAccordion-gutters.css-1elwnq4-MuiPaper-root-MuiAccordion-root:before {
         display: none;
     }
-}
-.img-fluid {
-    width: 100%;
-}
-.font-lg-18 {
-    font-size: 18px;
+    .MuiAccordionSummary-expandIconWrapper svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+        color: $p-color1;
+    }
+    .MuiCheckbox-root svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+        color: $themeColor;
+    }
+    .MuiGrid-root.MuiGrid-item.MuiGrid-grid-md-12.css-1o0tpb7-MuiGrid-root {
+        margin: 0px;
+    }
+    .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+        margin: 16px 0;
+    }
+
+    // productdetailpage table
+    tr.MuiTableRow-root.MuiTableRow-head .MuiTableCell-root {
+        border: none;
+        padding: 26px 30px 8px 30px;
+    }
+    tr.MuiTableRow-root.css-34nofg-MuiTableRow-root .MuiTableCell-root {
+        border: none;
+        padding: 14px 30px;
+    }
+    tr.MuiTableRow-root.css-34nofg-MuiTableRow-root:nth-child(8) .MuiTableCell-root {
+        padding-bottom: 40px;
+        // height: 163px;
+    }
+    .button-primary.Mui-disabled {
+        background: #bfbfbf;
+        color: #ffffff !important;
+    }
 }
 
 .accordion-main.Mui-expanded {
@@ -275,41 +480,7 @@ p {
         border-bottom: 1px solid $themeColor;
     }
 }
-.custom-select {
-    .MuiSelect-select.Mui-focused {
-        color: $themeColor;
-    }
-    .css-1480iag-MuiInputBase-root-MuiInput-root {
-        &:after {
-            border-bottom: 2px solid $themeColor;
-        }
-    }
-    .css-1480iag-MuiInputBase-root-MuiInput-root:hover:not(.Mui-disabled):before {
-        border-bottom: 1px solid $themeColor;
-    }
-    .MuiSelect-select {
-        &::before {
-            content: "";
-            background-image: url(../../public/assets/images/down-arrow.svg);
-            position: absolute;
-            right: 10px;
-            bottom: 0;
-            top: 12px;
-            background-size: cover;
-            height: 10px;
-            width: 15px;
-        }
-    }
-    svg {
-        display: none;
-    }
-}
-body {
-    .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root,
-    .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked {
-        color: $themeColor;
-    }
-}
+
 .page_content {
     position: relative;
     padding: 85px 30px;
@@ -330,28 +501,6 @@ body {
         height: 100%;
         z-index: -1;
     }
-}
-.xcala-logo-layout {
-    img {
-        width: 125px;
-    }
-}
-
-body .button-secondary-outline {
-    border: 1px solid $themeColor2;
-    background-color: transparent;
-    color: $themeColor2;
-    padding: 12px 35px;
-    border-radius: 10px;
-    text-transform: capitalize;
-    font-family: $pfontfamily;
-    font-size: $p-18-fontsize;
-    font-weight: $fweight;
-    cursor: pointer;
-}
-.button-primary.Mui-disabled {
-    background: #bfbfbf;
-    color: #ffffff !important;
 }
 
 .backgroundscreen {
@@ -392,81 +541,7 @@ body .button-secondary-outline {
         text-align: left;
     }
 }
-.p-18 {
-    font-family: $pfontfamily;
-    color: $p-color1;
-    font-size: $p-18-fontsize;
-    font-weight: $fweight;
-}
-.p-16 {
-    font-family: $pfontfamily;
-    color: $p-color1;
-    font-weight: $fweight;
-    font-size: $p-16-fontsize;
-}
-.p-14 {
-    font-family: $pfontfamily;
-    color: $p-color1;
-    font-weight: $fweight;
-    font-size: 14px;
-}
-// button
-.formbutton {
-    text-align: $center;
-}
-body .button-primary {
-    background: $themeColor;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    text-transform: capitalize;
-    font-family: $pfontfamily;
-    font-size: $p-18-fontsize;
-    font-weight: $fweight;
-    cursor: pointer;
-    margin-top: 1.5rem;
-    padding: 17px 40px;
-    text-decoration: auto;
-    height: 60px;
-    &:hover {
-        background: $themeColor;
-    }
-}
-body .light-button-primary {
-    background: $themeColor3;
-    color: $themeColorText;
-    padding: 17px 40px;
-    border: none;
-    border-radius: 8px;
-    text-transform: capitalize;
-    font-family: $pfontfamily;
-    font-size: $p-18-fontsize;
-    font-weight: $fweight2;
-    cursor: pointer;
-    margin-top: 1.5rem;
-    text-decoration: auto;
-    height: 60px;
-    &:hover {
-        background: $themeColor3;
-    }
-}
-body .button-light {
-    background: $themeColor3;
-    color: $themeColor;
-    padding: 17px 30px;
-    border: none;
-    border-radius: 8px;
-    text-transform: capitalize;
-    font-family: $pfontfamily;
-    font-size: $p-18-fontsize;
-    font-weight: $fweight2;
-    cursor: pointer;
-    margin-top: 1.5rem;
-}
-.button-primary.Mui-disabled {
-    background: #bfbfbf;
-    color: #ffffff !important;
-}
+
 .password-hint-wrapper {
     display: flex;
 }
@@ -480,46 +555,7 @@ p#standard-basic-helper-text {
 p#standard-basic-helper-text svg {
     width: 18px;
 }
-a {
-    text-decoration: auto;
-}
 
-// phoneno. scroller
-.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiMenu-paper.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
-    // height: 223px;
-    height: auto;
-}
-
-//product page filter (accordion)
-.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiAccordion-root.MuiAccordion-rounded.MuiAccordion-gutters.css-1elwnq4-MuiPaper-root-MuiAccordion-root:before {
-    display: none;
-}
-.MuiAccordionSummary-expandIconWrapper svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
-    color: $p-color1;
-}
-.MuiCheckbox-root svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
-    color: $themeColor;
-}
-.MuiGrid-root.MuiGrid-item.MuiGrid-grid-md-12.css-1o0tpb7-MuiGrid-root {
-    margin: 0px;
-}
-.css-1elwnq4-MuiPaper-root-MuiAccordion-root {
-    margin: 16px 0;
-}
-
-// productdetailpage table
-tr.MuiTableRow-root.MuiTableRow-head .MuiTableCell-root {
-    border: none;
-    padding: 26px 30px 8px 30px;
-}
-tr.MuiTableRow-root.css-34nofg-MuiTableRow-root .MuiTableCell-root {
-    border: none;
-    padding: 14px 30px;
-}
-tr.MuiTableRow-root.css-34nofg-MuiTableRow-root:nth-child(8) .MuiTableCell-root {
-    padding-bottom: 40px;
-    // height: 163px;
-}
 .objective_navbar {
     padding: 40px 0;
     .stpper-navbar {
@@ -568,9 +604,18 @@ tr.MuiTableRow-root.css-34nofg-MuiTableRow-root:nth-child(8) .MuiTableCell-root 
 }
 
 .padding-btn {
-    button {
+    a {
         padding: 10px 30px;
         font-weight: 500;
+        @media (max-width: $mobile) {
+            font-size: 16px;
+            padding: 10px 15px;
+            display: block;
+        }
+    }
+    @media (max-width: $mobile) {
+        text-align: center;
+        padding-top: 30px;
     }
 }
 .new-user-graph {
@@ -578,9 +623,21 @@ tr.MuiTableRow-root.css-34nofg-MuiTableRow-root:nth-child(8) .MuiTableCell-root 
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width: $mobile) {
+            display: block;
+        }
         button {
             max-width: 280px;
-            width: 100%;
+            @media (max-width: $mobile) {
+                max-width: 100%;
+                margin-top: 10px;
+            }
+        }
+        a {
+            @media (max-width: $mobile) {
+                max-width: 100%;
+                margin-top: 10px;
+            }
         }
     }
 }
@@ -595,3 +652,4 @@ body {
         }
     }
 }
+

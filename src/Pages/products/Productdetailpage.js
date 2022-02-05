@@ -6,41 +6,41 @@ import Charts from "../../components/productgraph/Chart";
 import Productdetailconditions from "../../components/productgraph/Productdetailconditions";
 
 function Productdetailpage() {
-  
+
   return (
     <div className={productgraphstyles.productdetail}>
       <Container className={productgraphstyles.wrapper} maxWidth="lg">
-       
-          <Grid container spacing={2}>
-            <Grid item md={8} mb={3}>
-              <div className={productgraphstyles.heading}>
-                <img src="/assets/images/polygon.png" alt=""></img>
-                <Typography
-                  className={productgraphstyles.h2}
-               
-                >
-                  Xcala Deuda Privada Global
-                </Typography>
-              </div>
-              <div className={productgraphstyles.link}>
-                <Link className={productgraphstyles.link1} to="">
-                  Generar ingresos
-                </Link>
-                <Link className={productgraphstyles.link2} to="">
-                  Medioambiente
-                </Link>
-              </div>
-            </Grid>
-            <Grid className="formbutton" item md={4}>
-              <div className={productgraphstyles.btn1}>
-                <Button style={{ width: "300px" }} className="button-primary">
-                  Simular inversión
-                </Button>
-              </div>
-            </Grid>
+
+        <Grid container spacing={2}>
+          <Grid item md={8} mb={3}>
+            <div className={productgraphstyles.heading}>
+              <img src="/assets/images/polygon.png" alt=""></img>
+              <Typography
+                className={productgraphstyles.h2}
+
+              >
+                Xcala Deuda Privada Global
+              </Typography>
+            </div>
+            <div className={productgraphstyles.link}>
+              <Link className={productgraphstyles.link1} to="">
+                Generar ingresos
+              </Link>
+              <Link className={productgraphstyles.link2} to="">
+                Medioambiente
+              </Link>
+            </div>
           </Grid>
-          {/* warning text  */}
-          <Grid item md={12} mb={3}>
+          <Grid className="formbutton" item md={4}>
+            <div className={productgraphstyles.btn1}>
+              <Link to="/simulator" style={{ width: "200px", margin: '30px auto 0' }} className="button-primary">
+                Simular inversión
+              </Link>
+            </div>
+          </Grid>
+        </Grid>
+        {/* warning text  */}
+        <Grid item md={12} mb={3}>
           <div className={productgraphstyles.heading}>
             <img src="/assets/images/warning.svg" alt=""></img>
             <Typography
@@ -158,10 +158,10 @@ function Productdetailpage() {
         </div>
 
         {/* Button */}
-        <Grid mt={2} className="formbutton" item md={12}>
-          <Button style={{ width: "300px" }} className="button-primary">
+        <Grid mt={2} className="formbutton text-center" item md={12}>
+          <Link to="/simulator" style={{ width: "200px", margin: '30px auto 0' }} className="button-primary">
             Simular inversión
-          </Button>
+          </Link>
         </Grid>
       </Container>
     </div>

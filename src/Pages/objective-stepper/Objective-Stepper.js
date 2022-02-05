@@ -21,7 +21,7 @@ function ObjectiveStepper(props) {
       <ObjectiveSelectorThree setstepper={setstepper} stepper={stepper} setSteppercolor={setSteppercolor} />
     ) : ''}
     {stepper === 4 ? (
-      <SuccessStep Success_heading=" ¡Excelente!" Success_subheading="Ahora que te conocemos mejor podremos recomendarte opciones más apropiadas de acuerdo a lo que te gusta y te motiva." Success_btn="Continua con tu inversión" setBack={null} />
+      <SuccessStep Success_heading=" ¡Excelente!" Success_subheading="Ahora que te conocemos mejor podremos recomendarte opciones más apropiadas de acuerdo a lo que te gusta y te motiva." Success_btn="Ver tus recomendaciones" href="/new-user" setBack={null} />
     ) : ''}
   </>;
 }

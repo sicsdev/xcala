@@ -26,10 +26,10 @@ function ConfirmRequest() {
   };
 
   return <>
-    <div className='grey-bg'>
-      {receivedRequest ?
+    {receivedRequest ?
+      <div className='grey-bg'>
         <div className={Styled.complete_registraion_main}>
-          <Container sx={{  maxWidth: "701px!important" }}>
+          <Container sx={{ maxWidth: "701px!important" }}>
             <Typography
               className='museo-regular font-lg-24'
             >
@@ -168,12 +168,12 @@ function ConfirmRequest() {
                     </div>
                   </div>
                 </Grid>
-                <Grid item md={6} mt={3}>
+                <Grid item md={6} xs={12} mt={3}>
                   <div className={Styled.continue_btn}>
                     <Button className="light-button-primary" >No por ahora</Button>
                   </div>
                 </Grid>
-                <Grid item md={6} mt={3}>
+                <Grid item md={6} xs={12} mt={3}>
                   <div className={Styled.continue_btn}>
                     <Button className="button-primary" onClick={OpenreceviedRequest}>Confirmar solicitud de inversión</Button>
                   </div>
@@ -182,10 +182,10 @@ function ConfirmRequest() {
             </div>
           </Container>
         </div>
-        :
-        <ReceivedRequest />
-      }
-    </div >
+      </div>
+      :
+      <ReceivedRequest />
+    }
   </>
 }
 

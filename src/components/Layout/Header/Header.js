@@ -9,7 +9,6 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Styles from "../Header/Header.module.scss";
 import ImagSrc from "../../../notification.svg";
@@ -18,7 +17,6 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import CloseIcon from '@mui/icons-material/Close';
-const pages = ["Inicio", "Productos", "Mis transacciones"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const ResponsiveAppBar = () => {
@@ -30,13 +28,15 @@ const ResponsiveAppBar = () => {
     setmobileMenu((prevState => !prevState))
   };
   const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
+    setAnchorElUser(false);
   };
 
-  const handleCloseUserMenu = () => {
+  const handleCloseMenu = () => {
     setmobileMenu((prevState => !prevState))
   };
-
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
   return (
     <AppBar position="static" className={Styles.app_header}>
       <Container maxWidth="lg" className={Styles.header_wrapper}>
@@ -97,10 +97,10 @@ const ResponsiveAppBar = () => {
                 horizontal: "right",
               }}
               open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
+              onClose={handleCloseNavMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                <MenuItem key={setting} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center" color="#1E22AA">
                     {setting}
                   </Typography>
@@ -122,7 +122,7 @@ const ResponsiveAppBar = () => {
             aria-label="account of current user"
             aria-controls="menu-appbar"
             aria-haspopup="true"
-            onClick={handleOpenNavMenu}
+            onClick={handleCloseMenu  }
             color="inherit"
           >
             <MenuIcon />
@@ -135,10 +135,10 @@ const ResponsiveAppBar = () => {
                     Filtros
                   </Typography>
                   <Typography >
-                    <CloseIcon className='blue_text' onClick={handleCloseUserMenu} />
+                    <CloseIcon className='blue_text' onClick={handleCloseMenu} />
                   </Typography>
                 </div>
-                <Link to="/new-user"  >
+                <Link to="/new-user" onClick={handleCloseMenu}>
                   Inicio
                 </Link>
                 <Accordion className={Styles.mobile_accordion} style={{ boxShadow: "none" }}>
@@ -179,10 +179,10 @@ const ResponsiveAppBar = () => {
                   </AccordionDetails>
                 </Accordion>
 
-                <Link to="/products"  >
+                <Link to="/products" onClick={handleCloseMenu}>
                   Productos
                 </Link>
-                <Link to="/lets-start"  >
+                <Link to="/lets-start" onClick={handleCloseMenu}>
                   Mis transacciones
                 </Link>
               </div>

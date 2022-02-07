@@ -52,7 +52,7 @@ body {
         font-family: Museo-bold;
     }
     .blue_text {
-        color: $themeColorText;
+        color: $themeColorText !important;
     }
     .light-blue {
         color: $p-color1;
@@ -124,14 +124,13 @@ body {
         color: white;
         border: none;
         display: block;
-        border-radius: 8px;
+        border-radius: 4px;
         text-transform: capitalize;
         font-family: $pfontfamily;
         font-size: $p-18-fontsize;
         font-weight: $fweight;
         cursor: pointer;
-        margin-top: 1.5rem;
-        padding: 17px 40px;
+        padding: 15px 40px;
         text-decoration: auto;
         &:hover {
             background: $themeColor;
@@ -140,64 +139,81 @@ body {
     .light-button-primary {
         background: $themeColor3;
         color: $themeColorText;
-        padding: 17px 40px;
+        padding: 15px 30px;
         border: none;
         display: block;
-        border-radius: 8px;
+        border-radius: 4px;
         text-transform: capitalize;
         font-family: $pfontfamily;
         font-size: $p-18-fontsize;
         font-weight: $fweight2;
         cursor: pointer;
-        margin-top: 1.5rem;
         text-decoration: auto;
         &:hover {
             background: $themeColor3;
+        }
+        @media (max-width: $mobile) {
+            font-size: 16px;
+            padding: 12px 20px;
         }
     }
     .button-light {
         background: $themeColor3;
         color: $themeColor;
-        padding: 17px 30px;
+        padding: 15px 30px;
         border: none;
-        border-radius: 8px;
+        border-radius: 4px;
         text-transform: capitalize;
         font-family: $pfontfamily;
         font-size: $p-18-fontsize;
         font-weight: $fweight2;
         cursor: pointer;
         margin-top: 1.5rem;
+        @media (max-width: $mobile) {
+            font-size: 16px;
+            padding: 12px 20px;
+        }
     }
     .button-secondary-outline {
         border: 1px solid $themeColor2;
         background-color: transparent;
         color: $themeColor2;
-        padding: 12px 35px;
-        border-radius: 10px;
+        padding: 12px 30px;
+        border-radius: 4px;
         text-transform: capitalize;
         font-family: $pfontfamily;
         font-size: $p-18-fontsize;
         font-weight: $fweight;
+        
         cursor: pointer;
+        @media (max-width: $mobile) {
+            font-size: 16px;
+            padding: 12px 20px;
+        }
     }
     .button-primary.Mui-disabled {
         background: #bfbfbf;
         color: #ffffff !important;
     }
+    .fund-btn button {
+        max-width: 380px;
+        margin: -40px auto 0px;
+        display: block;
+    }
 }
 @media (max-width: $mobile) {
     body {
         .font-lg-20 {
-            font-size: 18px;
+            font-size: 16px;
         }
         .font-lg-24 {
             font-size: 20px;
         }
         .font-lg-28 {
-            font-size: 24px;
+            font-size: 22px;
         }
         .font-lg-32 {
-            font-size: 28px;
+            font-size: 24px;
         }
         .font-lg-18 {
             font-size: 16px;
@@ -252,6 +268,11 @@ body {
     height: calc(100vh - 206px);
     display: grid;
     place-content: center;
+    @media (max-width: $mobile) {
+        height: 100%;
+        display: block;
+        place-content: start;
+    }
 }
 body {
     margin: 0;
@@ -395,10 +416,16 @@ body {
     tr.MuiTableRow-root.MuiTableRow-head .MuiTableCell-root {
         border: none;
         padding: 26px 30px 8px 30px;
+        @media (max-width: $mobile) {
+            padding: 20px 12px;
+        }
     }
     tr.MuiTableRow-root.css-34nofg-MuiTableRow-root .MuiTableCell-root {
         border: none;
         padding: 14px 30px;
+        @media (max-width: $mobile) {
+            padding: 10px 12px;
+        }
     }
     tr.MuiTableRow-root.css-34nofg-MuiTableRow-root:nth-child(8) .MuiTableCell-root {
         padding-bottom: 40px;
@@ -407,6 +434,77 @@ body {
     .button-primary.Mui-disabled {
         background: #bfbfbf;
         color: #ffffff !important;
+    }
+    .accordion-main {
+        .css-ounldo-MuiAccordionDetails-root {
+            @media (max-width: $mobile) {
+                padding: 16px 0;
+            }
+        }
+    }
+    .profile-tab-popup {
+        .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+            max-width: 505px;
+            #alert-dialog-description {
+                display: flex;
+                align-items: flex-start;
+                span {
+                    padding-top: 0;
+                }
+            }
+            .MuiDialogActions-root {
+                .MuiButton-root {
+                    width: 50%;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .css-ypiqx9-MuiDialogContent-root {
+        padding: 0px;
+    }
+    .product-filter-accordion {
+        .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+            background-color: transparent;
+        }
+    }
+    .show-filter-responsive {
+        @media (max-width: $mobile) {
+            display: block !important;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            background: white;
+            z-index: 9;
+            height: 100%;
+            padding: 0 25px !important;
+        }
+    }
+    .desktop-hide{
+        display: none;
+        @media (max-width: $mobile) {
+            display: block;
+        }
+    }
+    .mobile-hide {
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+
+    .table-data-wrapper .table-data {
+        .p-16,
+        .p-18 {
+            @media (max-width: $mobile) {
+                font-size: 14px;
+            }
+        }
+    }
+    .simulator-wrapper {
+        @media (max-width: $mobile) {
+            padding: 0;
+        }
     }
 }
 
@@ -485,24 +583,37 @@ body {
     position: relative;
     padding: 85px 30px;
     z-index: 10;
-    // height: calc(100vh - 85px);
-    // overflow: auto;
-    &::before {
-        content: "";
-        height: calc(100vh - 85px);
-        background-image: url(../../public/assets/images/background-layout.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        height: 100%;
-        z-index: -1;
+    height: 100%;
+    background-image: url(../../public/assets/images/background-layout.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    @media (max-width: $mobile) {
+        height: calc(100vh - 91px);
+    }
+
+    @media (max-width: $mobile) {
+        padding: 35px 5px;
     }
 }
-
+.stepper-main-wrapper {
+    @media (max-width: $mobile) {
+        padding: 0px 5px;
+    }
+    .stpper-navbar {
+        @media (max-width: $mobile) {
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+    }
+    // .css-11h4g4n-MuiGrid-root > .MuiGrid-item {
+    //     @media (max-width: $mobile) {
+    //         padding-top: 0px;
+    //     }
+    // }
+}
 .backgroundscreen {
     background: rgba(246, 246, 246, 1);
     position: relative;
@@ -558,10 +669,24 @@ p#standard-basic-helper-text svg {
 
 .objective_navbar {
     padding: 40px 0;
+    position: relative;
+    @media (max-width: $mobile) {
+        padding: 1px 0;
+    }
     .stpper-navbar {
+        @media (max-width: $mobile) {
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
         .MuiGrid-item {
             flex-basis: 30%;
             max-width: 30%;
+            @media (max-width: $mobile) {
+                flex-basis: calc(33.33% - 3px);
+                max-width: calc(33.33% - 3px);
+                margin-right: 3px !important;
+            }
         }
         span {
             margin: 0 auto;
@@ -652,4 +777,3 @@ body {
         }
     }
 }
-

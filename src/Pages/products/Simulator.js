@@ -44,7 +44,7 @@ function Simulator() {
         };
       });
     }
-    if (name.length == 1) {
+    if (name.length === 1) {
       setHelpermsg((nametext) => {
         return {
           ...nametext,
@@ -70,12 +70,11 @@ function Simulator() {
   return (
     <>
       <div className={simulatorstyle.bgcolor}>
-        <Container maxWidth="lg">
-          <Grid container spacing={25} className={simulatorstyle.simulate}>
-            <Grid item xs={4} maxWidth="lg">
+        <Container maxWidth="lg" className="simulator-wrapper">
+          <Grid container className={simulatorstyle.simulate} spacing={5}>
+            <Grid item md={4} xs={12} className={simulatorstyle.simulate_grid}>
               <Grid
                 className={simulatorstyle.container}
-                container
                 bgcolor={"#fff"}
                 maxWidth="sm"
                 spacing={2}
@@ -88,8 +87,7 @@ function Simulator() {
                     <img src="/assets/images/Rectangle.png" alt=""></img>
                     <Typography
                       className="font-lg-24 museo-regular"
-                      variant=""
-                      component=""
+
                     >
                       Simula tu inversión
                     </Typography>
@@ -98,7 +96,7 @@ function Simulator() {
 
                 <form>
                   <div className={simulatorstyle.register_input_text}>
-                    <div class={simulatorstyle.form_inputs}>
+                    <div className={simulatorstyle.form_inputs}>
                       <FormControl fullWidth variant="standard">
                         <TextField
                           className={
@@ -120,7 +118,7 @@ function Simulator() {
                       </FormControl>
                     </div>
 
-                    <div class={simulatorstyle.form_inputs}>
+                    <div className={simulatorstyle.form_inputs}>
                       <FormControl variant="standard">
                         <InputLabel htmlFor="standard-adornment-amount">
                           Inversión Inicial
@@ -146,7 +144,7 @@ function Simulator() {
                       </div>
                     </div>
 
-                    <div class={simulatorstyle.form_inputs}>
+                    <div className={simulatorstyle.form_inputs}>
                       <FormControl variant="standard">
                         <InputLabel htmlFor="standard-adornment-amount">
                           Aporte Mensual (Opcional)
@@ -167,7 +165,7 @@ function Simulator() {
                       </FormControl>
                     </div>
 
-                    <div class={simulatorstyle.form_inputs}>
+                    <div className={simulatorstyle.form_inputs}>
                       <FormControl fullWidth variant="standard">
                         <InputLabel id="demo-simple-select-standard-label">
                           Plazo estimado de inversión (Horizonte)
@@ -196,7 +194,7 @@ function Simulator() {
               </Grid>
             </Grid>
             {simulator ? (
-              <Grid item xs={8} maxWidth="lg">
+              <Grid item md={8} item xs={12} className={simulatorstyle.simulator_result_wrapper}>
                 <Simulatorresult />
               </Grid>
             ) : (

@@ -34,7 +34,6 @@
             display: flex;
             align-items: center;
             gap: 25px;
-            margin-top: 4rem;
             .h2 {
                 font-size: 28px;
                 color: $h2-color;
@@ -58,6 +57,7 @@
                 line-height: 30px;
                 @media (max-width: $mobile) {
                     font-size: 18px;
+                    color: $p-color1;
                 }
             }
         }

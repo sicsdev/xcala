@@ -4,16 +4,25 @@
     background: #f2f2f2;
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
+    @media (max-width: $mobile) {
+        padding: 30px 15px;
+    }
 
     .wrapper {
         background: $white;
         border-radius: 20px;
         padding: 2.5rem;
+        @media (max-width: $mobile) {
+            padding: 20px 15px 20px 15px;
+        }
         .heading {
             display: flex;
             align-items: center;
             gap: 14px;
             position: relative;
+            @media (max-width: $mobile) {
+                padding: 3px 0px;
+            }
 
             .h2 {
                 font-weight: $fweight2;
@@ -30,6 +39,12 @@
             align-content: center;
             text-align: center;
             margin-left: 3.6rem;
+            @media (max-width: $mobile) {
+                margin-left: 0;
+                padding: 15px 0 0;
+                margin-bottom:0;
+            }
+
 
             .link1,
             .link2 {
@@ -38,6 +53,9 @@
                 line-height: 25px;
                 font-family: $pfontfamily;
                 margin-bottom: 0.8rem;
+                @media (max-width: $mobile) {
+                    width: 50%;
+                }
             }
             .link1 {
                 background: #e7f3ff;
@@ -51,16 +69,24 @@
             }
         }
 
-       
-
         .p {
             margin-top: 3.2rem;
             margin-bottom: 3.2rem;
-            width: 880px;
+            width: 100%;
+            max-width: 880px;
+            @media (max-width: $mobile) {
+                margin: 15px 0;
+                padding: 15px 0 30px;
+            }
+
             .fadetext {
                 color: #808080;
                 font-size: $p-18-fontsize;
                 line-height: 30px;
+                @media (max-width: $mobile) {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
             }
         }
         .pdf_section {

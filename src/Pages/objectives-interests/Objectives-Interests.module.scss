@@ -1,9 +1,15 @@
+@import "/src/Global/sass/variables.scss";
 body {
     .objective_vector_img {
         max-width: 300px;
         height: 300px;
+        @media (max-width: $mobile) {
+            max-width: 190px;
+            margin: 0 auto;
+            display: block;
+        }
     }
-    
+
     .start_objective_grid {
         padding-left: 30px;
 
@@ -11,6 +17,13 @@ body {
             width: 100%;
             max-width: 335px;
             margin-top: 100px;
+            @media (max-width: $mobile) {
+                margin: 30px auto 50px auto;
+                max-width: 100%;
+            }
+        }
+        @media (max-width: $mobile) {
+            padding-left: 0px;
         }
     }
     .card_interest {
@@ -46,6 +59,8 @@ body {
             margin: -4px;
             background: linear-gradient(92.05deg, #ffffff -0.62%, #e3e3e3 50.1%, #ffffff 93.02%);
         }
-       
+    }
+    .stepCard{
+        margin: 40px 0 20px!important;
     }
 }

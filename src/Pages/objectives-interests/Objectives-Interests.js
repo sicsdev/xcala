@@ -19,11 +19,11 @@ function ObjectiveInterest() {
             <Grid container spacing={2}>
 
 
-              <Grid item md={3}>
-                <img src='./assets/images/objective-interests-img.svg' className={Styled.objective_vector_img}></img>
+              <Grid item md={3} xs={12}>
+                <img src='./assets/images/objective-interests-img.svg' className={Styled.objective_vector_img} alt=""></img>
               </Grid>
 
-              <Grid item md={9} >
+              <Grid item md={9} xs={12} >
                 <div className={Styled.start_objective_grid}>
                   <Typography variant='h5' className='blue_text font-lg-32'>
                     Conoce el mundo Xcala y ayúdanos a proponerte la mejor inversión para ti...

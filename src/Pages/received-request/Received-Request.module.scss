@@ -1,20 +1,37 @@
 @import "/src/Global/sass/variables.scss";
 .received_request {
     padding: 50px 30px;
+    background-color: #f2f2f2;
+    @media (max-width: $mobile) {
+        background-color: $white;
+        padding: 20px 0px;
+    }
     .success_tick {
         display: flex;
         padding: 30px 0;
         justify-content: center;
         position: relative;
+        @media (max-width: $mobile) {
+            padding: 20px 0 10px;
+        }
+       
         img {
             width: 150px;
             mix-blend-mode: multiply;
             position: absolute;
             top: -24px;
             left: 50px;
+            @media (max-width: $mobile) {
+                width: 100px;
+                top: -14px;
+                left: -10px;
+            }
         }
         .success_messg {
             padding: 11px 0 0 120px;
+            @media (max-width: $mobile) {
+                padding: 0px 0px 0px 90px;
+            }
         }
     }
     .registration_wrapper {
@@ -27,16 +44,21 @@
             border-radius: 8px;
             width: 100%;
             padding: 20px;
+            @media (max-width: $mobile) {
+                margin-top: 0px;
+            }
         }
         .registration_first_step {
             max-width: 640px;
             padding: 0px 37px 40px;
             margin: 0 auto;
+            @media (max-width: $mobile) {
+                padding: 0px 15px 40px;
+            }
             p {
                 color: $p-color1;
             }
 
-            
             .copy_btn {
                 text-align: center;
                 button {
@@ -44,7 +66,10 @@
                     max-width: 430px;
                     margin: 0 auto;
                     font-size: 16px;
-                    svg{
+                    @media (max-width: $mobile) {
+                        font-size: 14px;
+                    }
+                    svg {
                         font-size: 20px;
                         position: relative;
                         left: -10px;
@@ -52,18 +77,18 @@
                     }
                 }
             }
-            .warning{
+            .warning {
                 display: flex;
-                .warning_text{
+                .warning_text {
                     padding-left: 10px;
-                    color: #D12D35;
+                    color: #d12d35;
                     font-weight: 600;
                 }
             }
-            .downlaod{
+            .downlaod {
                 display: flex;
                 color: $themeColor2;
-                .downlaod_text{
+                .downlaod_text {
                     margin-left: 10px;
                     font-weight: 600;
                 }
@@ -82,6 +107,9 @@
             width: 100%;
             max-width: 255px;
             margin: 30px auto;
+            @media (max-width: $mobile) {
+                margin: 0px auto;
+            }
         }
     }
 }

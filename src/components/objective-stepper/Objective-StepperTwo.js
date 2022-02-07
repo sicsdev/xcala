@@ -27,7 +27,7 @@ function ObjectiveSelectorTwo(props) {
   return (
     <>
       <Grid container maxWidth="sm" spacing={2}>
-        <Grid item md={12} style={{ margin: "50px auto 30px auto" }}>
+        <Grid item md={12} xs={12} style={{ margin: "50px auto 30px auto" }}>
           <Typography
             variant="h6"
             className='light-blue font-lg-24'
@@ -42,7 +42,7 @@ function ObjectiveSelectorTwo(props) {
         </Grid>
       </Grid >
       <Grid container maxWidth="sm" spacing={2}>
-        <Grid item md={12}>
+        <Grid item md={12} xs={12}>
           <StepTwoCard icon={<DirectionsCarFilledIcon />} heading="Comprarte un auto" checkbox={<Checkbox onChange={checkmark} />} />
           <StepTwoCard icon={<DirectionsWalkIcon />} heading="Mejorar tu jubilación" checkbox={<Checkbox onChange={checkmark} />} />
           <StepTwoCard icon={<BeachAccessIcon />} heading="Las vacaciones soñadas" checkbox={<Checkbox onChange={checkmark} />} />

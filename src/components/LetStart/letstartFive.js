@@ -19,7 +19,7 @@ function LetStartFive(props) {
   return (
 
     <Grid container maxWidth="sm" spacing={2}>
-      <Grid item md={12} mt={3} style={{ margin: "20px auto" }}>
+      <Grid item md={12} xs={12} mt={3} style={{ margin: "20px auto" }}>
         <Typography
           variant="h6"
           style={{ color: '#182849', marginBottom: "25px", fontWeight: "bold" }}
@@ -29,13 +29,13 @@ function LetStartFive(props) {
 
       </Grid>
 
-      <Grid className={Styles.lets_start_btn} item md={12}>
+      <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
         <Link component="button" onClick={Handlestep}>Rojo</Link>
       </Grid>
-      <Grid className={Styles.lets_start_btn} item md={12}>
+      <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
         <Link component="button" onClick={Handlestep}>Medio</Link>
       </Grid>
-      <Grid className={Styles.lets_start_btn} item md={12}>
+      <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
         <Link component="button" onClick={Handlestep}>Alto</Link>
       </Grid>
     </Grid>

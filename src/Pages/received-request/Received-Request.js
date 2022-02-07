@@ -1,5 +1,5 @@
 import { Container, Grid, Typography } from '@mui/material';
-import React, { useState } from 'react';
+import React from 'react';
 import Button from '../../components/UI/Button';
 import Styled from "../received-request/Received-Request.module.scss"
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
@@ -131,7 +131,7 @@ function ReceivedRequest() {
           </Grid>
         </div>
         <Grid container spacing={2}>
-          <Grid item md={12} mt={3}>
+          <Grid item md={12} xs={12} mt={3}>
             <div className={Styled.continue_btn}>
               <Link to="/recurring-dash" className="button-primary" >Volver al Inicio</Link>
             </div>

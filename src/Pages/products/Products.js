@@ -13,27 +13,35 @@ import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import Productslider from "../../components/productgraph/Productslider";
-
+import FilterAltIcon from '@mui/icons-material/FilterAlt';
+import CloseIcon from '@mui/icons-material/Close';
 function Products() {
   const [showdata, setProductdatahide] = useState(false);
-
+  const [showResponsivefilter, setResponsivefilter] = useState();
   const onClick = () => setProductdatahide(true);
-
+  const showFilterMobile = () => {
+    setResponsivefilter(prevState=>!prevState);
+  }
+  const handleCloseUserMenu = () => {
+    setResponsivefilter((prevState => !prevState))
+  };
   return (
-    <div>
+    <div className={productstyles.product_wrapper}>
       <Container maxWidth="lg">
-        <Grid item md={12} mb={3}>
+        <Grid item md={12} xs={12} mb={3}>
           <div className={productstyles.page_wrapper}>
             <div className={productstyles.heading}>
-              <img src="/assets/images/product_rect.png" alt=""></img>
               <Typography className={productstyles.h2} >
+                <img src="/assets/images/product_rect.png" alt=""></img> &nbsp;
                 Nuestros fondos
+              </Typography>
+              <Typography className={productstyles.filter_responsive} onClick={showFilterMobile} >
+                <FilterAltIcon /> Filtrar
               </Typography>
             </div>
             <div className={productstyles.p}>
               <Typography
                 className={productstyles.fadetext}
-
               >
                 Invierte tranquila... Podrás invertir desde $10 mil y sacar tu
                 plata cuando la necesites.
@@ -43,7 +51,7 @@ function Products() {
         </Grid>
 
         {/* filter */}
-        {showdata == false ? (
+        {showdata === false ? (
           <div className="hide">
             <div className={productstyles.filter}>
               <Typography
@@ -54,15 +62,23 @@ function Products() {
                 Filtros
               </Typography>
               <div
-                className="Static"
-                style={{ fontSize: "14px", color: "#808080" }}
+                className="Static font-lg-14 light-grey"
+
               >
                 Actualizado 16/12/2021 - 14:27
               </div>
             </div>
 
-            <Grid container spacing={5} style={{ marginBottom: "5rem" }}>
-              <Grid item xs={4}>
+            <Grid container spacing={5}>
+              <Grid item md={4} xs={12} className={!showResponsivefilter ? `product-filter-accordion ${productstyles.responsive_filter}`:`product-filter-accordion show-filter-responsive ${productstyles.responsive_filter}`} >
+              <div className={productstyles.mobile_heading}>
+                  <Typography className='museo-regular font-lg-24 blue_text'>
+                    Filtros
+                  </Typography>
+                  <Typography >
+                    <CloseIcon className='blue_text' onClick={handleCloseUserMenu} />
+                  </Typography>
+                </div>
                 {/* Accordion-1 */}
                 <Accordion style={{ boxShadow: "none", marginTop: "1rem" }} defaultExpanded={true}>
                   <AccordionSummary
@@ -238,25 +254,25 @@ function Products() {
                   </AccordionDetails>
                 </Accordion>
               </Grid>
-              <Grid item xs={8}>
+              <Grid item md={8} xs={12}>
                 <Grid container spacing={3}  >
-                  <Grid item xs={6}>
+                  <Grid item md={6} xs={12}>
                     <Productgraph />
                   </Grid>
-                  <Grid item xs={6}>
+                  <Grid item md={6} xs={12}>
                     <Productgraph />
                   </Grid>
                   <Grid style={{ marginLeft: "auto" }} container spacing={3}>
-                    <Grid item xs={6}>
+                    <Grid item md={6} xs={12}>
                       <Productgraph />
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item md={6} xs={12}>
                       <Productgraph />
                     </Grid>
                   </Grid>
                 </Grid>
 
-                <Grid className={productstyles.showmorebtn} item md={12}>
+                <Grid className={productstyles.showmorebtn} item md={12} xs={12}>
                   <Button
                     onClick={onClick}
                     className={productstyles.btn}

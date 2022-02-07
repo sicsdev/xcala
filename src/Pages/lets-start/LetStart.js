@@ -29,15 +29,15 @@ function LetStart() {
   }
 
   return (
-    <div className="page_content">
+    <div className="page_content stepper-main-wrapper">
       <Container sx={{
         maxWidth: "444px !important",
       }}>
 
-        <StepperNav stepper={stepper} steppercolor={steppercolor} />
+        <StepperNav stepper={stepper} steppercolor={steppercolor} className='StepperNav' />
 
 
-        <Grid container mt={5} maxWidth="sm" spacing={2}>
+        <Grid container maxWidth="sm" spacing={2} className={Styles.letstart_grid}>
           {stepper === 1 ? (
             <>
               <LetStartOne setstepper={setstepper} stepper={stepper} setSteppercolor={setSteppercolor} setSteppercolor={setSteppercolor} />

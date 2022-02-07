@@ -18,7 +18,7 @@ function LetStartThree(props) {
   return (
 
     <Grid container maxWidth="sm" spacing={2}>
-      <Grid item md={12} mt={3} style={{ margin: "20px auto" }}>
+      <Grid item md={12} xs={12} mt={3} style={{ margin: "20px auto" }}>
         <Typography
           variant="h6"
           style={{ color: '#182849', marginBottom: "25px", fontWeight: "bold" }}
@@ -27,13 +27,13 @@ function LetStartThree(props) {
         </Typography>
       </Grid>
 
-      <Grid className={Styles.lets_start_btn} item md={12}>
+      <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
         <Link component="button" onClick={Handlestep}>Asegurar y mantener mi capital</Link>
       </Grid>
-      <Grid className={Styles.lets_start_btn} item md={12}>
+      <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
         <Link component="button"  onClick={Handlestep}>Aumentar mi patrimonio, ojalá con retornos estables</Link>
       </Grid>
-      <Grid className={Styles.lets_start_btn} item md={12}>
+      <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
         <Link component="button"  onClick={Handlestep}>Que mi dinero crezca sin importar los riesgos</Link>
       </Grid>
     </Grid>

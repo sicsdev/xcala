@@ -40,7 +40,7 @@ function Recurringdash() {
                         style={{ justifyContent: "start" }}
                         className={RecurringStyled.heading}
                     >
-                        <img src="/assets/images/product_rect.png" alt=""></img>
+                        <img src="/assets/images/product_rect.png" alt="d"></img>
                         <Typography
                         className="font-lg-28 museo-regular"
                         variant=""
@@ -116,7 +116,7 @@ function Recurringdash() {
                     <Grid container maxWidth="sm" spacing={2}>
                         <Grid item md={12} mb={3}>
                         <div className={RecurringStyled.card_h1}>
-                            <img src="/assets/images/Iconos-Perfiles.svg"></img>
+                            <img src="/assets/images/Iconos-Perfiles.svg" alt=""></img>
                             <Typography style={{marginRight:"auto"}} className={RecurringStyled.h1} variant="" component="">
                             Xcala Balanceado Global
                             </Typography>
@@ -243,7 +243,7 @@ function Recurringdash() {
                     <Grid container maxWidth="sm" spacing={2}>
                         <Grid item md={12} mb={3}>
                         <div className={RecurringStyled.card_h1}>
-                            <img src="/assets/images/Iconos-Perfiles.svg"></img>
+                            <img src="/assets/images/Iconos-Perfiles.svg" alt=""></img>
                             <Typography style={{marginRight:"auto"}} className={RecurringStyled.h1} variant="" component="">
                             Xcala Balanceado Global
                             </Typography>
@@ -344,7 +344,7 @@ function Recurringdash() {
         <Grid item md={12} mb={3}>
           <div className={RecurringStyled.page_wrapper}>
             <div className={RecurringStyled.heading}>
-              <img src="/assets/images/product_rect.png" alt=""></img>
+              <img src="/assets/images/product_rect.png" alt="d"></img>
               <Typography className={RecurringStyled.h2} variant="" component="">
               Te proponemos estos fondos <span style={{color:"#1E22AA"}}>para ti </span>
               </Typography>
@@ -392,7 +392,7 @@ function Recurringdash() {
         <Grid item md={12} mb={3}>
           <div className={RecurringStyled.page_wrapper}>
             <div className={RecurringStyled.heading}>
-              <img src="/assets/images/product_rect.png" alt=""></img>
+              <img src="/assets/images/product_rect.png" alt="d"></img>
               <Typography className={RecurringStyled.h2}>
               Descubre más Xcala
               </Typography>
@@ -402,8 +402,8 @@ function Recurringdash() {
 
         <Grid container spacing={12}>
             <Grid className={RecurringStyled.Investcolumn} item xs={4}>
-                <div class={RecurringStyled.Invest}> 
-                    <img height={"auto"} src="/assets/images/recurring-invest1.svg"/>
+                <div className={RecurringStyled.Invest}> 
+                    <img height={"auto"} src="/assets/images/recurring-invest1.svg" alt=""/>
                         <div className={RecurringStyled.heading}>
                             <Typography style={{color:"#1E22AA"}} className="font-lg-24 fw-600">
                             Invierte según tus motivaciones
@@ -415,8 +415,8 @@ function Recurringdash() {
                   <Recurringitems title="Generar un ingreso mensual extra" />
             </Grid>
             <Grid className={RecurringStyled.Investcolumn} item xs={4}>
-                <div class={RecurringStyled.Invest}> 
-                    <img src="/assets/images/recurring-invest2.svg"/>
+                <div className={RecurringStyled.Invest}> 
+                    <img src="/assets/images/recurring-invest2.svg" alt=""/>
                         <div className={RecurringStyled.heading}>
                             <Typography style={{color:"#1E22AA"}} className="font-lg-24 fw-600">
                             Invierte según tus áreas de interés
@@ -432,8 +432,8 @@ function Recurringdash() {
                   <Recurringitems title=" Otro" />
             </Grid>
             <Grid className={RecurringStyled.Investcolumn} item xs={4}>
-                <div class={RecurringStyled.Invest}> 
-                    <img src="/assets/images/recurring-invest3.svg"/>
+                <div className={RecurringStyled.Invest}> 
+                    <img src="/assets/images/recurring-invest3.svg" alt=""/>
                         <div className={RecurringStyled.heading}>
                             <Typography style={{color:"#1E22AA"}} className="font-lg-24 fw-600">
                             Invierte de acuerdo a objetivos

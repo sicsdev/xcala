@@ -5,6 +5,7 @@ import StepOneCard from './stepone-card/StepOne-Card';
 import TodayIcon from '@mui/icons-material/Today';
 import InsightsIcon from '@mui/icons-material/Insights';
 import LocalFloristIcon from '@mui/icons-material/LocalFlorist';
+import Styled from "../../Pages/objectives-interests/Objectives-Interests.module.scss"
 import Button from '../UI/Button';
 function ObjectiveSelectorOne(props) {
   const secondStep = () => {
@@ -20,7 +21,7 @@ function ObjectiveSelectorOne(props) {
   return (
     <>
       <Grid container maxWidth="sm" spacing={2}>
-        <Grid item md={12} style={{ margin: "50px auto 30px auto" }}>
+        <Grid className={Styled.stepCard} item md={12} xs={12} style={{ margin: "50px auto 30px auto" }}>
           <Typography
             variant="h6"
             className='light-blue font-lg-24'
@@ -35,12 +36,11 @@ function ObjectiveSelectorOne(props) {
         </Grid>
       </Grid >
       <Grid container maxWidth="sm" spacing={2}>
-        <Grid item md={12}>
+        <Grid item md={12} xs={12}>
           <StepOneCard icon={<TodayIcon />} heading="Generar un ingreso mensual extra" subheading="Obtener dividendos mensuales de mi inversión." checkbox={<Checkbox />} />
           <StepOneCard icon={<InsightsIcon />} heading="Hacer crecer mi plata" subheading="O generar ganancias en el tiempo." checkbox={<Checkbox />} />
           <StepOneCard icon={<LocalFloristIcon />} heading="Ganar con próposito e impacto" subheading="Ganar con próposito e impacto" checkbox={<Checkbox />} />
 
-         
 
           <Typography
             className='light-grey text-center '

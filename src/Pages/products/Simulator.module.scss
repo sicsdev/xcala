@@ -1,25 +1,30 @@
 @import "/src/Global/sass/variables.scss";
 
-.bgcolor{
-    background: #F2F2F2;
-.simulate{
-    display: flex;
-    justify-content: center;
-
-    padding: 5rem 0rem 5rem 0rem;
-
-        .container{
-        border-radius: 16px;
-        width: 444px;
-        padding: 2.2rem 3.6rem 2rem 3.6rem;
+.bgcolor {
+    background: #f2f2f2;
+    .simulate {
+        display: flex;
+        justify-content: center;
+        padding: 2rem 0rem 3rem 0rem;
         margin-top: 0px;
-          
-         .heading{
-             display: flex;
-             align-items: center;
-             gap: 10px;
-             color: $p-color1;
-         }
+        @media (max-width: $mobile) {
+            padding: 30px 0px;
+        }
+        .container {
+            border-radius: 16px;
+            width: 100%;
+            max-width: 444px;
+            padding: 2.2rem 3.6rem 2rem 3.6rem;
+            margin-top: 0px;
+            @media (max-width: $mobile) {
+                padding: 30px 15px;
+            }
+            .heading {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: $p-color1;
+            }
 
             form {
                 width: 100%;
@@ -49,9 +54,35 @@
                 Button {
                     width: 95%;
                     margin-top: 0rem;
+                    @media (max-width: $mobile) {
+                        width: 100%;
+                    }
                 }
             }
         }
+        .simulate_grid{
+            @media (max-width: $mobile) {
+                padding-left: 60px;
+                padding-right: 20px;
+            }
+           
+        }
+    }
+    .simulator_result_wrapper{
+        position: relative;
+        @media (max-width: $mobile) {
+            margin: 30px 0px 0 0;
+        }
+        // &::before {
+        //     @media (max-width: $mobile) {
+        //        content: "";
+        //        position: absolute;
+        //        background-color: white;
+        //        left: 0;
+        //        right: 0;
+        //        width: 100%;
+        //        height: 100%;
+        //     }
+        //  }
     }
 }
-

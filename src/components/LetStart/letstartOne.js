@@ -18,7 +18,7 @@ function LetStartOne(props) {
   return (
 
     <Grid container maxWidth="sm" spacing={2}>
-      <Grid item md={12} mt={3} style={{ margin: "20px auto" }}>
+      <Grid item xs={12} md={12} mt={3} style={{ margin: "20px auto" }}>
         <Typography
           variant="h6"
           style={{ color: '#182849', marginBottom: "25px", fontWeight: "bold" }}
@@ -28,13 +28,13 @@ function LetStartOne(props) {
 
       </Grid>
 
-      <Grid className={Styles.lets_start_btn} item md={12}>
+      <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
         <Link component="button" onClick={Handlestep}>Menos de 1 año</Link>
       </Grid>
-      <Grid className={Styles.lets_start_btn} item md={12}>
+      <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
         <Link component="button" onClick={Handlestep}>De 1 a 2 años</Link>
       </Grid>
-      <Grid className={Styles.lets_start_btn} item md={12}>
+      <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
         <Link component="button" onClick={Handlestep}>Menos de 2 año</Link>
       </Grid>
     </Grid>

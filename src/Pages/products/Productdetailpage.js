@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Grid, Container, Button } from "@mui/material";
+import { Typography, Grid, Container } from "@mui/material";
 import productgraphstyles from "./Productdetailpage.module.scss";
 import { Link } from "react-router-dom";
 import Charts from "../../components/productgraph/Chart";
@@ -10,9 +10,8 @@ function Productdetailpage() {
   return (
     <div className={productgraphstyles.productdetail}>
       <Container className={productgraphstyles.wrapper} maxWidth="lg">
-
         <Grid container spacing={2}>
-          <Grid item md={8} mb={3}>
+          <Grid item md={8} xs={12} mb={3}>
             <div className={productgraphstyles.heading}>
               <img src="/assets/images/polygon.png" alt=""></img>
               <Typography
@@ -31,7 +30,7 @@ function Productdetailpage() {
               </Link>
             </div>
           </Grid>
-          <Grid className="formbutton" item md={4}>
+          <Grid className="formbutton mobile-hide" item md={4}>
             <div className={productgraphstyles.btn1}>
               <Link to="/simulator" style={{ width: "200px", margin: '30px auto 0' }} className="button-primary">
                 Simular inversión
@@ -40,14 +39,12 @@ function Productdetailpage() {
           </Grid>
         </Grid>
         {/* warning text  */}
-        <Grid item md={12} mb={3}>
+        <Grid item md={12} xs={12} mb={3}>
           <div className={productgraphstyles.heading}>
             <img src="/assets/images/warning.svg" alt=""></img>
             <Typography
               style={{ color: "#D12D35" }}
               className="p-16"
-              variant=""
-              component=""
             >
               Este fondo supera el riesgo definido en tu perfil Conservador
             </Typography>
@@ -55,8 +52,7 @@ function Productdetailpage() {
           <div className={productgraphstyles.p}>
             <Typography
               className={productgraphstyles.fadetext}
-              variant=""
-              component=""
+
             >
               El Fondo tiene como objetivo principal invertir sus recursos en
               acciones “Man AHL TargetRisk”, el cual corresponde a un portfolio
@@ -65,21 +61,18 @@ function Productdetailpage() {
           </div>
         </Grid>
 
-        <Grid container spacing={3}>
-          <Grid item xs={6}>
+        <Grid container spacing={3} className='table-data-wrapper'>
+          <Grid item xs={12} md={6}>
             <div style={{ marginBottom: "2rem" }}>
               <Typography
-                style={{ fontSize: "24px", fontWeight: "600" }}
-                className="p-18"
-                variant=""
-                component=""
+                className="font-lg-24 fw-600"
               >
                 Evolución del fondo
               </Typography>
             </div>
             <Charts productdetail={"productdetail"} />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <Productdetailconditions />
           </Grid>
         </Grid>
@@ -87,16 +80,14 @@ function Productdetailpage() {
         <div className={productgraphstyles.pdf_section}>
           <div className={productgraphstyles.doc_head}>
             <Typography
-              style={{ fontSize: "24px", fontWeight: "600" }}
-              className="p-18"
-              variant=""
-              component=""
+              className="font-lg-24 fw-600"
+
             >
               Documentación de interés
             </Typography>
           </div>
           <Grid container spacing={2}>
-            <Grid item xs={4}>
+            <Grid item xs={12} md={4}>
               <div className={productgraphstyles.heading}>
                 <img src="/assets/images/pdf.svg" alt=""></img>
                 <Typography className="p-16" variant="" component="">
@@ -107,7 +98,7 @@ function Productdetailpage() {
               </div>
             </Grid>
 
-            <Grid item xs={4}>
+            <Grid item xs={12} md={4}>
               <div className={productgraphstyles.heading}>
                 <img src="/assets/images/pdf.svg" alt=""></img>
                 <Typography className="p-16" variant="" component="">
@@ -118,11 +109,11 @@ function Productdetailpage() {
               </div>
             </Grid>
 
-            <Grid className={productgraphstyles.flexxx} item xs={4}></Grid>
+            <Grid className={productgraphstyles.flexxx} item xs={12} md={4}></Grid>
           </Grid>
 
           <Grid mt={0.1} container spacing={2}>
-            <Grid item xs={4}>
+            <Grid item xs={12} md={4}>
               <div className={productgraphstyles.heading}>
                 <img src="/assets/images/pdf.svg" alt=""></img>
                 <Typography className="p-16" variant="" component="">
@@ -133,7 +124,7 @@ function Productdetailpage() {
               </div>
             </Grid>
 
-            <Grid item xs={4}>
+            <Grid item xs={12} md={4}>
               <div className={productgraphstyles.heading}>
                 <img src="/assets/images/pdf.svg" alt=""></img>
                 <Typography className="p-16" variant="" component="">
@@ -144,7 +135,7 @@ function Productdetailpage() {
               </div>
             </Grid>
 
-            <Grid className={productgraphstyles.flexxx} item xs={4}>
+            <Grid className={productgraphstyles.flexxx} item xs={12} md={4}>
               <div className={productgraphstyles.heading}>
                 <img src="/assets/images/pdf.svg" alt=""></img>
                 <Typography className="p-16" variant="" component="">

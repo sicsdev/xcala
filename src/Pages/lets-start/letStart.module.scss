@@ -1,3 +1,4 @@
+@import "/src/Global/sass/variables.scss";
 .stepper {
     position: relative;
     margin-right: 10px !important;
@@ -26,6 +27,14 @@
         justify-content: center;
         opacity: 0;
     }
+    @media (max-width: $mobile) {
+        width: calc(100%/9 - 5px);
+        margin-right: 5px !important;
+    }
+    &:last-child{
+        margin-right: 0px !important;
+    }
+   
 }
 .active {
     &::before {
@@ -35,6 +44,9 @@
         background: #5ac4b1;
         color: white;
         opacity: 1;
+        @media (max-width: $mobile) {
+            opacity: 0;
+        }
     }
 }
 .preactive{
@@ -64,17 +76,20 @@
         border: 2px solid transparent;
         border-radius: 8px;
         font-size: 14px;
-        &::before{
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: -2;
-            margin: -4px;
-            background: linear-gradient(92.05deg, #FFFFFF -0.62%, #E3E3E3 50.1%, #FFFFFF 93.02%);
+        @media (max-width: $mobile) {
+            height: 99px;
         }
+        // &::before{
+        //     content: '';
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     bottom: 0;
+        //     left: 0;
+        //     z-index: -2;
+        //     margin: -4px;
+        //     background: linear-gradient(92.05deg, #FFFFFF -0.62%, #E3E3E3 50.1%, #FFFFFF 93.02%);
+        // }
     }
    
 }
@@ -91,11 +106,20 @@
         }
     }
 }
+.letstart_grid{
+    padding-top: 50px;
+}
 .stepper:first-child::before {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
+    @media (max-width: $mobile) {
+        border-radius: 0;
+    }
 }
 .stepper:last-child::before {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+    @media (max-width: $mobile) {
+        border-radius: 0;
+    }
 }

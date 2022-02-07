@@ -15,8 +15,19 @@
     }
     .tabledata{
         font-family: $pfontfamily;
-        // font-weight: 600;
         font-size: $p-18-fontsize; 
         padding: 25px;   
+    }
+
+}
+.table_tabs Button{
+    padding: 0px 45px;
+}
+.filter{
+    display: flex;
+    gap: 8px;
+    justify-content: end;
+    .filter_text{
+        margin-right: 16px;
     }
 }

@@ -1,17 +1,8 @@
 import React from 'react';
 import { Button, Container, Grid, Typography } from '@mui/material';
 import MyinvestmentStyled from './Myinvestmentdetail.module.scss'
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Productgraph from '../../components/productgraph/Productgraph';
-import IconButton from '@mui/material/IconButton';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import Recurringitems from '../../components/UI/Recurring-items'
 import { Link } from 'react-router-dom';
 import Charts from '../../components/productgraph/Chart';
-import Productdetailconditions from '../../components/productgraph/Productdetailconditions';
 import Myinvestmentsummary from '../../components/Myinvestment-detail/Myinvestment-summary';
 import StickyHeadTable from '../../components/Myinvestment-detail/Investment-table';
 
@@ -32,7 +23,7 @@ function Myinvestmentdetail() {
                             variant=""
                             component=""
                             >
-                            Detalle de mi inversión
+                            Mis transacciones
                             </Typography>
                         </div>
                 </Grid>
@@ -72,7 +63,7 @@ function Myinvestmentdetail() {
                     </Grid>    
             </div>
           </Grid>
-    </Grid>      
+    </Grid>
 {/* end row*/}
 </Container>
     </div>  
@@ -101,6 +92,14 @@ function Myinvestmentdetail() {
                 Evolución del fondo
               </Typography>
             </div>
+
+            <div className={MyinvestmentStyled.table_button}>
+                <Link to=""> <Button variant="outlined" className={MyinvestmentStyled.btn}> 12 meses </Button> </Link>
+                <Link to=""> <Button variant="outlined" className={MyinvestmentStyled.btn}> 3 meses </Button> </Link>
+                <Link to=""> <Button variant="outlined" className={MyinvestmentStyled.btn}> 1 meses </Button> </Link>
+                <Link to=""> <Button variant="outlined" className={MyinvestmentStyled.btn}> 7 dias </Button> </Link>
+            </div>
+
           <Charts productdetail={"productdetail"} />
           </Grid>
         </Grid>   
@@ -120,7 +119,8 @@ function Myinvestmentdetail() {
                 </div>
                 
         </Grid>
-            <StickyHeadTable /></div>
+            <StickyHeadTable selector = {"notselected"} />
+        </div>
     </Container>
 
 
@@ -158,7 +158,7 @@ function Myinvestmentdetail() {
 
         </div>
     </Container>    
-</div>    
+</div>
 </>
   );
 }

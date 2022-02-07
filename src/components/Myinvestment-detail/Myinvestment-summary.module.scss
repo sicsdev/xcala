@@ -1,0 +1,34 @@
+@import "/src/Global/sass/variables.scss";
+
+.table_container{
+    margin-top: 2.5rem;
+.success_table{
+    .tablecell_heading{
+        border-bottom: 1px solid #1E22AA;
+    .tableheading{
+        padding: 10px 0px;
+        font-size: $p-18-fontsize;
+    }
+}
+.tabledata{
+    padding: 10px 0px;
+    color: #101820;
+    border: none;
+    font-size: $p-18-fontsize;
+    height: 52px;
+    .fade_text{
+        font-weight: $fweight;
+        display: block;
+        color:#808080
+    }
+}
+.successbluebox{
+    padding: 20px 16px;
+    .fade_text{
+        font-weight: $fweight;
+        display: block;
+    
+    }
+}
+}
+}

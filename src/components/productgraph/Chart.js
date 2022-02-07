@@ -118,6 +118,7 @@ if(props.productdetail === "productdetail"){
   ]);
   return (
     <>
+
     {props.productdetail === "productdetail" ?   <ReactApexChart
         options={options}
         series={series}

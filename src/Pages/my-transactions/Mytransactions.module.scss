@@ -1,0 +1,36 @@
+@import "/src/Global/sass/variables.scss";
+
+.top_banner {
+    background-position: center;
+    background-image: url("../../../public/assets/images/recurring.png");
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0px 40px 0;
+    margin-bottom: 0px;
+        .heading{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: $p-color1;
+            margin-top: 1.3rem;
+            margin-bottom: 3rem;
+        }
+        .cardstyle{
+            margin-top: 1.5rem;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #F2F2F2;
+            box-shadow: 8px 8px 20px rgba(61, 64, 75, 0.05);
+            border-radius: 8px;
+            padding: 40px;
+            background: linear-gradient(268.78deg, rgba(255, 255, 255, 0.8) 1.52%, rgba(255, 255, 255, 0) 39.44%, rgba(255, 255, 255, 0.8) 99.9%);
+            mix-blend-mode: normal;
+            backdrop-filter: blur(48px); 
+    }
+    .btn Button{
+        margin: auto;
+        margin-top: 2.5rem;
+        padding: 16px 80px;
+        height: 60px;
+    }
+}

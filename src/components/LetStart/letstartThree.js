@@ -28,13 +28,13 @@ function LetStartThree(props) {
       </Grid>
 
       <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
-        <Link component="button" onClick={Handlestep}>Asegurar y mantener mi capital</Link>
+        <Link component="button"  className='card-bordered'onClick={Handlestep}>Asegurar y mantener mi capital</Link>
       </Grid>
       <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
-        <Link component="button"  onClick={Handlestep}>Aumentar mi patrimonio, ojalá con retornos estables</Link>
+        <Link component="button"  className='card-bordered' onClick={Handlestep}>Aumentar mi patrimonio, ojalá con retornos estables</Link>
       </Grid>
       <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
-        <Link component="button"  onClick={Handlestep}>Que mi dinero crezca sin importar los riesgos</Link>
+        <Link component="button"  className='card-bordered' onClick={Handlestep}>Que mi dinero crezca sin importar los riesgos</Link>
       </Grid>
     </Grid>
   );

@@ -3,15 +3,16 @@ import CompleteRegisterFour from '../../components/complete-register-step/Comple
 import CompleteRegisterOne from '../../components/complete-register-step/Complete-RegisterOne';
 import CompleteRegisterThree from '../../components/complete-register-step/Complete-RegisterThree';
 import CompleteRegisterTwo from '../../components/complete-register-step/Complete-RegisteTwo';
-// import ErrorStep from '../../components/UI/errorStep';
+import Styled from "../complete-registration/Complete-Registration.module.scss"
+import ErrorStep from '../../components/UI/errorStep';
 import StepperNav from '../../components/UI/stepper-nav';
 import SuccessStep from '../../components/UI/successStep';
 function CompleteRegisterStepper(props) {
   const [stepper, setstepper] = useState(1);
-  const [steppercolor, setSteppercolor] = useState({ comp1: true, comp2: false, comp3: false, comp4: false });
+  const [steppercolor, setSteppercolor] = useState({ comp1: true, comp2: false, comp3: false, comp4: false, comp5: false });
   return <>
     {stepper === 5 ? null :
-      <StepperNav stepper={stepper} steppercolor={steppercolor} compleletRegisterStepper="compete_registration" />
+      <StepperNav stepper={stepper} steppercolor={steppercolor} compleletRegisterStepper='compete_registration' className={Styled.complete_registration_nav} />
     }
     {stepper === 1 ? (
       <CompleteRegisterOne setstepper={setstepper} stepper={stepper} setSteppercolor={setSteppercolor} />
@@ -26,8 +27,8 @@ function CompleteRegisterStepper(props) {
       <CompleteRegisterFour setstepper={setstepper} stepper={stepper} setSteppercolor={setSteppercolor} />
     ) : ''}
     {stepper === 5 ? (
-      <SuccessStep Success_heading="¡Felicidades, completaste tu registro!" Success_btn="Ver tus recomendaciones" setBack={props.setBack}/>
-      // <ErrorStep  setBack={props.setBack}/>
+      // <SuccessStep Success_heading="¡Felicidades, completaste tu registro!" Success_btn="Ver tus recomendaciones" setBack={props.setBack} />
+      <ErrorStep  setBack={props.setBack}/>
     ) : ''}
   </>;
 }

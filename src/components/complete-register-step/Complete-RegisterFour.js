@@ -17,7 +17,7 @@ function CompleteRegisterFour({ setstepper, setSteppercolor }) {
   return (
     <>
       <Grid container maxWidth="sm" spacing={2}>
-        <Grid item md={12} style={{ margin: "50px auto 0px auto" }}>
+        <Grid item md={12} xs={12} className='stepper-grid-registration'>
           <Typography
             variant="h6"
             className='blue_text fw-600 font-lg-24'
@@ -39,19 +39,19 @@ function CompleteRegisterFour({ setstepper, setSteppercolor }) {
             </ul>
           </div>
         </Grid>
-        <Grid container spacing={3} mt={1}>
-          <Grid className="formbutton" item md={6}>
-              <Button className="light-button-primary" >
-                Cancelar
-              </Button>
-          </Grid>
-          <Grid className="formbutton" item md={6}>
-            <Button className="button-primary" onClick={finalStep}>
-              Continuar
-            </Button>
-          </Grid>
+      </Grid>
+      <Grid container spacing={3} className={Styled.complete_registration_btn}>
+        <Grid className="formbutton" item md={6} xs={12}>
+          <Button className="light-button-primary">
+            Cancelar
+          </Button>
         </Grid>
-      </Grid >
+        <Grid className="formbutton" item md={6} xs={12}>
+          <Button className="button-primary" onClick={finalStep}>
+            Firmar mandato
+          </Button>
+        </Grid>
+      </Grid>
     </>
   );
 }

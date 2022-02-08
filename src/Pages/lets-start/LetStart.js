@@ -34,7 +34,7 @@ function LetStart() {
         maxWidth: "444px !important",
       }}>
 
-        <StepperNav stepper={stepper} steppercolor={steppercolor} className='StepperNav' />
+        <StepperNav stepper={stepper} steppercolor={steppercolor} className={`StepperNav ${Styles.lets_stepper_nav}`} />
 
 
         <Grid container maxWidth="sm" spacing={2} className={Styles.letstart_grid}>

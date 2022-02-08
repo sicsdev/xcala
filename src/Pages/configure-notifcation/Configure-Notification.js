@@ -12,7 +12,7 @@ function ConfigureNotification() {
           </Typography>
           <div className={Styled.configure_notification_wrapper}>
             <Grid container spacing={2} className={Styled.configure_notification_step}>
-              <Grid item md={12} mb={3}>
+              <Grid item md={12} xs={12} mb={3}>
                 <div className={Styled.configure_notification}>
                   <Typography>
                     Depósito recibido por Xcala

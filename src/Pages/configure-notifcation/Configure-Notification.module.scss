@@ -1,6 +1,9 @@
 @import "/src/Global/sass/variables.scss";
 .configure_notification_main {
     padding: 0px 30px;
+    @media (max-width: $mobile) {
+        padding: 0px;
+    }
     .configure_notification_wrapper {
         background: $white;
         border-radius: 20px;
@@ -9,6 +12,9 @@
             max-width: 591px;
             padding: 0px 37px;
             margin: 0 auto;
+            @media (max-width: $mobile) {
+                padding: 0px 15px;
+            }
             p {
                 color: $p-color1;
             }

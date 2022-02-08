@@ -14,7 +14,7 @@ function CompleteRegisterThree({setstepper,setSteppercolor}) {
   return (
     <>
       <Grid container maxWidth="sm" spacing={2}>
-        <Grid item md={12} style={{ margin: "50px auto 0px auto" }}>
+        <Grid item md={12} className='stepper-grid-registration'>
           <Typography
             variant="h6"
             className='blue_text fw-600 font-lg-24'
@@ -27,8 +27,11 @@ function CompleteRegisterThree({setstepper,setSteppercolor}) {
           >
             ¡Excelente, nos queda muy poco! Por favor escanea el siguiente código con tu celular para poder continuar con la validación de tu identidad.
           </Typography>
-          <div className="" style={{margin:"20px auto"}}>
+          <div className="mobile-hide" style={{margin:"20px auto"}}>
             <img src='/assets/images/scanner.png' alt='qr' style={{margin:"0 auto", display:"block"}} onClick={fourthStep}></img>
+          </div>
+          <div className="desktop-hide" style={{margin:"20px auto"}}>
+            <img src='/assets/images/fingerprint-mobile.png' alt='qr' style={{margin:"0 auto", display:"block"}} onClick={fourthStep}></img>
           </div>
         </Grid>
       </Grid >

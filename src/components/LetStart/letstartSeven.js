@@ -30,13 +30,13 @@ function LetStartSeven(props) {
       </Grid>
 
       <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
-        <Link component="button" onClick={Handlestep}>Vendería inmediatamente</Link>
+        <Link component="button" className='card-bordered' onClick={Handlestep}>Vendería inmediatamente</Link>
       </Grid>
       <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
-        <Link component="button" onClick={Handlestep}>Consultoría a un experto</Link>
+        <Link component="button" className='card-bordered' onClick={Handlestep}>Consultoría a un experto</Link>
       </Grid>
       <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
-        <Link component="button" onClick={Handlestep}>Asumiría las pérdidas en el corto plazo y esperaría obtener ganancias en el largo plazo</Link>
+        <Link component="button" className='card-bordered' onClick={Handlestep}>Asumiría las pérdidas en el corto plazo y esperaría obtener ganancias en el largo plazo</Link>
       </Grid>
     </Grid>
   );

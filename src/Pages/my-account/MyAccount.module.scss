@@ -1,12 +1,19 @@
-$themeColor2: #49a197;
+@import "/src/Global/sass/variables.scss";
+
 .account_card {
     background: #ffffff;
     border-radius: 16px;
     padding: 20px;
+    @media (max-width: $mobile) {
+        padding: 10px 15px;
+    }
     .user_row {
         .user_grid {
             display: flex;
             padding: 20px;
+            @media (max-width: $mobile) {
+                padding: 0;
+            }
             .user_img {
                 img {
                     width: 60px;

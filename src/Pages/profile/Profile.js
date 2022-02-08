@@ -68,13 +68,13 @@ function Profile(props) {
               ¿Conoces tu perfil inversionista?
             </Typography>
 
-            <CustomizedAccordions  openPopUp={handleClickOpen} className='profile-tabs-accordion' accordion_head_img="/assets/images/Iconos-Perfiles.svg" head_content="Conservador" accordion_body_heading="Perfil Conservador" accordion_body_content={accordion_body_content} accordion_body_btn_label="Es mi perfil" />
+            <CustomizedAccordions  openPopUp={handleClickOpen} className='profile-tabs-accordion card-bordered' accordion_head_img="/assets/images/Iconos-Perfiles.svg" head_content="Conservador" accordion_body_heading="Perfil Conservador" accordion_body_content={accordion_body_content} accordion_body_btn_label="Es mi perfil" />
 
-            <CustomizedAccordions  openPopUp={handleClickOpen} className='profile-tabs-accordion' accordion_head_img="/assets/images/cycle.svg" head_content="Moderado" accordion_body_heading="Perfil Conservador" accordion_body_content={accordion_body_content} accordion_body_btn_label="Es mi perfil" />
+            <CustomizedAccordions  openPopUp={handleClickOpen} className='profile-tabs-accordion card-bordered' accordion_head_img="/assets/images/cycle.svg" head_content="Moderado" accordion_body_heading="Perfil Conservador" accordion_body_content={accordion_body_content} accordion_body_btn_label="Es mi perfil" />
 
-            <CustomizedAccordions  openPopUp={handleClickOpen} className='profile-tabs-accordion' accordion_head_img="/assets/images/walk.svg" head_content="Agresivo" accordion_body_heading="Perfil Conservador" accordion_body_content={accordion_body_content} accordion_body_btn_label="Es mi perfil" />
+            <CustomizedAccordions  openPopUp={handleClickOpen} className='profile-tabs-accordion card-bordered' accordion_head_img="/assets/images/walk.svg" head_content="Agresivo" accordion_body_heading="Perfil Conservador" accordion_body_content={accordion_body_content} accordion_body_btn_label="Es mi perfil" />
 
-            <CustomizedAccordions  openPopUp={handleClickOpen} handleClick={handleClick} className="profile-tabs-accordion size-accordion" accordion_head_img="/assets/images/help_outline.svg" head_content="No estoy seguro, descubrir mi perfil" accordion_body_heading="Perfil Conservador" accordion_body_content={accordion_body_content} accordion_body_btn_label="Es mi perfil" />
+            <CustomizedAccordions  openPopUp={handleClickOpen} handleClick={handleClick} className="profile-tabs-accordion size-accordion card-bordered" accordion_head_img="/assets/images/help_outline.svg" head_content="No estoy seguro, descubrir mi perfil" accordion_body_heading="Perfil Conservador" accordion_body_content={accordion_body_content} accordion_body_btn_label="Es mi perfil" />
           </Grid>
         </Grid>
 

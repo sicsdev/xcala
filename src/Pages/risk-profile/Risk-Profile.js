@@ -11,33 +11,33 @@ function RiskProfile() {
         </Typography>
         <Grid container spacing={5} mt={1}>
           <Grid item xs={12}>
-            <div className={Styled.card_border}>
+            <div className={`card-bordered ${Styled.card_border}`}>
               <Grid container>
-                <Grid item xs={8}>
+                <Grid item xs={10} md={9}>
                   <Typography
                     className="font-lg-24 blue_text"
                     variant="h4"
                   >
-                    Marcela, tu perfil de inversionista es Conservador
+                    Marcela, tu perfil de inversionista es <strong> Conservador</strong>
                   </Typography>
+                </Grid>
+                <Grid item xs={2} md={2}>
+                  <div className='text-right icon-img'>
+                    <img src="/assets/images/Iconos-Perfiles.svg"></img>
+                  </div>
+                </Grid>
+                <Grid item xs={12} md={9}>
                   <Typography
                     className="font-lg-20"
                     mt={2}
                   >
                     Prefieres tener inversiones con un nivel de riesgo menor, es decir invertir el 100% de tu dinero en instrumentos más seguros aunque de menor rendimiento.
                   </Typography>
-                  <Typography
-                    className={Styled.edit_icon}
-                    mt={2}
-                  >
-                    <Button className='button-secondary-outline'>Reevaluar mi perfil</Button>
-                  </Typography>
 
                 </Grid>
-                <Grid item xs={4}>
-                  <div className='text-right'>
-                    <img src="/assets/images/Iconos-Perfiles.svg"></img>
-                  </div>
+                <Grid item xs={12} md={9} mt={2}>
+                  <Button className='button-secondary-outline'>Reevaluar mi perfil</Button>
+
                 </Grid>
               </Grid>
             </div>
@@ -45,15 +45,15 @@ function RiskProfile() {
         </Grid>
       </Container>
     </div>
-    <div className='light-skyblue-bg' style={{ paddingBottom: "5rem" }}>
-      <Container maxWidth="lg">
+    <div className='light-skyblue-bg' >
+      <Container maxWidth="lg" className={Styled.risk_profile_graph}>
         <Grid container>
           <Grid item lg={12}>
             <div className={Styled.page_wrapper}>
               <div className={Styled.heading}>
                 <img src="/assets/images/product_rect.png" alt=""></img>
                 <Typography className='museo-regular font-lg-28' >
-                  Te proponemos estos fondos para ti
+                  Te proponemos estos fondos <span className='blue_text'> para ti</span>
                 </Typography>
               </div>
               <div className={Styled.p}>
@@ -67,10 +67,9 @@ function RiskProfile() {
           </Grid>
         </Grid>
         <Grid container spacing={3} className='new-user-graph'>
-          <Grid item lg={12} >
+          <Grid item lg={12} xs={12}>
             <ProductRiskSlider />
           </Grid>
-
         </Grid>
 
       </Container>

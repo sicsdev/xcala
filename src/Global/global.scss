@@ -17,7 +17,7 @@ a {
     text-decoration: auto;
 }
 
-.black-color{
+.black-color {
     color: $black-color;
 }
 .dark-grey {
@@ -127,7 +127,7 @@ body {
         color: white;
         border: none;
         display: block;
-        border-radius: 4px;
+        border-radius: 8px;
         text-transform: capitalize;
         font-family: $pfontfamily;
         font-size: $p-18-fontsize;
@@ -145,7 +145,7 @@ body {
         padding: 15px 30px;
         border: none;
         display: block;
-        border-radius: 4px;
+        border-radius: 8px;
         text-transform: capitalize;
         font-family: $pfontfamily;
         font-size: $p-18-fontsize;
@@ -165,7 +165,7 @@ body {
         color: $themeColor;
         padding: 15px 30px;
         border: none;
-        border-radius: 4px;
+        border-radius: 8px;
         text-transform: capitalize;
         font-family: $pfontfamily;
         font-size: $p-18-fontsize;
@@ -182,12 +182,12 @@ body {
         background-color: transparent;
         color: $themeColor2;
         padding: 12px 30px;
-        border-radius: 4px;
+        border-radius: 8px;
         text-transform: capitalize;
         font-family: $pfontfamily;
         font-size: $p-18-fontsize;
         font-weight: $fweight;
-        
+
         cursor: pointer;
         @media (max-width: $mobile) {
             font-size: 16px;
@@ -223,6 +223,9 @@ body {
         }
         .desktop-none {
             display: block;
+        }
+        .pt-lg-45 {
+            padding-top: 25px;
         }
     }
 }
@@ -298,6 +301,24 @@ body {
         padding: 20px 15px;
         border-radius: 16px;
     }
+    .css-bdhsul-MuiTypography-root-MuiDialogTitle-root {
+        @media (max-width: $mobile) {
+            padding: 9px 0px 0;
+        }
+    }
+    .css-hlj6pa-MuiDialogActions-root button {
+        margin: 20px 0 0;
+        border-radius: 4px;
+        padding: 13px 52px;
+        @media (max-width: $mobile) {
+        }
+    }
+    .css-qsfli3-MuiButtonBase-root-MuiIconButton-root {
+        @media (max-width: $mobile) {
+            justify-content: end;
+        }
+    }
+
     .css-u8u3sx-MuiTypography-root {
         font-family: $pfontfamily;
     }
@@ -323,10 +344,16 @@ body {
     .css-1yjjitx-MuiSwitch-track {
         background-color: $p-color1;
         opacity: 1;
+        @media (max-width: $mobile) {
+            background-color: #bfbfbf;
+        }
     }
     .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
         background-color: $themeColor;
         opacity: 1;
+        @media (max-width: $mobile) {
+            background-color: $themeColor2;
+        }
     }
     .css-jsexje-MuiSwitch-thumb {
         width: 13px;
@@ -334,6 +361,9 @@ body {
         border-radius: 50%;
         position: relative;
         top: 4.1px;
+    }
+    .css-15v22id-MuiAccordionDetails-root {
+        padding: 0;
     }
     .css-1yjjitx-MuiSwitch-track {
         border-radius: 15px;
@@ -351,7 +381,11 @@ body {
     .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root,
     .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked {
         color: $themeColor;
+        @media (max-width: $mobile) {
+            padding-top: 0;
+        }
     }
+
     .css-11h4g4n-MuiGrid-root {
         @media (max-width: $mobile) {
             width: 100%;
@@ -484,7 +518,7 @@ body {
             padding: 0 25px !important;
         }
     }
-    .desktop-hide{
+    .desktop-hide {
         display: none;
         @media (max-width: $mobile) {
             display: block;
@@ -509,6 +543,48 @@ body {
             padding: 0;
         }
     }
+    .new-user-graph {
+        .Productgraph_product_action_btn__6Vxx5 a {
+            width: 100%;
+            max-width: 208px;
+            @media (max-width: $mobile) {
+                width: auto;
+                max-width: 100%;
+            }
+        }
+    }
+    .dashboad-accordion {
+        .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root {
+            pointer-events: none;
+            @media (max-width: $mobile) {
+                pointer-events: auto;
+            }
+            .css-yw020d-MuiAccordionSummary-expandIconWrapper {
+                display: none;
+                @media (max-width: $mobile) {
+                    display: block;
+                }
+            }
+        }
+        .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+            @media (max-width: $mobile) {
+                margin: 0;
+            }
+        }
+        .css-o4b71y-MuiAccordionSummary-content {
+            @media (max-width: $mobile) {
+                margin: 0;
+            }
+        }
+        .css-bz4dnt-MuiCollapse-root {
+            visibility: visible;
+            height: auto;
+            @media (max-width: $mobile) {
+                visibility: hidden;
+                height: 0;
+            }
+        }
+    }
 }
 
 .accordion-main.Mui-expanded {
@@ -531,6 +607,29 @@ body {
         }
     }
 }
+.accordion-main.Mui-expanded{
+    .card-bordered{
+        &::before {
+           display: none;
+        }
+   }
+}
+.card-bordered{
+     &::before {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         padding: 2px;
+         border-radius: 8px;
+         background: linear-gradient(92.05deg, #FFFFFF -0.62%, #E3E3E3 50.1%, #FFFFFF 93.02%);
+         -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+         -webkit-mask-composite: xor;
+     }
+}
+
 .accordion-main {
     background-color: transparent !important;
     display: grid;
@@ -549,18 +648,18 @@ body {
         );
         mix-blend-mode: normal;
         border-radius: 8px;
-        border: 2px solid transparent;
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: -2;
-            margin: -4px;
-            background: linear-gradient(92.05deg, #ffffff -0.62%, #e3e3e3 50.1%, #ffffff 93.02%);
-        }
+        // border: 2px solid transparent;
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     bottom: 0;
+        //     left: 0;
+        //     z-index: -2;
+        //     margin: -4px;
+        //     background: linear-gradient(92.05deg, #ffffff -0.62%, #e3e3e3 50.1%, #ffffff 93.02%);
+        // }
     }
     .size-accordion {
         padding: 16px 0;
@@ -593,7 +692,7 @@ body {
     background-position: center center;
 
     @media (max-width: $mobile) {
-        height: calc(100vh - 91px);
+        height: 100%;
     }
 
     @media (max-width: $mobile) {
@@ -602,7 +701,7 @@ body {
 }
 .stepper-main-wrapper {
     @media (max-width: $mobile) {
-        padding: 0px 5px;
+        padding: 0px 5px 68px;
     }
     .stpper-navbar {
         @media (max-width: $mobile) {
@@ -717,9 +816,12 @@ p#standard-basic-helper-text svg {
 }
 
 .complete_registration_navbar {
-    padding: 40px 0;
+    padding: 40px 0 10px;
     background: #ffffff;
     border-radius: 20px;
+    @media (max-width: $mobile) {
+        border-radius: 8px;
+    }
     .stpper-navbar {
         .MuiGrid-item {
             flex-basis: 22.3%;
@@ -728,6 +830,18 @@ p#standard-basic-helper-text svg {
         span {
             margin: 0 auto;
         }
+    }
+    .stepper-grid-registration {
+        margin-top: 40px;
+        @media (max-width: $mobile) {
+            margin-top: 20px;
+        }
+    }
+}
+.compete_registration {
+    .stepper:first-child::before {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
     }
 }
 
@@ -770,7 +884,22 @@ p#standard-basic-helper-text svg {
     }
 }
 .makeStyles-indicators-4 {
-    margin-top: 30px;
+    margin-top: 30px !important;
+    @media (max-width: $mobile) {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        text-align: center;
+        max-width: 25px;
+        margin: 0 auto;
+    }
+
+    .makeStyles-active-7 {
+        color: #49a197;
+    }
+    // .makeStyles-indicator-5{
+
+    // }
 }
 body {
     .css-11h4g4n-MuiGrid-root {
@@ -778,5 +907,96 @@ body {
             width: 100%;
             margin-left: 0;
         }
+    }
+}
+/* Required styles */
+.swipe-to-delete {
+    position: relative !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+
+    .js-delete {
+        position: absolute !important;
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        z-index: 1 !important;
+        opacity: 0;
+        @media (max-width: $mobile) {
+            opacity: 1;
+        }
+    }
+    .js-content {
+        position: relative;
+        z-index: 2 !important;
+    }
+    // .delete-noti{
+    //     overflow: hidden;
+    //     &::before{
+    //         content: '';
+    //         background: #ff5f58;
+    //         position: absolute;
+    //         left: 0;
+    //         right: 0;
+    //         height: 100%;
+    //         width: 100%;
+    //     }
+    // }
+    .js-content :first-child {
+        position: relative !important;
+    }
+
+    .js-transition-delete-right,
+    .js-transition-delete-left,
+    .js-transition-cancel {
+        transition-property: left !important;
+        transition-duration: 0.5s;
+    }
+    .js-transition-delete-right {
+        left: 100% !important;
+    }
+    .js-transition-delete-left {
+        left: -100% !important;
+    }
+    .js-transition-cancel {
+        left: 0 !important;
+    }
+}
+
+/* Custom styles */
+.delete-noti {
+    display: flex;
+    align-items: center;
+}
+.swipe-to-delete {
+    margin-bottom: 15px !important;
+    .js-delete {
+        $horiz-padding: 17px;
+        background: rgba(209, 45, 53, 0.1);
+        border-radius: 8px;
+        svg {
+            position: absolute;
+            left: $horiz-padding;
+            top: 50%;
+            margin-top: -13px;
+            width: 25px;
+            height: 25px;
+        }
+        svg:first-child {
+            left: auto;
+            right: $horiz-padding;
+        }
+    }
+
+    .js-content :first-child {
+        cursor: pointer;
+    }
+
+    .js-transition-delete-right,
+    .js-transition-delete-left,
+    .js-transition-cancel {
+        transition-duration: 0.7s;
+        transition-timing-function: ease-in-out;
     }
 }

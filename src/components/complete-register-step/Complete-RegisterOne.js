@@ -6,7 +6,7 @@ function CompleteRegisterOne({setstepper ,stepper, setSteppercolor}) {
   return (
     <>
       <Grid container maxWidth="sm" spacing={2}>
-        <Grid item md={12} style={{ margin: "50px auto 0px auto" }}>
+        <Grid item md={12} className='stepper-grid-registration'>
           <Typography
             variant="h6"
             className='blue_text fw-600 font-lg-24'

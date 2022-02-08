@@ -10,14 +10,14 @@ function NewUser() {
       <Container maxWidth="lg">
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <div className={Styled.card_border}>
+            <div className={`card-bordered ${Styled.card_border}`}>
               <Grid container>
                 <Grid item xs={10} md={9}>
                   <Typography
-                    className="font-lg-24 light-blue"
+                    className="font-lg-24 blue_text"
                     variant="h4"
                   >
-                    Marcela, tu perfil de inversionista es Conservador
+                    Marcela, tu perfil de inversionista es <strong> Conservador</strong>
                   </Typography>
                 </Grid>
                 <Grid item xs={2} md={2}>
@@ -83,7 +83,7 @@ function NewUser() {
                 </Grid>
               </div>
             </Grid>
-            <Grid item lg={12}>
+            <Grid item lg={12} mt={3}>
               <div className={Styled.page_wrapper}>
                 <div className={Styled.heading}>
                   <img src="/assets/images/product_rect.png" alt=""></img>

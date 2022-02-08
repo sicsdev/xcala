@@ -29,13 +29,13 @@ function LetStartEight(props) {
       </Grid>
 
       <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
-        <Link component="button"  onClick={Handlestep}>Alerta</Link>
+        <Link component="button" className='card-bordered' onClick={Handlestep}>Alerta</Link>
       </Grid>
       <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
-        <Link component="button"  onClick={Handlestep}>Inseguridad</Link>
+        <Link component="button" className='card-bordered' onClick={Handlestep}>Inseguridad</Link>
       </Grid>
       <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
-        <Link component="button"  onClick={Handlestep}>Oportunidad</Link>
+        <Link component="button" className='card-bordered' onClick={Handlestep}>Oportunidad</Link>
       </Grid>
     </Grid>
   );

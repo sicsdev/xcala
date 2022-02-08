@@ -57,13 +57,8 @@
 .lets_start_btn {
     button{
         position: relative;
-        background: linear-gradient(
-            268.78deg,
-            rgba(255, 255, 255, 0.8) 1.52%,
-            rgba(255, 255, 255, 0) 39.44%,
-            rgba(255, 255, 255, 0.8) 99.9%
-        );
-        mix-blend-mode: normal;
+        background: linear-gradient(268.78deg, rgba(255, 255, 255, 0.8) 1.52%, rgba(255, 255, 255, 0) 39.44%, rgba(255, 255, 255, 0.8) 99.9%);
+        border-radius: 8px;
         height: 91px;
         display: flex;
         align-items: center;
@@ -73,11 +68,10 @@
         font-weight: 500;
         width:100%;
         text-align: left;
-        border: 2px solid transparent;
-        border-radius: 8px;
+    
         font-size: 14px;
         @media (max-width: $mobile) {
-            height: 99px;
+            height: 109px;
         }
         // &::before{
         //     content: '';
@@ -109,6 +103,7 @@
 .letstart_grid{
     padding-top: 50px;
 }
+
 .stepper:first-child::before {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;

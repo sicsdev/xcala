@@ -1,6 +1,6 @@
 @mixin cardBordered {
     .card_border {
-        border: 2px solid transparent;
+        // border: 2px solid transparent;
         border-radius: 8px;
         position: relative;
         background: linear-gradient(
@@ -9,23 +9,23 @@
             rgba(255, 255, 255, 0) 45.32%,
             rgba(255, 255, 255, 0.8) 127.53%
         );
-        padding: 20px 40px 10px 40px;
+        padding: 20px 30px 20px 30px;
         mix-blend-mode: normal;
         @media (max-width: $mobile) {
             padding: 20px 15px 20px 15px;
         }
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: -2;
-            margin: -4px;
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     bottom: 0;
+        //     left: 0;
+        //     z-index: -2;
+        //     margin: -4px;
             
-            background: linear-gradient(92.05deg, #ffffff -0.62%, #e3e3e3 50.1%, #ffffff 93.02%);
-        }
+        //     background: linear-gradient(92.05deg, #ffffff -0.62%, #e3e3e3 50.1%, #ffffff 93.02%);
+        // }
     }
 }
 @mixin pageHeading {

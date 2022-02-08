@@ -40,13 +40,15 @@ function productgraph() {
         </CardContent>
 
         <CardActions>
-          <Grid className="formbutton" item xs={12} md={12}>
-            <Link to="" className="button-primary" >
-              Invertir
-            </Link>
-            <Link to="/product-detail" className="light-button-primary">
-              Más información
-            </Link>
+          <Grid item xs={12} md={12}>
+            <div className={`formbutton ${productgraphstyles.product_action_btn}`}>
+              <Link to="" className="button-primary" >
+                Invertir
+              </Link>
+              <Link to="/product-detail" className="light-button-primary">
+                Más información
+              </Link>
+            </div>
           </Grid>
         </CardActions>
       </Card>

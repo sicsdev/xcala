@@ -1,5 +1,6 @@
 import React from "react";
-import { Typography, Grid, Container,Button } from "@mui/material";
+import { Typography, Grid, Container } from "@mui/material";
+import Button from "@mui/material";
 import productgraphstyles from "./Productdetailpage.module.scss";
 import { Link } from "react-router-dom";
 import Charts from "../../components/productgraph/Chart";

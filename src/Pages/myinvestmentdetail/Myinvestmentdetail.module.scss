@@ -91,6 +91,27 @@
         justify-content: center;
         margin: 0;
         margin-bottom: 3rem;
+
+        .table_button{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 8px 16px;
+            gap: 10px;
+                .btn{
+                background: $themeColor;
+                border: 2px solid #1E22AA;
+                border-radius: 39px;
+                padding: 8px 16px;
+                color: #fff;
+                font-family: $pfontfamily;
+                text-transform: lowercase;
+                :hover{
+                    background-color: none;
+                }
+        }
+        }
+        
     }
     .bluebox{
         background: #ECF5FF;

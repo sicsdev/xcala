@@ -68,6 +68,14 @@ function Productdetailpage() {
               >
                 Evolución del fondo
               </Typography>
+
+              <div className={productgraphstyles.table_button}>
+                <Link to=""> <Button variant="outlined" className={productgraphstyles.btn}> 12 meses </Button> </Link>
+                <Link to=""> <Button variant="outlined" className={productgraphstyles.btn}> 3 meses </Button> </Link>
+                <Link to=""> <Button variant="outlined" className={productgraphstyles.btn}> 1 meses </Button> </Link>
+                <Link to=""> <Button variant="outlined" className={productgraphstyles.btn}> 7 dias </Button> </Link>
+             </div>
+
             </div>
             <Charts productdetail={"productdetail"} />
           </Grid>

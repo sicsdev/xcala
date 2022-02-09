@@ -17,7 +17,7 @@ function LetStartOne(props) {
 
   return (
 
-    <Grid container maxWidth="sm" spacing={2}>
+    <Grid container maxWidth="sm">
       <Grid item xs={12} md={12} mt={3} style={{ margin: "20px auto" }}>
         <Typography
           variant="h6"

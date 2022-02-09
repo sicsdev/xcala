@@ -34,7 +34,7 @@ function MyNotification() {
               {data && data.map((element) =>
                 <SwipeToDelete key={element.id}>
                   <div className="delete-noti">
-                    <div className={element.id != 1 ? `card-bordered ${Styled.my_notification}` : `active_notification card-bordered ${Styled.my_notification}`} >
+                    <div className={element.id != 1 ? ` ${Styled.my_notification}` : `active_notification ${Styled.my_notification}`} >
                       <Typography className={`date ${Styled.my_notification_date}`}>
                         {element.date}
                       </Typography>

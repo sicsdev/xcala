@@ -5,6 +5,8 @@
         .my_notification {
             position: relative;
             padding: 24px;
+            background:white;
+            border-radius: 10px;
             .my_notification_date {
                 color: $light-grey;
                 font-weight: 300;

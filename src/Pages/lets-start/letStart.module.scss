@@ -11,7 +11,6 @@
         width: 100%;
         background: rgba(0, 0, 0, 0.08);
         height: 8px;
-        
     }
     span {
         position: relative;
@@ -28,13 +27,12 @@
         opacity: 0;
     }
     @media (max-width: $mobile) {
-        width: calc(100%/9 - 5px);
+        width: calc(100% / 9 - 5px);
         margin-right: 5px !important;
     }
-    &:last-child{
+    &:last-child {
         margin-right: 0px !important;
     }
-   
 }
 .active {
     &::before {
@@ -49,29 +47,35 @@
         }
     }
 }
-.preactive{
+.preactive {
     span {
         opacity: 0;
     }
 }
 .lets_start_btn {
-    button{
+    button {
         position: relative;
-        background: linear-gradient(268.78deg, rgba(255, 255, 255, 0.8) 1.52%, rgba(255, 255, 255, 0) 39.44%, rgba(255, 255, 255, 0.8) 99.9%);
+        background: linear-gradient(
+            268.78deg,
+            rgba(255, 255, 255, 0.8) 1.52%,
+            rgba(255, 255, 255, 0) 39.44%,
+            rgba(255, 255, 255, 0.8) 99.9%
+        );
         border-radius: 8px;
         height: 91px;
         display: flex;
         align-items: center;
-        padding: 0 25px!important;
+        padding: 0 25px !important;
         color: #182849;
         text-decoration: none;
         font-weight: 500;
-        width:100%;
+        width: 100%;
         text-align: left;
-    
+        margin-bottom: 20px;
         font-size: 14px;
         @media (max-width: $mobile) {
             height: 109px;
+            margin-bottom: 15px;
         }
         // &::before{
         //     content: '';
@@ -85,22 +89,21 @@
         //     background: linear-gradient(92.05deg, #FFFFFF -0.62%, #E3E3E3 50.1%, #FFFFFF 93.02%);
         // }
     }
-   
 }
 
-.back_btn{
+.back_btn {
     margin-top: 40px;
-    button{
+    button {
         color: #49a197;
         padding-left: 10px;
         text-decoration: none;
         font-size: 16px;
-        img{
+        img {
             padding-right: 10px;
         }
     }
 }
-.letstart_grid{
+.letstart_grid {
     padding-top: 50px;
 }
 

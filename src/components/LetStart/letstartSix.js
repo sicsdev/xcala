@@ -18,7 +18,7 @@ function LetStartSix(props) {
   }
   return (
 
-    <Grid container maxWidth="sm" spacing={2}>
+    <Grid container maxWidth="sm" >
       <Grid item md={12} xs={12} mt={3} style={{ margin: "20px auto" }}>
         <Typography
           variant="h6"

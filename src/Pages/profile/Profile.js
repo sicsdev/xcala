@@ -10,11 +10,11 @@ const accordion_body_content = "Prefieres tener inversiones con un nivel de ries
 
 function Profile(props) {
   const pepModal = {
-    className :"profile-tab-popup",
-    title :"Antes de continuar...",
-    content :"Declaro entender y aceptar lo que implica identificarse con ese perfil de riesgo",
-    btnContent :"Entendido",
-    btnContent2 :"Cancelar"
+    className: "profile-tab-popup",
+    title: "Antes de continuar...",
+    content: "Declaro entender y aceptar lo que implica identificarse con ese perfil de riesgo",
+    btnContent: "Entendido",
+    btnContent2: "Cancelar"
   };
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ function Profile(props) {
         maxWidth: "674px !important",
       }}>
         <Grid container maxWidth="sm" spacing={2}>
-          <Grid item md={12} mb={3}>
+          <Grid item md={12} xs={12} mb={3}>
             <div className={Styles.rectangle_heading}>
               <Typography
                 variant="h5"
@@ -41,7 +41,7 @@ function Profile(props) {
               </Typography>
             </div>
           </Grid>
-          <Grid item md={12} mt={3} className={Styles.tab_content_main}>
+          <Grid item md={12} xs={12} mt={3} className={Styles.tab_content_main}>
             <div className={Styles.rectangle_heading}>
               <Typography
                 className='font-lg-18'
@@ -60,26 +60,24 @@ function Profile(props) {
             </div>
 
           </Grid>
-          <Grid item md={9} mt={3} className={Styles.tabs_wrapper} style={{ margin: "20px auto" }}>
+          <Grid item md={9} xs={12} mt={3} className={Styles.tabs_wrapper} style={{ margin: "20px auto" }}>
             <Typography
               variant="h5"
               className='font-lg-18 p-color1 fw-600'
             >
               ¿Conoces tu perfil inversionista?
             </Typography>
-
-            <CustomizedAccordions  openPopUp={handleClickOpen} className='profile-tabs-accordion' accordion_head_img="/assets/images/Iconos-Perfiles.svg" head_content="Conservador" accordion_body_heading="Perfil Conservador" accordion_body_content={accordion_body_content} accordion_body_btn_label="Es mi perfil" />
-
-            <CustomizedAccordions  openPopUp={handleClickOpen} className='profile-tabs-accordion' accordion_head_img="/assets/images/cycle.svg" head_content="Moderado" accordion_body_heading="Perfil Conservador" accordion_body_content={accordion_body_content} accordion_body_btn_label="Es mi perfil" />
-
-            <CustomizedAccordions  openPopUp={handleClickOpen} className='profile-tabs-accordion' accordion_head_img="/assets/images/walk.svg" head_content="Agresivo" accordion_body_heading="Perfil Conservador" accordion_body_content={accordion_body_content} accordion_body_btn_label="Es mi perfil" />
-
-            <CustomizedAccordions  openPopUp={handleClickOpen} handleClick={handleClick} className="profile-tabs-accordion size-accordion" accordion_head_img="/assets/images/help_outline.svg" head_content="No estoy seguro, descubrir mi perfil" accordion_body_heading="Perfil Conservador" accordion_body_content={accordion_body_content} accordion_body_btn_label="Es mi perfil" />
+            <div className='profile-tabs-accordion'>
+              <CustomizedAccordions openPopUp={handleClickOpen} accordion_head_img="/assets/images/Iconos-Perfiles.svg" head_content="Conservador" accordion_body_heading="Perfil Conservador" accordion_body_content={accordion_body_content} accordion_body_btn_label="Es mi perfil" />
+              <CustomizedAccordions openPopUp={handleClickOpen} accordion_head_img="/assets/images/cycle.svg" head_content="Moderado" accordion_body_heading="Perfil Conservador" accordion_body_content={accordion_body_content} accordion_body_btn_label="Es mi perfil" />
+              <CustomizedAccordions openPopUp={handleClickOpen} accordion_head_img="/assets/images/walk.svg" head_content="Agresivo" accordion_body_heading="Perfil Conservador" accordion_body_content={accordion_body_content} accordion_body_btn_label="Es mi perfil" />
+              <CustomizedAccordions openPopUp={handleClickOpen} handleClick={handleClick} className="size-accordion" accordion_head_img="/assets/images/help_outline.svg" head_content="No estoy seguro, descubrir mi perfil" accordion_body_heading="Perfil Conservador" accordion_body_content={accordion_body_content} accordion_body_btn_label="Es mi perfil" />
+            </div>
           </Grid>
         </Grid>
 
       </Container>
-      <DialogBox setOpen={setOpen} open={open} class={pepModal.className} modal_title={pepModal.title} modal_content={pepModal.content} action_btn2={pepModal.btnContent2} action_btn={pepModal.btnContent}  />
+      <DialogBox setOpen={setOpen} open={open} class={pepModal.className} modal_title={pepModal.title} modal_content={pepModal.content} action_btn2={pepModal.btnContent2} action_btn={pepModal.btnContent} />
 
     </div>
   );

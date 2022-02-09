@@ -8,7 +8,7 @@ import OTPInput, { ResendOTP } from "otp-input-react";
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import { Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 //custom otp button
 // const renderButton = (buttonProps) => {
 //   return <Button variant="outlined" startIcon={<MailOutlineIcon />} {...buttonProps}>Reenviar código</Button>;
@@ -19,10 +19,16 @@ import { Link } from "react-router-dom";
 
 function Codeverification() {
   const [OTP, setOTP] = useState("");
+  const navigate = useNavigate();
+  const gotoNextPage = () => {
+    navigate("/password");
+  };
   return (
     <>
       <Backgroundscreen />
-      <Container maxWidth="sm">
+      <Container sx={{
+        maxWidth: "674px !important"
+      }}>
         <Grid container maxWidth="sm" spacing={2}>
           <Grid item xs={12} md={12} mb={3}>
             <Xcalalogo />
@@ -46,8 +52,8 @@ function Codeverification() {
           <OTPInput
             value={OTP}
             onChange={setOTP}
-            autoFocus
-            OTPLength={4}
+            // autoFocus
+            OTPLength={6}
             otpType="number"
             disabled={false}
             secure
@@ -62,8 +68,8 @@ function Codeverification() {
             {/* <ResendOTP className={codeverificationstyle.otpbutton} onResendClick={() => console.log("Resend clicked")} /> */}
             {/* <ResendOTP renderButton={renderButton} /> */}
             {/* <Button className={codeverificationstyle.otpbutton} variant="outlined" startIcon={<MailOutlineIcon />}>Reenviar código</Button> */}
-            <Button className={codeverificationstyle.otpbutton} variant="outlined" startIcon={<MailOutlineIcon />}>
-              <Link to="/password">Reenviar código</Link>
+            <Button    onClick={gotoNextPage} className={codeverificationstyle.otpbutton} variant="outlined" startIcon={<MailOutlineIcon />}>
+              Reenviar código
             </Button>
           </div>
         </div>

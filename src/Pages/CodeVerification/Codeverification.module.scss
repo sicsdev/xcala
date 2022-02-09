@@ -37,23 +37,23 @@
         }
     }
     input[type="password"] {
-        height: 69.81px !important;
-        border: 1px solid $themeColor;
+        height: 56px !important;
+        border: 1px solid #1e22aa;
         box-sizing: border-box;
         transform: rotate(90deg);
-        width: 101px !important;
+        width: 93px !important; 
         border-radius: 32px;
         margin-right: 0px !important;
         @media (max-width: $mobile) {
-            height: 58.81px !important;
-            width: 90px !important;
+            height: 33px !important;
+            width: 50px !important;
         }
     }
     .fadetext {
         width: 100%;
         max-width: 444px;
-        margin-top: 80px;
-        margin-bottom: 55px;
+        margin-top: 60px;
+        margin-bottom: 45px;
         color: #808080;
         font-size: $p-14-fontsize;
         @media (max-width: $mobile) {

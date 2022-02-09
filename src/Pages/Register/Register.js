@@ -1,6 +1,15 @@
 import React from "react";
 import Container from "@mui/material/Container";
-import { Grid, TextField, Select, Checkbox, InputLabel, Input, MenuItem, Typography, } from "@mui/material";
+import {
+  Grid,
+  TextField,
+  Select,
+  Checkbox,
+  InputLabel,
+  Input,
+  MenuItem,
+  Typography,
+} from "@mui/material";
 import styles from "./Register.module.scss";
 import { useState } from "react";
 import isEmail from "validator/lib/isEmail";
@@ -12,7 +21,10 @@ import CloseIcon from "@mui/icons-material/Close";
 import { FormControl } from "@mui/material";
 import mobileCodes from "../../data/mobileCodes.json";
 import { Link } from "react-router-dom";
-
+import Helpertext from "../../components/register/HelperText";
+import LoadingButton from "@mui/lab/LoadingButton";
+import { useNavigate } from "react-router-dom";
+import AddIcon from '@mui/icons-material/Refresh';
 function Firstpage() {
   const [name, setName] = useState("");
   const [motherslastname, setMothername] = useState("");
@@ -36,7 +48,10 @@ function Firstpage() {
     lastnamehelpermsgcolor: false,
     emailhelpermsgcolor: false,
   });
-
+  const navigate = useNavigate();
+  const gotoNextPage = () => {
+    navigate("/lets-start");
+  };
   //this is for name textfiled (Nombre)
   const onnamechange = (e) => {
     setName(e.target.value);
@@ -45,7 +60,7 @@ function Firstpage() {
         return {
           ...nametext,
           namehelpermsg: "Perfecto",
-          logo: <DoneIcon />,
+          logo: <Helpertext message={"Perfecto"} />,
           namehelpermsgcolor: true,
         };
       });
@@ -69,7 +84,7 @@ function Firstpage() {
         return {
           ...mothernametext,
           mothernamehelpermsg: "Muy bien",
-          logo2: <DoneIcon />,
+          logo2: <Helpertext message={"Perfecto"} />,
           mothernamehelpermsgcolor: true,
         };
       });
@@ -93,7 +108,7 @@ function Firstpage() {
         return {
           ...lastnametext,
           lastnamehelpermsg: "Muy bien",
-          logo3: <DoneIcon />,
+          logo3: <Helpertext message={"Perfecto"} />,
           lastnamehelpermsgcolor: true,
         };
       });
@@ -116,12 +131,14 @@ function Firstpage() {
     if (isEmail(val)) {
       setEmailError(false);
       setEmailSuccess("¡Queda poco!");
-      setLogo4(<DoneIcon />);
+      setLogo4(<Helpertext message={"¡Queda poco!"} />);
       setErrormsg("");
     } else {
       setEmailError(true);
       setErrormsg("Algo anda mal... Verifica tu email");
-      setLogo4(<CloseIcon />);
+      setLogo4(
+        <Helpertext errormessage={"Algo anda mal... Verifica tu email"} />
+      );
       setEmailSuccess("");
       return;
     }
@@ -147,7 +164,11 @@ function Firstpage() {
               <Grid item xs={12} md={12} mb={4}>
                 <div className="h2">
                   <img src="/assets/images/Rectangle.png" alt=""></img>
-                  <Typography className="h2 museo-regular" variant="" component="">
+                  <Typography
+                    className="h2 museo-regular"
+                    variant=""
+                    component=""
+                  >
                     ¡Únete a Xcala!
                   </Typography>
                 </div>
@@ -225,7 +246,7 @@ function Firstpage() {
                         FormHelperTextProps={{
                           className: styles.helperTextcolor || "",
                         }}
-                        helperText={[helpermsg.logo, helpermsg.namehelpermsg]}
+                        helperText={helpermsg.logo}
                       />
                     </div>
                     <div className={styles.register_input_text}>
@@ -244,11 +265,8 @@ function Firstpage() {
                         FormHelperTextProps={{
                           className: styles.helperTextcolor || "",
                         }}
-                        // helperText={helpermsg.mothernamehelpermsg}
-                        helperText={[
-                          helpermsg.logo2,
-                          helpermsg.mothernamehelpermsg,
-                        ]}
+                        helperText={helpermsg.mothernamehelpermsg}
+                        helperText={helpermsg.logo2}
                       />
                     </div>
                     <div className={styles.register_input_text}>
@@ -268,10 +286,10 @@ function Firstpage() {
                           className: styles.helperTextcolor || "",
                         }}
                         // helperText={helpermsg.lastnamehelpermsg}
-                        helperText={[
-                          helpermsg.logo3,
-                          helpermsg.lastnamehelpermsg,
-                        ]}
+                        // helperText={[
+                        //   helpermsg.logo3,
+                        //   helpermsg.lastnamehelpermsg,
+                        // ]}
                       />
                     </div>
                     <div className={styles.register_input_text}>
@@ -295,9 +313,7 @@ function Firstpage() {
                         FormHelperTextProps={{
                           className: styles.helperTextcolor || "",
                         }}
-                        helperText={
-                          errormsg ? [logo4, errormsg] : [logo4, emailSuccess]
-                        }
+                        helperText={errormsg ? logo4 : logo4}
                       />
                     </div>
                     {/* Phone_field */}
@@ -305,7 +321,10 @@ function Firstpage() {
                       <Grid container maxWidth="sm" spacing={5}>
                         <Grid item xs={3} md={3}>
                           <FormControl variant="standard" sx={{ minWidth: 80 }}>
-                            <InputLabel className={styles.phonecolor} id="demo-simple-select-filled-label">
+                            <InputLabel
+                              className={styles.phonecolor}
+                              id="demo-simple-select-filled-label"
+                            >
                               Celular
                             </InputLabel>
                             <Select
@@ -325,7 +344,7 @@ function Firstpage() {
                         <Grid item xs={9} md={9} style={{ paddingTop: "56px" }}>
                           <Input
                             fullWidth
-                            id="standard-basic"
+                            id="standard-basic2"
                             label=""
                             type="number"
                             variant="standard"
@@ -344,7 +363,7 @@ function Firstpage() {
                       >
                         <Checkbox />
                         <div className="p1" style={{ paddingLeft: "10px" }}>
-                          <p className="p-16">
+                          <p>
                             Acepto los{" "}
                             <span className={styles.greentext}>
                               términos y condiciones del servicio{" "}
@@ -355,12 +374,14 @@ function Firstpage() {
                       </div>
                     </div>
                     <Grid className="formbutton" item md={12}>
-                      {/* <Button className="button-primary" disabled>
+                      <LoadingButton
+                        onClick={gotoNextPage}
+                        className="button-primary m-auto"
+                        loading={true}
+                        
+                      >
                         Continuar
-                        </Button>  */}
-                      <Link to="/codeverification" className="button-primary">
-                        Continuar
-                      </Link>
+                      </LoadingButton>
                     </Grid>
                   </form>
                 </Grid>

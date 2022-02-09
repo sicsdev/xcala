@@ -19,6 +19,8 @@ import ConfigureNotification from "../configure-notifcation/Configure-Notificati
 import MyNotification from "../my-notifcation/My-Notification";
 import Myinvestmentdetail from "../myinvestmentdetail/Myinvestmentdetail";
 import Mytransactions from "../my-transactions/Mytransactions";
+import Rescue from "../Rescue/Rescue";
+
 
 function Private() {
   const router = useLocation();
@@ -28,7 +30,7 @@ function Private() {
         router.pathname === "/profile-investor" ||
         router.pathname === "/my-account" ||
 
-        router.pathname === "/products" || router.pathname === "/objectives-interests"|| router.pathname === "/new-user"|| router.pathname === "/complete-registration"|| router.pathname === "/simulator"|| router.pathname === "/product-detail" || router.pathname === "/recurring-dash" || router.pathname === "/confirm-request" || router.pathname === "/risk-profile" || router.pathname === "/my-goal-interest" || router.pathname === "/configure-notification" || router.pathname === "/my-notification" || router.pathname === "/my-investment" || router.pathname === "/my-transaction") && <ResponsiveAppBar />}
+        router.pathname === "/products" || router.pathname === "/objectives-interests"|| router.pathname === "/new-user"|| router.pathname === "/complete-registration"|| router.pathname === "/simulator"|| router.pathname === "/product-detail" || router.pathname === "/recurring-dash" || router.pathname === "/confirm-request" || router.pathname === "/risk-profile" || router.pathname === "/my-goal-interest" || router.pathname === "/configure-notification" || router.pathname === "/my-notification" || router.pathname === "/my-investment" || router.pathname === "/my-transaction" || router.pathname === "/rescue") && <ResponsiveAppBar />}
 
       <Routes>
         <Route exact path="/profile-investor" element={<Profile />} />
@@ -41,17 +43,19 @@ function Private() {
         <Route exact path="/complete-registration" element={<CompleteRegistration />} />
         <Route exact path="/simulator" element={<Simulator />} />
         <Route exact path="/recurring-dash" element={<Recurringdash />} />
-         <Route exact path="/confirm-request" element={<ConfirmRequest />} />
+        <Route exact path="/confirm-request" element={<ConfirmRequest />} />
         <Route exact path="/risk-profile" element={<RiskProfile />} />
         <Route exact path="/my-goal-interest" element={<GoalInterest />} />
         <Route exact path="/configure-notification" element={<ConfigureNotification />} />
         <Route exact path="/my-notification" element={<MyNotification />} />
         <Route exact path="/my-investment" element={<Myinvestmentdetail />} />
         <Route exact path="/my-transaction" element={<Mytransactions />} />
+        <Route exact path="/rescue" element={<Rescue />} />
+
 
       </Routes>
 
-      {(router.pathname === "/my-account" || router.pathname === "/products" || router.pathname === "/objectives-interests"|| router.pathname === "/new-user"|| router.pathname === "/complete-registration"|| router.pathname === "/simulator"|| router.pathname === "/product-detail" || router.pathname === "/recurring-dash" || router.pathname === "/confirm-request" || router.pathname === "/risk-profile" || router.pathname === "/my-goal-interest" || router.pathname === "/configure-notification" || router.pathname === "/my-notification" || router.pathname === "/my-investment" || router.pathname === "/my-transaction") && <Footer />}
+      {(router.pathname === "/my-account" || router.pathname === "/products" || router.pathname === "/objectives-interests"|| router.pathname === "/new-user"|| router.pathname === "/complete-registration"|| router.pathname === "/simulator"|| router.pathname === "/product-detail" || router.pathname === "/recurring-dash" || router.pathname === "/confirm-request" || router.pathname === "/risk-profile" || router.pathname === "/my-goal-interest" || router.pathname === "/configure-notification" || router.pathname === "/my-notification" || router.pathname === "/my-investment" || router.pathname === "/my-transaction" || router.pathname === "/rescue") && <Footer />}
     </>
   );
 }

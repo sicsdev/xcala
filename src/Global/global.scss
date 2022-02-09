@@ -41,6 +41,9 @@ a {
 }
 body {
     font-family: $pfontfamily;
+    .m-auto{
+        margin: 0 auto;
+    }
     p {
         color: $p-color1;
         font-weight: 400;
@@ -543,6 +546,11 @@ body {
             padding: 0;
         }
     }
+
+    .css-1yt7yx7-MuiLoadingButton-loadingIndicator {
+        left: 19px;
+        top: 36%;
+
     .new-user-graph {
         .Productgraph_product_action_btn__6Vxx5 a {
             width: 100%;
@@ -584,6 +592,7 @@ body {
                 height: 0;
             }
         }
+
     }
 }
 

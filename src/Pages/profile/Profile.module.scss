@@ -1,0 +1,19 @@
+@import "/src/Global/sass/variables.scss";
+body {
+    .tab_content_main {
+        @media (max-width: $mobile) {
+            margin-top: 0;
+        }
+    }
+    .tabs_wrapper{
+        text-align: center;
+        h5{
+            margin: 20px 0 45px;
+            @media (max-width: $mobile) {
+                margin: 0px 0 30px;
+                text-align: left;
+            }
+        }
+        
+    }
+}

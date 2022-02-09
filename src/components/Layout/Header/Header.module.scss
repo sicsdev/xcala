@@ -1,21 +1,147 @@
-$themeColor: #1e22aa;
+@import "../../../Global/sass/variables.scss";
 body {
     .app_header {
-        background-color: rgba(255, 255, 255, 0.7);
+        background: linear-gradient(
+            251.04deg,
+            #f6faff -66.77%,
+            rgba(246, 250, 255, 0) 26.06%,
+            rgba(246, 250, 255, 0) 59.61%,
+            #f6faff 133.43%
+        );
+
         box-shadow: none;
-        padding: 14px 0;
-        
-        button{
-            color: $themeColor;
-            padding: 0 30px;
-            text-transform: capitalize;
-            font-size: 16px;
-            font-weight: 400;
+        padding: 14px 15px;
+        @media (max-width: $mobile) {
+            padding: 14px 0px;
+            overflow: hidden;
         }
-        .notification {
-            position: relative;
-            border-right: 2px solid #BFBFBF;
-            border-radius: 0;
+        .header_wrapper {
+            @media (max-width: $mobile) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            a {
+                color: $themeColor;
+                padding: 0 30px;
+                text-transform: capitalize;
+                font-size: 16px;
+                font-weight: 400;
+                @media (max-width: $mobile) {
+                    padding: 0;
+                }
+            }
+            .notification {
+                position: relative;
+                border-right: 2px solid #bfbfbf;
+                border-radius: 0;
+                padding-right: 15px;
+                margin-right: 15px;
+                top: 4px;
+                @media (max-width: $mobile) {
+                    margin-right: 0;
+                    border-right: none;
+                    padding-right: 10px;
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    right: 12px;
+                    width: 10px;
+                    height: 10px;
+                    background: #5ac4b1;
+                    border-radius: 50%;
+
+                    @media (max-width: $mobile) {
+                        right: 10px;
+                        top: -7px;
+                        width: 8px;
+                        height: 8px;
+                    }
+                }
+            }
+
+            .dropdown_profile {
+                color: $themeColor;
+                user-select: none;
+                cursor: pointer;
+                position: relative;
+                &::before {
+                    content: "";
+                    background-image: url(../../../../public/assets/images/down-arrow.svg);
+                    position: absolute;
+                    right: -26px;
+                    bottom: 0;
+                    top: 14px;
+                    background-size: cover;
+                    height: 10px;
+                    width: 15px;
+                }
+                button {
+                    padding: 0 10px 0 0;
+                }
+            }
+
+            .mobile_menu {
+                display: none;
+                @media (max-width: $mobile) {
+                    display: flex;
+                    align-items: center;
+                }
+                svg {
+                    @media (max-width: $mobile) {
+                        color: #1e22aa;
+                        font-size: 35px;
+                    }
+                }
+                .mobile_menu_content {
+                    position: fixed;
+                    background: #fff;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 100%;
+                    z-index: 99;
+                    overflow: hidden;
+                    width: 100%;
+                    .mobile_items {
+                        // padding: 20px 1 5px;
+                        padding: 16px;
+                        .mobile_accordion {
+                            padding: 0px 0 25px 0;
+                            border-bottom: 1px solid #f2f2f2;
+                            span,
+                            svg {
+                                color: $themeColor;
+                            }
+                            .user_detail {
+                                a {
+                                    color: $p-color1;
+                                }
+                            }
+                        }
+                        .mobile_heading {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding-bottom: 30px;
+                        }
+                        a {
+                            font-weight: 600;
+                            display: block;
+                            padding: 25px 0;
+                            border-bottom: 1px solid #f2f2f2;
+                        }
+                    }
+                }
+            }
         }
+    }
+}
+.mobile_btn{
+    button{
+        width: 100%;
     }
 }

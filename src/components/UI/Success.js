@@ -1,34 +1,45 @@
 import React from 'react';
-import Backgroundscreen from '../Backgroundscreen';
+import Backgroundscreen from "../../components/UI/Backgroundscreen";
 import Container from "@mui/material/Container";
-import Xcalalogo from '../Pages/Xcalalogo';
+import Xcalalogo from "../../components/UI/Xcalalogo";
 import success from "./Success.module.scss";
-import { Grid, Button } from "@mui/material";
+import { Grid } from "@mui/material";
+import { Link } from 'react-router-dom';
 
 function Success() {
-  return( 
-  <>
-        <Backgroundscreen />
-        <Container maxWidth="sm">
-          <Xcalalogo/>
-          <div className={success.verificationsuccesslogo}>
-             <img src="/assets/images/success.png" alt="success"></img>
-          
-          <div className={success.successtext}>
-              <p>¡Cuenta creada exitosamente!</p>
-          </div>
-          <Grid className="formbutton" item md={12}>
-                    <Button className="button-primary">
+   return (
+      <>
+         <Backgroundscreen />
+         <Container maxWidth="sm">
+            <Grid container maxWidth="sm" spacing={2}>
+               <Grid item xs={12} md={12} mb={3}>
+                  <Xcalalogo />
+               </Grid>
+            </Grid>
+            <div className={success.verificationsuccesslogo}>
+               <img src="/assets/images/sucess-gif.gif" alt="success" style={{ mixBlendMode: 'multiply', margin: "0 auto" }}></img>
+               <div>
+                  <div className={success.successtext}>
+                     <p>¡Cuenta creada exitosamente!</p>
+                  </div>
+                  <Grid className="formbutton" item md={12}>
+                     {/* <Button className="button-primary">
                     Ingresar a Xcala
-                    </Button>
-          </Grid>
-          <div className={success.completetext}>
-              <p>Completar tu registro</p>
-          </div>
-          </div>
-                 </Container>
-  </>
-  );
+                    </Button> */}
+                     <Link to="/login" className="button-primary">
+                        Ingresar a Xcala
+                     </Link>
+                  </Grid>
+                  <div className={success.completetext}>
+                     <Link to="/">
+                        <p>Completar tu registro</p>
+                     </Link>
+                  </div>
+               </div>
+            </div>
+         </Container>
+      </>
+   );
 }
 
 export default Success;

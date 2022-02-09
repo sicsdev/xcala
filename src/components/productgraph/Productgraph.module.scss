@@ -1,0 +1,81 @@
+@import "/src/Global/sass/variables.scss";
+
+.center {
+    margin-top: 1.5rem;
+    .cardstyle {
+        justify-content: center;
+        align-items: center;
+        background: #ffffff;
+        border: 1px solid #f2f2f2;
+        box-sizing: border-box;
+        box-shadow: 8px 8px 20px rgba(61, 64, 75, 0.05);
+        position: relative;
+        max-width: 100%;
+        @media (max-width: $mobile) {
+            padding: 0px 5px;
+        }
+        .star_tag {
+            position: absolute;
+            right: 25px;
+            top: 0px;
+            @media (max-width: $mobile) {
+                right: 15px;
+            }
+        }
+        .detail {
+            position: absolute;
+        }
+    }
+    .card_h1 {
+        display: flex;
+        align-items: center;
+        width: 246px;
+        gap: 14px;
+
+        .h1 {
+            font-family: $pfontfamily;
+            font-style: normal;
+            font-weight: $fweight2;
+            font-size: $p-18-fontsize;
+            line-height: 27px;
+        }
+    }
+    .link {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        gap: 10px;
+        align-content: center;
+        text-align: center;
+
+        .link1,
+        .link2 {
+            padding: 8px 16px;
+            border-radius: 39px;
+            font-weight: 500;
+            line-height: 25px;
+            font-family: $pfontfamily;
+        }
+        .link1 {
+            background: #e7f3ff;
+            font-size: 14px;
+            color: #587bc8;
+        }
+        .link2 {
+            font-size: 12px;
+            background: #edfcf9;
+            color: #49a197;
+        }
+    }
+    .product_action_btn{
+        a{
+            // width: 100%;
+            // max-width: 210px;
+            margin: 10px 0 ;
+            @media (max-width: $mobile) {
+                width: auto;
+                max-width: 100%;
+            }
+        }
+    }
+}

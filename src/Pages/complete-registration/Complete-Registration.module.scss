@@ -1,0 +1,96 @@
+@import "/src/Global/sass/variables.scss";
+.complete_registraion_main {
+    padding: 90px 30px;
+    @media (max-width: $mobile) {
+        padding: 30px 0px;
+    }
+    .registration_wrapper {
+        background: $white;
+        border-radius: 20px;
+
+        .registration_first_step {
+            max-width: 424px;
+            padding: 25px 20px;
+            margin: 0 auto;
+            @media (max-width: $mobile) {
+                padding: 15px 15px 0;
+            }
+            p {
+                color: $p-color1;
+            }
+            .identity {
+                display: flex;
+                padding: 10px 0;
+                svg {
+                    color: $themeColorText;
+                }
+            }
+            .continue_btn {
+                text-align: $center;
+                button {
+                    width: 100%;
+                    max-width: 281px;
+                    margin: 40px auto 30px;
+                    @media (max-width: $mobile) {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .card_objective {
+        .register_input_text,
+        .register_input_half {
+            padding: 15px 0;
+            .greentext {
+                color: $green-color;
+                font-weight: 600;
+            }
+        }
+        .register_input_half {
+            max-width: 200px;
+        }
+    }
+    .condition_text {
+        color: $p-color1;
+        .bold_text {
+            font-weight: 600;
+        }
+        svg {
+            color: $themeColorText;
+            position: relative;
+            left: 8px;
+            top: 6px;
+            cursor: pointer;
+        }
+        .MuiCheckbox-root {
+            padding: 0;
+        }
+    }
+    .list_items {
+        ul {
+            li {
+                font-size: 18px;
+                @media (max-width: $mobile) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    button {
+        width: 100%;
+        max-width: 341px;
+        margin: 20px auto;
+        font-size: 16px;
+        @media (max-width: $mobile) {
+            max-width: 100%;
+            margin: 0;
+        }
+    }
+    .complete_registration_btn {
+        @media (max-width: $mobile) {
+            margin-top: 10px;
+            flex-direction: column-reverse;
+        }
+    }
+}

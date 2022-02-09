@@ -1,25 +1,24 @@
 import React from 'react';
-
-function Select() {
+import InputLabel from '@mui/material/InputLabel';
+import {Select } from '@mui/material';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+function Customselect(props) {
   return (
     <div>
-      <FormControl fullWidth>
-        <InputLabel variant="standard" htmlFor="uncontrolled-native">
-          Age
-        </InputLabel>
-        <NativeSelect
-          defaultValue={30}
-          inputProps={{
-            name: 'age',
-            id: 'uncontrolled-native',
-          }}
+      <FormControl fullWidth variant="standard" className='custom-select'>
+      <InputLabel id={props.Labelid}>{props.placholder}</InputLabel>
+        <Select
+          labelId={props.Selectid}
+          id={props.id}
+          label={props.label}
+          onChange= {props.onChange}
         >
-          <option value={10}>Ten</option>
-        </NativeSelect>
+          <MenuItem value={10}>{props.menuItems}</MenuItem>
+        </Select>
       </FormControl>
-
     </div>
   );
 }
 
-export default Select;
+export default Customselect;

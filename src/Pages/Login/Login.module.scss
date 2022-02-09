@@ -1,0 +1,70 @@
+@import "/src/Global/sass/variables.scss";
+.login_logo {
+    @media (max-width: $mobile) {
+        padding-top: 50px;
+    }
+}
+.form_login {
+    background: #ffffff;
+    mix-blend-mode: normal;
+    border-radius: 8px;
+    padding-bottom: 40px;
+    margin-top: 30px;
+    display: flex;
+    max-width: 676px;
+
+    .form_inner {
+        padding: 30px 0 0;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 326px;
+        form {
+            width: 100% !important;
+            .continue_btn {
+                a {
+                    @media (max-width: $mobile) {
+                        display: block;
+                        height: auto;
+                    }
+                }
+            }
+
+            .btn_text {
+                a {
+                    @media (max-width: $mobile) {
+                        color: $themeColor2 !important;
+                    }
+                }
+            }
+        }
+        .register_input_text {
+            margin: $input-margin;
+            width: $pfontfamily;
+        }
+    }
+    .password_form {
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        text-align: $center;
+    }
+}
+
+.pass_text {
+    color: $themeColor;
+    font-weight: $fweight2;
+    font-size: 14px;
+    margin-bottom: 4rem;
+    @media (max-width: $mobile) {
+        margin-bottom: 1rem;
+    }
+}
+.btn_text {
+    color: $green-color;
+    margin-top: 2rem;
+    font-weight: $fweight2;
+}
+.p_14 {
+    font-size: $p-14-fontsize;
+    color: $themeColor;
+    font-weight: $fweight2;
+}

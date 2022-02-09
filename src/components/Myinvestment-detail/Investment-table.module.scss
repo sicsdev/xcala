@@ -1,0 +1,33 @@
+@import "/src/Global/sass/variables.scss";
+
+.tablebody{
+    .tableheading{
+        font-family: $pfontfamily;
+        font-weight: $fweight;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: $p-color1;
+        background: rgba(150, 189, 228, 0.1);
+        height: 33px;
+        padding: 3px 16px !important;
+    }
+    .tabledata{
+        font-family: $pfontfamily;
+        font-size: $p-18-fontsize; 
+        padding: 25px;   
+    }
+
+}
+.table_tabs Button{
+    padding: 0px 45px;
+}
+.filter{
+    display: flex;
+    gap: 8px;
+    justify-content: end;
+    .filter_text{
+        margin-right: 16px;
+    }
+}

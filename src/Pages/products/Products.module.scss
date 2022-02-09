@@ -1,0 +1,76 @@
+@import "/src/Global/sass/variables.scss";
+@import "/src/Global/sass/mixin.scss";
+@include pageHeading;
+.product_wrapper {
+    background: #f2f2f2;
+    padding: 50px 0;
+
+    .heading {
+        @media (max-width: $mobile) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .filter_responsive {
+            display: none;
+            @media (max-width: $mobile) {
+                display: block;
+                color: $themeColor;
+                font-weight: 600;
+                svg {
+                    position: relative;
+                    top: 5px;
+                }
+            }
+        }
+        .fadetext {
+            color: $p-color1 !important;
+        }
+    }
+
+    .filter {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .filter_text {
+            font-size: 24px;
+            color: $themeColor;
+            @media (max-width: $mobile) {
+                font-size: 0px;
+            }
+        }
+    }
+    .responsive_filter {
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+    .showmorebtn {
+        text-align: center;
+        .btn {
+            margin-top: 3rem;
+            font-weight: $fweight2;
+            font-size: $p-18-fontsize;
+            line-height: 27px;
+            color: $green-color;
+            text-align: center;
+            text-transform: capitalize;
+            border-color: $green-color;
+            padding: 12px 88px;
+            border-radius: 8px;
+            :hover {
+                border-color: $green-color !important;
+            }
+        }
+    }
+    .mobile_heading{
+        display: none;
+        @media (max-width: $mobile) {
+            padding: 30px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+     
+    }
+}

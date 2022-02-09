@@ -1,0 +1,36 @@
+@import "/src/Global/sass/variables.scss";
+.my_notification_main {
+    .my_notification_wrapper {
+        padding: 50px 0px 0;
+        .my_notification {
+            position: relative;
+            padding: 24px;
+            background:white;
+            border-radius: 10px;
+            .my_notification_date {
+                color: $light-grey;
+                font-weight: 300;
+            }
+            .my_notification_message {
+                padding-top: 10px;
+            }
+        }
+        .delete_all {
+            padding-top: 20px;
+            font-weight: 600;
+            a {
+                text-decoration: none;
+            }
+        }
+        .delete_icon {
+            padding: 20px;
+            svg {
+                color: $warning;
+                font-size: 30px;
+            }
+            @media (max-width: $mobile) {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,119 @@
+@import "/src/Global/sass/variables.scss";
+.received_request {
+    padding: 50px 30px;
+    background-color: #f2f2f2;
+    @media (max-width: $mobile) {
+        background-color: $white;
+        padding: 20px 0px 30px;
+    }
+    .success_tick {
+        display: flex;
+        padding: 30px 0;
+        justify-content: center;
+        position: relative;
+        @media (max-width: $mobile) {
+            padding: 20px 0 10px;
+        }
+       
+        img {
+            width: 150px;
+            mix-blend-mode: multiply;
+            position: absolute;
+            top: -24px;
+            left: 50px;
+            @media (max-width: $mobile) {
+                width: 100px;
+                top: -14px;
+                left: -10px;
+            }
+        }
+        .success_messg {
+            padding: 11px 0 0 120px;
+            @media (max-width: $mobile) {
+                padding: 0px 0px 0px 90px;
+            }
+        }
+    }
+    .registration_wrapper {
+        background: $white;
+        border-radius: 20px;
+        margin-top: 30px;
+        .rectangle_heading {
+            margin-top: 40px;
+            background: linear-gradient(359.32deg, #f1f4f9 -62.97%, rgba(241, 244, 249, 0) 189.05%);
+            border-radius: 8px;
+            width: 100%;
+            padding: 20px;
+            @media (max-width: $mobile) {
+                margin-top: 0px;
+            }
+        }
+        .registration_first_step {
+            max-width: 640px;
+            padding: 0px 37px 40px;
+            margin: 0 auto;
+            @media (max-width: $mobile) {
+                padding: 0 0 40px;
+            }
+            p {
+                color: $p-color1;
+            }
+
+            .copy_btn {
+                text-align: center;
+                button {
+                    width: 100%;
+                    max-width: 430px;
+                    margin: 0 auto;
+                    font-size: 16px;
+                    @media (max-width: $mobile) {
+                        font-size: 14px;
+                    }
+                    svg {
+                        font-size: 20px;
+                        position: relative;
+                        left: -10px;
+                        top: 3px;
+                    }
+                }
+            }
+            .warning {
+                display: flex;
+                .warning_text {
+                    padding-left: 10px;
+                    color: #d12d35;
+                    font-weight: 600;
+                }
+            }
+            .downlaod {
+                display: flex;
+                color: $themeColor2;
+                @media (max-width: $mobile) {
+                    padding-top: 10px;
+                }
+             
+                .downlaod_text {
+                    margin-left: 10px;
+                    font-weight: 600;
+                }
+            }
+            .bank_detail {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .continue_btn {
+        text-align: $center;
+        a {
+            width: 100%;
+            max-width: 255px;
+            margin: 30px auto;
+            @media (max-width: $mobile) {
+                margin: 0px auto;
+            }
+        }
+    }
+}

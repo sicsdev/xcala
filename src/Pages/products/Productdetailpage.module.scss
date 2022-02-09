@@ -1,0 +1,143 @@
+@import "/src/Global/sass/variables.scss";
+
+.productdetail {
+    background: #f2f2f2;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    @media (max-width: $mobile) {
+        padding: 30px 15px;
+    }
+
+    .wrapper {
+        background: $white;
+        border-radius: 20px;
+        padding: 2.5rem;
+        @media (max-width: $mobile) {
+            padding: 20px 15px 20px 15px;
+        }
+        .heading {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            position: relative;
+            @media (max-width: $mobile) {
+                padding: 3px 0px;
+            }
+
+            .h2 {
+                font-weight: $fweight2;
+                font-size: 24px;
+                line-height: 27px;
+            }
+        }
+
+        .link {
+            margin-top: 0.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 10px;
+            align-content: center;
+            text-align: center;
+            margin-left: 3.6rem;
+            @media (max-width: $mobile) {
+                margin-left: 0;
+                padding: 15px 0 0;
+                margin-bottom:0;
+            }
+
+
+            .link1,
+            .link2 {
+                padding: 3px 16px;
+                border-radius: 39px;
+                line-height: 25px;
+                font-family: $pfontfamily;
+                margin-bottom: 0.8rem;
+                @media (max-width: $mobile) {
+                    width: 50%;
+                }
+            }
+            .link1 {
+                background: #e7f3ff;
+                font-size: 14px;
+                color: #587bc8;
+            }
+            .link2 {
+                font-size: 12px;
+                background: #edfcf9;
+                color: #49a197;
+            }
+        }
+
+        .p {
+            margin-top: 3.2rem;
+            margin-bottom: 3.2rem;
+            width: 100%;
+            max-width: 880px;
+            @media (max-width: $mobile) {
+                margin: 15px 0;
+                padding: 15px 0 30px;
+            }
+
+            .fadetext {
+                color: #808080;
+                font-size: $p-18-fontsize;
+                line-height: 30px;
+                @media (max-width: $mobile) {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+        .pdf_section {
+            margin-top: 4.5rem;
+            background: linear-gradient(359.32deg, #f1f4f9 -62.97%, rgba(241, 244, 249, 0) 189.05%);
+            border-radius: 8px;
+            padding: 30px 20px;
+            @media (max-width: $mobile) {
+                margin-top: 1.5rem;
+            }
+            .doc_head {
+                margin-bottom: 1rem;
+            }
+        }
+        .table_button{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 8px 16px;
+            margin-top: 1rem;
+            gap: 10px;
+            @media (max-width: $mobile) {
+                font-size: 14px;
+                padding: 8px 0px;
+            }
+                .btn{
+                background: $themeColor;
+                border: 1px solid #1E22AA;
+                border-radius: 39px;
+                padding: 8px 16px;
+                color: #fff;
+                text-transform: lowercase;
+                @media (max-width: $mobile) {
+                    font-size: 12px;
+                    padding: 8px 6px;
+                }
+                :hover{
+                    background-color: none;
+                }
+        }
+        .btn_outline{
+            border: 1px solid #1E22AA;
+            border-radius: 39px;
+            padding: 8px 16px;
+            color: #1E22AA;
+            text-transform: lowercase;
+            @media (max-width: $mobile) {
+                font-size: 12px;
+                padding: 8px 6px;
+            }
+        }
+        }
+    }
+}

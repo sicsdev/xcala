@@ -1,4 +1,5 @@
-import * as React from "react";
+import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -8,125 +9,80 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import Styles from "../Header/Header.module.scss";
 import ImagSrc from "../../../notification.svg";
-
-const pages = ["Inicio", "Productos", "Mis transacciones"];
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import CloseIcon from '@mui/icons-material/Close';
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [mobileMenu, setmobileMenu] = useState(false);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
+    setmobileMenu((prevState => !prevState))
   };
   const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
+    setAnchorElUser(false);
   };
 
+  const handleCloseMenu = () => {
+    setmobileMenu((prevState => !prevState))
+  };
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   return (
     <AppBar position="static" className={Styles.app_header}>
-      <Container maxWidth="xl">
+      <Container maxWidth="lg" className={Styles.header_wrapper}>
         <Toolbar disableGutters>
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
+            sx={{ mr: 2, display: { md: "flex" } }}
           >
             <div className="xcala-logo-layout">
-              <img src="/assets/images/logo.svg" alt="logo"></img>
+              <Link to="/new-user">
+                <img src="/assets/images/logo.svg" alt="logo"></img>
+              </Link>
             </div>
-          </Typography>
-
-          <Box sx={{ flexGrow: 0, display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
-          >
-            LOGO
           </Typography>
           <Box
             sx={{
               flexGrow: 1,
               display: { xs: "none", md: "flex" },
               justifyContent: "flex-end",
+              alignItems: "center",
             }}
           >
-            {pages.map((page) => (
-              // {page == "Inicio" ? <h1></h1> :<h1></h1> }
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
-              </Button>
-            ))}
-             <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-                className="notification"
-              >
-              <img src={ImagSrc}  alt="icon"></img>
-              </Button>
+            <Link to="/new-user" sx={{ my: 2, color: "white", display: "block" }} >
+              Inicio
+            </Link>
+            <Link to="/products" sx={{ my: 2, color: "white", display: "block" }} >
+              Productos
+            </Link>
+            <Link to="/lets-start" sx={{ my: 2, color: "white", display: "block" }} >
+              Mis transacciones
+            </Link>
+            <Link to="/my-notification" className={Styles.notification} sx={{ my: 2, color: "white", display: "block" }} >
+              <img src={ImagSrc} alt="icon"></img>
+              <span></span>
+            </Link>
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+          <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }} >
+            <div className={Styles.dropdown_profile} onClick={handleOpenUserMenu}>
+              <IconButton sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/assets/images/Avatar.svg" />
               </IconButton>
-            </Tooltip>
+              Mi cuenta
+            </div>
             <Menu
               sx={{ mt: "45px" }}
               id="menu-appbar"
@@ -141,10 +97,10 @@ const ResponsiveAppBar = () => {
                 horizontal: "right",
               }}
               open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
+              onClose={handleCloseNavMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                <MenuItem key={setting} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center" color="#1E22AA">
                     {setting}
                   </Typography>
@@ -153,6 +109,86 @@ const ResponsiveAppBar = () => {
             </Menu>
           </Box>
         </Toolbar>
+
+        <div className={Styles.mobile_menu}>
+          <div className='desktop-none'>
+            <Link to="/my-notification" className={Styles.notification} sx={{ my: 2, color: "white", display: "block" }} >
+              <img src={ImagSrc} alt="icon"></img>
+              <span></span>
+            </Link>
+          </div>
+          <IconButton
+            size="large"
+            aria-label="account of current user"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={handleCloseMenu  }
+            color="inherit"
+          >
+            <MenuIcon />
+          </IconButton>
+          {mobileMenu ?
+            <div className={Styles.mobile_menu_content}>
+              <div className={Styles.mobile_items}>
+                <div className={Styles.mobile_heading}>
+                  <Typography className='museo-regular font-lg-24 blue_text'>
+                    Filtros
+                  </Typography>
+                  <Typography >
+                    <CloseIcon className='blue_text' onClick={handleCloseMenu} />
+                  </Typography>
+                </div>
+                <Link to="/new-user" onClick={handleCloseMenu}>
+                  Inicio
+                </Link>
+                <Accordion className={Styles.mobile_accordion} style={{ boxShadow: "none" }}>
+                  <AccordionSummary
+                    style={{ padding: "0px" }}
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+
+                  >
+                    <Typography
+                      className="p-18"
+                      variant=""
+                      component=""
+                      style={{ fontWeight: "600" }}
+                    >
+                      Perfil de inversión
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <div className={Styles.user_detail}>
+                      <Link to="" >
+                        Mis datos
+                      </Link>
+                      <Link to=""  >
+                        Mi perfil de riesgo
+                      </Link>
+                      <Link to=""  >
+                        Mis objetivos e intereses
+                      </Link>
+                      <Link to=""  >
+                        Cambiar contraseña
+                      </Link>
+                      <Link to=""  >
+                        Configurar notificaciones
+                      </Link>
+                    </div>
+                  </AccordionDetails>
+                </Accordion>
+
+                <Link to="/products" onClick={handleCloseMenu}>
+                  Productos
+                </Link>
+                <Link to="/lets-start" onClick={handleCloseMenu}>
+                  Mis transacciones
+                </Link>
+              </div>
+            </div>
+            : ''}
+        </div>
       </Container>
     </AppBar>
   );

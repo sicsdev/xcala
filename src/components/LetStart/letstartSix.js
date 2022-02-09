@@ -1,6 +1,5 @@
 import React from 'react';
-import Container from "@mui/material/Container";
-import Styles from "../Pages/lets-start/letStart.module.scss"
+import Styles from "../../Pages/lets-start/letStart.module.scss"
 import Typography from '@mui/material/Typography';
 import { Grid, Link } from "@mui/material";
 function LetStartSix(props) {
@@ -19,8 +18,8 @@ function LetStartSix(props) {
   }
   return (
 
-    <Grid container maxWidth="sm" spacing={2}>
-      <Grid item md={12} mt={3} style={{ margin: "20px auto" }}>
+    <Grid container maxWidth="sm" >
+      <Grid item md={12} xs={12} mt={3} style={{ margin: "20px auto" }}>
         <Typography
           variant="h6"
           style={{ color: '#182849', marginBottom: "25px", fontWeight: "bold" }}
@@ -30,14 +29,14 @@ function LetStartSix(props) {
 
       </Grid>
 
-      <Grid className={Styles.lets_start_btn} item md={12} >
-        <Link component="button" onClick={Handlestep}>Invertiría todo mi dinero en instrumentos con poco riesgo, aunque su rentabilidad sea baja.</Link>
+      <Grid className={Styles.lets_start_btn} item md={12} xs={12} >
+        <Link component="button" className='card-bordered' onClick={Handlestep}>Invertiría todo mi dinero en instrumentos con poco riesgo, aunque su rentabilidad sea baja.</Link>
       </Grid>
-      <Grid className={Styles.lets_start_btn} item md={12} >
-        <Link component="button" onClick={Handlestep}>Invertiría una parte de mi dinero en instrumentos de bajo riesgo y otra, en aquellos que aunque son más riesgosos, tienen mayor rentabilidad.</Link>
+      <Grid className={Styles.lets_start_btn} item md={12} xs={12} >
+        <Link component="button" className='card-bordered' onClick={Handlestep}>Invertiría una parte de mi dinero en instrumentos de bajo riesgo y otra, en aquellos que aunque son más riesgosos, tienen mayor rentabilidad.</Link>
       </Grid>
-      <Grid className={Styles.lets_start_btn} item md={12} >
-        <Link component="button" onClick={Handlestep}>Invertiría todo mi dinero en instrumentos de alto rendimiento para maximizar mi ganancia, aún cuando esto signifique asumir mayores riesgos.</Link>
+      <Grid className={Styles.lets_start_btn} item md={12} xs={12} >
+        <Link component="button" className='card-bordered' onClick={Handlestep}>Invertiría todo mi dinero en instrumentos de alto rendimiento para maximizar mi ganancia, aún cuando esto signifique asumir mayores riesgos.</Link>
       </Grid>
     </Grid>
   );

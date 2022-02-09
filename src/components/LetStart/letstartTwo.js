@@ -17,7 +17,7 @@ function LetStartTwo(props) {
   }
   return (
 
-    <Grid container maxWidth="sm" spacing={2}>
+    <Grid container maxWidth="sm" >
       <Grid item md={12} xs={12} mt={3} style={{ margin: "20px auto" }}>
         <Typography
           variant="h6"
@@ -27,13 +27,13 @@ function LetStartTwo(props) {
         </Typography>
       </Grid>
       <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
-        <Link component="button" onClick={Handlestep}>Menos del 30%</Link>
+        <Link component="button" className='card-bordered' onClick={Handlestep}>Menos del 30%</Link>
       </Grid>
       <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
-        <Link component="button" onClick={Handlestep}>Estoy 30% y 60%</Link>
+        <Link component="button" className='card-bordered' onClick={Handlestep}>Estoy 30% y 60%</Link>
       </Grid>
       <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
-        <Link component="button" onClick={Handlestep}>MMás del 60%</Link>
+        <Link component="button" className='card-bordered' onClick={Handlestep}>MMás del 60%</Link>
       </Grid>
     </Grid >
   );

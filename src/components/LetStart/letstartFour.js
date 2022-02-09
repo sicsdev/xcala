@@ -18,7 +18,7 @@ function LetStartFour(props) {
   }
   return (
 
-    <Grid container maxWidth="sm" spacing={2}>
+    <Grid container maxWidth="sm">
       <Grid item md={12} xs={12} mt={3} style={{ margin: "20px auto" }}>
         <Typography
           variant="h6"
@@ -30,13 +30,13 @@ function LetStartFour(props) {
       </Grid>
 
       <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
-        <Link component="button" onClick={Handlestep}>Básciamente mediante mi trabajo</Link>
+        <Link component="button" className='card-bordered' onClick={Handlestep}>Básciamente mediante mi trabajo</Link>
       </Grid>
       <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
-        <Link component="button" onClick={Handlestep}>Mediante mi trabajo, más algunos ahorros</Link>
+        <Link component="button" className='card-bordered' onClick={Handlestep}>Mediante mi trabajo, más algunos ahorros</Link>
       </Grid>
       <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
-        <Link component="button" onClick={Handlestep}>De otras rentas no relacionadas con mi trabajo</Link>
+        <Link component="button" className='card-bordered' onClick={Handlestep}>De otras rentas no relacionadas con mi trabajo</Link>
       </Grid>
     </Grid>
   );

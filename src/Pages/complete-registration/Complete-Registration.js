@@ -75,7 +75,7 @@ function CompleteRegistration() {
             :
             <div className= {back ? ("complete_registration_navbar") : "" }>
               <Container sx={{
-                maxWidth: "480px !important",
+                maxWidth: "500px !important",
               }}>
                 <Grid container spacing={0}>
                   <Grid item md={12}>

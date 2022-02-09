@@ -23,12 +23,12 @@ function MyAccount() {
   }
   return <div className="page_content">
     <Container maxWidth="lg">
-      <Grid container item md={12} mb={5}>
-        <Grid item md={12}>
+      <Grid container item md={12} xs={12} mb={5}>
+        <Grid item md={12} xs={12}>
           <div className={Styles.rectangle_heading}>
             <Typography
               variant="h5"
-              style={{ fontSize: "28px" }}
+              className='font-lg-28'
             >
               <img src="/assets/images/Rectangle.png" alt=""></img> Mis datos de contacto y depósito
             </Typography>
@@ -36,8 +36,8 @@ function MyAccount() {
         </Grid>
       </Grid>
       <div className={Styles.account_card}>
-        <Grid container item spacing={5} md={12} mb={3}>
-          <Grid item md={12} mt={3}>
+        <Grid container item spacing={5} md={12} xs={12} mb={3}>
+          <Grid item md={12} xs={12} mt={3}>
             <div className={Styles.user_row}>
               <div className={Styles.user_grid}>
                 <div className={Styles.user_img}>
@@ -46,13 +46,12 @@ function MyAccount() {
                 <div className={Styles.user_content}>
                   <Typography
                     variant="h5"
-                    style={{ fontSize: "24px" }}
+                    className='font-lg-24'
                   >
                     Marcela Paz Pérez Ilabaca
                   </Typography>
                   <Typography
-                    className='light-grey'
-                    style={{ fontSize: "18" }}
+                    className='font-lg-18 light-grey'
                   >
                     RUT  11.111.111-1
                   </Typography>
@@ -60,7 +59,7 @@ function MyAccount() {
               </div>
             </div>
           </Grid>
-          <Grid item md={4} mt={3}>
+          <Grid item md={4} xs={12} mt={3}>
             <div className={Styles.account_detail_main}>
               <div className={Styles.account_heading}>
                 <Typography
@@ -80,7 +79,7 @@ function MyAccount() {
               <DataPersonal personalData={personalData} setpersonalData={setpersonalData} />
             </div>
           </Grid>
-          <Grid item md={4} mt={3}>
+          <Grid item md={4} xs={12} mt={3}>
             <div className={Styles.account_detail_main}>
               <div className={Styles.account_heading}>
                 <Typography
@@ -100,7 +99,7 @@ function MyAccount() {
               <ContactInfo contactData={contactData} setContactData={setContactData} />
             </div>
           </Grid>
-          <Grid item md={4} mt={3}>
+          <Grid item md={4} xs={12} mt={3}>
             <div className={Styles.account_detail_main}>
               <div className={Styles.account_heading}>
                 <Typography

@@ -1,8 +1,9 @@
-import { Container, Grid, Link, Switch, Typography } from '@mui/material';
+import { Button, Container, Grid, Link, Switch, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import Styled from "../my-notifcation/My-Notification.module.scss"
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import Data from '../../data/message.json';
+import SwipeToDelete from 'react-swipe-to-delete-component';
 function MyNotification() {
   const [data, setData] = useState(Data);
   // const [alldata, setAllData] = useState(Data);
@@ -31,9 +32,9 @@ function MyNotification() {
           <div className={Styled.my_notification_wrapper}>
             <>
               {data && data.map((element) =>
-                <Grid container spacing={2} className={Styled.my_notification_step} key={element.id}>
-                  <Grid item md={10} mb={3}>
-                    <div className={element.id != 1 ? Styled.my_notification : `active_notification ${Styled.my_notification}`} >
+                <SwipeToDelete key={element.id}>
+                  <div className="delete-noti">
+                    <div className={element.id != 1 ? ` ${Styled.my_notification}` : `active_notification ${Styled.my_notification}`} >
                       <Typography className={`date ${Styled.my_notification_date}`}>
                         {element.date}
                       </Typography>
@@ -41,25 +42,30 @@ function MyNotification() {
                         {element.message}
                       </Typography>
                     </div>
-                  </Grid>
-                  <Grid item md={2} mb={3}>
                     <div className={Styled.delete_icon}>
                       <DeleteOutlineIcon className={Styled.delete_icon} id={element.id} onClick={(e) => handleRemove(element.id)} />
                     </div>
-                  </Grid>
-                </Grid>
+                  </div>
+                </SwipeToDelete>
               )}
             </>
             {data &&
-              <Grid item md={12} mb={3}>
+            <>
+              <Grid item md={12} xs={12} mb={3}>
                 <div className={Styled.delete_all}>
                   <Link className="dark-green" onClick={handleRemoveAll}>Eliminar todas</Link>
                 </div>
               </Grid>
+               <Grid item md={12} xs={12} mb={3} className="desktop-hide">
+               <div className={Styled.back_top_top}>
+                 <Button className="button-primary">Volver al Inicio</Button>
+               </div>
+             </Grid>
+             </>
             }
-          </div>
-        </Container>
       </div>
+    </Container>
+  </div>
     </div >
   </>
 }

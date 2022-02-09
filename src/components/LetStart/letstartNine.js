@@ -17,7 +17,7 @@ function LetStartNine(props) {
   // }
   return (
 
-    <Grid container maxWidth="sm" spacing={2}>
+    <Grid container maxWidth="sm">
       <Grid item md={12} xs={12} mt={3} style={{ margin: "20px auto" }}>
         <Typography
           variant="h6"
@@ -29,13 +29,13 @@ function LetStartNine(props) {
       </Grid>
 
       <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
-        <Link component="button">Disminuirá</Link>
+        <Link component="button" className='card-bordered'>Disminuirá</Link>
       </Grid>
       <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
-        <Link component="button">Se mantendrá</Link>
+        <Link component="button" className='card-bordered'>Se mantendrá</Link>
       </Grid>
       <Grid className={Styles.lets_start_btn} item md={12} xs={12}>
-        <Link component="button">Aumentará</Link>
+        <Link component="button" className='card-bordered'>Aumentará</Link>
       </Grid>
     </Grid>
   );

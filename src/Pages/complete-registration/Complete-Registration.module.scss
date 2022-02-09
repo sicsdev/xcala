@@ -1,6 +1,9 @@
 @import "/src/Global/sass/variables.scss";
 .complete_registraion_main {
     padding: 90px 30px;
+    @media (max-width: $mobile) {
+        padding: 30px 0px;
+    }
     .registration_wrapper {
         background: $white;
         border-radius: 20px;
@@ -9,6 +12,9 @@
             max-width: 424px;
             padding: 25px 20px;
             margin: 0 auto;
+            @media (max-width: $mobile) {
+                padding: 15px 15px 0;
+            }
             p {
                 color: $p-color1;
             }
@@ -54,13 +60,13 @@
             top: 6px;
             cursor: pointer;
         }
-        .MuiCheckbox-root{
+        .MuiCheckbox-root {
             padding: 0;
         }
     }
-    .list_items{
-        ul{
-            li{
+    .list_items {
+        ul {
+            li {
                 font-size: 18px;
             }
         }
@@ -68,6 +74,16 @@
     button {
         width: 100%;
         max-width: 341px;
-        margin: 30px auto 20px;
+        margin: 20px auto;
+        font-size: 16px;
+        @media (max-width: $mobile) {
+            max-width: 100%;
+            margin: 0;
+        }
+    }
+    .complete_registration_btn {
+        @media (max-width: $mobile) {
+            flex-direction: column-reverse;
+        }
     }
 }

@@ -18,7 +18,7 @@ function LetStartSix(props) {
   }
   return (
 
-    <Grid container maxWidth="sm" spacing={2}>
+    <Grid container maxWidth="sm" >
       <Grid item md={12} xs={12} mt={3} style={{ margin: "20px auto" }}>
         <Typography
           variant="h6"
@@ -30,13 +30,13 @@ function LetStartSix(props) {
       </Grid>
 
       <Grid className={Styles.lets_start_btn} item md={12} xs={12} >
-        <Link component="button" onClick={Handlestep}>Invertiría todo mi dinero en instrumentos con poco riesgo, aunque su rentabilidad sea baja.</Link>
+        <Link component="button" className='card-bordered' onClick={Handlestep}>Invertiría todo mi dinero en instrumentos con poco riesgo, aunque su rentabilidad sea baja.</Link>
       </Grid>
       <Grid className={Styles.lets_start_btn} item md={12} xs={12} >
-        <Link component="button" onClick={Handlestep}>Invertiría una parte de mi dinero en instrumentos de bajo riesgo y otra, en aquellos que aunque son más riesgosos, tienen mayor rentabilidad.</Link>
+        <Link component="button" className='card-bordered' onClick={Handlestep}>Invertiría una parte de mi dinero en instrumentos de bajo riesgo y otra, en aquellos que aunque son más riesgosos, tienen mayor rentabilidad.</Link>
       </Grid>
       <Grid className={Styles.lets_start_btn} item md={12} xs={12} >
-        <Link component="button" onClick={Handlestep}>Invertiría todo mi dinero en instrumentos de alto rendimiento para maximizar mi ganancia, aún cuando esto signifique asumir mayores riesgos.</Link>
+        <Link component="button" className='card-bordered' onClick={Handlestep}>Invertiría todo mi dinero en instrumentos de alto rendimiento para maximizar mi ganancia, aún cuando esto signifique asumir mayores riesgos.</Link>
       </Grid>
     </Grid>
   );

@@ -1,54 +1,35 @@
 @import "/src/Global/sass/variables.scss";
 .my_notification_main {
     .my_notification_wrapper {
-        padding: 50px 0px;
+        padding: 50px 0px 0;
         .my_notification {
             position: relative;
-            background: linear-gradient(
-                268.78deg,
-                rgba(255, 255, 255, 0.8) 1.52%,
-                rgba(255, 255, 255, 0) 39.44%,
-                rgba(255, 255, 255, 0.8) 99.9%
-            );
-            mix-blend-mode: normal;
-            border: 2px solid transparent;
-            border-radius: 8px;
-            width: 100%;
-            padding: 20px;
-            // &::before {
-            //     content: "";
-            //     position: absolute;
-            //     top: 0;
-            //     right: 0;
-            //     bottom: 0;
-            //     left: 0;
-            //     z-index: -2;
-            //     margin: -4px;
-            //     background: linear-gradient(92.05deg, #ffffff -0.62%, #e3e3e3 50.1%, #ffffff 93.02%);
-            // }
-            .my_notification_date{
-                color:$light-grey;
+            padding: 24px;
+            background:white;
+            border-radius: 10px;
+            .my_notification_date {
+                color: $light-grey;
                 font-weight: 300;
             }
-            .my_notification_message{
+            .my_notification_message {
                 padding-top: 10px;
             }
         }
-        .delete_all{
+        .delete_all {
             padding-top: 20px;
             font-weight: 600;
-            a{
+            a {
                 text-decoration: none;
             }
         }
         .delete_icon {
-            display: grid;
-            place-content: center;
-            align-items: center;
-            height: 100%;
+            padding: 20px;
             svg {
                 color: $warning;
                 font-size: 30px;
+            }
+            @media (max-width: $mobile) {
+                display: none;
             }
         }
     }

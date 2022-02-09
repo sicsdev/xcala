@@ -7,161 +7,212 @@
     background-position: center;
     padding: 40px 0px 40px 0;
     margin-bottom: 0px;
-        .heading{
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            color: $p-color1;
-            margin-top: 1.3rem;
+    @media (max-width: $mobile) {
+        padding: 10px 0px 40px 0;
+    }
+    .heading {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        color: $p-color1;
+        margin-top: 1.3rem;
+    }
+    .investments {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+        border-right: 1px solid #587bc8;
+        @media (max-width: $mobile) {
+            border-right: none;
+            border-bottom: 1px solid #587bc8;
+            margin-top: 1rem;
+            margin-bottom: 0rem;
+            padding: 20px 0;
         }
-        .investments{
-            display: flex;
-            flex-direction: column;
-            justify-items: center;
-            text-align: center;
-            margin-top: 3.2rem;
-            margin-bottom: 4rem;
-            border-right: 1px solid #587BC8;;
-            .currency{
-                margin-top: 8px;
-            .currency_{
+        .currency {
+            margin-top: 8px;
+            .currency_ {
                 font-weight: bold;
                 font-size: 36px;
                 color: $p-color1;
-            }
+                @media (max-width: $mobile) {
+                    font-size: 24px;
+                }
             }
         }
-.center{
-    margin-top: 1.5rem;
-    .cardstyle{
-        justify-content: center;
-        align-items: center;
-        border: 1px solid #F2F2F2;
-        box-shadow: 8px 8px 20px rgba(61, 64, 75, 0.05);
-        background: linear-gradient(118.26deg, rgba(255, 255, 255, 0.8) 17.11%, rgba(255, 255, 255, 0) 103.77%);
-        backdrop-filter: blur(27px);
-        border-radius: 16px;
-        padding: 15px;
-        min-height: 340px;
- 
-    .card_h1{
-        display: flex;
-        align-items: center;
-        gap: 14px;
-            .h1{
-            font-size: 24px;
-            color: $themeColor;
-            font-weight: $fweight2;
-            }
     }
-    .link{
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        display: flex;
-        gap: 10px;
-        align-content: center;
-        text-align: center;
+    .center {
+        margin-top: 1.5rem;
+        .cardstyle {
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #f2f2f2;
+            box-shadow: 8px 8px 20px rgba(61, 64, 75, 0.05);
+            background: linear-gradient(118.26deg, rgba(255, 255, 255, 0.8) 17.11%, rgba(255, 255, 255, 0) 103.77%);
+            backdrop-filter: blur(27px);
+            border-radius: 16px;
+            padding: 15px;
+            min-height: 310px;
+            @media (max-width: $mobile) {
+                padding: 5px;
+            }
 
-        .link1, .link2{
-            padding: 8px 16px;
-            border-radius: 39px;
-            font-size: 12px;
-            text-decoration: none;
-        }
-        .link1{
-            background: #E7F3FF;  
-            color:#587BC8;
-            ;
-        }
-        .link2{
-            background: #EDFCF9;
-            color: #49A197;
-        }
-    }
-}
-.columnborder{
-    border-right: 1px dashed #96BDE4;
-}
-.second_column{
-    width: 100%;
-    max-width: 210px;
-    margin-left: auto;      
-}
-.usd{
-    margin-top: 0.5rem;
-    margin-bottom: 0.2rem;
-}
-.fadetext{
-    margin-top: 1.2rem;
-    .text{
-        font-size: 14px;
-        line-height: 21px;
-        color: #808080; 
-        padding-left: 16px;
-    }
-}
-}
-}
-.fundpurpose{
-    background: #F6F6F6;
-    padding-top: 1rem;
-.filter{
-    display: flex;
-    width: 100%;
-    justify-content: end;
-}
-.green_btn{
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-        Button{
-        margin-top: 1.65rem;
-        padding: 17px 40px;
-        color: $green-color;
-        border-color: $green-color;
-        border-radius: 8px;
-        font-weight: $fweight2;
-        text-transform: capitalize;
-        font-size: $p-18-fontsize;
-        line-height: normal;
-        }
-}
-.Discover_section{
-    padding-top: 0.5rem;
-    margin-top: 6rem;
-    margin-bottom: 3rem;
-    background: #fff;
-    .Investcolumn{
-        display: flex;
-        flex-direction: column;
-        margin-top: 4rem;
-        justify-items: center;
-        align-items: center;
-        .Invest{
-            text-align: center;
-            img{
-                width: 200px;
-                height: 200px;
+            .card_h1 {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                @media (max-width: $mobile) {
+                    gap: 8px;
+                }
+                .h1 {
+                    font-size: 24px;
+                    color: $themeColor;
+                    font-weight: $fweight2;
+                    @media (max-width: $mobile) {
+                        font-size: 16px;
+                    }
+                }
+                img {
+                    @media (max-width: $mobile) {
+                        width: 50px;
+                    }
+                }
             }
-            .heading{
-                width: 310px;
-                margin-top: 2rem;
-                margin-bottom: 1.2rem;
+            .link {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                display: flex;
+                gap: 10px;
+                align-content: center;
+                text-align: center;
+
+                .link1,
+                .link2 {
+                    padding: 8px 16px;
+                    border-radius: 39px;
+                    font-size: 12px;
+                    text-decoration: none;
+                    @media (max-width: $mobile) {
+                        padding: 8px 10px;
+                    }
+                }
+                .link1 {
+                    background: #e7f3ff;
+                    color: #587bc8;
+                }
+                .link2 {
+                    background: #edfcf9;
+                    color: #49a197;
+                }
             }
-    }
-    .invest_list{
-        display: flex;
-        flex-direction: row !important;
-        justify-content: space-between;
-        width: 300px;
-        margin-top: 1.8rem;
-        gap: 55px;
-        align-items: baseline;
-        .list_item{
-            font-size: 18px;
-            color: #101820;
+        }
+        .columnborder {
+            border-right: 1px dashed #96bde4;
+            @media (max-width: $mobile) {
+                border-right: none;
+                border-bottom: 1px dashed #96bde4;
+                padding-bottom: 20px;
+            }
+        }
+        .second_column {
+            width: 100%;
+            max-width: 210px;
+            margin-left: auto;
+            @media (max-width: $mobile) {
+                max-width: 100%;
+                padding-top: 20px;
+            }
+        }
+        .usd {
+            margin-top: 0.5rem;
+            margin-bottom: 0.2rem;
+        }
+        .fadetext {
+            margin-top: 1.2rem;
+            .text {
+                font-size: 14px;
+                line-height: 21px;
+                color: #808080;
+            }
         }
     }
 }
-}
+.fundpurpose {
+    background: #f6f6f6;
+    padding-top: 3rem;
+    .filter {
+        display: flex;
+        width: 100%;
+        justify-content: end;
+    }
+    .green_btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        @media (max-width: $mobile) {
+            display: none;
+        }
+        // Button {
+        //     margin-top: 1.65rem;
+        //     padding: 17px 40px;
+        //     color: $green-color;
+        //     border-color: $green-color;
+        //     border-radius: 8px;
+        //     font-weight: $fweight2;
+        //     text-transform: capitalize;
+        //     font-size: $p-18-fontsize;
+        //     line-height: normal;
+        // }
+    }
+    .Discover_section {
+        padding-top: 0.5rem;
+        margin-top: 6rem;
+        margin-bottom: 3rem;
+        background: #fff;
+        padding-top: 3rem;
+        .Investcolumn {
+            margin-top: 2rem;
+
+            .Invest {
+                text-align: center;
+                img {
+                    width: 200px;
+                    height: 200px;
+                    @media (max-width: $mobile) {
+                        display: none;
+                    }
+                }
+                .heading {
+                    width: 310px;
+                    margin-top: 2rem;
+                    margin-bottom: 1.2rem;
+                    text-align: center;
+                    @media (max-width: $mobile) {
+                        text-align: left;
+                    }
+                }
+            }
+            .invest_list {
+                display: flex;
+                flex-direction: row !important;
+                justify-content: space-between;
+                width: 300px;
+                margin-top: 1.8rem;
+                gap: 55px;
+                align-items: baseline;
+                .list_item {
+                    font-size: 18px;
+                    color: #101820;
+                }
+            }
+            @media (max-width: $mobile) {
+                margin-top: 0;
+                border-bottom: 1px solid #587bc8;
+                padding-bottom: 20px;
+            }
+        }
+    }
 }

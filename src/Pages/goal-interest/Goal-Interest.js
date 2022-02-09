@@ -19,7 +19,7 @@ function GoalInterest() {
         <Grid container spacing={2}>
           <Grid item md={12} mb={3}>
             <Typography className='museo-regular font-lg-24'  >
-              <img src="/assets/images/Rectangle.png" alt=""></img>&nbsp;    Mi perfil de riesgo
+              <img src="/assets/images/Rectangle.png" alt=""></img>&nbsp;    Mis objetivos e intereses
             </Typography>
           </Grid>
           <Grid item md={12} mb={3}>
@@ -33,7 +33,6 @@ function GoalInterest() {
                   id="panel1a-header"
                 >
                   <Typography
-                    style={{ fontWeight: "600" }}
                     className='blue_text fw-600 font-lg-24'
                   >
                     Mis motivaciones
@@ -45,7 +44,6 @@ function GoalInterest() {
                     <div className={Styled.accordion_content_text}>
                       <TodayIcon className='dark-green' />
                       <Typography
-                        style={{ fontWeight: "600" }}
                         className='fw-600 font-lg-18'
                       >
                         Hacer crecer mi plata
@@ -57,7 +55,6 @@ function GoalInterest() {
                     <div className={Styled.accordion_content_text}>
                       <InsightsIcon className='dark-green' />
                       <Typography
-                        style={{ fontWeight: "600" }}
                         className='fw-600 font-lg-18'
                       >
                         Ganar con próposito e impacto
@@ -69,7 +66,6 @@ function GoalInterest() {
                     <div className={Styled.accordion_content_text}>
                       <LocalFloristIcon className='dark-green' />
                       <Typography
-                        style={{ fontWeight: "600" }}
                         className='fw-600 font-lg-18'
                       >
                         Generar un ingreso mensual extra
@@ -88,7 +84,6 @@ function GoalInterest() {
                   id="panel1a-header"
                 >
                   <Typography
-                    style={{ fontWeight: "600" }}
                     className='blue_text fw-600 font-lg-24'
                   >
                     Mis interereses
@@ -100,7 +95,6 @@ function GoalInterest() {
                     <div className={Styled.accordion_content_text}>
                       <DirectionsCarFilledIcon className='dark-green' />
                       <Typography
-                        style={{ fontWeight: "600" }}
                         className='fw-600 font-lg-18'
                       >
                         Comprar tu auto
@@ -112,7 +106,6 @@ function GoalInterest() {
                     <div className={Styled.accordion_content_text}>
                       <AccountBalanceIcon className='dark-green' />
                       <Typography
-                        style={{ fontWeight: "600" }}
                         className='fw-600 font-lg-18'
                       >
                         Comprar tu casa
@@ -124,7 +117,6 @@ function GoalInterest() {
                     <div className={Styled.accordion_content_text}>
                       <DirectionsWalkIcon className='dark-green' />
                       <Typography
-                        style={{ fontWeight: "600" }}
                         className='fw-600 font-lg-18'
                       >
                         Mejorar tu jubilación
@@ -136,7 +128,6 @@ function GoalInterest() {
                     <div className={Styled.accordion_content_text}>
                       <MonetizationOnOutlinedIcon className='dark-green' />
                       <Typography
-                        style={{ fontWeight: "600" }}
                         className='fw-600 font-lg-18'
                       >
                         Ahorrar para imprevistos
@@ -148,7 +139,6 @@ function GoalInterest() {
                     <div className={Styled.accordion_content_text}>
                       <BeachAccessIcon className='dark-green' />
                       <Typography
-                        style={{ fontWeight: "600" }}
                         className='fw-600 font-lg-18'
                       >
                         Las vacaciones soñadas
@@ -160,7 +150,6 @@ function GoalInterest() {
                     <div className={Styled.accordion_content_text}>
                       <HelpOutlineOutlinedIcon className='dark-green' />
                       <Typography
-                        style={{ fontWeight: "600" }}
                         className='fw-600 font-lg-18'
                       >
                         Otro
@@ -180,7 +169,6 @@ function GoalInterest() {
                   id="panel1a-header"
                 >
                   <Typography
-                    style={{ fontWeight: "600" }}
                     className='blue_text fw-600 font-lg-24'
                   >
                     Mis objetivos
@@ -192,7 +180,6 @@ function GoalInterest() {
                     <div className={Styled.accordion_content_text}>
                       <TodayIcon className='dark-green' />
                       <Typography
-                        style={{ fontWeight: "600" }}
                         className='fw-600 font-lg-18'
                       >
                         Hacer crecer mi plata

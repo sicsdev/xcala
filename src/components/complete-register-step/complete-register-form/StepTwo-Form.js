@@ -173,13 +173,13 @@ function StepTwoForm({ setstepper, setSteppercolor, props }) {
             </div>
           </Grid>
         </Grid >
-        <Grid container spacing={3} mt={1}>
-          <Grid className="formbutton" item md={6}>
-              <Button className="button-primary" style={{ background: "#F4F4FB", color: "#1E22AA", fontWeight: "600", }}>
+        <Grid container spacing={3} mt={1}  className={Styled.complete_registration_btn}>
+          <Grid className="formbutton" item md={6} xs={12}>
+              <Button className="light-button-primary" >
                 Cancelar
               </Button>
           </Grid>
-          <Grid className="formbutton" item md={6}>
+          <Grid className="formbutton" item md={6} xs={12}>
             <Button className="button-primary" onClick={thirdStep}>
               Continuar
             </Button>

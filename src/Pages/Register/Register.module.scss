@@ -14,7 +14,10 @@
   }
   .register_input_text:nth-child(7) {
     max-width: $width-100;
-    margin-bottom: 3.5rem;
+    margin-bottom: 1.8rem;
+    @media (max-width: $mobile) {
+      margin-bottom: 1.5rem;
+    }
   }
 
   .form_register {
@@ -32,8 +35,8 @@
       margin: 0 auto;
       padding: 70px 0 0;
       @media (max-width: $mobile) {
-        padding: 50px 0px;
-        max-width: 400px;
+        padding: 40px 0px 25px;
+        max-width: 100%;
       }
       .bluebox {
         background: rgba(150, 189, 228, 0.1);
@@ -42,7 +45,7 @@
           width: 100%;
           margin-left: 0;
         }
-      
+
         p {
           span {
             span {
@@ -52,11 +55,21 @@
           }
         }
       }
-      a{
+      a {
         @media (max-width: $mobile) {
           display: block;
           height: auto;
         }
+      }
+    }
+  }
+  .continue_btn {
+    button {
+      max-width: 212px;
+      margin: 0 auto;
+      width: 100%;
+      @media (max-width: $mobile) {
+        max-width: 100%;
       }
     }
   }

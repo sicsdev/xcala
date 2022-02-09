@@ -8214,6 +8214,11 @@
   dependencies:
     "framer-motion" "^4.1.17"
 
+"react-multi-carousel@^2.6.5":
+  "integrity" "sha512-i5iuAm5XRT/h7uBL9/pGWeRsQXzqvjBrPVP1sobKgDKEvfZuKFpYp/alaQhTRM56Jtkb8jZpSqLn52Ku6jJbDg=="
+  "resolved" "https://registry.npmjs.org/react-multi-carousel/-/react-multi-carousel-2.6.5.tgz"
+  "version" "2.6.5"
+
 "react-phone-number-input@^3.1.44":
   "integrity" "sha512-+Tk+iJzImAt3s6NN2Btn4o3DSL6d1gcfoG+Wdnh9m9VMysgPrT+AGimvDobojEjYOS6nPiFqJdhFNwGMIlppVA=="
   "resolved" "https://registry.npmjs.org/react-phone-number-input/-/react-phone-number-input-3.1.44.tgz"

@@ -166,14 +166,13 @@ function Firstpage() {
                   <img src="/assets/images/Rectangle.png" alt=""></img>
                   <Typography
                     className="h2 museo-regular"
-                    variant=""
-                    component=""
+
                   >
                     ¡Únete a Xcala!
                   </Typography>
                 </div>
                 <div className="p-center">
-                  <Typography className="p-18" variant="" component="">
+                  <Typography className="font-lg-18" >
                     Invierte seguro, invierte con propósito...
                   </Typography>
                 </div>
@@ -285,11 +284,11 @@ function Firstpage() {
                         FormHelperTextProps={{
                           className: styles.helperTextcolor || "",
                         }}
-                        // helperText={helpermsg.lastnamehelpermsg}
-                        // helperText={[
-                        //   helpermsg.logo3,
-                        //   helpermsg.lastnamehelpermsg,
-                        // ]}
+                      // helperText={helpermsg.lastnamehelpermsg}
+                      // helperText={[
+                      //   helpermsg.logo3,
+                      //   helpermsg.lastnamehelpermsg,
+                      // ]}
                       />
                     </div>
                     <div className={styles.register_input_text}>
@@ -357,7 +356,7 @@ function Firstpage() {
                       <div
                         style={{
                           display: "flex",
-                          marginTop: "3rem",
+                          marginTop: "2rem",
                           alignItems: "flex-start",
                         }}
                       >
@@ -373,12 +372,12 @@ function Firstpage() {
                         </div>
                       </div>
                     </div>
-                    <Grid className="formbutton" item md={12}>
+                    <Grid className={`formbutton ${styles.continue_btn}`} item md={12}>
                       <LoadingButton
                         onClick={gotoNextPage}
                         className="button-primary m-auto"
                         loading={true}
-                        
+
                       >
                         Continuar
                       </LoadingButton>

@@ -211,9 +211,14 @@ body {
             display: none;
         }
     }
+    .full-height{
+        height: 100vh;
+        padding-bottom: 15px;
+    }
 }
 @media (max-width: $mobile) {
     body {
+       
         .font-lg-20 {
             font-size: 16px;
         }
@@ -351,6 +356,28 @@ body {
     .MuiLink-root {
         cursor: pointer;
     }
+    // Product Slider
+    .product_slider {
+        padding: 0px 14px;
+        @media (max-width: $mobile) {
+            padding: 0;
+        }
+    }
+    .react-multi-carousel-list {
+        padding-bottom: 60px;
+        .react-multi-carousel-dot--active button {
+            background: $themeColor2;
+            @media (max-width: $mobile) {
+                background: $themeColor;
+            }
+        }
+        .react-multi-carousel-dot button{
+            border-color: $themeColor2;
+            @media (max-width: $mobile) {
+                border-color: $themeColor;
+            }
+        }
+    }
     // Switch
     .MuiSwitch-root {
         width: 55px;
@@ -393,9 +420,9 @@ body {
         }
     }
 
-    // .MuiAccordionDetails-root {
-    //     padding: 0;
-    // }
+    .MuiAccordionDetails-root {
+        padding: 0;
+    }
     .css-11h4g4n-MuiGrid-root {
         @media (max-width: $mobile) {
             width: 100%;
@@ -436,9 +463,13 @@ body {
             display: none;
         }
     }
-
+    
+    
     .MuiCheckbox-root svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
         color: $themeColor;
+        @media (max-width: $mobile) {
+            background: $themeColor;
+        }
     }
 
     .MuiAccordion-gutters {

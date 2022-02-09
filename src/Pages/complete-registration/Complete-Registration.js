@@ -14,7 +14,7 @@ function CompleteRegistration() {
     setStart((preState => !preState));
   }
   return <>
-    <div className='grey-bg'>
+    <div className='full-heigt grey-bg'>
       <div className={Styled.complete_registraion_main}>
         <Container maxWidth="sm"  style={{
           maxWidth: "667px !important",

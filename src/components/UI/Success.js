@@ -18,23 +18,21 @@ function Success() {
             </Grid>
             <div className={success.verificationsuccesslogo}>
                <img src="/assets/images/sucess-gif.gif" alt="success" style={{ mixBlendMode: 'multiply', margin: "0 auto" }}></img>
-               <div>
-                  <div className={success.successtext}>
-                     <p>¡Cuenta creada exitosamente!</p>
-                  </div>
-                  <Grid className="formbutton" item md={12}>
-                     {/* <Button className="button-primary">
+               <div className={success.successtext}>
+                  <p>¡Cuenta creada exitosamente!</p>
+               </div>
+               <Grid className={success.button_xcala}item md={12}>
+                  {/* <Button className="button-primary">
                     Ingresar a Xcala
                     </Button> */}
-                     <Link to="/login" className="button-primary">
-                        Ingresar a Xcala
-                     </Link>
-                  </Grid>
-                  <div className={success.completetext}>
-                     <Link to="/">
-                        <p>Completar tu registro</p>
-                     </Link>
-                  </div>
+                  <Link to="/login" className="button-primary">
+                     Ingresar a Xcala
+                  </Link>
+               </Grid>
+               <div className={success.completetext}>
+                  <Link to="/" className='blue_text fw-600'>
+                     Completar tu registro
+                  </Link>
                </div>
             </div>
          </Container>

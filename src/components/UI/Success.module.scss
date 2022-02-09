@@ -5,7 +5,7 @@
     img {
         width: 250px;
         @media (max-width: $mobile) {
-            padding-top: 100px;
+            padding-top: 0px;
         }
     }
     .successtext {
@@ -21,9 +21,12 @@
             }
         }
     }
-    .completetext {
+    .button_xcala {
         a {
-            color: $themeColorText;
+            display: inline-block;
+            @media (max-width: $mobile) {
+                display: block;
+            }
         }
     }
     .completetext {
@@ -32,5 +35,8 @@
         color: $themeColor;
         font-size: 18px;
         font-family: $pfontfamily;
+        a {
+            color: $themeColorText;
+        }
     }
 }

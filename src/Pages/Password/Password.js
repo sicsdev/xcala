@@ -144,7 +144,7 @@ const Password = () => {
                 <div className={passwordstyles.blueboxsection}>
                   <img src="/assets/images/ipassword.png"></img>
                   <div style={{ paddingLeft: "12px" }}>
-                    <Typography className="p-16" variant="" component="">
+                    <Typography>
                       Asegúrate de que tu contraseña tenga:
                     </Typography>
                   </div>

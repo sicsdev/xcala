@@ -87,28 +87,28 @@ function Login() {
                 </div>
                 <Grid className="formbutton" item xs={12} md={12}>
                   <div className={loginstyles.continue_btn}>
-                  <Link to="/profile-investor" className="button-primary">
-                    Ingresar
-                  </Link>
-                </div>
-                {/* <Button className="button-primary">
+                    <Link to="/profile-investor" className="button-primary">
+                      Ingresar
+                    </Link>
+                  </div>
+                  {/* <Button className="button-primary">
                     <Link to="/profile-investor">
                       Ingresar
                     </Link>
                   </Button> */}
 
-
-                <div className={loginstyles.btn_text}>
-                  <Typography variant="" component="">
+                  <div className={`mobile-hide ${loginstyles.btn_text}`}>
                     <Link to="/">¿Aún no estás registrado?</Link>
-                  </Typography>
-                </div>
+                  </div>
+                </Grid>
+              </form>
             </Grid>
-          </form>
-        </Grid>
+          </div>
 
-      </div>
-    </div>
+        </div>
+        <div className={`desktop-hide text-center ${loginstyles.btn_text}`}>
+          <Link to="/">¿Aún no estás registrado?</Link>
+        </div>
       </Container >
 
     </>

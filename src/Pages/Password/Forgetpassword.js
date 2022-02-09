@@ -12,52 +12,51 @@ import { Link } from 'react-router-dom';
 function Forgetpassword() {
   return (
     <>
-      <Backgroundscreen />
-
-      <Container maxWidth="sm">
-        <Grid container maxWidth="sm" spacing={2} className={forgetpasswordstyles.login_logo}>
-          <Grid item xs={12} md={12} mb={3}>
-            <Xcalalogo />
+      <div className='grey-bg full-height '>
+        <Container maxWidth="sm">
+          <Grid container maxWidth="sm" spacing={{ xs: 0, md: 2 }} className={forgetpasswordstyles.login_logo}>
+            <Grid item xs={12} md={12} mb={3}>
+              <Xcalalogo />
+            </Grid>
           </Grid>
-        </Grid>
-        <div className={forgetpasswordstyles.form_login}>
-          <div className={forgetpasswordstyles.form_inner}>
-            <Typography className={forgetpasswordstyles.h3} variant="" component="h3" align='justify'>
-              ¿Olvidaste tu contraseña?
-            </Typography>
-            <Typography className={forgetpasswordstyles.color_p} variant="body1" component="" align='justify'>
-              No te preocupes, a todos nos pasa...
-            </Typography>
-            <div className={forgetpasswordstyles.p}>
-              <Typography className="p-16" variant="" component="">
-                Ingresa tu email o RUT y enviaremos un correo a tu email registrado para que puedas configurar una nueva contraseña.
+          <div className={forgetpasswordstyles.form_login}>
+            <div className={forgetpasswordstyles.form_inner}>
+              <Typography className={forgetpasswordstyles.h3} variant="" component="h3" align='justify'>
+                ¿Olvidaste tu contraseña?
               </Typography>
-            </div>
-            <form >
-              <div className={forgetpasswordstyles.register_input_text}>
-                <TextField
-                  fullWidth
-                  id="standard-basic"
-                  label="Email o RUT"
-                  variant="standard"
-                  type="email"
-                />
+              <Typography className={forgetpasswordstyles.color_p} variant="body1" component="" align='justify'>
+                No te preocupes, a todos nos pasa...
+              </Typography>
+              <div className={forgetpasswordstyles.p}>
+                <Typography className="p-16" variant="" component="">
+                  Ingresa tu email o RUT y enviaremos un correo a tu email registrado para que puedas configurar una nueva contraseña.
+                </Typography>
               </div>
-            </form>
-            <Grid className="formbutton" item md={12}>
-              {/* <Button className="button-primary">
+              <form >
+                <div className={forgetpasswordstyles.register_input_text}>
+                  <TextField
+                    fullWidth
+                    id="standard-basic"
+                    label="Email o RUT"
+                    variant="standard"
+                    type="email"
+                  />
+                </div>
+              </form>
+              <Grid className="formbutton" item md={12}>
+                {/* <Button className="button-primary">
                     Enviar correo
                     </Button> */}
-              <div className={forgetpasswordstyles.reset_btn}>    
-              <Link to="/resetpassword" className="button-primary">
-                Enviar correo
-              </Link>
+                <div className={forgetpasswordstyles.reset_btn}>
+                  <Link to="/resetpassword" className="button-primary">
+                    Enviar correo
+                  </Link>
+                </div>
+              </Grid>
+            </div>
           </div>
-        </Grid>
+        </Container >
       </div>
-    </div>
-      </Container >
-
     </>
   );
 }

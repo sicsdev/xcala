@@ -41,6 +41,9 @@ a {
 }
 body {
     font-family: $pfontfamily;
+    .m-auto{
+        margin: 0 auto;
+    }
     p {
         color: $p-color1;
         font-weight: 400;
@@ -508,6 +511,10 @@ body {
         @media (max-width: $mobile) {
             padding: 0;
         }
+    }
+    .css-1yt7yx7-MuiLoadingButton-loadingIndicator {
+        left: 19px;
+        top: 36%;
     }
 }
 

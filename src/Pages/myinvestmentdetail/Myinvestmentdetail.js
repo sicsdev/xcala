@@ -91,7 +91,7 @@ function Myinvestmentdetail() {
               >
                 Evolución del fondo
               </Typography>
-            </div>
+          </div>
 
             <div className={MyinvestmentStyled.table_button}>
                 <Link to=""> <Button variant="outlined" className={MyinvestmentStyled.btn}> 12 meses </Button> </Link>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography, Grid, Container } from "@mui/material";
-import {Button} from "@mui/material";
+import { Button } from "@mui/material";
 import productgraphstyles from "./Productdetailpage.module.scss";
 import { Link } from "react-router-dom";
 import Charts from "../../components/productgraph/Chart";
@@ -44,7 +44,6 @@ function Productdetailpage() {
             <img src="/assets/images/warning.svg" alt=""></img>
             <Typography
               style={{ color: "#D12D35" }}
-              className="p-16"
             >
               Este fondo supera el riesgo definido en tu perfil Conservador
             </Typography>
@@ -72,10 +71,10 @@ function Productdetailpage() {
 
               <div className={productgraphstyles.table_button}>
                 <Link to=""> <Button variant="outlined" className={productgraphstyles.btn}> 12 meses </Button> </Link>
-                <Link to=""> <Button variant="outlined" className={productgraphstyles.btn}> 3 meses </Button> </Link>
-                <Link to=""> <Button variant="outlined" className={productgraphstyles.btn}> 1 meses </Button> </Link>
-                <Link to=""> <Button variant="outlined" className={productgraphstyles.btn}> 7 dias </Button> </Link>
-             </div>
+                <Link to=""> <Button variant="outlined" className={productgraphstyles.btn_outline}> 3 meses </Button> </Link>
+                <Link to=""> <Button variant="outlined" className={productgraphstyles.btn_outline}> 1 meses </Button> </Link>
+                <Link to=""> <Button variant="outlined" className={productgraphstyles.btn_outline}> 7 dias </Button> </Link>
+              </div>
 
             </div>
             <Charts productdetail={"productdetail"} />

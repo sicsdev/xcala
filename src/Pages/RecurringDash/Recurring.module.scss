@@ -17,33 +17,38 @@
         color: $p-color1;
         margin-top: 1.3rem;
     }
-    .investments {
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        text-align: center;
-        margin-top: 2rem;
-        margin-bottom: 4rem;
-        border-right: 1px solid #587bc8;
-        @media (max-width: $mobile) {
-            border-right: none;
-            border-bottom: 1px solid #587bc8;
-            margin-top: 1rem;
-            margin-bottom: 0rem;
-            padding: 20px 0;
-        }
-        .currency {
-            margin-top: 8px;
-            .currency_ {
-                font-weight: bold;
-                font-size: 36px;
-                color: $p-color1;
-                @media (max-width: $mobile) {
-                    font-size: 24px;
+    .top_bar {
+        padding: 20px 0 0;
+      
+        .investments {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+            border-right: 1px solid #587bc8;
+            @media (max-width: $mobile) {
+                border-right: none;
+                border-bottom: 1px solid #587bc8;
+                margin-top: 1rem;
+                margin-bottom: 0rem;
+                padding: 20px 0;
+            }
+            .currency {
+                margin-top: 8px;
+                .currency_ {
+                    font-weight: bold;
+                    font-size: 36px;
+                    color: $p-color1;
+                    @media (max-width: $mobile) {
+                        font-size: 24px;
+                    }
                 }
             }
         }
     }
+
     .center {
         margin-top: 1.5rem;
         .cardstyle {
@@ -124,7 +129,12 @@
             @media (max-width: $mobile) {
                 max-width: 100%;
                 padding-top: 20px;
+                padding-top: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
             }
+           
         }
         .usd {
             margin-top: 0.5rem;
@@ -195,19 +205,7 @@
                     }
                 }
             }
-            .invest_list {
-                display: flex;
-                flex-direction: row !important;
-                justify-content: space-between;
-                width: 300px;
-                margin-top: 1.8rem;
-                gap: 55px;
-                align-items: baseline;
-                .list_item {
-                    font-size: 18px;
-                    color: #101820;
-                }
-            }
+          
             @media (max-width: $mobile) {
                 margin-top: 0;
                 border-bottom: 1px solid #587bc8;

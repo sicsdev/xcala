@@ -50,7 +50,7 @@ function Recurringdash() {
               </div>
             </Grid>
           </Grid>
-          <Grid container spacing={2} >
+          <Grid container  className={RecurringStyled.top_bar}>
             <Grid className={RecurringStyled.investments} item xs={12} md={4}>
               <Typography style={{ textTransform: "uppercase", color: "#182849" }}
                 className="font-lg-18"
@@ -177,16 +177,17 @@ function Recurringdash() {
                             </Typography>
                             <div style={{ lineHeight: "39px" }} className={RecurringStyled.usd}>
                               <Typography
-                                className="font-lg-20"
+                                className="font-lg-20 fw-600"
                               >
                                 USD$ 9.259,25
                               </Typography>
-                            </div>
-                            <div>
+                              <div>
                               <Typography >
                                 $ 4.777,07*
                               </Typography>
                             </div>
+                            </div>
+                           
                           </Grid>
                           <div className={RecurringStyled.fadetext}>
                             <Typography
@@ -278,7 +279,7 @@ function Recurringdash() {
                           </Typography>
                           <div style={{ lineHeight: "39px" }} className={RecurringStyled.usd}>
                             <Typography
-                              className="font-lg-20"
+                              className="font-lg-20 fw-600"
                             >
                               -$ 370.000
                             </Typography>

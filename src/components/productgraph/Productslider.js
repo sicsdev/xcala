@@ -11,39 +11,39 @@ function Productslider() {
                      <Carousel navButtonsAlwaysInvisible>
                             <div>
                                    <Grid container spacing={3}>
-                                          <Grid item xs={4}>
+                                          <Grid item xs={12} md={4}>
                                                  <Productgraph />
                                           </Grid>
-                                          <Grid item xs={4}>
+                                          <Grid item xs={12} md={4}>
                                                  <Productgraph />
                                           </Grid>
-                                          <Grid item xs={4}>
-                                                 <Productgraph />
-                                          </Grid>
-                                   </Grid>
-                            </div>
-                            <div>
-                                   <Grid container spacing={3}>
-                                          <Grid item xs={4}>
-                                                 <Productgraph />
-                                          </Grid>
-                                          <Grid item xs={4}>
-                                                 <Productgraph />
-                                          </Grid>
-                                          <Grid item xs={4}>
+                                          <Grid item xs={12} md={4}>
                                                  <Productgraph />
                                           </Grid>
                                    </Grid>
                             </div>
                             <div>
                                    <Grid container spacing={3}>
-                                          <Grid item xs={4}>
+                                          <Grid item xs={12} md={4}>
                                                  <Productgraph />
                                           </Grid>
-                                          <Grid item xs={4}>
+                                          <Grid item xs={12} md={4}>
                                                  <Productgraph />
                                           </Grid>
-                                          <Grid item xs={4}>
+                                          <Grid item xs={12} md={4}>
+                                                 <Productgraph />
+                                          </Grid>
+                                   </Grid>
+                            </div>
+                            <div>
+                                   <Grid container spacing={3}>
+                                          <Grid item xs={12} md={4}>
+                                                 <Productgraph />
+                                          </Grid>
+                                          <Grid item xs={12} md={4}>
+                                                 <Productgraph />
+                                          </Grid>
+                                          <Grid item xs={12} md={4}>
                                                  <Productgraph />
                                           </Grid>
                                    </Grid>

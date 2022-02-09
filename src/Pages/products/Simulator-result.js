@@ -21,8 +21,8 @@ function Simulatorresult() {
                                 </Grid>
 
 
-                                <Grid className={simulatorresultstyle.green_box} container spacing={2}>
-                                        <Grid  item xs={12}>
+                                <div className={simulatorresultstyle.green_box} >
+                                        <Grid item xs={12} md={12}>
                                                 <Typography className={simulatorresultstyle.greendata_text}>
                                                         escenario optimista
                                                 </Typography>
@@ -46,10 +46,10 @@ function Simulatorresult() {
                                                         </Typography>
                                                 </Grid>
                                         </Grid>
-                                </Grid>
+                                </div>
 
-                                <Grid className={simulatorresultstyle.blue_box} container spacing={2}>
-                                        <Grid item xs={12}>
+                                <div className={simulatorresultstyle.blue_box}>
+                                        <Grid item xs={12} md={12}>
                                                 <Typography className={simulatorresultstyle.bluedata_text}>
                                                         escenario normal
                                                 </Typography>
@@ -73,10 +73,10 @@ function Simulatorresult() {
                                                         </Typography>
                                                 </Grid>
                                         </Grid>
-                                </Grid>
+                                </div>
 
-                                <Grid className={simulatorresultstyle.yellow_box} container spacing={2}>
-                                        <Grid item xs={12}>
+                                <div className={simulatorresultstyle.yellow_box}>
+                                        <Grid item xs={12} md={12}>
                                                 <Typography className={simulatorresultstyle.yellowdata_text}>
                                                         escenario pesimista
                                                 </Typography>
@@ -100,7 +100,7 @@ function Simulatorresult() {
                                                         </Typography>
                                                 </Grid>
                                         </Grid>
-                                </Grid>
+                                </div>
 
                                 <div className={simulatorresultstyle.warning}>
                                         <img src="/assets/images/warning.svg" alt=""></img>
@@ -116,7 +116,7 @@ function Simulatorresult() {
                                         ¿Cómo calculamos la rentabilidad?
                                 </Link>
 
-                                <Grid container spacing={2} style={{alignItems:"center"}} mt={3}>
+                                <Grid container spacing={2} style={{ alignItems: "center" }} mt={3}>
                                         <Grid item md={6} xs={12} className="mobile-hide text-center">
                                                 <Button className="button-secondary-outline">
                                                         Ver otros fondos

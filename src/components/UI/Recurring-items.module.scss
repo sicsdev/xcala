@@ -13,4 +13,8 @@
         font-size: 18px;
         color: #101820;
     }
+    @media (max-width: $mobile) {
+        width: 100%;
+        gap: 5px;
+    }
 }

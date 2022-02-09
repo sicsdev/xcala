@@ -135,7 +135,7 @@ body {
         font-weight: $fweight;
         cursor: pointer;
         font-size: 16px;
-        padding: 11px 40px;
+        padding: 14px 40px;
         text-decoration: auto;
         &:hover {
             background: $themeColor;
@@ -144,7 +144,7 @@ body {
     .light-button-primary {
         background: $themeColor3;
         color: $themeColorText;
-        padding: 15px 30px;
+        padding: 14px 30px;
         border: none;
         display: block;
         border-radius: 8px;
@@ -163,7 +163,7 @@ body {
     .button-light {
         background: $themeColor3;
         color: $themeColor;
-        padding: 15px 30px;
+        padding: 14px 30px;
         border: none;
         border-radius: 8px;
         text-transform: capitalize;
@@ -179,7 +179,7 @@ body {
         border: 1px solid $themeColor2;
         background-color: transparent;
         color: $themeColor2;
-        padding: 12px 30px;
+        padding: 14px 30px;
         border-radius: 8px;
         text-transform: capitalize;
         font-family: $pfontfamily;
@@ -199,6 +199,17 @@ body {
         max-width: 380px;
         margin: -40px auto 0px;
         display: block;
+    }
+    .desktop-hide {
+        display: none;
+        @media (max-width: $mobile) {
+            display: block;
+        }
+    }
+    .mobile-hide {
+        @media (max-width: $mobile) {
+            display: none;
+        }
     }
 }
 @media (max-width: $mobile) {
@@ -307,12 +318,15 @@ body {
         margin: 20px 0 0;
         border-radius: 4px;
         padding: 13px 52px;
-        @media (max-width: $mobile) {
-        }
     }
-    .css-qsfli3-MuiButtonBase-root-MuiIconButton-root {
-        @media (max-width: $mobile) {
-            justify-content: end;
+    .MuiDialog-container {
+        .MuiButtonBase-root {
+            @media (max-width: $mobile) {
+                justify-content: end;
+            }
+        }
+        .MuiDialogActions-root {
+            padding: 15px 0;
         }
     }
 
@@ -338,51 +352,50 @@ body {
         cursor: pointer;
     }
     // Switch
-    .css-1yjjitx-MuiSwitch-track {
-        background-color: $p-color1;
-        opacity: 1;
-        @media (max-width: $mobile) {
-            background-color: #bfbfbf;
-        }
+    .MuiSwitch-root {
+        width: 55px;
+        height: 40px;
     }
-    .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
-        background-color: $themeColor;
-        opacity: 1;
-        @media (max-width: $mobile) {
-            background-color: $themeColor2;
-        }
+    .MuiSwitch-switchBase {
+        transform: translateX(5px);
     }
-    .css-jsexje-MuiSwitch-thumb {
+    .MuiSwitch-thumb {
         width: 13px;
         height: 13px;
         border-radius: 50%;
         position: relative;
         top: 4.1px;
     }
-    .css-15v22id-MuiAccordionDetails-root {
-        padding: 0;
-    }
-    .css-1yjjitx-MuiSwitch-track {
+    .MuiSwitch-track {
+        background-color: $p-color1;
+        opacity: 1;
         border-radius: 15px;
+        @media (max-width: $mobile) {
+            background-color: #bfbfbf;
+        }
     }
-    .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase {
-        transform: translateX(5px);
+    .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
+        background-color: $themeColor;
+        opacity: 1;
+        @media (max-width: $mobile) {
+            background-color: $themeColor2;
+        }
     }
-    .css-julti5-MuiSwitch-root {
-        width: 55px;
-        height: 40px;
-    }
-    .css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase.Mui-checked {
+
+    .MuiSwitch-switchBase.Mui-checked {
         color: $white;
     }
-    .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root,
-    .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked {
+    .MuiCheckbox-root,
+    .MuiCheckbox-root.Mui-checked {
         color: $themeColor;
         @media (max-width: $mobile) {
             padding-top: 0;
         }
     }
 
+    .MuiAccordionDetails-root {
+        padding: 0;
+    }
     .css-11h4g4n-MuiGrid-root {
         @media (max-width: $mobile) {
             width: 100%;
@@ -423,27 +436,20 @@ body {
             display: none;
         }
     }
-    // phoneno. scroller
-    .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiMenu-paper.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
-        // height: 223px;
-        height: auto;
-    }
 
-    //product page filter (accordion)
-    .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiAccordion-root.MuiAccordion-rounded.MuiAccordion-gutters.css-1elwnq4-MuiPaper-root-MuiAccordion-root:before {
-        display: none;
-    }
-    .MuiAccordionSummary-expandIconWrapper svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
-        color: $p-color1;
-    }
     .MuiCheckbox-root svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
         color: $themeColor;
     }
     .MuiGrid-root.MuiGrid-item.MuiGrid-grid-md-12.css-1o0tpb7-MuiGrid-root {
         margin: 0px;
     }
-    .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+    .MuiAccordion-gutters {
         margin: 16px 0;
+    }
+    .MuiPaper-root {
+        &:before {
+            display: none;
+        }
     }
     .css-ounldo-MuiAccordionDetails-root {
         padding: 16px 0;
@@ -465,7 +471,6 @@ body {
     }
     tr.MuiTableRow-root.css-34nofg-MuiTableRow-root:nth-child(8) .MuiTableCell-root {
         padding-bottom: 40px;
-        // height: 163px;
     }
     .button-primary.Mui-disabled {
         background: #bfbfbf;
@@ -486,7 +491,7 @@ body {
         }
     }
     .profile-tab-popup {
-        .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+        .MuiDialogContent-root {
             max-width: 505px;
             #alert-dialog-description {
                 display: flex;
@@ -509,6 +514,8 @@ body {
     .product-filter-accordion {
         .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
             background-color: transparent;
+            padding: 0px 0 20px;
+            border-bottom: 1px solid #f2f2f2;
         }
     }
     .show-filter-responsive {
@@ -522,17 +529,6 @@ body {
             z-index: 9;
             height: 100%;
             padding: 0 25px !important;
-        }
-    }
-    .desktop-hide {
-        display: none;
-        @media (max-width: $mobile) {
-            display: block;
-        }
-    }
-    .mobile-hide {
-        @media (max-width: $mobile) {
-            display: none;
         }
     }
 
@@ -686,13 +682,13 @@ body {
         .MuiInputLabel-root.Mui-focused {
             color: $themeColor;
         }
-        .css-ghsjzk-MuiInputBase-root-MuiInput-root {
+        .MuiInput-root {
             &:after {
                 border-bottom: 2px solid $themeColor;
             }
         }
-        .css-ghsjzk-MuiInputBase-root-MuiInput-root:hover:not(.Mui-disabled):before {
-            border-bottom: 1px solid $themeColor;
+        .MuiInput-root:hover:not(.Mui-disabled):before {
+            border-bottom: 2px solid $themeColor;
         }
     }
 
@@ -725,11 +721,6 @@ body {
                 right: 0;
             }
         }
-        // .css-11h4g4n-MuiGrid-root > .MuiGrid-item {
-        //     @media (max-width: $mobile) {
-        //         padding-top: 0px;
-        //     }
-        // }
     }
     .backgroundscreen {
         background: rgba(246, 246, 246, 1);
@@ -916,14 +907,14 @@ body {
 
         // }
     }
-    body {
-        .css-11h4g4n-MuiGrid-root {
-            @media (max-width: $mobile) {
-                width: 100%;
-                margin-left: 0;
-            }
+
+    .css-11h4g4n-MuiGrid-root {
+        @media (max-width: $mobile) {
+            width: 100%;
+            margin-left: 0;
         }
     }
+
     /* Required styles */
     .swipe-to-delete {
         position: relative !important;

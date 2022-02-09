@@ -45,6 +45,9 @@
     }
     .account_detail_main {
         max-width: 291px;
+        @media (max-width: $mobile) {
+            max-width: 100%;
+        }
         .fields {
             padding: 10px 0;
             button {

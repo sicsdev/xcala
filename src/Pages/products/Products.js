@@ -20,7 +20,7 @@ function Products() {
   const [showResponsivefilter, setResponsivefilter] = useState();
   const onClick = () => setProductdatahide(true);
   const showFilterMobile = () => {
-    setResponsivefilter(prevState=>!prevState);
+    setResponsivefilter(prevState => !prevState);
   }
   const handleCloseUserMenu = () => {
     setResponsivefilter((prevState => !prevState))
@@ -56,22 +56,19 @@ function Products() {
             <div className={productstyles.filter}>
               <Typography
                 className={productstyles.filter_text}
-                variant=""
-                component=""
               >
                 Filtros
               </Typography>
               <div
                 className="Static font-lg-14 light-grey"
-
               >
                 Actualizado 16/12/2021 - 14:27
               </div>
             </div>
 
             <Grid container spacing={5}>
-              <Grid item md={4} xs={12} className={!showResponsivefilter ? `product-filter-accordion ${productstyles.responsive_filter}`:`product-filter-accordion show-filter-responsive ${productstyles.responsive_filter}`} >
-              <div className={productstyles.mobile_heading}>
+              <Grid item md={4} xs={12} className={!showResponsivefilter ? `product-filter-accordion ${productstyles.responsive_filter}` : `product-filter-accordion show-filter-responsive ${productstyles.responsive_filter}`} >
+                <div className={productstyles.mobile_heading}>
                   <Typography className='museo-regular font-lg-24 blue_text'>
                     Filtros
                   </Typography>

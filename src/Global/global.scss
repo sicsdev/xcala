@@ -651,23 +651,26 @@ body {
         );
         mix-blend-mode: normal;
         border-radius: 8px;
-        // border: 2px solid transparent;
-        // &::before {
-        //     content: "";
-        //     position: absolute;
-        //     top: 0;
-        //     right: 0;
-        //     bottom: 0;
-        //     left: 0;
-        //     z-index: -2;
-        //     margin: -4px;
-        //     background: linear-gradient(92.05deg, #ffffff -0.62%, #e3e3e3 50.1%, #ffffff 93.02%);
-        // }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 2px;
+            border-radius: 8px;
+            background: linear-gradient(92.05deg, #FFFFFF -0.62%, #E3E3E3 50.1%, #FFFFFF 93.02%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            z-index: -1;
+        }
     }
     .size-accordion {
         padding: 16px 0;
         margin-left: 14px;
     }
+   
 }
 
 .MuiFormControl-root {

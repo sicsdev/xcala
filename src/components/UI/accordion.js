@@ -43,7 +43,7 @@ export default function CustomizedAccordions(props) {
 
   return (
     <>
-      <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} className="accordion-main" onClick={props.handleClick}>
+      <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} className="accordion-main card-bordered" onClick={props.handleClick}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Typography className={props.className} style={{ display: "flex", alignItems: "center" }}> <img src={props.accordion_head_img} style={{ marginRight: "15px" }} alt=""/>{props.head_content}</Typography>
         </AccordionSummary>

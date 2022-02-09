@@ -22,7 +22,19 @@
    .textRight {
       text-align: right;
       @media (max-width: $mobile) {
+         padding-top: 10px;
          text-align: left;
+      }
+   }
+   .textLeft,.textRight {
+      @media (max-width: $mobile) {
+        display: flex;
+        justify-content: space-between;
+      }
+      span{
+         @media (max-width: $mobile) {
+            display: none;
+          }
       }
    }
    .green_box,
@@ -32,6 +44,9 @@
       border-radius: 8px;
       padding: 16px;
       width: 100%;
+      @media (max-width: $mobile) {
+         padding: 10px;
+       }
       .greendata_text,
       .bluedata_text,
       .yellowdata_text {
@@ -44,9 +59,12 @@
       .yellowdata_whitebox {
          margin-top: 1rem;
          background: #fff;
-         padding: 13px 16px 30px;
+         padding: 15px 20px;
          margin-left: 0px;
          border-radius: 8px;
+         @media (max-width: $mobile) {
+            padding: 15px 10px;
+          }
       }
    }
    .green_box {

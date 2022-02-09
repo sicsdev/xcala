@@ -18,7 +18,7 @@ function ReceivedRequest() {
           </div>
         </div>
         <div className={Styled.registration_wrapper}>
-          <Grid container spacing={2} className={Styled.registration_first_step}>
+          <Grid container className={Styled.registration_first_step}>
             <div className={Styled.rectangle_heading}>
               <Grid item md={12} mb={3}>
                 <Typography className='font-lg-14'>
@@ -127,10 +127,9 @@ function ReceivedRequest() {
                 </div>
               </div>
             </Grid>
-
           </Grid>
         </div>
-        <Grid container spacing={2}>
+        <Grid container>
           <Grid item md={12} xs={12} mt={3}>
             <div className={Styled.continue_btn}>
               <Link to="/recurring-dash" className="button-primary" >Volver al Inicio</Link>

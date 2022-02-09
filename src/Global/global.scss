@@ -11,7 +11,7 @@
 
 p {
     margin: 0px;
-    font-family: $pfontfamily;
+    font-family: $pfontfamily !important;
 }
 a {
     text-decoration: auto;
@@ -326,7 +326,7 @@ body {
             }
         }
         .MuiDialogActions-root {
-            padding: 15px 0;
+            padding: 10px 15px;
         }
     }
 
@@ -337,9 +337,9 @@ body {
         width: 100%;
         margin-left: 0;
     }
-    .css-mhc70k-MuiGrid-root > .MuiGrid-item {
-        padding-left: 0;
-    }
+    // .css-mhc70k-MuiGrid-root > .MuiGrid-item {
+    //     padding-left: 0;
+    // }
     .active_notification {
         p {
             color: $themeColor !important;
@@ -393,9 +393,9 @@ body {
         }
     }
 
-    .MuiAccordionDetails-root {
-        padding: 0;
-    }
+    // .MuiAccordionDetails-root {
+    //     padding: 0;
+    // }
     .css-11h4g4n-MuiGrid-root {
         @media (max-width: $mobile) {
             width: 100%;
@@ -440,9 +440,7 @@ body {
     .MuiCheckbox-root svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
         color: $themeColor;
     }
-    .MuiGrid-root.MuiGrid-item.MuiGrid-grid-md-12.css-1o0tpb7-MuiGrid-root {
-        margin: 0px;
-    }
+
     .MuiAccordion-gutters {
         margin: 16px 0;
     }
@@ -451,9 +449,9 @@ body {
             display: none;
         }
     }
-    .css-ounldo-MuiAccordionDetails-root {
-        padding: 16px 0;
-    }
+    // .css-ounldo-MuiAccordionDetails-root {
+    //     padding: 16px 0;
+    // }
     // productdetailpage table
     tr.MuiTableRow-root.MuiTableRow-head .MuiTableCell-root {
         border: none;
@@ -712,7 +710,8 @@ body {
     }
     .stepper-main-wrapper {
         @media (max-width: $mobile) {
-            padding: 0px 5px 68px;
+            padding: 0px 5px 30px;
+            height: calc(100vh - 91px);
         }
         .stpper-navbar {
             @media (max-width: $mobile) {
@@ -827,6 +826,7 @@ body {
         border-radius: 20px;
         @media (max-width: $mobile) {
             border-radius: 8px;
+            padding: 40px 0 20px;
         }
         .stpper-navbar {
             .MuiGrid-item {

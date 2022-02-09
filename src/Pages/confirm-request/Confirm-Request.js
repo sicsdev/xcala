@@ -36,7 +36,7 @@ function ConfirmRequest() {
               <img src="/assets/images/Rectangle.png" alt=""></img>  Confirma tu solicitud
             </Typography>
             <div className={Styled.registration_wrapper}>
-              <Grid container spacing={2} className={Styled.registration_first_step}>
+              <Grid container className={Styled.registration_first_step}>
                 <Grid item md={12} mb={3}>
                   <div className={Styled.rectangle_heading}>
                     <Typography mt={4} className='font-lg-18'>
@@ -68,10 +68,10 @@ function ConfirmRequest() {
 
                 </Grid>
 
-                <Grid item md={12} mt={3}>
+                <Grid item md={12} mt={2}>
                   <Productdetailconditions />
                 </Grid>
-                <Grid item md={12} mb={3}>
+                <Grid item md={12} mt={2}>
                   <Typography mt={4} className='font-lg-18 blue_text'>
                     Este fondo genera dividendos mensuales.
                   </Typography>
@@ -79,7 +79,7 @@ function ConfirmRequest() {
                     ¿Qué quieres hacer con estos dividendos?
                   </Typography>
                 </Grid>
-                <Grid item md={12} mt={3}>
+                <Grid item md={12} mt={2}>
                   <div className={Styled.identity_radio}>
                     <Radio checked={selectedValue === 'a'}
                       onChange={handleChange}
@@ -146,7 +146,7 @@ function ConfirmRequest() {
                 </Grid>
 
                 <div className={Styled.line}></div>
-                <Grid item md={12} mt={3}>
+                <Grid item md={12} mt={2}>
                   <div className={Styled.identity_radio}>
                     <Checkbox />
                     <div className={Styled.p1}
@@ -168,12 +168,12 @@ function ConfirmRequest() {
                     </div>
                   </div>
                 </Grid>
-                <Grid item md={6} xs={12} mt={3}>
+                <Grid item md={6} xs={12} mt={2}>
                   <div className={Styled.continue_btn}>
                     <Button className="light-button-primary" >No por ahora</Button>
                   </div>
                 </Grid>
-                <Grid item md={6} xs={12} mt={3}>
+                <Grid item md={6} xs={12} mt={2}>
                   <div className={Styled.continue_btn}>
                     <Button className="button-primary" onClick={OpenreceviedRequest}>Confirmar solicitud de inversión</Button>
                   </div>

@@ -37,7 +37,7 @@ function LetStart() {
         <StepperNav stepper={stepper} steppercolor={steppercolor} className={`StepperNav ${Styles.lets_stepper_nav}`} />
 
 
-        <Grid container maxWidth="sm" spacing={2} className={Styles.letstart_grid}>
+        <Grid container maxWidth="sm" className={Styles.letstart_grid}>
           {stepper === 1 ? (
             <>
               <LetStartOne setstepper={setstepper} stepper={stepper} setSteppercolor={setSteppercolor} setSteppercolor={setSteppercolor} />

@@ -4,7 +4,7 @@
     background-color: #f2f2f2;
     @media (max-width: $mobile) {
         background-color: $white;
-        padding: 20px 0px;
+        padding: 20px 0px 30px;
     }
     .success_tick {
         display: flex;
@@ -53,7 +53,7 @@
             padding: 0px 37px 40px;
             margin: 0 auto;
             @media (max-width: $mobile) {
-                padding: 0px 15px 40px;
+                padding: 0 0 40px;
             }
             p {
                 color: $p-color1;
@@ -88,6 +88,10 @@
             .downlaod {
                 display: flex;
                 color: $themeColor2;
+                @media (max-width: $mobile) {
+                    padding-top: 10px;
+                }
+             
                 .downlaod_text {
                     margin-left: 10px;
                     font-weight: 600;

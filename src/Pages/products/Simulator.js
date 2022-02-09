@@ -17,6 +17,7 @@ import InputAdornment from "@mui/material/InputAdornment";
 import FormControl from "@mui/material/FormControl";
 import { IconButton, Tooltip } from "@mui/material";
 import Simulatorresult from "./Simulator-result";
+import Customselect from "../../components/UI/select";
 
 function Simulator() {
   const [name, setName] = useState("");
@@ -166,20 +167,16 @@ function Simulator() {
                     </div>
 
                     <div className={simulatorstyle.form_inputs}>
-                      <FormControl fullWidth variant="standard">
-                        <InputLabel id="demo-simple-select-standard-label">
-                          Plazo estimado de inversión (Horizonte)
-                        </InputLabel>
-                        <Select
-                          labelId="demo-simple-select-standard-label"
-                          id="demo-simple-select-standard"
-                          value={investment}
-                          onChange={estimate}
-                          label="Age"
-                        >
-                          <MenuItem value={0}>2 años</MenuItem>
-                        </Select>
-                      </FormControl>
+                      <Customselect
+                        label="Plazo estimado de inversión (Horizonte)"
+                        Labelid="demo-simple-select-standard-label"
+                        placholder="demo-simple-select-standard-label"
+                        Selectid="demo-simple-select-standard-label"
+                        id="bank-name"
+                        onChange={estimate}
+                        value={investment}
+                        
+                      />
                     </div>
                     <Grid className={simulatorstyle.btn} item md={12}>
                       <Button

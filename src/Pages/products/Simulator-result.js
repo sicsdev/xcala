@@ -27,13 +27,13 @@ function Simulatorresult() {
                                                         escenario optimista
                                                 </Typography>
                                         </Grid>
-                                        <Grid className={simulatorresultstyle.greendata_whitebox} container spacing={2}>
-                                                <Grid item xs={12} md={6}>
+                                        <Grid className={simulatorresultstyle.greendata_whitebox} container>
+                                                <Grid item xs={12} md={6} className={simulatorresultstyle.textLeft}>
                                                         <Typography>
                                                                 Saldo en 24 meses
                                                         </Typography>
                                                         <Typography className='fw-600'>
-                                                                USD$ 6.600 / $ 5.346.000*
+                                                                <span>  USD$ 6.600 / </span> $ 5.346.000*
                                                         </Typography>
 
                                                 </Grid>
@@ -42,7 +42,7 @@ function Simulatorresult() {
                                                                 Ganado <span style={{ color: "#347856" }}>(+20%)</span>
                                                         </Typography>
                                                         <Typography className='fw-600 light-grey'>
-                                                                USD$ 427,17 / $ 346.000
+                                                                <span> USD$ </span>  427,17 / $ 346.000
                                                         </Typography>
                                                 </Grid>
                                         </Grid>
@@ -54,8 +54,8 @@ function Simulatorresult() {
                                                         escenario normal
                                                 </Typography>
                                         </Grid>
-                                        <Grid className={simulatorresultstyle.bluedata_whitebox} container spacing={2}>
-                                                <Grid item xs={12} md={6}>
+                                        <Grid className={simulatorresultstyle.bluedata_whitebox} container>
+                                                <Grid item xs={12} md={6} className={simulatorresultstyle.textLeft}>
                                                         <Typography>
                                                                 Saldo en 24 meses
                                                         </Typography>
@@ -69,7 +69,7 @@ function Simulatorresult() {
                                                                 Ganado <span style={{ color: "#347856" }}>(+20%)</span>
                                                         </Typography>
                                                         <Typography className='fw-600 light-grey'>
-                                                                USD$ 427,17 / $ 346.000
+                                                                <span> USD$ 427,17 /</span>         $ 346.000
                                                         </Typography>
                                                 </Grid>
                                         </Grid>
@@ -81,13 +81,13 @@ function Simulatorresult() {
                                                         escenario pesimista
                                                 </Typography>
                                         </Grid>
-                                        <Grid className={simulatorresultstyle.yellowdata_whitebox} container spacing={2}>
-                                                <Grid item xs={12} md={6}>
+                                        <Grid className={simulatorresultstyle.yellowdata_whitebox} container>
+                                                <Grid item xs={12} md={6} className={simulatorresultstyle.textLeft}>
                                                         <Typography>
                                                                 Saldo en 24 meses
                                                         </Typography>
                                                         <Typography className='fw-600'>
-                                                                USD$ 6.600 / $ 5.346.000*
+                                                                <span>USD$ 6.600 /</span>      $ 5.346.000*
                                                         </Typography>
 
                                                 </Grid>
@@ -96,7 +96,7 @@ function Simulatorresult() {
                                                                 Ganado <span style={{ color: "#347856" }}>(+20%)</span>
                                                         </Typography>
                                                         <Typography className='fw-600 light-grey'>
-                                                                USD$ 427,17 / $ 346.000
+                                                                <span>  USD$ 427,17 /</span>   $ 346.000
                                                         </Typography>
                                                 </Grid>
                                         </Grid>

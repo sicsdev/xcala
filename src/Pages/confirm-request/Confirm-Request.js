@@ -37,7 +37,7 @@ function ConfirmRequest() {
             </Typography>
             <div className={Styled.registration_wrapper}>
               <Grid container className={Styled.registration_first_step}>
-                <Grid item md={12} mb={3}>
+                <Grid item md={12} xs={12} mb={3}>
                   <div className={Styled.rectangle_heading}>
                     <Typography mt={4} className='font-lg-18'>
                       Fondo
@@ -68,10 +68,10 @@ function ConfirmRequest() {
 
                 </Grid>
 
-                <Grid item md={12} mt={2}>
+                <Grid item md={12} xs={12} mt={2}>
                   <Productdetailconditions />
                 </Grid>
-                <Grid item md={12} mt={2}>
+                <Grid item md={12} xs={12} mt={2}>
                   <Typography mt={4} className='font-lg-18 blue_text'>
                     Este fondo genera dividendos mensuales.
                   </Typography>
@@ -79,7 +79,7 @@ function ConfirmRequest() {
                     ¿Qué quieres hacer con estos dividendos?
                   </Typography>
                 </Grid>
-                <Grid item md={12} mt={2}>
+                <Grid item md={12} xs={12} mt={2}>
                   <div className={Styled.identity_radio}>
                     <Radio checked={selectedValue === 'a'}
                       onChange={handleChange}
@@ -146,7 +146,7 @@ function ConfirmRequest() {
                 </Grid>
 
                 <div className={Styled.line}></div>
-                <Grid item md={12} mt={2}>
+                <Grid item md={12} xs={12} mt={2}>
                   <div className={Styled.identity_radio}>
                     <Checkbox />
                     <div className={Styled.p1}

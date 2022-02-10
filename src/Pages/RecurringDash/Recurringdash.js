@@ -441,6 +441,13 @@ function Recurringdash() {
 
 
             </Grid>
+
+            <Grid item md={12} mt={4} className="desktop-hide" >
+              <div className="formbutton">
+                <Button className='light-button-primary'> Ver todas las opciones de inversión</Button>
+              </div>
+            </Grid>
+
           </Container>
 
         </div>

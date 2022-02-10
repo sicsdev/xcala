@@ -57,6 +57,9 @@
             .fields {
                 max-width: 341px;
                 margin: 20px 0;
+                @media (max-width: $mobile) {
+                    max-width: 100%;
+                }
             }
         }
     }

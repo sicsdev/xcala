@@ -28,11 +28,7 @@ function DialogBox(props) {
           <IconButton
             aria-label="close"
             onClick={handleClose}
-            sx={{
-              position: 'absolute',
-              right: 8,
-              top: 8
-            }}
+            className="close-modal-btn"
           >
             <CloseIcon />
           </IconButton>

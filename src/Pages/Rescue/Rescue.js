@@ -66,31 +66,31 @@ function Rescue() {
           </Grid>
 
           <Grid container spacing={2}>
-            <Grid item xs={7}>
+            <Grid item xs={12} md={7}>
               <div className={RescateStyled.card_h1}>
                 <img src="/assets/images/Iconos-Perfiles.svg"></img>
                 <div className={RescateStyled.subtitle}>
-                  <Typography className="font-lg-20">Fondo</Typography>
-                  <Typography className={RescateStyled.h1}>
+                  <Typography className={`font-lg-20 ${RescateStyled.fondo}`}>Fondo</Typography>
+                  <Typography className={`font-lg-24 ${RescateStyled.h1}`}>
                     Xcala Balanceado Global
                   </Typography>
                 </div>
               </div>
             </Grid>
-            <Grid item xs={5}>
-              <div className={RescateStyled.cardstyle}>
-                <Typography className={RescateStyled.tableheading}>
+            <Grid item xs={12} md={5}>
+              <div className={`card-bordered ${RescateStyled.cardstyle}`}>
+                <Typography className={`font-lg-18 ${RescateStyled.tableheading}`}>
                   Tienes
                 </Typography>
                 <Typography className={RescateStyled.tabledata}>
                   USD$ 9.259,25
                   <span
-                    className={`font-lg-24 fw-600, ${RescateStyled.fade_text}`}
+                    className={`font-lg-24 fw-600 ${RescateStyled.fade_text}`}
                   >
                     $ 7.500.000*
                   </span>
                 </Typography>
-                <div className={`font-lg-18, ${RescateStyled.fade_text18}`}>
+                <div className={`font-lg-18 ${RescateStyled.fade_text18}`}>
                   Plazo de rescate Máx. 11 días corridos
                 </div>
               </div>
@@ -102,7 +102,7 @@ function Rescue() {
       <div className={RescateStyled.grey_section}>
         <Container maxWidth="lg">
           <Grid className={RescateStyled.request_section} container>
-            <Grid className={RescateStyled.rescueall} item xs={6}>
+            <Grid className={RescateStyled.rescueall} item xs={12} md={6}>
               <Typography className="font-lg-24 fw-600 blue_text">
                 ¿Qué quieres hacer?
               </Typography>
@@ -171,18 +171,18 @@ function Rescue() {
                   </div>
 
                   <div className={RescateStyled.fade_text12}>
-                    *Equivalente a{" "}
+                    *Equivalente a {" "}
                     <span style={{ fontWeight: "600" }}>123,25 cuota</span>
-                    <Tooltip title="Icon">
+                    <div className={RescateStyled.tooltipicon}><Tooltip title="Icon">
                       <IconButton>
                         <img src="/assets/images/ipassword.png"></img>
                       </IconButton>
-                    </Tooltip>
+                    </Tooltip></div>
                   </div>
                 </div>
               ) : null}
             </Grid>
-            <Grid className={RescateStyled.deposit_section} item xs={6}>
+            <Grid className={RescateStyled.deposit_section} item xs={12} md={6}>
               <Typography className="font-lg-24 fw-600 blue_text">
                 ¿Dónde hacemos el depósito?
               </Typography>

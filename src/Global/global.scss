@@ -307,6 +307,13 @@ body {
         place-content: start;
     }
 }
+.sucess_auth_main{
+    .backgroundscreen{
+        @media (max-width: $mobile) {
+         display: none;
+        }
+    }
+}
 body {
     margin: 0;
     font-family: $pfontfamily;
@@ -341,7 +348,9 @@ body {
     .MuiDialog-container {
         .MuiButtonBase-root {
             @media (max-width: $mobile) {
-                justify-content: end;
+                text-align: right;
+                width: 100%;
+                display: block;
             }
         }
         .MuiDialogActions-root {

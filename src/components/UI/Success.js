@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 function Success() {
    return (
-      <>
+      <div className="sucess_auth_main">
          <Backgroundscreen />
          <Container maxWidth="sm">
             <Grid container maxWidth="sm" spacing={2}>
@@ -36,7 +36,7 @@ function Success() {
                </div>
             </div>
          </Container>
-      </>
+      </div>
    );
 }
 

@@ -1,5 +1,4 @@
 @import "/src/Global/sass/variables.scss";
-
 .verificationsuccesslogo {
     text-align: $center;
     img {
@@ -26,6 +25,8 @@
             display: inline-block;
             @media (max-width: $mobile) {
                 display: block;
+                max-width: 190px;
+                margin: 0 auto;
             }
         }
     }

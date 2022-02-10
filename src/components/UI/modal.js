@@ -14,7 +14,7 @@ function DialogBox(props) {
   };
 
   return (
-    <div>
+    <>
 
       <Dialog
         open={props.open}
@@ -38,7 +38,7 @@ function DialogBox(props) {
             {props.action_btn2 && (
               <Checkbox />
             )}
-            <div dangerouslySetInnerHTML={{ __html: props.modal_content }} ></div>
+            <span dangerouslySetInnerHTML={{ __html: props.modal_content }} ></span>
           </DialogContentText>
         </DialogContent>
         <DialogActions style={{ justifyContent: "center" }}>
@@ -48,7 +48,7 @@ function DialogBox(props) {
           <Button onClick={handleClose} className='button-primary'>{props.action_btn}</Button>
         </DialogActions>
       </Dialog>
-    </div>
+    </>
   );
 }
 

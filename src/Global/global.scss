@@ -331,30 +331,37 @@ body {
     .MuiContainer-maxWidthLg {
         max-width: 1372px;
     }
-    .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
-        padding: 20px 15px;
-        border-radius: 16px;
-    }
-    .css-bdhsul-MuiTypography-root-MuiDialogTitle-root {
-        @media (max-width: $mobile) {
-            padding: 9px 0px 0;
-        }
-    }
-    .css-hlj6pa-MuiDialogActions-root button {
-        margin: 20px 0 0;
-        border-radius: 4px;
-        padding: 13px 52px;
-    }
+ 
     .MuiDialog-container {
-        .MuiButtonBase-root {
+        padding: 10px 15px;
+      
+        .MuiPaper-root{
+            padding: 20px 15px;
+            border-radius: 16px;
+            margin: 0;
             @media (max-width: $mobile) {
-                text-align: right;
-                width: 100%;
-                display: block;
+                padding: 10px 15px;
             }
-        }
-        .MuiDialogActions-root {
-            padding: 10px 15px;
+            .MuiDialogTitle-root{
+                @media (max-width: $mobile) {
+                    padding: 9px 0px 0;
+                   
+                }
+            }
+            .close-modal-btn {
+                @media (max-width: $mobile) {
+                    text-align: right;
+                    width: 100%;
+                    display: block;
+                }
+            }
+            .MuiDialogActions-spacing{
+                button{
+                    margin:0;
+                    border-radius: 4px;
+                    padding: 13px 52px;
+                }
+            }
         }
     }
 
@@ -491,12 +498,12 @@ body {
         }
     }
 
-    .MuiCheckbox-root svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
-        color: $themeColor;
-        @media (max-width: $mobile) {
-            background: $themeColor;
-        }
-    }
+    // .MuiCheckbox-root svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+    //     color: $themeColor;
+    //     @media (max-width: $mobile) {
+    //         background: $themeColor;
+    //     }
+    // }
 
     .MuiAccordion-gutters {
         margin: 16px 0;

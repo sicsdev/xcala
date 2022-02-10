@@ -7,6 +7,10 @@
     background-position: center;
     padding: 40px 0px 40px 0;
     margin-bottom: 0px;
+        @media (max-width: $mobile){
+            padding: 10px 0px 30px 0;
+        }
+
         .heading{
             display: flex;
             align-items: center;
@@ -14,17 +18,43 @@
             color: $p-color1;
             margin-top: 1.3rem;
             margin-bottom: 3rem;
+            @media (max-width: $mobile){
+                gap: 14px;
+                margin-bottom: 2.2rem;
+            }
+            img{
+                @media (max-width: $mobile){
+                    width: 14px;
+                }
+            }
         }
         .card_h1{
             display: flex;
-            align-items: center;
+            align-items: center;     
             gap: 14px;
+                @media (max-width: $mobile){
+                    align-items: flex-start;
+                }
+                img{
+                    @media (max-width: $mobile){
+                        width: 45px;
+                    }
+                }
                 .subtitle{
                     display: block;
+                    .fondo{
+                        @media (max-width: $mobile){
+                            text-transform: uppercase;
+                            font-size: 12px;
+                        }
+                    }
                 .h1{
-                font-size: 24px;
                 color: $themeColor;
                 font-weight: $fweight2;
+                 @media (max-width: $mobile){
+                     color: $p-color1;
+                     width: 88%;
+                 }
                 }
             }
         }
@@ -35,25 +65,36 @@
             padding: 24px 30px;
             background: linear-gradient(118.26deg, rgba(255, 255, 255, 0.9) 17.11%, rgba(255, 255, 255, 0) 103.77%);
             backdrop-filter: blur(27px);
+                @media (max-width: $mobile){
+                    margin-top: 1rem;
+                    padding: 12px 15px;
+                }
               .tableheading{
                 padding: 10px 0px;
-                font-size: $p-18-fontsize;
                 text-transform: uppercase;
             }
         }
         .tabledata{
             font-size: 41px;
             font-weight: bold;
+            @media (max-width: $mobile){
+                font-size: 24px;
+            }
 
             .fade_text{
-                font-weight: $fweight;
                 display: block;
-                color:#808080
+                color:#808080;
+                @media (max-width: $mobile){
+                    color:$p-color1
+                }
             }
         }   
         .fade_text18{
             margin-top: 1.1rem;
-            color:#808080
+            color:#808080;
+            @media (max-width: $mobile){
+                font-size: 12px;
+            }
         }
     }
 
@@ -62,6 +103,9 @@
         background: #F2F2F2;
         padding-top: 3rem;
         padding-bottom: 3rem;
+            @media (max-width: $mobile){
+                padding-top: 2rem;
+            }
         .request_section{
             border-radius: 8px;
             background: #fff;
@@ -69,11 +113,21 @@
             justify-content: center;
             margin: 0;
             margin-bottom: 3rem;
+                @media (max-width: $mobile){
+                    padding: 20px;
+                    padding-bottom: 7rem;
+                }
             .rescueall{
                 border-right: 1px solid #F2F2F2;
                 padding: 2rem 5rem;
+                    @media (max-width: $mobile){
+                        padding: 0px;
+                    }
                 .radiobutton{
                     margin-top: 2rem;
+                        @media (max-width: $mobile){
+                            margin-top: 1rem;
+                        }
                 }
                 .identity_radio {
                     svg {
@@ -84,6 +138,10 @@
             }
             .deposit_section{
                padding: 2rem 5rem;
+               @media (max-width: $mobile){
+                padding: 0px;
+                margin-top: 2rem;
+            }
             }
             .isequalto{
                 margin-top: 13px;
@@ -101,6 +159,14 @@
                 img{
                     width: 15px;
                 }
+                @media (max-width: $mobile){
+                    display: inline;
+                }
+                .tooltipicon{
+                    @media (max-width: $mobile){
+                        display: inline-block;
+                    }
+                }
             }
         }
         .selector{
@@ -111,6 +177,11 @@
             margin-top: 2.5rem;
             padding: 16px 80px;
             height: 60px;
+                @media (max-width: $mobile){
+                    margin-top: -8.5rem;
+                    width: 90%;
+                    padding: 0px;
+                }
         }
 
         @include cardBordered;

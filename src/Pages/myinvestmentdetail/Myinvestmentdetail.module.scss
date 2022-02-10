@@ -13,6 +13,15 @@
             color: $p-color1;
             margin-top: 1.3rem;
             margin-bottom: 3rem;
+                @media (max-width: $mobile){
+                    margin-bottom: 0px;
+                    gap: 12px;
+                }
+                img{
+                    @media (max-width: $mobile){
+                        width: 14px;
+                    }
+                }
         }
 
             .cardstyle{
@@ -26,15 +35,25 @@
                 background: linear-gradient(268.78deg, rgba(255, 255, 255, 0.8) 1.52%, rgba(255, 255, 255, 0) 39.44%, rgba(255, 255, 255, 0.8) 99.9%);
                 mix-blend-mode: normal;
                 backdrop-filter: blur(48px); 
+                @media (max-width: $mobile){
+                    border: none;
+                    background: none;
+                    box-shadow: none;
+                    backdrop-filter: unset;
+                    padding: 20px;
+                }
 
             .card_h1{
                 display: flex;
                 align-items: center;
                 gap: 14px;
                     .h1{
-                    font-size: 24px;
                     color: $themeColor;
                     font-weight: $fweight2;
+                       @media (max-width: $mobile){
+                        color:$p-color1;
+                        width: 90%;
+                    }
                     }
             }
             .link{
@@ -63,21 +82,69 @@
             }
         }
 
+        .xcalacontainer{
+            justify-content: end;
+                @media (max-width: $mobile){
+                    background: #fff;;
+                    padding: 4px 20px 20px 20px;
+                    position: fixed;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;  
+                    display: flex;
+                    justify-content: center;
+                    z-index: 99;
+                    @media (max-width: $mobile){
+                        padding:10px;
+                    }
+            }
+        .incomepesos_btns{
+            margin-top: 1rem;
+            display: flex;
+            gap: 15px;
+            @media (max-width: $mobile){
+                margin-top: 0;
+            }
         .green_btn{
-            justify-content: center;
-            margin-right: 20px;
-
                 Button{
                 // margin-top: 1.65rem;
-                padding: 17px 40px;
+                width: 240px;
+                height: 50px;
                 color: $green-color;
                 border-color: $green-color;
                 border-radius: 8px;
                 font-weight: $fweight2;
                 text-transform: none;
-                font-size: $p-18-fontsize;
                 line-height: normal;
+                font-size: 14px;
+                    @media (max-width: $mobile){
+                         width: 200px;
+                    }
                 }
+        }
+        
+        .primary_btn{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 240px;
+            height: 50px;
+            font-size: 14px;
+            background: #1E22AA;
+            border-radius: 4px;
+            Button{
+            color: #fff;
+            font-family: $pfontfamily;
+            }
+            @media (max-width: $mobile){
+                width: 163.5px;
+        }
+        }
+        }
+    }
+        @media (max-width: $mobile){
+            padding: 20px 0px 0px 0;
         }
     }
 .grey_section{
@@ -88,16 +155,17 @@
         border-radius: 8px;
         background: #fff;
         padding: 40px;
-        justify-content: center;
-        margin: 0;
         margin-bottom: 3rem;
-
         .table_button{
             display: flex;
             flex-direction: row;
             align-items: center;
             padding: 8px 16px;
             gap: 10px;
+                @media (max-width: $mobile){
+                    padding: 0px;
+                    margin-bottom: 1rem;
+                }
                 .btn{
                 background: $themeColor;
                 border: 2px solid #1E22AA;
@@ -106,12 +174,20 @@
                 color: #fff;
                 font-family: $pfontfamily;
                 text-transform: lowercase;
+                font-size: $p-16-fontsize;
+                    @media (max-width: $mobile){
+                        font-size:12px;
+                        padding: 0px 6px;
+                        height: 35px;
+                    }
                 :hover{
                     background-color: none;
                 }
         }
         }
-        
+        @media (max-width: $mobile){
+            padding: 20px;
+        }
     }
     .bluebox{
         background: #ECF5FF;
@@ -119,16 +195,28 @@
         border-radius: 8px;
         padding: 40px;
         margin-top: 3rem;
+            @media (max-width: $mobile){
+                padding: 20px;
+            }
+           .text{
+               margin-bottom: 2.5rem;
+           } 
         .invest_list{
             display: flex;
             flex-direction: row !important;
             margin-top: 2rem;
             gap: 20px;
             align-items: baseline;
+                @media (max-width: $mobile){
+                    margin-top: 0rem;
+                }
             .list_item{
                 font-size: 18px;
                 color: #49A197;
                 font-weight: $fweight2;
+                @media (max-width: $mobile){
+                    font-size: 14px;
+                }
             }
         }
     }

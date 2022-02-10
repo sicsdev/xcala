@@ -1,5 +1,22 @@
 @import "/src/Global/sass/variables.scss";
 
+.table_tabs Button{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.filter{
+    display: flex;
+    gap: 8px;
+    justify-content: start;
+    margin-top: 1.5rem;
+    .filter_text{
+        margin-right: 16px;
+    }
+}
+
+
 .table_container{
     margin-top: 2.5rem;
     @media (max-width: $mobile){
@@ -8,10 +25,8 @@
 }
 .success_table{
     .tablecell_heading, .tablecell_heading2{
-        border-bottom: 1px solid #1E22AA;
-    .tableheading{
-        padding: 10px 0px;
-    }
+        border-bottom: 1px solid #ffffff;
+
 }
 .tablecell_heading{
 @media (max-width: $mobile){
@@ -28,20 +43,13 @@
     padding: 10px 0px;
     color: #101820;
     border: none;
-    height: 52px;
+    font-size: 14px;
     .fade_text{
         font-weight: $fweight;
         display: block;
         color:#808080
     }
 }
-.successbluebox{
-    padding: 20px 16px;
-    .fade_text{
-        font-weight: $fweight;
-        display: block;
-    
-    }
-}
+
 }
 }

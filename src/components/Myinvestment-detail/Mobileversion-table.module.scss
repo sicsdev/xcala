@@ -15,7 +15,7 @@
     justify-content: start;
     margin-top: 1.5rem;
     .filter_text{
-        margin-right: 16px;
+        margin-right: 16px; 
     }
 }
 
@@ -23,6 +23,7 @@
  display: flex;
  justify-content: center;
  flex-direction: row;
+
  &:nth-child(even) .table_container{
     background: white;
   }
@@ -34,6 +35,7 @@
      
     @media (max-width: $mobile){
         margin-top: 1.2rem;
+        // margin-left: 16px;
 }
 .success_table{
     .tablecell_heading, .tablecell_heading2{

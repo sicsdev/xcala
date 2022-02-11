@@ -13,8 +13,9 @@ p {
   margin: 0px;
   font-family: $pfontfamily !important;
 }
+
 a {
-  text-decoration: auto;
+  text-decoration: none !important;
 }
 
 .black-color {
@@ -260,8 +261,6 @@ body {
     }
   }
 }
-.nav-link {
-}
 .navbar_active.nav-link {
   position: relative;
   a {
@@ -274,7 +273,6 @@ body {
       border-bottom: 3px solid #5ac4b1;
     }
   }
- 
 }
 .MuiTabs-scroller.MuiTabs-fixed {
   .Mui-selected {
@@ -283,6 +281,50 @@ body {
   }
   .MuiTabs-indicator {
     background-color: $themeColor;
+  }
+  .full-height {
+    height: 100vh;
+    padding-bottom: 15px;
+  }
+  .close-modal-btn {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+  }
+}
+@media (max-width: $mobile) {
+  body {
+    .font-lg-20 {
+      font-size: 16px;
+    }
+    .font-lg-24 {
+      font-size: 18px;
+    }
+    .font-lg-28 {
+      font-size: 20px;
+    }
+    .font-lg-32 {
+      font-size: 20px;
+    }
+    .font-lg-18 {
+      font-size: 16px;
+    }
+    .desktop-none {
+      display: block;
+    }
+    .pt-lg-45 {
+      padding-top: 25px;
+    }
+    div#panel1d-content {
+      padding: 15px 0;
+    }
+    .MuiDialogContent-root {
+      .MuiDialogContentText-root {
+        @media (max-width: $mobile) {
+          font-size: 14px;
+        }
+      }
+    }
   }
 }
 .icon-img {
@@ -336,6 +378,13 @@ body {
     place-content: start;
   }
 }
+.sucess_auth_main {
+  .backgroundscreen {
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+}
 body {
   margin: 0;
   font-family: $pfontfamily;
@@ -353,28 +402,35 @@ body {
   .MuiContainer-maxWidthLg {
     max-width: 1372px;
   }
-  .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
-    padding: 20px 15px;
-    border-radius: 16px;
-  }
-  .css-bdhsul-MuiTypography-root-MuiDialogTitle-root {
-    @media (max-width: $mobile) {
-      padding: 9px 0px 0;
-    }
-  }
-  .css-hlj6pa-MuiDialogActions-root button {
-    margin: 20px 0 0;
-    border-radius: 4px;
-    padding: 13px 52px;
-  }
   .MuiDialog-container {
-    .MuiButtonBase-root {
+    padding: 10px 15px;
+
+    .MuiPaper-root {
+      padding: 20px 15px;
+      border-radius: 16px;
+      margin: 0;
       @media (max-width: $mobile) {
-        justify-content: end;
+        padding: 10px 15px;
       }
-    }
-    .MuiDialogActions-root {
-      padding: 10px 15px;
+      .MuiDialogTitle-root {
+        @media (max-width: $mobile) {
+          padding: 9px 0px 0;
+        }
+      }
+      .close-modal-btn {
+        @media (max-width: $mobile) {
+          text-align: right;
+          width: 100%;
+          display: block;
+        }
+      }
+      .MuiDialogActions-spacing {
+        button {
+          margin: 0;
+          border-radius: 4px;
+          padding: 13px 52px;
+        }
+      }
     }
   }
 
@@ -459,6 +515,7 @@ body {
   .MuiSwitch-switchBase.Mui-checked {
     color: $white;
   }
+
   .MuiCheckbox-root,
   .MuiCheckbox-root.Mui-checked {
     color: $themeColor;
@@ -467,9 +524,6 @@ body {
     }
   }
 
-  .MuiAccordionDetails-root {
-    padding: 0;
-  }
   .css-11h4g4n-MuiGrid-root {
     @media (max-width: $mobile) {
       width: 100%;
@@ -511,12 +565,8 @@ body {
     }
   }
 
-  .MuiCheckbox-root
-    svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
-    color: $themeColor;
-    @media (max-width: $mobile) {
-      background: $themeColor;
-    }
+  .MuiAccordionDetails-root {
+    padding: 0;
   }
 
   .MuiAccordion-gutters {
@@ -545,8 +595,7 @@ body {
       padding: 10px 12px;
     }
   }
-  tr.MuiTableRow-root.css-34nofg-MuiTableRow-root:nth-child(8)
-    .MuiTableCell-root {
+  tr.MuiTableRow-root.css-34nofg-MuiTableRow-root:nth-child(8) .MuiTableCell-root {
     padding-bottom: 40px;
   }
   .button-primary.Mui-disabled {
@@ -673,12 +722,7 @@ body {
       backdrop-filter: none;
       &::after {
         content: "";
-        background: linear-gradient(
-          91.94deg,
-          #1e22aa -51.99%,
-          #e3e3e3 50.09%,
-          #1e22aa 136.47%
-        );
+        background: linear-gradient(91.94deg, #1e22aa -51.99%, #e3e3e3 50.09%, #1e22aa 136.47%);
         position: absolute;
         top: 0;
         right: 0;
@@ -709,14 +753,8 @@ body {
       bottom: 0;
       padding: 2px;
       border-radius: 8px;
-      background: linear-gradient(
-        92.05deg,
-        #ffffff -0.62%,
-        #e3e3e3 50.1%,
-        #ffffff 93.02%
-      );
-      -webkit-mask: linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
+      background: linear-gradient(92.05deg, #ffffff -0.62%, #e3e3e3 50.1%, #ffffff 93.02%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
       z-index: -1;
     }
@@ -749,14 +787,8 @@ body {
         bottom: 0;
         padding: 2px;
         border-radius: 8px;
-        background: linear-gradient(
-          92.05deg,
-          #ffffff -0.62%,
-          #e3e3e3 50.1%,
-          #ffffff 93.02%
-        );
-        -webkit-mask: linear-gradient(#fff 0 0) content-box,
-          linear-gradient(#fff 0 0);
+        background: linear-gradient(92.05deg, #ffffff -0.62%, #e3e3e3 50.1%, #ffffff 93.02%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
         -webkit-mask-composite: xor;
         z-index: -1;
       }
@@ -776,11 +808,11 @@ body {
         border-bottom: 2px solid $themeColor;
       }
     }
+
     .MuiInput-root:hover:not(.Mui-disabled):before {
       border-bottom: 2px solid $themeColor;
     }
   }
-
   .page_content {
     position: relative;
     padding: 85px 30px;

@@ -24,7 +24,7 @@ function Myinvestmentdetail() {
             </div>
           </Grid>
 
-          {/* row */}
+          {/*grid row */}
           <Grid container spacing={4}>
             <Grid item xs={12}>
               <div className={MyinvestmentStyled.cardstyle}>

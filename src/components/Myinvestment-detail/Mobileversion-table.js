@@ -117,7 +117,7 @@ function Mobileversiontable({ selector }) {
         {selector === "notselected" ? (
           <></>
         ) : (
-          <FormControl variant="standard" fullWidth sx={{ mt: 3, mb: 2 }}>
+          <FormControl variant="standard" fullWidth sx={{ mt: 3, mb: 2, ml:2}}>
             <InputLabel id="demo-simple-select-standard-label">
               Fondo
             </InputLabel>

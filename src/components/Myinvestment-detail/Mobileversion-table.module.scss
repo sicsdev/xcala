@@ -23,6 +23,7 @@
  display: flex;
  justify-content: center;
  flex-direction: row;
+ margin-left: 16px;
 
  &:nth-child(even) .table_container{
     background: white;

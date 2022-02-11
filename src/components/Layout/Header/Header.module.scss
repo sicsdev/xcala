@@ -1,6 +1,7 @@
 @import "../../../Global/sass/variables.scss";
 body {
     .app_header {
+        
         background: linear-gradient(
             251.04deg,
             #f6faff -66.77%,
@@ -32,6 +33,7 @@ body {
                     padding: 0;
                 }
             }
+            
             .notification {
                 position: relative;
                 border-right: 2px solid #bfbfbf;
@@ -54,8 +56,8 @@ body {
                     border-radius: 50%;
 
                     @media (max-width: $mobile) {
-                        right: 10px;
-                        top: -7px;
+                        right: 11px;
+                        top: -9px;
                         width: 8px;
                         height: 8px;
                     }

@@ -15,6 +15,7 @@ import { Input } from "@mui/material";
 import { IconButton } from "@mui/material";
 import { Tooltip } from "@mui/material";
 
+
 function Rescue() {
   const [amount, setAmount] = React.useState("");
 
@@ -196,12 +197,13 @@ function Rescue() {
                   Cuenta
                 </InputLabel>
                 <Select
+                 fullWidth
                   labelId="demo-simple-select-standard-label"
                   id="demo-simple-select-standard"
                   value={select}
                   onChange={handleChange}
-                  label="Age"
                   disabled={disableradiobtn}
+                  IconComponent={() => <img src="/assets/images/arrow_down.svg"/>}
                 >
                   <MenuItem value={10}>Banco de Chile - N° 1890567891</MenuItem>
                   <MenuItem value={20}>Banco de Chile - N°</MenuItem>

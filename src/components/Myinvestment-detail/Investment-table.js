@@ -117,6 +117,14 @@ const rows = [
     "$ 355,99",
     "$ 4.213,49"
   ),
+  
+  createData(
+    "00/06/20",
+    "Inversión Inicial",
+    "$ 7.000.000",
+    "$ 1.741,25",
+    "$ 4.020,09"
+  ),
   // createData('00/06/20', 'Inversión Inicial', 'USD$4.938,27', '1.741,25', '$ 4.020,09'),
   // createData('31/07/20', 'Aporte', 'USD$ 617,28', '24,13', '$ 4.153,45'),
   // createData('31/08/20', 'Rescate', 'USD$ 1.234,56', '240,47', '$ 4.153,45'),
@@ -143,7 +151,7 @@ export default function StickyHeadTable({selector}) {
   // end-tab
 
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -193,8 +201,9 @@ export default function StickyHeadTable({selector}) {
           value={age}
           onChange={handleChange}
           label="Age"
+          IconComponent={() => <img src="/assets/images/arrow_down.svg" />}
         >
-          <MenuItem value={10}>Todos</MenuItem>
+          <MenuItem value={5}>Todos</MenuItem>
         </Select>
       </FormControl>}
  {/* selector */}
@@ -324,7 +333,7 @@ export default function StickyHeadTable({selector}) {
       {/* End-Tab  */}
 
       <TablePagination
-        rowsPerPageOptions={[10, 25, 100]}
+        rowsPerPageOptions={[5, 10, 20]}
         component="div"
         count={rows.length}
         rowsPerPage={rowsPerPage}

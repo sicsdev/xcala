@@ -3,6 +3,7 @@ import StickyHeadTable from '../../components/Myinvestment-detail/Investment-tab
 import { Button, Container, Grid, Typography } from '@mui/material';
 import MytransactionsStyled from './Mytransactions.module.scss'
 import { Link } from 'react-router-dom';
+import Mobileversiontable from '../../components/Myinvestment-detail/Mobileversion-table';
 
 function Mytransactions() {
   return (
@@ -28,7 +29,12 @@ function Mytransactions() {
     <Grid container spacing={4}>
         <Grid item xs={12}>
             <div className={MytransactionsStyled.cardstyle}>
-      <StickyHeadTable />
+      <div className="mobile-hide">
+         <StickyHeadTable />
+      </div>
+       <div className="desktop-hide">
+         <Mobileversiontable/>
+      </div>
       </div>
       <Grid className={MytransactionsStyled.btn} item xs={12} item md={12}>
       <Link to="/codeverification">

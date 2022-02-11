@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -16,26 +16,30 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from "@mui/icons-material/Close";
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [mobileMenu, setmobileMenu] = useState(false);
+  const [activeNavbar, setActiveNavbar] = useState(1);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
-    setmobileMenu((prevState => !prevState))
+    setmobileMenu((prevState) => !prevState);
   };
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(false);
   };
 
   const handleCloseMenu = () => {
-    setmobileMenu((prevState => !prevState))
+    setmobileMenu((prevState) => !prevState);
   };
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+  };
+  const activeNav = (val) => {
+    setActiveNavbar(val);
   };
   return (
     <AppBar position="static" className={Styles.app_header}>
@@ -61,23 +65,44 @@ const ResponsiveAppBar = () => {
               alignItems: "center",
             }}
           >
-            <Link to="/new-user" sx={{ my: 2, color: "white", display: "block" }} >
-              Inicio
-            </Link>
-            <Link to="/products" sx={{ my: 2, color: "white", display: "block" }} >
-              Productos
-            </Link>
-            <Link to="/lets-start" sx={{ my: 2, color: "white", display: "block" }} >
-              Mis transacciones
-            </Link>
-            <Link to="/my-notification" className={Styles.notification} sx={{ my: 2, color: "white", display: "block" }} >
+            <div
+              className={
+                activeNavbar == 1 ? "navbar_active nav-link" : "nav-link"
+              }
+            >
+              <Link to="/new-user" onClick={(e) => activeNav(1)}>
+                Inicio
+              </Link>
+            </div>
+            <div
+              className={
+                activeNavbar == 2 ? "navbar_active nav-link" : "nav-link"
+              }
+            >
+              <Link to="/products" onClick={(e) => activeNav(2)}>
+                Productos
+              </Link>
+            </div>
+            <div
+              className={
+                activeNavbar == 3 ? "navbar_active nav-link" : "nav-link"
+              }
+            >
+              <Link to="/lets-start" onClick={(e) => activeNav(3)}>
+                Mis transacciones
+              </Link>
+            </div>
+            <Link to="/my-notification" className={Styles.notification}>
               <img src={ImagSrc} alt="icon"></img>
               <span></span>
             </Link>
           </Box>
 
-          <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }} >
-            <div className={Styles.dropdown_profile} onClick={handleOpenUserMenu}>
+          <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
+            <div
+              className={Styles.dropdown_profile}
+              onClick={handleOpenUserMenu}
+            >
               <IconButton sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/assets/images/Avatar.svg" />
               </IconButton>
@@ -111,8 +136,12 @@ const ResponsiveAppBar = () => {
         </Toolbar>
 
         <div className={Styles.mobile_menu}>
-          <div className='desktop-none'>
-            <Link to="/my-notification" className={Styles.notification} sx={{ my: 2, color: "white", display: "block" }} >
+          <div className="desktop-none">
+            <Link
+              to="/my-notification"
+              className={Styles.notification}
+              sx={{ my: 2, color: "white", display: "block" }}
+            >
               <img src={ImagSrc} alt="icon"></img>
               <span></span>
             </Link>
@@ -122,32 +151,37 @@ const ResponsiveAppBar = () => {
             aria-label="account of current user"
             aria-controls="menu-appbar"
             aria-haspopup="true"
-            onClick={handleCloseMenu  }
+            onClick={handleCloseMenu}
             color="inherit"
           >
             <MenuIcon />
           </IconButton>
-          {mobileMenu ?
+          {mobileMenu ? (
             <div className={Styles.mobile_menu_content}>
               <div className={Styles.mobile_items}>
                 <div className={Styles.mobile_heading}>
-                  <Typography className='museo-regular font-lg-24 blue_text'>
+                  <Typography className="museo-regular font-lg-24 blue_text">
                     Filtros
                   </Typography>
-                  <Typography >
-                    <CloseIcon className='blue_text' onClick={handleCloseMenu} />
+                  <Typography>
+                    <CloseIcon
+                      className="blue_text"
+                      onClick={handleCloseMenu}
+                    />
                   </Typography>
                 </div>
                 <Link to="/new-user" onClick={handleCloseMenu}>
                   Inicio
                 </Link>
-                <Accordion className={Styles.mobile_accordion} style={{ boxShadow: "none" }}>
+                <Accordion
+                  className={Styles.mobile_accordion}
+                  style={{ boxShadow: "none" }}
+                >
                   <AccordionSummary
                     style={{ padding: "0px" }}
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
-
                   >
                     <Typography
                       className="p-18"
@@ -160,21 +194,11 @@ const ResponsiveAppBar = () => {
                   </AccordionSummary>
                   <AccordionDetails>
                     <div className={Styles.user_detail}>
-                      <Link to="" >
-                        Mis datos
-                      </Link>
-                      <Link to=""  >
-                        Mi perfil de riesgo
-                      </Link>
-                      <Link to=""  >
-                        Mis objetivos e intereses
-                      </Link>
-                      <Link to=""  >
-                        Cambiar contraseña
-                      </Link>
-                      <Link to=""  >
-                        Configurar notificaciones
-                      </Link>
+                      <Link to="">Mis datos</Link>
+                      <Link to="">Mi perfil de riesgo</Link>
+                      <Link to="">Mis objetivos e intereses</Link>
+                      <Link to="">Cambiar contraseña</Link>
+                      <Link to="">Configurar notificaciones</Link>
                     </div>
                   </AccordionDetails>
                 </Accordion>
@@ -187,7 +211,9 @@ const ResponsiveAppBar = () => {
                 </Link>
               </div>
             </div>
-            : ''}
+          ) : (
+            ""
+          )}
         </div>
       </Container>
     </AppBar>

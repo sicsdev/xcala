@@ -118,36 +118,11 @@ function Myinvestmentdetail() {
                   Evolución del fondo
                 </Typography>
               </div>
-
               <div className={MyinvestmentStyled.table_button}>
-                <Link to="">
-                  {" "}
-                  <Button variant="outlined" className={MyinvestmentStyled.btn}>
-                    {" "}
-                    12 meses{" "}
-                  </Button>{" "}
-                </Link>
-                <Link to="">
-                  {" "}
-                  <Button variant="outlined" className={MyinvestmentStyled.btn}>
-                    {" "}
-                    3 meses{" "}
-                  </Button>{" "}
-                </Link>
-                <Link to="">
-                  {" "}
-                  <Button variant="outlined" className={MyinvestmentStyled.btn}>
-                    {" "}
-                    1 meses{" "}
-                  </Button>{" "}
-                </Link>
-                <Link to="">
-                  {" "}
-                  <Button variant="outlined" className={MyinvestmentStyled.btn}>
-                    {" "}
-                    7 dias{" "}
-                  </Button>{" "}
-                </Link>
+                <Link to=""> <Button variant="outlined" className={MyinvestmentStyled.btn}> 12 meses </Button> </Link>
+                <Link to=""> <Button variant="outlined" className={MyinvestmentStyled.btn_outline}> 3 meses </Button> </Link>
+                <Link to=""> <Button variant="outlined" className={MyinvestmentStyled.btn_outline}> 1 meses </Button> </Link>
+                <Link to=""> <Button variant="outlined" className={MyinvestmentStyled.btn_outline}> 7 dias </Button> </Link>
               </div>
 
               <Charts productdetail={"productdetail"} />
@@ -172,7 +147,7 @@ function Myinvestmentdetail() {
               <StickyHeadTable selector={"notselected"} />
             </div>
             <div className="desktop-hide">
-              <Mobileversiontable />
+              <Mobileversiontable selector={"notselected"} />
             </div>
           </div>
         </Container>

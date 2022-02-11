@@ -11,10 +11,10 @@ import Charts from './Chart';
 function productgraph() {
   return (
     <div className={productgraphstyles.center}>
-      <Card className={productgraphstyles.cardstyle} sx={{ maxWidth: 445, borderRadius: 4, padding: 3 }}>
+      <Card className={productgraphstyles.cardstyle} sx={{ maxWidth: 445, borderRadius: 4 }}>
         <CardContent>
-          <Grid container spacing={2}>
-            <Grid item xs={12} md={12} mb={3}>
+          <Grid container>
+            <Grid item xs={12} md={12}>
               <div className={productgraphstyles.card_h1}>
                 <img src="/assets/images/polygon.png" alt="d"></img>
                 <Typography className={productgraphstyles.h1} variant="" component="">

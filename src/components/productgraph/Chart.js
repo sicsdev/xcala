@@ -123,12 +123,12 @@ if(props.productdetail === "productdetail"){
         options={options}
         series={series}
         type="area"
-        height={400}
+        height={500}
       /> :   <ReactApexChart
       options={options}
       series={series}
       type="area"
-      height={180}
+      height={200}
     />}
     
     </>

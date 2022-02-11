@@ -4,6 +4,9 @@
     display: flex;
     justify-content: center;
     width: 50%;
+    @media (max-width: $mobile){
+        font-size: 16px;
+       }
 }
 
 .filter{
@@ -16,17 +19,25 @@
     }
 }
 
-
+.table_main{
+ display: flex;
+ justify-content: center;
+ flex-direction: row;
+ &:nth-child(even) .table_container{
+    background: white;
+  }
 .table_container{
+    background: #F9FBFD;
+    border-radius: 8px;
+    padding: 5px;
     margin-top: 2.5rem;
+     
     @media (max-width: $mobile){
         margin-top: 1.2rem;
-
 }
 .success_table{
     .tablecell_heading, .tablecell_heading2{
         border-bottom: 1px solid #ffffff;
-
 }
 .tablecell_heading{
 @media (max-width: $mobile){
@@ -41,15 +52,16 @@
 
 .tabledata{
     padding: 10px 0px;
-    color: #101820;
+    color: #182849;
     border: none;
     font-size: 14px;
     .fade_text{
         font-weight: $fweight;
         display: block;
-        color:#808080
+        color:#808080;
+        font-size: 12px;
     }
 }
-
+}
 }
 }

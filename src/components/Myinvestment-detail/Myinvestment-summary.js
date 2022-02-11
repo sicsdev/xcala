@@ -39,12 +39,13 @@ function Myinvestmentsummary() {
 
               </TableCell>
               <TableCell className={tablestyle.tablecell_heading2}  align="right">
-                <Typography className={`font-lg-18 fw-600 black-color ${tablestyle.tabledata}`}>
-                USD$ 9.259,25
+                <Typography className={`font-lg-18 fw-600 black-color ${tablestyle.tableheading}`}>
+                USD$ 9.259,25  
+                </Typography> 
                 <span className={`font-lg-18 ${tablestyle.fade_text}`}>
                 $ 7.000.000
                 </span> 
-                </Typography>  
+               
 
                 <Typography className={`font-lg-18 ${tablestyle.tabledata}`}>
                 USD$ 5,89
@@ -85,9 +86,9 @@ function Myinvestmentsummary() {
 
             <TableRow style={{backgroundColor:"#182849"}}>
              <TableCell className={tablestyle.successbluebox} component="th" scope="row">
-                 <Typography style={{ color:"#fff"}}  className="font-lg-18">
+                 <Typography style={{ color:"#fff"}}  className={`font-lg-18 ${tablestyle.tabledata}`}>
                  Has ganado <span style={{color:"#49A197"}}>(+1,56%) </span> 
-                     <Tooltip style={{color:"#fff"}} title="icon">
+                     <Tooltip className={tablestyle.tooltipicon} style={{color:"#fff"}} title="icon">
                         <IconButton>
                           <HelpIcon/>
                         </IconButton>
@@ -95,9 +96,9 @@ function Myinvestmentsummary() {
                  </Typography>
               </TableCell>
               <TableCell className={tablestyle.successbluebox} align="right">
-                <Typography style={{color:"#fff"}} className="font-lg-18">
+                <Typography style={{color:"#fff"}}  className={`font-lg-18 ${tablestyle.tabledata}`}>
                 USD$ 1.851,84
-                <span className={`font-lg-18 ${tablestyle.fade_text}`}>
+                <span className={`font-lg-18 ${tablestyle.fade_text2}`}>
                 $ 1.499.998
                   </span> 
                   </Typography>

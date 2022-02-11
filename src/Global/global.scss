@@ -15,7 +15,7 @@ p {
 }
 
 a {
-    text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 .black-color {
@@ -282,50 +282,50 @@ body {
   .MuiTabs-indicator {
     background-color: $themeColor;
   }
-    .full-height {
-        height: 100vh;
-        padding-bottom: 15px;
-    }
-    .close-modal-btn {
-        position: absolute;
-        right: 8px;
-        top: 8px;
-    }
+  .full-height {
+    height: 100vh;
+    padding-bottom: 15px;
+  }
+  .close-modal-btn {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+  }
 }
 @media (max-width: $mobile) {
-    body {
-        .font-lg-20 {
-            font-size: 16px;
-        }
-        .font-lg-24 {
-            font-size: 18px;
-        }
-        .font-lg-28 {
-            font-size: 20px;
-        }
-        .font-lg-32 {
-            font-size: 20px;
-        }
-        .font-lg-18 {
-            font-size: 16px;
-        }
-        .desktop-none {
-            display: block;
-        }
-        .pt-lg-45 {
-            padding-top: 25px;
-        }
-        div#panel1d-content {
-            padding: 15px 0;
-        }
-        .MuiDialogContent-root {
-            .MuiDialogContentText-root {
-                @media (max-width: $mobile) {
-                    font-size: 14px;
-                }
-            }
-        }
+  body {
+    .font-lg-20 {
+      font-size: 16px;
     }
+    .font-lg-24 {
+      font-size: 18px;
+    }
+    .font-lg-28 {
+      font-size: 20px;
+    }
+    .font-lg-32 {
+      font-size: 20px;
+    }
+    .font-lg-18 {
+      font-size: 16px;
+    }
+    .desktop-none {
+      display: block;
+    }
+    .pt-lg-45 {
+      padding-top: 25px;
+    }
+    div#panel1d-content {
+      padding: 15px 0;
+    }
+    .MuiDialogContent-root {
+      .MuiDialogContentText-root {
+        @media (max-width: $mobile) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
 .icon-img {
   position: relative;
@@ -378,12 +378,12 @@ body {
     place-content: start;
   }
 }
-.sucess_auth_main{
-    .backgroundscreen{
-        @media (max-width: $mobile) {
-         display: none;
-        }
+.sucess_auth_main {
+  .backgroundscreen {
+    @media (max-width: $mobile) {
+      display: none;
     }
+  }
 }
 body {
   margin: 0;
@@ -403,37 +403,36 @@ body {
     max-width: 1372px;
   }
   .MuiDialog-container {
+    padding: 10px 15px;
+
+    .MuiPaper-root {
+      padding: 20px 15px;
+      border-radius: 16px;
+      margin: 0;
+      @media (max-width: $mobile) {
         padding: 10px 15px;
-      
-        .MuiPaper-root{
-            padding: 20px 15px;
-            border-radius: 16px;
-            margin: 0;
-            @media (max-width: $mobile) {
-                padding: 10px 15px;
-            }
-            .MuiDialogTitle-root{
-                @media (max-width: $mobile) {
-                    padding: 9px 0px 0;
-                   
-                }
-            }
-            .close-modal-btn {
-                @media (max-width: $mobile) {
-                    text-align: right;
-                    width: 100%;
-                    display: block;
-                }
-            }
-            .MuiDialogActions-spacing{
-                button{
-                    margin:0;
-                    border-radius: 4px;
-                    padding: 13px 52px;
-                }
-            }
+      }
+      .MuiDialogTitle-root {
+        @media (max-width: $mobile) {
+          padding: 9px 0px 0;
         }
+      }
+      .close-modal-btn {
+        @media (max-width: $mobile) {
+          text-align: right;
+          width: 100%;
+          display: block;
+        }
+      }
+      .MuiDialogActions-spacing {
+        button {
+          margin: 0;
+          border-radius: 4px;
+          padding: 13px 52px;
+        }
+      }
     }
+  }
 
   .css-u8u3sx-MuiTypography-root {
     font-family: $pfontfamily;
@@ -516,32 +515,15 @@ body {
   .MuiSwitch-switchBase.Mui-checked {
     color: $white;
   }
+
   .MuiCheckbox-root,
   .MuiCheckbox-root.Mui-checked {
     color: $themeColor;
     @media (max-width: $mobile) {
       padding-top: 0;
-
-    .react-multi-carousel-list {
-        padding-bottom: 60px;
-        .react-multi-carousel-dot--active button {
-            background: $themeColor2;
-            @media (max-width: $mobile) {
-                background: $themeColor;
-            }
-        }
-        .react-multi-carousel-dot button {
-            border-color: $themeColor2;
-            @media (max-width: $mobile) {
-                border-color: $themeColor;
-            }
-        }
     }
   }
 
-  .MuiAccordionDetails-root {
-    padding: 0;
-  }
   .css-11h4g4n-MuiGrid-root {
     @media (max-width: $mobile) {
       width: 100%;
@@ -583,50 +565,9 @@ body {
     }
   }
 
-
-    .MuiAccordionDetails-root {
-        padding: 0;
-    }
-    .css-11h4g4n-MuiGrid-root {
-        @media (max-width: $mobile) {
-            width: 100%;
-            margin-left: 0;
-        }
-    }
-    .css-11h4g4n-MuiGrid-root > .MuiGrid-item {
-        @media (max-width: $mobile) {
-            padding-left: 0px;
-        }
-    }
-    .custom-select {
-        .MuiSelect-select.Mui-focused {
-            color: $themeColor;
-        }
-        .css-1480iag-MuiInputBase-root-MuiInput-root {
-            &:after {
-                border-bottom: 2px solid $themeColor;
-            }
-        }
-        .css-1480iag-MuiInputBase-root-MuiInput-root:hover:not(.Mui-disabled):before {
-            border-bottom: 1px solid $themeColor;
-        }
-        .MuiSelect-select {
-            &::before {
-                content: "";
-                background-image: url(../../public/assets/images/down-arrow.svg);
-                position: absolute;
-                right: 10px;
-                bottom: 0;
-                top: 12px;
-                background-size: cover;
-                height: 10px;
-                width: 15px;
-            }
-        }
-        svg {
-            display: none;
-        }
-    }
+  .MuiAccordionDetails-root {
+    padding: 0;
+  }
 
   .MuiAccordion-gutters {
     margin: 16px 0;
@@ -654,8 +595,7 @@ body {
       padding: 10px 12px;
     }
   }
-  tr.MuiTableRow-root.css-34nofg-MuiTableRow-root:nth-child(8)
-    .MuiTableCell-root {
+  tr.MuiTableRow-root.css-34nofg-MuiTableRow-root:nth-child(8) .MuiTableCell-root {
     padding-bottom: 40px;
   }
   .button-primary.Mui-disabled {
@@ -782,12 +722,7 @@ body {
       backdrop-filter: none;
       &::after {
         content: "";
-        background: linear-gradient(
-          91.94deg,
-          #1e22aa -51.99%,
-          #e3e3e3 50.09%,
-          #1e22aa 136.47%
-        );
+        background: linear-gradient(91.94deg, #1e22aa -51.99%, #e3e3e3 50.09%, #1e22aa 136.47%);
         position: absolute;
         top: 0;
         right: 0;
@@ -818,14 +753,8 @@ body {
       bottom: 0;
       padding: 2px;
       border-radius: 8px;
-      background: linear-gradient(
-        92.05deg,
-        #ffffff -0.62%,
-        #e3e3e3 50.1%,
-        #ffffff 93.02%
-      );
-      -webkit-mask: linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
+      background: linear-gradient(92.05deg, #ffffff -0.62%, #e3e3e3 50.1%, #ffffff 93.02%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
       z-index: -1;
     }
@@ -858,14 +787,8 @@ body {
         bottom: 0;
         padding: 2px;
         border-radius: 8px;
-        background: linear-gradient(
-          92.05deg,
-          #ffffff -0.62%,
-          #e3e3e3 50.1%,
-          #ffffff 93.02%
-        );
-        -webkit-mask: linear-gradient(#fff 0 0) content-box,
-          linear-gradient(#fff 0 0);
+        background: linear-gradient(92.05deg, #ffffff -0.62%, #e3e3e3 50.1%, #ffffff 93.02%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
         -webkit-mask-composite: xor;
         z-index: -1;
       }
@@ -888,51 +811,8 @@ body {
 
     .MuiInput-root:hover:not(.Mui-disabled):before {
       border-bottom: 2px solid $themeColor;
-
-    .new-user-graph {
-        .formbutton a {
-            width: 100%;
-            max-width: 208px;
-            @media (max-width: $mobile) {
-                width: auto;
-                max-width: 100%;
-            }
-        }
-    }
-    .dashboad-accordion {
-        .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root {
-            pointer-events: none;
-            @media (max-width: $mobile) {
-                pointer-events: auto;
-            }
-            .css-yw020d-MuiAccordionSummary-expandIconWrapper {
-                display: none;
-                @media (max-width: $mobile) {
-                    display: block;
-                }
-            }
-        }
-        .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
-            @media (max-width: $mobile) {
-                margin: 0;
-            }
-        }
-        .css-o4b71y-MuiAccordionSummary-content {
-            @media (max-width: $mobile) {
-                margin: 0;
-            }
-        }
-        .css-bz4dnt-MuiCollapse-root {
-            visibility: visible;
-            height: auto;
-            @media (max-width: $mobile) {
-                visibility: hidden;
-                height: 0;
-            }
-        }
     }
   }
-
   .page_content {
     position: relative;
     padding: 85px 30px;

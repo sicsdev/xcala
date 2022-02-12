@@ -8,6 +8,8 @@ import SpaSharpIcon from '@mui/icons-material/SpaSharp';
 import AutoStoriesSharpIcon from '@mui/icons-material/AutoStoriesSharp';
 import BarChartSharpIcon from '@mui/icons-material/BarChartSharp';
 import BiotechSharpIcon from '@mui/icons-material/BiotechSharp';
+import stepperThree from '../../data/stepperThree.json'
+
 function ObjectiveSelectorThree(props) {
 
   const finalStep = () => {
@@ -32,11 +34,17 @@ function ObjectiveSelectorThree(props) {
       </Grid >
       <Grid container maxWidth="sm" spacing={2}>
         <Grid item md={12}>
-          <StepTwoCard icon={<DevicesOutlinedIcon />} heading="Tecnología" checkbox={<Checkbox />} />
+
+        {stepperThree.map((data) => (
+          <StepTwoCard key={data.id}
+          heading={data.heading}
+          checkbox={<Checkbox />} />
+        ))}
+          {/* <StepTwoCard icon={<DevicesOutlinedIcon />} heading="Tecnología" checkbox={<Checkbox />} />
           <StepTwoCard icon={<SpaSharpIcon />} heading="Medio ambiente" checkbox={<Checkbox />} />
           <StepTwoCard icon={<AutoStoriesSharpIcon />} heading="Cultura" checkbox={<Checkbox />} />
           <StepTwoCard icon={<BarChartSharpIcon />} heading="Economía" checkbox={<Checkbox />} />
-          <StepTwoCard icon={<BiotechSharpIcon />} heading="Ciencia" checkbox={<Checkbox />} />
+          <StepTwoCard icon={<BiotechSharpIcon />} heading="Ciencia" checkbox={<Checkbox />} />  */}
 
           <Typography
             className='light-grey text-center '

@@ -1,0 +1,22 @@
+[
+    {
+        "id": "1",
+        "heading": "Tecnología"            
+    },
+    {
+        "id": "2",
+        "heading": "Medio ambiente"              
+    },
+    {
+        "id": "3",
+        "heading": "Cultura"              
+    },
+    {
+        "id": "4",
+        "heading": "Economía"              
+    },
+    {
+        "id": "5",
+        "heading": "Ciencia"              
+    }
+]

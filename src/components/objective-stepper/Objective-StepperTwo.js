@@ -9,6 +9,8 @@ import BeachAccessIcon from '@mui/icons-material/BeachAccess';
 import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlined';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
+import stepperTwo from '../../data/stepperTwo.json'
+
 function ObjectiveSelectorTwo(props) {
   const [goal, setGoal] = useState(false);
 
@@ -43,12 +45,20 @@ function ObjectiveSelectorTwo(props) {
       </Grid >
       <Grid container maxWidth="sm" spacing={2}>
         <Grid item md={12} xs={12}>
-          <StepTwoCard icon={<DirectionsCarFilledIcon />} heading="Comprarte un auto" checkbox={<Checkbox onChange={checkmark} />} />
+
+        {stepperTwo.map((data) => (
+        <StepTwoCard  key={data.id}
+         heading={data.heading}
+        checkbox={<Checkbox onChange={checkmark} />} />
+        ))}
+
+          {/* <StepTwoCard icon={<DirectionsCarFilledIcon />} heading="Comprarte un auto" checkbox={<Checkbox onChange={checkmark} />} />
           <StepTwoCard icon={<DirectionsWalkIcon />} heading="Mejorar tu jubilación" checkbox={<Checkbox onChange={checkmark} />} />
           <StepTwoCard icon={<BeachAccessIcon />} heading="Las vacaciones soñadas" checkbox={<Checkbox onChange={checkmark} />} />
           <StepTwoCard icon={<AccountBalanceIcon />} heading="Comprar tu casa" checkbox={<Checkbox onChange={checkmark} />} />
           <StepTwoCard icon={<MonetizationOnOutlinedIcon />} heading="Ahorrar para imprevistos" checkbox={<Checkbox onChange={checkmark} />} />
-          <StepTwoCard icon={<HelpOutlineOutlinedIcon />} heading="Otro" checkbox={<Checkbox onChange={checkmark} />} />
+          <StepTwoCard icon={<HelpOutlineOutlinedIcon />} heading="Otro" checkbox={<Checkbox onChange={checkmark} />} /> */}
+          
           {goal ?
             <div className='objective-field'>
               <TextField

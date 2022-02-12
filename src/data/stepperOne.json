@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "heading": "Generar un ingreso mensual extra",               
+        "subheading": "Obtener dividendos mensuales de mi inversión.",
+        "icon" : "TodayIcon"
+    },
+    {
+        "id": "2",
+        "heading": "Hacer crecer mi plata",               
+        "subheading": "O generar ganancias en el tiempo.",
+        "icon" : "InsightsIcon"
+    },
+    {
+        "id": "3",
+        "heading": "Ganar con próposito e impacto",               
+        "subheading": "Ganar con próposito e impacto",
+        "icon" : "LocalFloristIcon"
+    }
+]

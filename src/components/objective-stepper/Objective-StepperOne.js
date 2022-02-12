@@ -2,11 +2,12 @@ import React from 'react';
 import Typography from '@mui/material/Typography';
 import { Checkbox, Grid } from "@mui/material";
 import StepOneCard from './stepone-card/StepOne-Card';
-import TodayIcon from '@mui/icons-material/Today';
-import InsightsIcon from '@mui/icons-material/Insights';
-import LocalFloristIcon from '@mui/icons-material/LocalFlorist';
-import Styled from "../../Pages/objectives-interests/Objectives-Interests.module.scss"
+
+import Styled from "../../Pages/objectives-interests/Objectives-Interests.module.scss";
 import Button from '../UI/Button';
+import stepperOne from '../../data/stepperOne.json';
+
+
 function ObjectiveSelectorOne(props) {
   const secondStep = () => {
     props.setstepper(2)
@@ -37,10 +38,18 @@ function ObjectiveSelectorOne(props) {
       </Grid >
       <Grid container maxWidth="sm" spacing={2}>
         <Grid item md={12} xs={12}>
-          <StepOneCard icon={<TodayIcon />} heading="Generar un ingreso mensual extra" subheading="Obtener dividendos mensuales de mi inversión." checkbox={<Checkbox />} />
-          <StepOneCard icon={<InsightsIcon />} heading="Hacer crecer mi plata" subheading="O generar ganancias en el tiempo." checkbox={<Checkbox />} />
-          <StepOneCard icon={<LocalFloristIcon />} heading="Ganar con próposito e impacto" subheading="Ganar con próposito e impacto" checkbox={<Checkbox />} />
 
+        {stepperOne.map((data) => (
+            <StepOneCard key={data.id}
+            icon={data.icon} 
+            heading={data.heading}
+            subheading={data.subheading}
+            checkbox={<Checkbox />} />
+          ))}
+
+          {/* <StepOneCard icon={<TodayIcon />} heading="Generar un ingreso mensual extra" subheading="Obtener dividendos mensuales de mi inversión." checkbox={<Checkbox />} />
+          <StepOneCard icon={<InsightsIcon />} heading="Hacer crecer mi plata" subheading="O generar ganancias en el tiempo." checkbox={<Checkbox />} />
+          <StepOneCard icon={<LocalFloristIcon />} heading="Ganar con próposito e impacto" subheading="Ganar con próposito e impacto" checkbox={<Checkbox />} /> */}
 
           <Typography
             className='light-grey text-center '

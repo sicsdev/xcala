@@ -37,6 +37,7 @@ function ObjectiveSelectorThree(props) {
 
         {stepperThree.map((data) => (
           <StepTwoCard key={data.id}
+          icon={data.icon} 
           heading={data.heading}
           checkbox={<Checkbox />} />
         ))}

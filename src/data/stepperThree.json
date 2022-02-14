@@ -1,22 +1,27 @@
 [
     {
         "id": "1",
-        "heading": "Tecnología"            
+        "heading": "Tecnología",
+        "icon" : "devices"               
     },
     {
         "id": "2",
-        "heading": "Medio ambiente"              
+        "heading": "Medio ambiente",
+        "icon" : "spa"                 
     },
     {
         "id": "3",
-        "heading": "Cultura"              
+        "heading": "Cultura",
+        "icon" : "auto_stories"                 
     },
     {
         "id": "4",
-        "heading": "Economía"              
+        "heading": "Economía",
+        "icon" : "bar_chart"                 
     },
     {
         "id": "5",
-        "heading": "Ciencia"              
+        "heading": "Ciencia",
+        "icon" : "biotech"                
     }
 ]

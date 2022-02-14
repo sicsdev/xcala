@@ -1,26 +1,32 @@
 [
     {
         "id": "1",
-        "heading": "Comprarte un auto"            
+        "heading": "Comprarte un auto",
+        "icon" : "directions_car_filled"
     },
     {
         "id": "2",
-        "heading": "Mejorar tu jubilación"              
+        "heading": "Mejorar tu jubilación",
+        "icon" : "Group"            
     },
     {
         "id": "3",
-        "heading": "Las vacaciones soñadas"              
+        "heading": "Las vacaciones soñadas",  
+        "icon" : "beach_access"         
     },
     {
         "id": "4",
-        "heading": "Comprar tu casa"              
+        "heading": "Comprar tu casa", 
+        "icon" : "home"           
     },
     {
         "id": "5",
-        "heading": "Ahorrar para imprevistos"              
+        "heading": "Ahorrar para imprevistos",      
+        "icon" : "paid"  
     },
     {
         "id": "6",
-        "heading": "Otro"              
+        "heading": "Otro",
+        "icon" : "help_outline"    
     }
 ]

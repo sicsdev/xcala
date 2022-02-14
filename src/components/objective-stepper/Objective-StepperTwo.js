@@ -48,6 +48,7 @@ function ObjectiveSelectorTwo(props) {
 
         {stepperTwo.map((data) => (
         <StepTwoCard  key={data.id}
+        icon={data.icon} 
          heading={data.heading}
         checkbox={<Checkbox onChange={checkmark} />} />
         ))}

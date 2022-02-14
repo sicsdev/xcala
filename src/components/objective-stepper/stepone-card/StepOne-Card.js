@@ -2,9 +2,8 @@ import React from 'react';
 import Styles from "../../../Pages/objectives-interests/Objectives-Interests.module.scss"
 import Typography from '@mui/material/Typography';
 import { Grid } from "@mui/material";
-import TodayIcon from '@mui/icons-material/Today';
-import InsightsIcon from '@mui/icons-material/Insights';
-import LocalFloristIcon from '@mui/icons-material/LocalFlorist';
+import Icondd from '../../icons/Icondd';
+
 function StepOneCard(props) {
   return (
     <>
@@ -12,7 +11,9 @@ function StepOneCard(props) {
         <Grid container maxWidth="sm">
           <Grid item md={2} xs={2}>
             <span className="card-icon">
-              {<props.icon />}
+              {/* {<props.icon />} */}
+              <Icondd icon = {props.icon}/>
+
             </span>
           </Grid>
           <Grid item md={8} xs={9}>

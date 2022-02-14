@@ -2,11 +2,9 @@ import React from 'react';
 import Typography from '@mui/material/Typography';
 import { Checkbox, Grid } from "@mui/material";
 import StepOneCard from './stepone-card/StepOne-Card';
-
 import Styled from "../../Pages/objectives-interests/Objectives-Interests.module.scss";
 import Button from '../UI/Button';
 import stepperOne from '../../data/stepperOne.json';
-
 
 function ObjectiveSelectorOne(props) {
   const secondStep = () => {
